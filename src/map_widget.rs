@@ -4,6 +4,8 @@ use gtk::subclass::prelude::*;
 use std::cell::RefCell;
 use std::sync::OnceLock;
 
+use libadwaita as adw;
+
 #[derive(Clone, Copy, PartialEq)]
 pub enum RegionState {
     Normal,
@@ -25,13 +27,17 @@ mod imp {
     pub struct MapWidget {
         pub regions: RefCell<Vec<Region>>,
         pub svg_bounds: RefCell<gtk::graphene::Rect>,
+        // [normal, highlighted, correct, wrong, border]
+        pub cached_colors: RefCell<[gtk::gdk::RGBA; 5]>,
     }
 
     impl Default for MapWidget {
         fn default() -> Self {
+            let fallback = gtk::gdk::RGBA::new(0.5, 0.5, 0.5, 1.0);
             Self {
                 regions: RefCell::new(Vec::new()),
                 svg_bounds: RefCell::new(gtk::graphene::Rect::new(0.0, 0.0, 1.0, 1.0)),
+                cached_colors: RefCell::new([fallback; 5]),
             }
         }
     }
@@ -80,6 +86,24 @@ mod imp {
                 }
             });
             obj.add_controller(motion);
+
+            let style = adw::StyleManager::default();
+            let w = obj.downgrade();
+            style.connect_dark_notify(move |_| {
+                if let Some(w) = w.upgrade() {
+                    w.imp().cache_colors();
+                    w.queue_draw();
+                }
+            });
+            let w = obj.downgrade();
+            style.connect_high_contrast_notify(move |_| {
+                if let Some(w) = w.upgrade() {
+                    w.imp().cache_colors();
+                    w.queue_draw();
+                }
+            });
+
+            self.cache_colors();
         }
     }
 
@@ -112,28 +136,29 @@ mod imp {
             snapshot.scale(scale, scale);
 
             let stroke = gtk::gsk::Stroke::new(1.5 / scale);
-            let border_color = gtk::gdk::RGBA::new(0.3, 0.3, 0.3, 1.0);
+            let colors = self.cached_colors.borrow();
+            let [c_normal, c_highlight, c_correct, c_wrong, c_border] = *colors;
 
             let regions = self.regions.borrow();
             for region in regions.iter() {
                 let fill_color = match region.state {
-                    RegionState::Normal => gtk::gdk::RGBA::new(0.85, 0.89, 0.93, 1.0),
-                    RegionState::Highlighted => gtk::gdk::RGBA::new(0.68, 0.78, 0.9, 1.0),
-                    RegionState::Correct => gtk::gdk::RGBA::new(0.3, 0.76, 0.48, 1.0),
-                    RegionState::Wrong => gtk::gdk::RGBA::new(0.87, 0.28, 0.28, 1.0),
+                    RegionState::Normal => c_normal,
+                    RegionState::Highlighted => c_highlight,
+                    RegionState::Correct => c_correct,
+                    RegionState::Wrong => c_wrong,
                 };
                 snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
-                snapshot.append_stroke(&region.path, &stroke, &border_color);
+                snapshot.append_stroke(&region.path, &stroke, &c_border);
             }
             // Draw markers for tiny regions on top of everything
             for region in regions.iter() {
                 let b = &region.bounds;
                 if b.width() < 8.0 || b.height() < 8.0 {
                     let fill_color = match region.state {
-                        RegionState::Normal => gtk::gdk::RGBA::new(0.85, 0.89, 0.93, 1.0),
-                        RegionState::Highlighted => gtk::gdk::RGBA::new(0.68, 0.78, 0.9, 1.0),
-                        RegionState::Correct => gtk::gdk::RGBA::new(0.3, 0.76, 0.48, 1.0),
-                        RegionState::Wrong => gtk::gdk::RGBA::new(0.87, 0.28, 0.28, 1.0),
+                        RegionState::Normal => c_normal,
+                        RegionState::Highlighted => c_highlight,
+                        RegionState::Correct => c_correct,
+                        RegionState::Wrong => c_wrong,
                     };
                     let cx = b.x() + b.width() / 2.0;
                     let cy = b.y() + b.height() / 2.0;
@@ -143,7 +168,7 @@ mod imp {
                         cx - r, cy - r, cx + r, cy - r, cx + r, cy + r, cx - r, cy + r
                     )).unwrap();
                     snapshot.append_fill(&marker, gtk::gsk::FillRule::Winding, &fill_color);
-                    snapshot.append_stroke(&marker, &stroke, &border_color);
+                    snapshot.append_stroke(&marker, &stroke, &c_border);
                 }
             }
 
@@ -155,6 +180,25 @@ mod imp {
                 gtk::Orientation::Horizontal => (300, 600, -1, -1),
                 _ => (200, 500, -1, -1),
             }
+        }
+    }
+
+    impl MapWidget {
+        fn cache_colors(&self) {
+            #[allow(deprecated)]
+            let ctx = self.obj().style_context();
+            let lookup = |name: &str| -> gtk::gdk::RGBA {
+                #[allow(deprecated)]
+                ctx.lookup_color(name)
+                    .unwrap_or(gtk::gdk::RGBA::new(0.5, 0.5, 0.5, 1.0))
+            };
+            *self.cached_colors.borrow_mut() = [
+                lookup("map-region-color"),
+                lookup("map-region-highlight-color"),
+                lookup("map-region-correct-color"),
+                lookup("map-region-wrong-color"),
+                lookup("map-border-color"),
+            ];
         }
     }
 }

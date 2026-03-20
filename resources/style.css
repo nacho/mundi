@@ -1,3 +1,9 @@
 .map-widget {
     background-color: @window_bg_color;
 }
+
+@define-color map-region-color @view_bg_color;
+@define-color map-region-highlight-color mix(@accent_bg_color, @view_bg_color, 0.4);
+@define-color map-region-correct-color @success_bg_color;
+@define-color map-region-wrong-color @error_bg_color;
+@define-color map-border-color @borders;
