@@ -8,5 +8,6 @@
     <file>maps/spain/provinces.svg</file>
     <file>maps/world/continents.svg</file>
     <file>maps/europe/countries.svg</file>
+    <file>maps/america/countries.svg</file>
   </gresource>
 </gresources>
