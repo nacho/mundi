@@ -1,4 +1,4 @@
-project('learn-maps', 'rust',
+project('mundi', 'rust',
   version: '0.1.0',
   meson_version: '>= 0.59.0',
 )
@@ -15,7 +15,7 @@ adwaita_dep = dependency('libadwaita-1', version: '>= 1.5')
 gettext_package = meson.project_name()
 localedir = get_option('prefix') / get_option('localedir')
 datadir = get_option('prefix') / get_option('datadir')
-application_id = 'io.github.nacho.learn-maps'
+application_id = 'io.github.nacho.mundi'
 
 conf = configuration_data()
 conf.set('LOCALEDIR', localedir)

@@ -487,22 +487,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 
 [[package]]
-name = "learn-maps"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "gettext-rs",
- "gio",
- "glib",
- "glib-build-tools",
- "gtk4",
- "libadwaita",
- "quick-xml",
- "rand",
- "regex",
-]
-
-[[package]]
 name = "libadwaita"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -580,6 +564,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a"
 dependencies = [
  "autocfg",
+]
+
+[[package]]
+name = "mundi"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "gettext-rs",
+ "gio",
+ "glib",
+ "glib-build-tools",
+ "gtk4",
+ "libadwaita",
+ "quick-xml",
+ "rand",
+ "regex",
 ]
 
 [[package]]

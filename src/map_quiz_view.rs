@@ -13,7 +13,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/io/github/nacho/learn-maps/ui/map_quiz_view.ui")]
+    #[template(resource = "/io/github/nacho/mundi/ui/map_quiz_view.ui")]
     pub struct MapQuizView {
         #[template_child]
         pub header_title: TemplateChild<adw::WindowTitle>,
@@ -194,7 +194,7 @@ impl MapQuizView {
         let settings = gio::Settings::new_full(
             &gio::SettingsSchemaSource::default()
                 .unwrap()
-                .lookup("io.github.nacho.learn-maps.stats", true)
+                .lookup("io.github.nacho.mundi.stats", true)
                 .unwrap(),
             None::<&gio::SettingsBackend>,
             Some(&exercise.stats_path()),
@@ -209,7 +209,7 @@ impl MapQuizView {
             let settings = gio::Settings::new_full(
                 &gio::SettingsSchemaSource::default()
                     .unwrap()
-                    .lookup("io.github.nacho.learn-maps.stats", true)
+                    .lookup("io.github.nacho.mundi.stats", true)
                     .unwrap(),
                 None::<&gio::SettingsBackend>,
                 Some(&ex.stats_path()),

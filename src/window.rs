@@ -11,8 +11,8 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/io/github/nacho/learn-maps/ui/window.ui")]
-    pub struct LearnMapsWindow {
+    #[template(resource = "/io/github/nacho/mundi/ui/window.ui")]
+    pub struct MundiWindow {
         #[template_child]
         pub navigation_view: TemplateChild<adw::NavigationView>,
         #[template_child]
@@ -20,9 +20,9 @@ mod imp {
     }
 
     #[glib::object_subclass]
-    impl ObjectSubclass for LearnMapsWindow {
-        const NAME: &'static str = "LearnMapsWindow";
-        type Type = super::LearnMapsWindow;
+    impl ObjectSubclass for MundiWindow {
+        const NAME: &'static str = "MundiWindow";
+        type Type = super::MundiWindow;
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
@@ -35,26 +35,26 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for LearnMapsWindow {
+    impl ObjectImpl for MundiWindow {
         fn constructed(&self) {
             self.parent_constructed();
             self.obj().populate_countries();
         }
     }
-    impl WidgetImpl for LearnMapsWindow {}
-    impl WindowImpl for LearnMapsWindow {}
-    impl ApplicationWindowImpl for LearnMapsWindow {}
-    impl AdwApplicationWindowImpl for LearnMapsWindow {}
+    impl WidgetImpl for MundiWindow {}
+    impl WindowImpl for MundiWindow {}
+    impl ApplicationWindowImpl for MundiWindow {}
+    impl AdwApplicationWindowImpl for MundiWindow {}
 }
 
 glib::wrapper! {
-    pub struct LearnMapsWindow(ObjectSubclass<imp::LearnMapsWindow>)
+    pub struct MundiWindow(ObjectSubclass<imp::MundiWindow>)
         @extends adw::ApplicationWindow, gtk::ApplicationWindow, gtk::Window, gtk::Widget,
         @implements gio::ActionGroup, gio::ActionMap, gtk::Accessible, gtk::Buildable,
                     gtk::ConstraintTarget, gtk::Native, gtk::Root, gtk::ShortcutManager;
 }
 
-impl LearnMapsWindow {
+impl MundiWindow {
     pub fn new(app: &adw::Application) -> Self {
         glib::Object::builder().property("application", app).build()
     }
@@ -117,7 +117,7 @@ impl LearnMapsWindow {
     }
 
     pub fn load_window_state(&self) {
-        let settings = gio::Settings::new("io.github.nacho.learn-maps.state.window");
+        let settings = gio::Settings::new("io.github.nacho.mundi.state.window");
         let (width, height) = settings.get::<(i32, i32)>("size");
         self.set_default_size(width, height);
 
@@ -126,14 +126,14 @@ impl LearnMapsWindow {
         }
 
         self.connect_notify_local(Some("maximized"), move |window, _| {
-            let settings = gio::Settings::new("io.github.nacho.learn-maps.state.window");
+            let settings = gio::Settings::new("io.github.nacho.mundi.state.window");
             settings
                 .set_boolean("maximized", window.is_maximized())
                 .unwrap();
         });
 
         self.connect_notify_local(Some("default-width"), move |window, _| {
-            let settings = gio::Settings::new("io.github.nacho.learn-maps.state.window");
+            let settings = gio::Settings::new("io.github.nacho.mundi.state.window");
             if !window.is_maximized() {
                 settings
                     .set("size", (window.default_width(), window.default_height()))
@@ -142,7 +142,7 @@ impl LearnMapsWindow {
         });
 
         self.connect_notify_local(Some("default-height"), move |window, _| {
-            let settings = gio::Settings::new("io.github.nacho.learn-maps.state.window");
+            let settings = gio::Settings::new("io.github.nacho.mundi.state.window");
             if !window.is_maximized() {
                 settings
                     .set("size", (window.default_width(), window.default_height()))

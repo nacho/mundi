@@ -30,7 +30,7 @@ impl MapExercise {
 
     pub fn stats_path(&self) -> String {
         format!(
-            "/io/github/nacho/learn-maps/stats/{}/{}/",
+            "/io/github/nacho/mundi/stats/{}/{}/",
             self.country_id, self.id
         )
     }
@@ -41,14 +41,14 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         id: "communities",
         country_id: "spain",
         title_msgid: "Autonomous Communities",
-        svg_resource: "/io/github/nacho/learn-maps/maps/spain/communities.svg",
+        svg_resource: "/io/github/nacho/mundi/maps/spain/communities.svg",
         region_ids: crate::region_names::SPAIN_COMMUNITIES,
     },
     MapExercise {
         id: "provinces",
         country_id: "spain",
         title_msgid: "Provinces",
-        svg_resource: "/io/github/nacho/learn-maps/maps/spain/provinces.svg",
+        svg_resource: "/io/github/nacho/mundi/maps/spain/provinces.svg",
         region_ids: crate::region_names::SPAIN_PROVINCES,
     },
 ];

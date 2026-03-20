@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="io.github.nacho.learn-maps" path="/io/github/nacho/learn-maps/">
-    <child name="state" schema="io.github.nacho.learn-maps.state"/>
+  <schema id="io.github.nacho.mundi" path="/io/github/nacho/mundi/">
+    <child name="state" schema="io.github.nacho.mundi.state"/>
   </schema>
 
-  <schema id="io.github.nacho.learn-maps.state" path="/io/github/nacho/learn-maps/state/">
-    <child name="window" schema="io.github.nacho.learn-maps.state.window"/>
+  <schema id="io.github.nacho.mundi.state" path="/io/github/nacho/mundi/state/">
+    <child name="window" schema="io.github.nacho.mundi.state.window"/>
   </schema>
 
-  <schema id="io.github.nacho.learn-maps.state.window" path="/io/github/nacho/learn-maps/state/window/">
+  <schema id="io.github.nacho.mundi.state.window" path="/io/github/nacho/mundi/state/window/">
     <key name="maximized" type="b">
       <default>false</default>
     </key>
@@ -17,7 +17,7 @@
     </key>
   </schema>
 
-  <schema id="io.github.nacho.learn-maps.stats">
+  <schema id="io.github.nacho.mundi.stats">
     <key name="correct" type="u">
       <default>0</default>
       <summary>Correct answers</summary>

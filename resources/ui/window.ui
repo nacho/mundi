@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="LearnMapsWindow" parent="AdwApplicationWindow">
-    <property name="title">Learn Maps</property>
+  <template class="MundiWindow" parent="AdwApplicationWindow">
+    <property name="title">Mundi</property>
     <property name="default-width">900</property>
     <property name="default-height">700</property>
     <property name="content">
@@ -9,7 +9,7 @@
         <child>
           <object class="AdwNavigationPage">
             <property name="tag">main_menu</property>
-            <property name="title">Learn Maps</property>
+            <property name="title">Mundi</property>
             <property name="child">
               <object class="AdwToolbarView">
                 <child type="top">

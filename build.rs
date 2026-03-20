@@ -15,8 +15,8 @@ fn generate_config() {
             let var_name = &captures[1];
             env::var(var_name).unwrap_or_else(|_| match var_name {
                 "VERSION" => "0.1.0".to_string(),
-                "APPLICATION_ID" => "io.github.nacho.learn-maps".to_string(),
-                "GETTEXT_PACKAGE" => "learn-maps".to_string(),
+                "APPLICATION_ID" => "io.github.nacho.mundi".to_string(),
+                "GETTEXT_PACKAGE" => "mundi".to_string(),
                 "DATADIR" => "/usr/share".to_string(),
                 _ => String::new(),
             })

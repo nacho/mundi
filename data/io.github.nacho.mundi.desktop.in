@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Learn Maps
+Name=Mundi
 Comment=Learn geography by identifying regions on maps
-Exec=learn-maps
-Icon=io.github.nacho.learn-maps
+Exec=mundi
+Icon=io.github.nacho.mundi
 Terminal=false
 Type=Application
 Categories=Education;

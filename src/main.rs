@@ -16,7 +16,7 @@ use gettextrs::{bind_textdomain_codeset, bindtextdomain, setlocale, textdomain, 
 use gio::prelude::*;
 use std::path::PathBuf;
 
-use application::LearnMapsApplication;
+use application::MundiApplication;
 
 fn run_application() -> Result<()> {
     setlocale(LocaleCategory::LcAll, "");
@@ -28,7 +28,7 @@ fn run_application() -> Result<()> {
 
     gio::resources_register_include!("resources.gresource")?;
 
-    let app = LearnMapsApplication::new();
+    let app = MundiApplication::new();
     app.run();
 
     Ok(())
