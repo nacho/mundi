@@ -16,7 +16,7 @@ mod imp {
         #[template_child]
         pub navigation_view: TemplateChild<adw::NavigationView>,
         #[template_child]
-        pub exercises_group: TemplateChild<adw::PreferencesGroup>,
+        pub countries_group: TemplateChild<adw::PreferencesGroup>,
     }
 
     #[glib::object_subclass]
@@ -38,7 +38,7 @@ mod imp {
     impl ObjectImpl for LearnMapsWindow {
         fn constructed(&self) {
             self.parent_constructed();
-            self.obj().populate_exercises();
+            self.obj().populate_countries();
         }
     }
     impl WidgetImpl for LearnMapsWindow {}
@@ -59,35 +59,61 @@ impl LearnMapsWindow {
         glib::Object::builder().property("application", app).build()
     }
 
-    fn populate_exercises(&self) {
+    fn populate_countries(&self) {
         let imp = self.imp();
-        let mut current_country = String::new();
 
-        for exercise in registry::exercises() {
-            let country = exercise.country_name();
-            if country != current_country {
-                if !current_country.is_empty() {
-                    // Add a visual separator between countries by using a new group
-                }
-                current_country = country.clone();
-            }
-
+        for country in registry::countries() {
             let row = adw::ActionRow::builder()
-                .title(exercise.title())
-                .subtitle(&country)
+                .title(country.name())
                 .activatable(true)
                 .build();
             row.add_suffix(&gtk::Image::from_icon_name("go-next-symbolic"));
 
             let nav = imp.navigation_view.clone();
-            let ex = exercise.clone();
+            let country = country.clone();
             row.connect_activated(move |_| {
+                let page = Self::build_country_page(&country);
+                nav.push(&page);
+            });
+
+            imp.countries_group.add(&row);
+        }
+    }
+
+    fn build_country_page(country: &registry::Country) -> adw::NavigationPage {
+        let group = adw::PreferencesGroup::new();
+
+        for exercise in country.exercises {
+            let row = adw::ActionRow::builder()
+                .title(exercise.title())
+                .activatable(true)
+                .build();
+            row.add_suffix(&gtk::Image::from_icon_name("go-next-symbolic"));
+
+            let ex = exercise.clone();
+            row.connect_activated(move |row| {
+                let nav = row
+                    .ancestor(adw::NavigationView::static_type())
+                    .and_downcast::<adw::NavigationView>()
+                    .unwrap();
                 let quiz_view = MapQuizView::new(&ex);
                 nav.push(&quiz_view);
             });
 
-            imp.exercises_group.add(&row);
+            group.add(&row);
         }
+
+        let prefs_page = adw::PreferencesPage::new();
+        prefs_page.add(&group);
+
+        let toolbar = adw::ToolbarView::new();
+        toolbar.add_top_bar(&adw::HeaderBar::new());
+        toolbar.set_content(Some(&prefs_page));
+
+        adw::NavigationPage::builder()
+            .title(country.name())
+            .child(&toolbar)
+            .build()
     }
 
     pub fn load_window_state(&self) {

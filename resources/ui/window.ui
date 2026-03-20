@@ -18,8 +18,8 @@
                 <property name="content">
                   <object class="AdwPreferencesPage">
                     <child>
-                      <object class="AdwPreferencesGroup" id="exercises_group">
-                        <property name="title" translatable="yes">Exercises</property>
+                      <object class="AdwPreferencesGroup" id="countries_group">
+                        <property name="title" translatable="yes">Countries</property>
                       </object>
                     </child>
                   </object>
