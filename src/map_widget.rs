@@ -114,7 +114,8 @@ mod imp {
             let stroke = gtk::gsk::Stroke::new(1.5 / scale);
             let border_color = gtk::gdk::RGBA::new(0.3, 0.3, 0.3, 1.0);
 
-            for region in self.regions.borrow().iter() {
+            let regions = self.regions.borrow();
+            for region in regions.iter() {
                 let fill_color = match region.state {
                     RegionState::Normal => gtk::gdk::RGBA::new(0.85, 0.89, 0.93, 1.0),
                     RegionState::Highlighted => gtk::gdk::RGBA::new(0.68, 0.78, 0.9, 1.0),
@@ -123,6 +124,27 @@ mod imp {
                 };
                 snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
                 snapshot.append_stroke(&region.path, &stroke, &border_color);
+            }
+            // Draw markers for tiny regions on top of everything
+            for region in regions.iter() {
+                let b = &region.bounds;
+                if b.width() < 8.0 || b.height() < 8.0 {
+                    let fill_color = match region.state {
+                        RegionState::Normal => gtk::gdk::RGBA::new(0.85, 0.89, 0.93, 1.0),
+                        RegionState::Highlighted => gtk::gdk::RGBA::new(0.68, 0.78, 0.9, 1.0),
+                        RegionState::Correct => gtk::gdk::RGBA::new(0.3, 0.76, 0.48, 1.0),
+                        RegionState::Wrong => gtk::gdk::RGBA::new(0.87, 0.28, 0.28, 1.0),
+                    };
+                    let cx = b.x() + b.width() / 2.0;
+                    let cy = b.y() + b.height() / 2.0;
+                    let r = 5.0 / scale;
+                    let marker = gtk::gsk::Path::parse(&format!(
+                        "M {},{} L {},{} L {},{} L {},{} Z",
+                        cx - r, cy - r, cx + r, cy - r, cx + r, cy + r, cx - r, cy + r
+                    )).unwrap();
+                    snapshot.append_fill(&marker, gtk::gsk::FillRule::Winding, &fill_color);
+                    snapshot.append_stroke(&marker, &stroke, &border_color);
+                }
             }
 
             snapshot.restore();
@@ -280,6 +302,26 @@ impl MapWidget {
         let (svg_x, svg_y) = self.transform_to_svg(x, y);
         let point = gtk::graphene::Point::new(svg_x, svg_y);
         let regions = self.imp().regions.borrow();
+        // Check tiny regions first (they'd be hidden behind larger neighbours)
+        let min_size = 8.0_f32;
+        let tolerance = 10.0_f32;
+        let mut best: Option<(f32, &Region)> = None;
+        for region in regions.iter() {
+            let b = &region.bounds;
+            if b.width() < min_size || b.height() < min_size {
+                let cx = b.x() + b.width() / 2.0;
+                let cy = b.y() + b.height() / 2.0;
+                let dist = ((svg_x - cx).powi(2) + (svg_y - cy).powi(2)).sqrt();
+                if dist < tolerance
+                    && (best.is_none() || dist < best.unwrap().0)
+                {
+                    best = Some((dist, region));
+                }
+            }
+        }
+        if let Some((_, r)) = best {
+            return Some(r.id.clone());
+        }
         for region in regions.iter() {
             if region.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
                 return Some(region.id.clone());

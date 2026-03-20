@@ -53,13 +53,22 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
     },
 ];
 
-static WORLD_EXERCISES: &[MapExercise] = &[MapExercise {
-    id: "continents",
-    country_id: "world",
-    title_msgid: "Continents",
-    svg_resource: "/io/github/nacho/mundi/maps/world/continents.svg",
-    region_ids: crate::region_names::WORLD_CONTINENTS,
-}];
+static WORLD_EXERCISES: &[MapExercise] = &[
+    MapExercise {
+        id: "continents",
+        country_id: "world",
+        title_msgid: "Continents",
+        svg_resource: "/io/github/nacho/mundi/maps/world/continents.svg",
+        region_ids: crate::region_names::WORLD_CONTINENTS,
+    },
+    MapExercise {
+        id: "europe-countries",
+        country_id: "world",
+        title_msgid: "Countries of Europe",
+        svg_resource: "/io/github/nacho/mundi/maps/europe/countries.svg",
+        region_ids: crate::region_names::EUROPE_COUNTRIES,
+    },
+];
 
 pub fn countries() -> &'static [Country] {
     static COUNTRIES: &[Country] = &[
