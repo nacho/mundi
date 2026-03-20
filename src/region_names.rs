@@ -223,3 +223,20 @@ pub const AFRICA_COUNTRIES: &[&str] = &[
     "Zambia",
     "Zimbabwe",
 ];
+
+pub const OCEANIA_COUNTRIES: &[&str] = &[
+    "Australia",
+    "Fiji",
+    "Kiribati",
+    "Marshall Islands",
+    "Micronesia",
+    "Nauru",
+    "New Zealand",
+    "Palau",
+    "Papua New Guinea",
+    "Samoa",
+    "Solomon Islands",
+    "Tonga",
+    "Tuvalu",
+    "Vanuatu",
+];

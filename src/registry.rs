@@ -82,6 +82,13 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/africa/countries.svg",
         region_ids: crate::region_names::AFRICA_COUNTRIES,
     },
+    MapExercise {
+        id: "oceania-countries",
+        country_id: "world",
+        title_msgid: "Countries of Oceania",
+        svg_resource: "/io/github/nacho/mundi/maps/oceania/countries.svg",
+        region_ids: crate::region_names::OCEANIA_COUNTRIES,
+    },
 ];
 
 pub fn countries() -> &'static [Country] {
