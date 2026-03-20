@@ -11,5 +11,6 @@
     <file>maps/america/countries.svg</file>
     <file>maps/africa/countries.svg</file>
     <file>maps/oceania/countries.svg</file>
+    <file>maps/asia/countries.svg</file>
   </gresource>
 </gresources>

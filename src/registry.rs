@@ -62,11 +62,11 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         region_ids: crate::region_names::WORLD_CONTINENTS,
     },
     MapExercise {
-        id: "europe-countries",
+        id: "africa-countries",
         country_id: "world",
-        title_msgid: "Countries of Europe",
-        svg_resource: "/io/github/nacho/mundi/maps/europe/countries.svg",
-        region_ids: crate::region_names::EUROPE_COUNTRIES,
+        title_msgid: "Countries of Africa",
+        svg_resource: "/io/github/nacho/mundi/maps/africa/countries.svg",
+        region_ids: crate::region_names::AFRICA_COUNTRIES,
     },
     MapExercise {
         id: "america-countries",
@@ -76,11 +76,18 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         region_ids: crate::region_names::AMERICA_COUNTRIES,
     },
     MapExercise {
-        id: "africa-countries",
+        id: "asia-countries",
         country_id: "world",
-        title_msgid: "Countries of Africa",
-        svg_resource: "/io/github/nacho/mundi/maps/africa/countries.svg",
-        region_ids: crate::region_names::AFRICA_COUNTRIES,
+        title_msgid: "Countries of Asia",
+        svg_resource: "/io/github/nacho/mundi/maps/asia/countries.svg",
+        region_ids: crate::region_names::ASIA_COUNTRIES,
+    },
+    MapExercise {
+        id: "europe-countries",
+        country_id: "world",
+        title_msgid: "Countries of Europe",
+        svg_resource: "/io/github/nacho/mundi/maps/europe/countries.svg",
+        region_ids: crate::region_names::EUROPE_COUNTRIES,
     },
     MapExercise {
         id: "oceania-countries",
