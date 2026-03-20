@@ -161,27 +161,28 @@ impl MapWidget {
 
         let imp = self.imp();
         let mut regions = Vec::new();
+        let mut markers: Vec<(String, f32, f32)> = Vec::new();
         let mut reader = Reader::from_str(data);
 
         loop {
             match reader.read_event() {
-                Ok(Event::Empty(ref e)) | Ok(Event::Start(ref e))
-                    if e.name().as_ref() == b"path" =>
-                {
-                    let mut id = None;
-                    let mut d = None;
-                    for attr in e.attributes().flatten() {
-                        match attr.key.as_ref() {
-                            b"id" => id = Some(String::from_utf8_lossy(&attr.value).to_string()),
-                            b"d" => d = Some(String::from_utf8_lossy(&attr.value).to_string()),
-                            _ => {}
+                Ok(Event::Empty(ref e)) | Ok(Event::Start(ref e)) => {
+                    let tag = e.name();
+                    if tag.as_ref() == b"path" {
+                        let mut id = None;
+                        let mut d = None;
+                        for attr in e.attributes().flatten() {
+                            match attr.key.as_ref() {
+                                b"id" => {
+                                    id = Some(String::from_utf8_lossy(&attr.value).to_string())
+                                }
+                                b"d" => d = Some(String::from_utf8_lossy(&attr.value).to_string()),
+                                _ => {}
+                            }
                         }
-                    }
-                    if let (Some(id), Some(d)) = (id, d) {
-                        // Normalize: trim whitespace, GskPath::parse is strict
-                        let d = d.trim().to_string();
-                        match gtk::gsk::Path::parse(&d) {
-                            Ok(path) => {
+                        if let (Some(id), Some(d)) = (id, d) {
+                            let d = d.trim().to_string();
+                            if let Ok(path) = gtk::gsk::Path::parse(&d) {
                                 let bounds = path
                                     .bounds()
                                     .unwrap_or(gtk::graphene::Rect::new(0.0, 0.0, 0.0, 0.0));
@@ -192,7 +193,27 @@ impl MapWidget {
                                     state: RegionState::Normal,
                                 });
                             }
-                            Err(_) => {}
+                        }
+                    } else if tag.as_ref() == b"circle" {
+                        let mut id = None;
+                        let mut cx = None;
+                        let mut cy = None;
+                        for attr in e.attributes().flatten() {
+                            match attr.key.as_ref() {
+                                b"id" => {
+                                    id = Some(String::from_utf8_lossy(&attr.value).to_string())
+                                }
+                                b"cx" => {
+                                    cx = String::from_utf8_lossy(&attr.value).parse::<f32>().ok()
+                                }
+                                b"cy" => {
+                                    cy = String::from_utf8_lossy(&attr.value).parse::<f32>().ok()
+                                }
+                                _ => {}
+                            }
+                        }
+                        if let (Some(id), Some(cx), Some(cy)) = (id, cx, cy) {
+                            markers.push((id, cx, cy));
                         }
                     }
                 }
@@ -200,6 +221,23 @@ impl MapWidget {
                 Err(_) => break,
                 _ => {}
             }
+        }
+
+        // If markers exist, match them to paths using in_fill (for compound-path SVGs)
+        if !markers.is_empty() {
+            for (name, cx, cy) in &markers {
+                let point = gtk::graphene::Point::new(*cx, *cy);
+                for region in regions.iter_mut() {
+                    if region.id.starts_with("__province_")
+                        && region.path.in_fill(&point, gtk::gsk::FillRule::Winding)
+                    {
+                        region.id = name.clone();
+                        break;
+                    }
+                }
+            }
+            // Remove unmatched temp paths
+            regions.retain(|r| !r.id.starts_with("__province_"));
         }
 
         // Compute overall bounds

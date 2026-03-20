@@ -28,12 +28,22 @@ impl MapExercise {
 }
 
 pub fn exercises() -> Vec<MapExercise> {
-    vec![MapExercise {
-        id: "communities",
-        country_id: "spain",
-        country_name_msgid: "Spain",
-        title_msgid: "Autonomous Communities",
-        svg_resource: "/io/github/nacho/learn-maps/maps/spain/communities.svg",
-        region_ids: crate::region_names::SPAIN_COMMUNITIES,
-    }]
+    vec![
+        MapExercise {
+            id: "communities",
+            country_id: "spain",
+            country_name_msgid: "Spain",
+            title_msgid: "Autonomous Communities",
+            svg_resource: "/io/github/nacho/learn-maps/maps/spain/communities.svg",
+            region_ids: crate::region_names::SPAIN_COMMUNITIES,
+        },
+        MapExercise {
+            id: "provinces",
+            country_id: "spain",
+            country_name_msgid: "Spain",
+            title_msgid: "Provinces",
+            svg_resource: "/io/github/nacho/learn-maps/maps/spain/provinces.svg",
+            region_ids: crate::region_names::SPAIN_PROVINCES,
+        },
+    ]
 }
