@@ -92,7 +92,7 @@ impl MapQuizView {
         map.load_svg(exercise.svg_resource);
         *imp.map_widget.borrow_mut() = Some(map);
 
-        let quiz = Quiz::new(exercise.region_ids);
+        let quiz = Quiz::new(exercise.regions);
         *imp.quiz.borrow_mut() = Some(quiz);
 
         self.update_ui();
@@ -113,7 +113,7 @@ impl MapQuizView {
                 return;
             }
 
-            let target = quiz.current_region().unwrap().to_string();
+            let target = quiz.current_id().unwrap().to_string();
             let correct = quiz.answer(region_id);
             let map = imp.map_widget.borrow();
             let map = map.as_ref().unwrap();
@@ -152,8 +152,8 @@ impl MapQuizView {
             imp.prompt_label.set_text(&gettext("Quiz complete!"));
             imp.attempts_label.set_text("");
             self.save_stats(quiz.session_correct, quiz.session_total);
-        } else if let Some(region) = quiz.current_region() {
-            let translated = gettext(region);
+        } else if let Some(name) = quiz.current_name() {
+            let translated = gettext(name);
             imp.prompt_label
                 .set_text(&format!("{}: {}", gettext("Select"), translated));
             imp.attempts_label.set_text(&format!(

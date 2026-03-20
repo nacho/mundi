@@ -1,7 +1,7 @@
 use rand::seq::SliceRandom;
 
 pub struct Quiz {
-    regions: Vec<String>,
+    regions: Vec<(String, String)>, // (id, name_msgid)
     current: usize,
     pub attempts_left: u32,
     pub session_correct: u32,
@@ -9,8 +9,11 @@ pub struct Quiz {
 }
 
 impl Quiz {
-    pub fn new(region_ids: &[&str]) -> Self {
-        let mut regions: Vec<String> = region_ids.iter().map(|s| s.to_string()).collect();
+    pub fn new(regions: &[(&str, &str)]) -> Self {
+        let mut regions: Vec<(String, String)> = regions
+            .iter()
+            .map(|(id, name)| (id.to_string(), name.to_string()))
+            .collect();
         regions.shuffle(&mut rand::rng());
         Quiz {
             regions,
@@ -21,8 +24,14 @@ impl Quiz {
         }
     }
 
-    pub fn current_region(&self) -> Option<&str> {
-        self.regions.get(self.current).map(|s| s.as_str())
+    pub fn current_id(&self) -> Option<&str> {
+        self.regions.get(self.current).map(|(id, _)| id.as_str())
+    }
+
+    pub fn current_name(&self) -> Option<&str> {
+        self.regions
+            .get(self.current)
+            .map(|(_, name)| name.as_str())
     }
 
     pub fn is_finished(&self) -> bool {
@@ -31,7 +40,7 @@ impl Quiz {
 
     /// Returns true if correct
     pub fn answer(&mut self, region_id: &str) -> bool {
-        if let Some(target) = self.current_region() {
+        if let Some(target) = self.current_id() {
             if region_id == target {
                 self.session_correct += 1;
                 self.session_total += 1;
