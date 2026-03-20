@@ -1,6 +1,29 @@
 // Region names for gettext extraction.
 // At runtime we call gettext() on the SVG path id to get the translated name.
 
+pub const ITALY_REGIONS: &[&str] = &[
+    "Abruzzo",
+    "Basilicata",
+    "Calabria",
+    "Campania",
+    "Emilia-Romagna",
+    "Friuli Venezia Giulia",
+    "Lazio",
+    "Liguria",
+    "Lombardy",
+    "Marche",
+    "Molise",
+    "Piedmont",
+    "Puglia",
+    "Sardegna",
+    "Sicilia",
+    "Trentino-Alto Adige",
+    "Tuscany",
+    "Umbria",
+    "Valle d'Aosta",
+    "Veneto",
+];
+
 pub const SPAIN_COMMUNITIES: &[&str] = &[
     "Andalucía",
     "Aragón",

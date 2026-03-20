@@ -8,6 +8,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 ## Exercises
 
 - **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania
+- **Italy** — Regions
 - **Spain** — Autonomous Communities, Provinces
 
 ## How to Play
@@ -31,6 +32,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - World / Americas / Africa / Asia / Oceania: [BlankMap-World.svg](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg) (public domain)
 - Europe: [Blank map of Europe (with disputed regions)](https://commons.wikimedia.org/wiki/File:Blank_map_of_Europe_(with_disputed_regions).svg) (CC BY-SA 3.0)
 - Spain: [Mapa de España - Provincias.svg](https://commons.wikimedia.org/wiki/File:Mapa_de_Espa%C3%B1a_-_Provincias.svg) (CC BY-SA 4.0)
+- Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use)
 
 ## License
 
