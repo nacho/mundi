@@ -13,7 +13,15 @@
             <property name="child">
               <object class="AdwToolbarView">
                 <child type="top">
-                  <object class="AdwHeaderBar"/>
+                  <object class="AdwHeaderBar">
+                    <child type="end">
+                      <object class="GtkMenuButton" id="primary_menu_button">
+                        <property name="icon-name">open-menu-symbolic</property>
+                        <property name="primary">true</property>
+                        <property name="tooltip-text" translatable="yes">Main Menu</property>
+                      </object>
+                    </child>
+                  </object>
                 </child>
                 <property name="content">
                   <object class="AdwPreferencesPage">

@@ -2,6 +2,7 @@ use gio::prelude::*;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use libadwaita as adw;
+use libadwaita::prelude::*;
 use libadwaita::subclass::prelude::*;
 
 use crate::window::MundiWindow;
@@ -24,7 +25,6 @@ mod imp {
         fn startup(&self) {
             self.parent_startup();
             let app = self.obj();
-            app.set_resource_base_path(Some("/io/github/nacho/mundi"));
             app.setup_actions();
             app.set_accels_for_action("app.quit", &["<Ctrl>Q"]);
             app.set_accels_for_action("window.close", &["<Ctrl>W"]);
@@ -40,7 +40,8 @@ mod imp {
 
         fn activate(&self) {
             let app = self.obj();
-            let window = MundiWindow::new(app.upcast_ref());
+            let menu = app.menu_by_id("main-menu");
+            let window = MundiWindow::new(app.upcast_ref(), menu.as_ref().map(|m| m.upcast_ref()));
             window.load_window_state();
             window.present();
         }
@@ -59,12 +60,32 @@ impl MundiApplication {
     pub fn new() -> Self {
         glib::Object::builder()
             .property("application-id", "io.github.nacho.mundi")
+            .property("resource-base-path", "/io/github/nacho/mundi")
             .build()
     }
 
     fn setup_actions(&self) {
-        self.add_action_entries(vec![gio::ActionEntry::builder("quit")
-            .activate(|app: &Self, _, _| app.quit())
-            .build()]);
+        self.add_action_entries(vec![
+            gio::ActionEntry::builder("quit")
+                .activate(|app: &Self, _, _| app.quit())
+                .build(),
+            gio::ActionEntry::builder("about")
+                .activate(|app: &Self, _, _| app.show_about())
+                .build(),
+        ]);
+    }
+
+    fn show_about(&self) {
+        let dialog = adw::AboutDialog::builder()
+            .application_name("Mundi")
+            .application_icon("io.github.nacho.mundi")
+            .version("0.1.0")
+            .developer_name("Ignacio Casal Quinteiro")
+            .license_type(gtk::License::Gpl30)
+            .website("https://github.com/nacho/mundi")
+            .issue_url("https://github.com/nacho/mundi/issues")
+            .build();
+        let window = self.active_window();
+        dialog.present(window.as_ref());
     }
 }

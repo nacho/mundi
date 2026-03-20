@@ -4,19 +4,27 @@ use libadwaita as adw;
 use libadwaita::prelude::*;
 use libadwaita::subclass::prelude::*;
 
+use std::cell::RefCell;
+
 use crate::map_quiz_view::MapQuizView;
 use crate::registry;
 
 mod imp {
     use super::*;
+    use glib::Properties;
 
-    #[derive(Default, gtk::CompositeTemplate)]
+    #[derive(Default, gtk::CompositeTemplate, Properties)]
     #[template(resource = "/io/github/nacho/mundi/ui/window.ui")]
+    #[properties(wrapper_type = super::MundiWindow)]
     pub struct MundiWindow {
         #[template_child]
         pub navigation_view: TemplateChild<adw::NavigationView>,
         #[template_child]
         pub countries_group: TemplateChild<adw::PreferencesGroup>,
+        #[template_child]
+        primary_menu_button: TemplateChild<gtk::MenuButton>,
+        #[property(get, set = Self::set_main_menu, construct_only, nullable)]
+        main_menu: RefCell<Option<gio::MenuModel>>,
     }
 
     #[glib::object_subclass]
@@ -35,12 +43,21 @@ mod imp {
         }
     }
 
+    #[glib::derived_properties]
     impl ObjectImpl for MundiWindow {
         fn constructed(&self) {
             self.parent_constructed();
             self.obj().populate_countries();
         }
     }
+
+    impl MundiWindow {
+        fn set_main_menu(&self, menu: Option<&gio::MenuModel>) {
+            self.primary_menu_button.set_menu_model(menu);
+            *self.main_menu.borrow_mut() = menu.cloned();
+        }
+    }
+
     impl WidgetImpl for MundiWindow {}
     impl WindowImpl for MundiWindow {}
     impl ApplicationWindowImpl for MundiWindow {}
@@ -55,8 +72,11 @@ glib::wrapper! {
 }
 
 impl MundiWindow {
-    pub fn new(app: &adw::Application) -> Self {
-        glib::Object::builder().property("application", app).build()
+    pub fn new(app: &adw::Application, main_menu: Option<&gio::MenuModel>) -> Self {
+        glib::Object::builder()
+            .property("application", app)
+            .property("main-menu", main_menu)
+            .build()
     }
 
     fn populate_countries(&self) {
