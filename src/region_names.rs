@@ -73,3 +73,12 @@ pub const SPAIN_PROVINCES: &[&str] = &[
     "Álava",
     "Ávila",
 ];
+
+pub const WORLD_CONTINENTS: &[&str] = &[
+    "Africa",
+    "Asia",
+    "Europe",
+    "North America",
+    "Oceania",
+    "South America",
+];

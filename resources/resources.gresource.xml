@@ -6,5 +6,6 @@
     <file>style.css</file>
     <file>maps/spain/communities.svg</file>
     <file>maps/spain/provinces.svg</file>
+    <file>maps/world/continents.svg</file>
   </gresource>
 </gresources>
