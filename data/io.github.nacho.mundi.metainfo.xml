@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.nacho.mundi</id>
+
+  <name>Mundi</name>
+
+  <summary>Learn geography with interactive map quizzes</summary>
+  <summary xml:lang="es">Aprende geografía con cuestionarios de mapas interactivos</summary>
+
+  <developer_name>Ignacio Casal Quinteiro</developer_name>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#9141ac</color>
+    <color type="primary" scheme_preference="dark">#613583</color>
+  </branding>
+
+  <description>
+    <p>
+      Mundi is a geography learning application that quizzes you on map regions.
+      Click on the correct region of an interactive map to answer each question,
+      with color feedback and progress tracking to help you learn.
+    </p>
+    <p xml:lang="es">
+      Mundi es una aplicación de aprendizaje de geografía que te pregunta sobre regiones del mapa.
+      Haz clic en la región correcta de un mapa interactivo para responder cada pregunta,
+      con retroalimentación de colores y seguimiento del progreso para ayudarte a aprender.
+    </p>
+    <p>
+      Features include multiple exercises per country, session and all-time statistics,
+      and a data-driven design for easy extensibility to new countries and topics.
+    </p>
+    <p xml:lang="es">
+      Las características incluyen múltiples ejercicios por país, estadísticas de sesión y globales,
+      y un diseño basado en datos para una fácil extensibilidad a nuevos países y temas.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.nacho.mundi.desktop</launchable>
+
+  <url type="homepage">https://github.com/nacho/mundi</url>
+  <url type="vcs-browser">https://github.com/nacho/mundi</url>
+
+  <categories>
+    <category>Education</category>
+    <category>Geography</category>
+  </categories>
+
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="0.1.0" date="2026-03-20">
+      <description>
+        <ul>
+          <li>Initial release</li>
+          <li>Spain: Autonomous Communities quiz</li>
+          <li>Spain: Provinces quiz</li>
+          <li>Interactive SVG maps with click-to-answer</li>
+          <li>3 attempts per region with color feedback</li>
+          <li>Session and all-time statistics</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>
