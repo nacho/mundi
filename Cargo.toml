@@ -1,0 +1,18 @@
+[package]
+name = "learn-maps"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gtk = { version = "0.10", package = "gtk4", features = ["v4_14"] }
+libadwaita = { version = "0.8", package = "libadwaita", features = ["v1_5"] }
+gio = "0.21"
+glib = { version = "0.21", features = ["log_macros"] }
+gettext-rs = { version = "0.7", features = ["gettext-system"] }
+anyhow = "1.0"
+rand = "0.9"
+quick-xml = "0.37"
+
+[build-dependencies]
+glib-build-tools = "0.21"
+regex = "1.11"

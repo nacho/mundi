@@ -1,0 +1,7 @@
+/target/
+.flatpak-builder/
+build-dir/
+builddir/
+.builddir/
+build/
+data/gschemas.compiled

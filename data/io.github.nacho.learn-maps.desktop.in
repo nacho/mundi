@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Learn Maps
+Comment=Learn geography by identifying regions on maps
+Exec=learn-maps
+Icon=io.github.nacho.learn-maps
+Terminal=false
+Type=Application
+Categories=Education;

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="io.github.nacho.learn-maps" path="/io/github/nacho/learn-maps/">
+    <child name="state" schema="io.github.nacho.learn-maps.state"/>
+  </schema>
+
+  <schema id="io.github.nacho.learn-maps.state" path="/io/github/nacho/learn-maps/state/">
+    <child name="window" schema="io.github.nacho.learn-maps.state.window"/>
+  </schema>
+
+  <schema id="io.github.nacho.learn-maps.state.window" path="/io/github/nacho/learn-maps/state/window/">
+    <key name="maximized" type="b">
+      <default>false</default>
+    </key>
+    <key name="size" type="(ii)">
+      <default>(900, 700)</default>
+    </key>
+  </schema>
+
+  <schema id="io.github.nacho.learn-maps.stats">
+    <key name="correct" type="u">
+      <default>0</default>
+      <summary>Correct answers</summary>
+    </key>
+    <key name="total" type="u">
+      <default>0</default>
+      <summary>Total questions</summary>
+    </key>
+  </schema>
+</schemalist>

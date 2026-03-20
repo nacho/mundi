@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="LearnMapsWindow" parent="AdwApplicationWindow">
+    <property name="title">Learn Maps</property>
+    <property name="default-width">900</property>
+    <property name="default-height">700</property>
+    <property name="content">
+      <object class="AdwNavigationView" id="navigation_view">
+        <child>
+          <object class="AdwNavigationPage">
+            <property name="tag">main_menu</property>
+            <property name="title">Learn Maps</property>
+            <property name="child">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar"/>
+                </child>
+                <property name="content">
+                  <object class="AdwPreferencesPage">
+                    <child>
+                      <object class="AdwPreferencesGroup" id="exercises_group">
+                        <property name="title" translatable="yes">Exercises</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+</interface>
