@@ -1,4 +1,5 @@
 src/region_names.rs
+src/map_exercise_view.rs
 resources/gtk/menus.ui
 resources/ui/window.ui
-resources/ui/map_quiz_view.ui
+resources/ui/map_exercise_view.ui

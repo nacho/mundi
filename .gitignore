@@ -5,3 +5,4 @@ builddir/
 .builddir/
 build/
 data/gschemas.compiled
+*~
