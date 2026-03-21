@@ -52,6 +52,29 @@
 
   <content_rating type="oars-1.1" />
 
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/1-continents.png</image>
+      <caption>World continents in discovery mode</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/2-continents-quiz.png</image>
+      <caption>Continents quiz with timer</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/2-europe.png</image>
+      <caption>Countries of Europe</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/3-spain.png</image>
+      <caption>Autonomous Communities of Spain</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/4-italy.png</image>
+      <caption>Italian regions</caption>
+    </screenshot>
+  </screenshots>
+
   <releases>
     <release version="0.1.0" date="2026-03-21">
       <description>
