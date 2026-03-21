@@ -19,22 +19,24 @@
 
   <description>
     <p>
-      Mundi is a geography learning application that quizzes you on map regions.
-      Click on the correct region of an interactive map to answer each question,
-      with color feedback and progress tracking to help you learn.
+      Mundi is a geography learning application for the GNOME desktop.
+      Explore interactive maps in discovery mode to learn regions, countries and
+      continents, then test your knowledge with timed quizzes.
     </p>
     <p xml:lang="es">
-      Mundi es una aplicación de aprendizaje de geografía que te pregunta sobre regiones del mapa.
-      Haz clic en la región correcta de un mapa interactivo para responder cada pregunta,
-      con retroalimentación de colores y seguimiento del progreso para ayudarte a aprender.
+      Mundi es una aplicación de aprendizaje de geografía para el escritorio GNOME.
+      Explora mapas interactivos en modo descubrimiento para aprender regiones, países y
+      continentes, y luego pon a prueba tus conocimientos con cuestionarios cronometrados.
     </p>
     <p>
-      Features include multiple exercises per country, session and all-time statistics,
-      and a data-driven design for easy extensibility to new countries and topics.
+      Features include discovery mode for free exploration, timed quizzes with
+      score tracking, multiple exercises per country, and a results view to
+      review your performance.
     </p>
     <p xml:lang="es">
-      Las características incluyen múltiples ejercicios por país, estadísticas de sesión y globales,
-      y un diseño basado en datos para una fácil extensibilidad a nuevos países y temas.
+      Las características incluyen modo descubrimiento para exploración libre,
+      cuestionarios cronometrados con seguimiento de puntuación, múltiples
+      ejercicios por país y una vista de resultados para revisar tu rendimiento.
     </p>
   </description>
 
@@ -51,15 +53,16 @@
   <content_rating type="oars-1.1" />
 
   <releases>
-    <release version="0.1.0" date="2026-03-20">
+    <release version="0.1.0" date="2026-03-21">
       <description>
         <ul>
           <li>Initial release</li>
-          <li>Spain: Autonomous Communities quiz</li>
-          <li>Spain: Provinces quiz</li>
-          <li>Interactive SVG maps with click-to-answer</li>
-          <li>3 attempts per region with color feedback</li>
-          <li>Session and all-time statistics</li>
+          <li>Discovery mode: click regions to learn their names</li>
+          <li>Timed quizzes with results view</li>
+          <li>World: Continents, Countries of Africa, America, Asia, Europe and Oceania</li>
+          <li>Italy: Regions</li>
+          <li>Spain: Autonomous Communities and Provinces</li>
+          <li>Spanish translation</li>
         </ul>
       </description>
     </release>
