@@ -91,19 +91,38 @@ mod imp {
             let w = obj.downgrade();
             style.connect_dark_notify(move |_| {
                 if let Some(w) = w.upgrade() {
-                    w.imp().cache_colors();
-                    w.queue_draw();
+                    glib::idle_add_local_once(glib::clone!(
+                        #[weak]
+                        w,
+                        move || {
+                            w.imp().cache_colors();
+                            w.queue_draw();
+                        }
+                    ));
                 }
             });
             let w = obj.downgrade();
             style.connect_high_contrast_notify(move |_| {
                 if let Some(w) = w.upgrade() {
-                    w.imp().cache_colors();
-                    w.queue_draw();
+                    glib::idle_add_local_once(glib::clone!(
+                        #[weak]
+                        w,
+                        move || {
+                            w.imp().cache_colors();
+                            w.queue_draw();
+                        }
+                    ));
                 }
             });
 
-            self.cache_colors();
+            glib::idle_add_local_once(glib::clone!(
+                #[weak(rename_to = this)]
+                self,
+                move || {
+                    this.cache_colors();
+                    this.obj().queue_draw();
+                }
+            ));
         }
     }
 
