@@ -3,7 +3,7 @@
   <gresource prefix="/io/github/nacho/mundi">
     <file preprocess="xml-stripblanks">gtk/menus.ui</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
-    <file preprocess="xml-stripblanks">ui/map_quiz_view.ui</file>
+    <file preprocess="xml-stripblanks">ui/map_exercise_view.ui</file>
     <file>style.css</file>
     <file>maps/spain/communities.svg</file>
     <file>maps/spain/provinces.svg</file>

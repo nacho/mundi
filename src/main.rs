@@ -1,5 +1,5 @@
 mod application;
-mod map_quiz_view;
+mod map_exercise_view;
 mod map_widget;
 mod quiz;
 mod region_names;

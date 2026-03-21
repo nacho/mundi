@@ -6,7 +6,7 @@ use libadwaita::subclass::prelude::*;
 
 use std::cell::RefCell;
 
-use crate::map_quiz_view::MapQuizView;
+use crate::map_exercise_view::MapExerciseView;
 use crate::registry;
 
 mod imp {
@@ -34,7 +34,7 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
-            MapQuizView::ensure_type();
+            MapExerciseView::ensure_type();
             klass.bind_template();
         }
 
@@ -116,7 +116,7 @@ impl MundiWindow {
                     .ancestor(adw::NavigationView::static_type())
                     .and_downcast::<adw::NavigationView>()
                     .unwrap();
-                let quiz_view = MapQuizView::new(&ex);
+                let quiz_view = MapExerciseView::new(&ex);
                 nav.push(&quiz_view);
             });
 

@@ -7,3 +7,8 @@
 @define-color map-region-correct-color @success_bg_color;
 @define-color map-region-wrong-color @error_bg_color;
 @define-color map-border-color @borders;
+
+.key-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+}

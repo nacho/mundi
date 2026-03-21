@@ -419,6 +419,15 @@ impl MapWidget {
         }
     }
 
+    pub fn region_state(&self, region_id: &str) -> RegionState {
+        let regions = self.imp().regions.borrow();
+        regions
+            .iter()
+            .find(|r| r.id == region_id)
+            .map(|r| r.state)
+            .unwrap_or(RegionState::Normal)
+    }
+
     pub fn set_region_state(&self, region_id: &str, state: RegionState) {
         let mut regions = self.imp().regions.borrow_mut();
         for region in regions.iter_mut() {

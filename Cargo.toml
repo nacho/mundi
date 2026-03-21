@@ -9,6 +9,7 @@ libadwaita = { version = "0.8", package = "libadwaita", features = ["v1_5"] }
 gio = "0.21"
 glib = { version = "0.21", features = ["log_macros"] }
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
+i18n-format = "0.4"
 anyhow = "1.0"
 rand = "0.9"
 quick-xml = "0.37"
