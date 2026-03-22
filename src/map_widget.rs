@@ -391,12 +391,16 @@ impl MapWidget {
         if let Some((_, r)) = best {
             return Some(r.id.clone());
         }
+        let mut smallest: Option<(f32, &Region)> = None;
         for region in regions.iter() {
             if region.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
-                return Some(region.id.clone());
+                let area = region.bounds.width() * region.bounds.height();
+                if smallest.is_none() || area < smallest.unwrap().0 {
+                    smallest = Some((area, region));
+                }
             }
         }
-        None
+        smallest.map(|(_, r)| r.id.clone())
     }
 
     fn on_click(&self, x: f64, y: f64) {
