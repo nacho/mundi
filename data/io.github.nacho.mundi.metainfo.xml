@@ -76,6 +76,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.2.0" date="2026-03-22">
+      <description>
+        <ul>
+          <li>United States: States</li>
+          <li>Fix swapped Basque Country and Navarre in communities map</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-03-21">
       <description>
         <ul>
