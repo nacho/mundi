@@ -3,7 +3,9 @@
 // N_ is a no-op that marks strings for xgettext extraction (--keyword=N_).
 
 #[allow(non_snake_case)]
-const fn N_(s: &str) -> &str { s }
+const fn N_(s: &str) -> &str {
+    s
+}
 
 pub const ITALY_REGIONS: &[(&str, &str)] = &[
     ("Abruzzo", N_("Abruzzo")),
@@ -207,7 +209,10 @@ pub const AFRICA_COUNTRIES: &[(&str, &str)] = &[
     ("Chad", N_("Chad")),
     ("Comoros", N_("Comoros")),
     ("Côte d'Ivoire", N_("Côte d'Ivoire")),
-    ("Democratic Republic of the Congo", N_("Democratic Republic of the Congo")),
+    (
+        "Democratic Republic of the Congo",
+        N_("Democratic Republic of the Congo"),
+    ),
     ("Djibouti", N_("Djibouti")),
     ("Egypt", N_("Egypt")),
     ("Equatorial Guinea", N_("Equatorial Guinea")),
@@ -319,4 +324,58 @@ pub const ASIA_COUNTRIES: &[(&str, &str)] = &[
     ("Uzbekistan", N_("Uzbekistan")),
     ("Vietnam", N_("Vietnam")),
     ("Yemen", N_("Yemen")),
+];
+
+pub const US_STATES: &[(&str, &str)] = &[
+    ("Alabama", N_("Alabama")),
+    ("Alaska", N_("Alaska")),
+    ("Arizona", N_("Arizona")),
+    ("Arkansas", N_("Arkansas")),
+    ("California", N_("California")),
+    ("Colorado", N_("Colorado")),
+    ("Connecticut", N_("Connecticut")),
+    ("Delaware", N_("Delaware")),
+    ("District of Columbia", N_("District of Columbia")),
+    ("Florida", N_("Florida")),
+    ("Georgia", N_("Georgia")),
+    ("Hawaii", N_("Hawaii")),
+    ("Idaho", N_("Idaho")),
+    ("Illinois", N_("Illinois")),
+    ("Indiana", N_("Indiana")),
+    ("Iowa", N_("Iowa")),
+    ("Kansas", N_("Kansas")),
+    ("Kentucky", N_("Kentucky")),
+    ("Louisiana", N_("Louisiana")),
+    ("Maine", N_("Maine")),
+    ("Maryland", N_("Maryland")),
+    ("Massachusetts", N_("Massachusetts")),
+    ("Michigan", N_("Michigan")),
+    ("Minnesota", N_("Minnesota")),
+    ("Mississippi", N_("Mississippi")),
+    ("Missouri", N_("Missouri")),
+    ("Montana", N_("Montana")),
+    ("Nebraska", N_("Nebraska")),
+    ("Nevada", N_("Nevada")),
+    ("New Hampshire", N_("New Hampshire")),
+    ("New Jersey", N_("New Jersey")),
+    ("New Mexico", N_("New Mexico")),
+    ("New York", N_("New York")),
+    ("North Carolina", N_("North Carolina")),
+    ("North Dakota", N_("North Dakota")),
+    ("Ohio", N_("Ohio")),
+    ("Oklahoma", N_("Oklahoma")),
+    ("Oregon", N_("Oregon")),
+    ("Pennsylvania", N_("Pennsylvania")),
+    ("Rhode Island", N_("Rhode Island")),
+    ("South Carolina", N_("South Carolina")),
+    ("South Dakota", N_("South Dakota")),
+    ("Tennessee", N_("Tennessee")),
+    ("Texas", N_("Texas")),
+    ("Utah", N_("Utah")),
+    ("Vermont", N_("Vermont")),
+    ("Virginia", N_("Virginia")),
+    ("Washington", N_("Washington")),
+    ("West Virginia", N_("West Virginia")),
+    ("Wisconsin", N_("Wisconsin")),
+    ("Wyoming", N_("Wyoming")),
 ];

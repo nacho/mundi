@@ -53,15 +53,13 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
     },
 ];
 
-static ITALY_EXERCISES: &[MapExercise] = &[
-    MapExercise {
-        id: "regions",
-        country_id: "italy",
-        title_msgid: "Regions",
-        svg_resource: "/io/github/nacho/mundi/maps/italy/regions.svg",
-        regions: crate::region_names::ITALY_REGIONS,
-    },
-];
+static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
+    id: "regions",
+    country_id: "italy",
+    title_msgid: "Regions",
+    svg_resource: "/io/github/nacho/mundi/maps/italy/regions.svg",
+    regions: crate::region_names::ITALY_REGIONS,
+}];
 
 static WORLD_EXERCISES: &[MapExercise] = &[
     MapExercise {
@@ -108,6 +106,14 @@ static WORLD_EXERCISES: &[MapExercise] = &[
     },
 ];
 
+static US_EXERCISES: &[MapExercise] = &[MapExercise {
+    id: "states",
+    country_id: "united_states",
+    title_msgid: "States",
+    svg_resource: "/io/github/nacho/mundi/maps/united_states/states.svg",
+    regions: crate::region_names::US_STATES,
+}];
+
 pub fn countries() -> &'static [Country] {
     static COUNTRIES: &[Country] = &[
         Country {
@@ -124,6 +130,11 @@ pub fn countries() -> &'static [Country] {
             id: "spain",
             name_msgid: "Spain",
             exercises: SPAIN_EXERCISES,
+        },
+        Country {
+            id: "united_states",
+            name_msgid: "United States",
+            exercises: US_EXERCISES,
         },
     ];
     COUNTRIES

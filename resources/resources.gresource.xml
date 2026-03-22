@@ -14,5 +14,6 @@
     <file>maps/oceania/countries.svg</file>
     <file>maps/asia/countries.svg</file>
     <file>maps/italy/regions.svg</file>
+    <file>maps/united_states/states.svg</file>
   </gresource>
 </gresources>
