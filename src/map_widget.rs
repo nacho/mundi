@@ -184,8 +184,16 @@ mod imp {
                     let r = 5.0 / scale;
                     let marker = gtk::gsk::Path::parse(&format!(
                         "M {},{} L {},{} L {},{} L {},{} Z",
-                        cx - r, cy - r, cx + r, cy - r, cx + r, cy + r, cx - r, cy + r
-                    )).unwrap();
+                        cx - r,
+                        cy - r,
+                        cx + r,
+                        cy - r,
+                        cx + r,
+                        cy + r,
+                        cx - r,
+                        cy + r
+                    ))
+                    .unwrap();
                     snapshot.append_fill(&marker, gtk::gsk::FillRule::Winding, &fill_color);
                     snapshot.append_stroke(&marker, &stroke, &c_border);
                 }
@@ -375,9 +383,7 @@ impl MapWidget {
                 let cx = b.x() + b.width() / 2.0;
                 let cy = b.y() + b.height() / 2.0;
                 let dist = ((svg_x - cx).powi(2) + (svg_y - cy).powi(2)).sqrt();
-                if dist < tolerance
-                    && (best.is_none() || dist < best.unwrap().0)
-                {
+                if dist < tolerance && (best.is_none() || dist < best.unwrap().0) {
                     best = Some((dist, region));
                 }
             }

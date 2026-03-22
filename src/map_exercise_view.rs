@@ -187,18 +187,15 @@ impl MapExerciseView {
 
         let start_time = imp.start_time.clone();
         let timer_label = imp.timer_label.clone();
-        let source_id = glib::timeout_add_local(
-            std::time::Duration::from_secs(1),
-            move || {
-                if let Some(start) = *start_time.borrow() {
-                    let elapsed = start.elapsed().as_secs();
-                    timer_label.set_text(&format!("{}:{:02}", elapsed / 60, elapsed % 60));
-                    glib::ControlFlow::Continue
-                } else {
-                    glib::ControlFlow::Break
-                }
-            },
-        );
+        let source_id = glib::timeout_add_local(std::time::Duration::from_secs(1), move || {
+            if let Some(start) = *start_time.borrow() {
+                let elapsed = start.elapsed().as_secs();
+                timer_label.set_text(&format!("{}:{:02}", elapsed / 60, elapsed % 60));
+                glib::ControlFlow::Continue
+            } else {
+                glib::ControlFlow::Break
+            }
+        });
         *imp.timer_source_id.borrow_mut() = Some(source_id);
 
         self.update_quiz_ui();
