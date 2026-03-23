@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-23 15:24+0100\n"
-"PO-Revision-Date: 2026-03-22 21:00+0100\n"
+"PO-Revision-Date: 2026-03-23 20:00+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -1118,333 +1118,315 @@ msgstr "Yemen"
 
 #: src/region_names.rs:330
 msgid "Alabama"
-msgstr ""
+msgstr "Alabama"
 
 #: src/region_names.rs:331
 msgid "Alaska"
-msgstr ""
+msgstr "Alaska"
 
 #: src/region_names.rs:332
 msgid "Arizona"
-msgstr ""
+msgstr "Arizona"
 
 #: src/region_names.rs:333
 msgid "Arkansas"
-msgstr ""
+msgstr "Arkansas"
 
 #: src/region_names.rs:334
 msgid "California"
-msgstr ""
+msgstr "California"
 
 #: src/region_names.rs:335
-#, fuzzy
 msgid "Colorado"
-msgstr "Colombia"
+msgstr "Colorado"
 
 #: src/region_names.rs:336
 msgid "Connecticut"
-msgstr ""
+msgstr "Connecticut"
 
 #: src/region_names.rs:337
 msgid "Delaware"
-msgstr ""
+msgstr "Delaware"
 
 #: src/region_names.rs:338
 msgid "District of Columbia"
-msgstr ""
+msgstr "Distretto di Columbia"
 
 #: src/region_names.rs:339
 msgid "Florida"
-msgstr ""
+msgstr "Florida"
 
 #: src/region_names.rs:341
 msgid "Hawaii"
-msgstr ""
+msgstr "Hawaii"
 
 #: src/region_names.rs:342
 msgid "Idaho"
-msgstr ""
+msgstr "Idaho"
 
 #: src/region_names.rs:343
 msgid "Illinois"
-msgstr ""
+msgstr "Illinois"
 
 #: src/region_names.rs:344
-#, fuzzy
 msgid "Indiana"
-msgstr "India"
+msgstr "Indiana"
 
 #: src/region_names.rs:345
 msgid "Iowa"
-msgstr ""
+msgstr "Iowa"
 
 #: src/region_names.rs:346
 msgid "Kansas"
-msgstr ""
+msgstr "Kansas"
 
 #: src/region_names.rs:347
 msgid "Kentucky"
-msgstr ""
+msgstr "Kentucky"
 
 #: src/region_names.rs:348
-#, fuzzy
 msgid "Louisiana"
-msgstr "Tunisia"
+msgstr "Louisiana"
 
 #: src/region_names.rs:349
-#, fuzzy
 msgid "Maine"
-msgstr "Ucraina"
+msgstr "Maine"
 
 #: src/region_names.rs:350
-#, fuzzy
 msgid "Maryland"
-msgstr "Irlanda"
+msgstr "Maryland"
 
 #: src/region_names.rs:351
 msgid "Massachusetts"
-msgstr ""
+msgstr "Massachusetts"
 
 #: src/region_names.rs:352
 msgid "Michigan"
-msgstr ""
+msgstr "Michigan"
 
 #: src/region_names.rs:353
 msgid "Minnesota"
-msgstr ""
+msgstr "Minnesota"
 
 #: src/region_names.rs:354
 msgid "Mississippi"
-msgstr ""
+msgstr "Mississippi"
 
 #: src/region_names.rs:355
 msgid "Missouri"
-msgstr ""
+msgstr "Missouri"
 
 #: src/region_names.rs:356
 msgid "Montana"
-msgstr ""
+msgstr "Montana"
 
 #: src/region_names.rs:357
 msgid "Nebraska"
-msgstr ""
+msgstr "Nebraska"
 
 #: src/region_names.rs:358
 msgid "Nevada"
-msgstr ""
+msgstr "Nevada"
 
 #: src/region_names.rs:359
 msgid "New Hampshire"
-msgstr ""
+msgstr "New Hampshire"
 
 #: src/region_names.rs:360
 msgid "New Jersey"
-msgstr ""
+msgstr "New Jersey"
 
 #: src/region_names.rs:361
-#, fuzzy
 msgid "New Mexico"
-msgstr "Messico"
+msgstr "New Mexico"
 
 #: src/region_names.rs:362
 msgid "New York"
-msgstr ""
+msgstr "New York"
 
 #: src/region_names.rs:363
-#, fuzzy
 msgid "North Carolina"
-msgstr "Macedonia del Nord"
+msgstr "North Carolina"
 
 #: src/region_names.rs:364
-#, fuzzy
 msgid "North Dakota"
-msgstr "Corea del Nord"
+msgstr "North Dakota"
 
 #: src/region_names.rs:365
 msgid "Ohio"
-msgstr ""
+msgstr "Ohio"
 
 #: src/region_names.rs:366
 msgid "Oklahoma"
-msgstr ""
+msgstr "Oklahoma"
 
 #: src/region_names.rs:367
 msgid "Oregon"
-msgstr ""
+msgstr "Oregon"
 
 #: src/region_names.rs:368
 msgid "Pennsylvania"
-msgstr ""
+msgstr "Pennsylvania"
 
 #: src/region_names.rs:369
 msgid "Rhode Island"
-msgstr ""
+msgstr "Rhode Island"
 
 #: src/region_names.rs:370
-#, fuzzy
 msgid "South Carolina"
-msgstr "Sudafrica"
+msgstr "South Carolina"
 
 #: src/region_names.rs:371
-#, fuzzy
 msgid "South Dakota"
-msgstr "Corea del Sud"
+msgstr "South Dakota"
 
 #: src/region_names.rs:372
 msgid "Tennessee"
-msgstr ""
+msgstr "Tennessee"
 
 #: src/region_names.rs:373
 msgid "Texas"
-msgstr ""
+msgstr "Texas"
 
 #: src/region_names.rs:374
 msgid "Utah"
-msgstr ""
+msgstr "Utah"
 
 #: src/region_names.rs:375
-#, fuzzy
 msgid "Vermont"
-msgstr "Piemonte"
+msgstr "Vermont"
 
 #: src/region_names.rs:376
-#, fuzzy
 msgid "Virginia"
-msgstr "Sardegna"
+msgstr "Virginia"
 
 #: src/region_names.rs:377
 msgid "Washington"
-msgstr ""
+msgstr "Washington"
 
 #: src/region_names.rs:378
 msgid "West Virginia"
-msgstr ""
+msgstr "Virginia Occidentale"
 
 #: src/region_names.rs:379
 msgid "Wisconsin"
-msgstr ""
+msgstr "Wisconsin"
 
 #: src/region_names.rs:380
 msgid "Wyoming"
-msgstr ""
+msgstr "Wyoming"
 
 #: src/region_names.rs:384
-#, fuzzy
 msgid "Greater Poland"
-msgstr "Paesi Bassi"
+msgstr "Grande Polonia"
 
 #: src/region_names.rs:385
 msgid "Kuyavia-Pomerania"
-msgstr ""
+msgstr "Kuyavia-Pomerania"
 
 #: src/region_names.rs:386
-#, fuzzy
 msgid "Lesser Poland"
-msgstr "Polonia"
+msgstr "Piccola Polonia"
 
 #: src/region_names.rs:387
 msgid "Lower Silesia"
-msgstr ""
+msgstr "Bassa Slesia"
 
 #: src/region_names.rs:388
 msgid "Lublin"
-msgstr ""
+msgstr "Lublino"
 
 #: src/region_names.rs:389
 msgid "Lubusz"
-msgstr ""
+msgstr "Lubusz"
 
 #: src/region_names.rs:390
 msgid "Masovia"
-msgstr ""
+msgstr "Masovia"
 
 #: src/region_names.rs:391
 msgid "Opole"
-msgstr ""
+msgstr "Opole"
 
 #: src/region_names.rs:392
 msgid "Podlachia"
 msgstr ""
 
 #: src/region_names.rs:393
-#, fuzzy
 msgid "Pomerania"
-msgstr "Romania"
+msgstr "Pomerania"
 
 #: src/region_names.rs:394
 msgid "Silesia"
-msgstr ""
+msgstr "Slesia"
 
 #: src/region_names.rs:395
 msgid "Subcarpathia"
-msgstr ""
+msgstr "Subcarpazia"
 
 #: src/region_names.rs:396
 msgid "Świętokrzyskie"
-msgstr ""
+msgstr "Świętokrzyskie"
 
 #: src/region_names.rs:397
 msgid "Warmia-Masuria"
-msgstr ""
+msgstr "Warmia-Masuria"
 
 #: src/region_names.rs:398
 msgid "West Pomerania"
-msgstr ""
+msgstr "Pomerania occidentale"
 
 #: src/region_names.rs:399
 msgid "Łódź"
-msgstr ""
+msgstr "Łódź"
 
 #: src/region_names.rs:405
 msgid "Autonomous Communities"
-msgstr ""
+msgstr "Comunità autonome"
 
 #: src/region_names.rs:406
 msgid "Provinces"
-msgstr ""
+msgstr "Province"
 
 #: src/region_names.rs:407
 msgid "Regions"
-msgstr ""
+msgstr "Regioni"
 
 #: src/region_names.rs:408
 msgid "Continents"
-msgstr ""
+msgstr "Continenti"
 
 #: src/region_names.rs:409
-#, fuzzy
 msgid "Countries of Africa"
-msgstr "Sudafrica"
+msgstr "Paesi dell'Africa"
 
 #: src/region_names.rs:410
-#, fuzzy
 msgid "Countries of America"
-msgstr "America del Sud"
+msgstr "Paesi dell'America"
 
 #: src/region_names.rs:411
 msgid "Countries of Asia"
-msgstr ""
+msgstr "Paesi dell'Asia"
 
 #: src/region_names.rs:412
 msgid "Countries of Europe"
-msgstr ""
+msgstr "Paesi d'Europa"
 
 #: src/region_names.rs:413
 msgid "Countries of Oceania"
-msgstr ""
+msgstr "Paesi dell’Oceania"
 
 #: src/region_names.rs:414
 msgid "Voivodeships"
-msgstr ""
+msgstr "Voivodati"
 
 #: src/region_names.rs:415
-#, fuzzy
 msgid "States"
-msgstr "Stati Uniti"
+msgstr "Stati"
 
 #: src/region_names.rs:416
 msgid "World"
-msgstr ""
+msgstr "Mondo"
 
 #: src/map_exercise_view.rs:266
 msgid "Select"
@@ -1468,11 +1450,11 @@ msgstr "_Informazioni su Mundi"
 
 #: resources/ui/window.ui:21
 msgid "Main Menu"
-msgstr ""
+msgstr "Menù principale"
 
 #: resources/ui/window.ui:30
 msgid "Countries"
-msgstr ""
+msgstr "Paesi"
 
 #: resources/ui/map_exercise_view.ui:30
 msgid "Start Quiz"
