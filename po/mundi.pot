@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 12:16+0100\n"
+"POT-Creation-Date: 2026-03-23 15:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -445,7 +445,7 @@ msgstr ""
 msgid "Ireland"
 msgstr ""
 
-#: src/region_names.rs:138
+#: src/region_names.rs:138 src/registry.rs:135
 msgid "Italy"
 msgstr ""
 
@@ -497,7 +497,7 @@ msgstr ""
 msgid "Norway"
 msgstr ""
 
-#: src/region_names.rs:151
+#: src/region_names.rs:151 src/registry.rs:140
 msgid "Poland"
 msgstr ""
 
@@ -529,7 +529,7 @@ msgstr ""
 msgid "Slovenia"
 msgstr ""
 
-#: src/region_names.rs:159
+#: src/region_names.rs:159 src/registry.rs:145
 msgid "Spain"
 msgstr ""
 
@@ -657,7 +657,7 @@ msgstr ""
 msgid "Trinidad and Tobago"
 msgstr ""
 
-#: src/region_names.rs:194
+#: src/region_names.rs:194 src/registry.rs:150
 msgid "United States"
 msgstr ""
 
@@ -1379,6 +1379,54 @@ msgstr ""
 
 #: src/region_names.rs:399
 msgid "Łódź"
+msgstr ""
+
+#: src/registry.rs:44
+msgid "Autonomous Communities"
+msgstr ""
+
+#: src/registry.rs:51
+msgid "Provinces"
+msgstr ""
+
+#: src/registry.rs:60
+msgid "Regions"
+msgstr ""
+
+#: src/registry.rs:69
+msgid "Continents"
+msgstr ""
+
+#: src/registry.rs:76
+msgid "Countries of Africa"
+msgstr ""
+
+#: src/registry.rs:83
+msgid "Countries of America"
+msgstr ""
+
+#: src/registry.rs:90
+msgid "Countries of Asia"
+msgstr ""
+
+#: src/registry.rs:97
+msgid "Countries of Europe"
+msgstr ""
+
+#: src/registry.rs:104
+msgid "Countries of Oceania"
+msgstr ""
+
+#: src/registry.rs:113
+msgid "Voivodeships"
+msgstr ""
+
+#: src/registry.rs:121
+msgid "States"
+msgstr ""
+
+#: src/registry.rs:130
+msgid "World"
 msgstr ""
 
 #: src/map_exercise_view.rs:266

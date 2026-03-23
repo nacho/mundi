@@ -3,7 +3,7 @@
 // N_ is a no-op that marks strings for xgettext extraction (--keyword=N_).
 
 #[allow(non_snake_case)]
-const fn N_(s: &str) -> &str {
+pub const fn N_(s: &str) -> &str {
     s
 }
 
