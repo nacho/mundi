@@ -379,3 +379,22 @@ pub const US_STATES: &[(&str, &str)] = &[
     ("Wisconsin", N_("Wisconsin")),
     ("Wyoming", N_("Wyoming")),
 ];
+
+pub const POLAND_VOIVODESHIPS: &[(&str, &str)] = &[
+    ("Greater Poland", N_("Greater Poland")),
+    ("Kuyavia-Pomerania", N_("Kuyavia-Pomerania")),
+    ("Lesser Poland", N_("Lesser Poland")),
+    ("Lower Silesia", N_("Lower Silesia")),
+    ("Lublin", N_("Lublin")),
+    ("Lubusz", N_("Lubusz")),
+    ("Masovia", N_("Masovia")),
+    ("Opole", N_("Opole")),
+    ("Podlachia", N_("Podlachia")),
+    ("Pomerania", N_("Pomerania")),
+    ("Silesia", N_("Silesia")),
+    ("Subcarpathia", N_("Subcarpathia")),
+    ("Świętokrzyskie", N_("Świętokrzyskie")),
+    ("Warmia-Masuria", N_("Warmia-Masuria")),
+    ("West Pomerania", N_("West Pomerania")),
+    ("Łódź", N_("Łódź")),
+];

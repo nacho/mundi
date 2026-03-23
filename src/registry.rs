@@ -106,6 +106,14 @@ static WORLD_EXERCISES: &[MapExercise] = &[
     },
 ];
 
+static POLAND_EXERCISES: &[MapExercise] = &[MapExercise {
+    id: "voivodeships",
+    country_id: "poland",
+    title_msgid: "Voivodeships",
+    svg_resource: "/io/github/nacho/mundi/maps/poland/voivodeships.svg",
+    regions: crate::region_names::POLAND_VOIVODESHIPS,
+}];
+
 static US_EXERCISES: &[MapExercise] = &[MapExercise {
     id: "states",
     country_id: "united_states",
@@ -125,6 +133,11 @@ pub fn countries() -> &'static [Country] {
             id: "italy",
             name_msgid: "Italy",
             exercises: ITALY_EXERCISES,
+        },
+        Country {
+            id: "poland",
+            name_msgid: "Poland",
+            exercises: POLAND_EXERCISES,
         },
         Country {
             id: "spain",
