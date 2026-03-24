@@ -6,3 +6,4 @@ builddir/
 build/
 data/gschemas.compiled
 *~
+messages.mo
