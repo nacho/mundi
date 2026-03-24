@@ -20,6 +20,7 @@ pub struct Region {
     pub path: gtk::gsk::Path,
     pub bounds: gtk::graphene::Rect,
     pub state: RegionState,
+    pub is_river: bool,
 }
 
 mod imp {
@@ -156,13 +157,14 @@ mod imp {
             snapshot.scale(scale, scale);
 
             let stroke = gtk::gsk::Stroke::new(1.5 / scale);
+            let river_stroke = gtk::gsk::Stroke::new(3.0 / scale);
             let colors = self.cached_colors.borrow();
             let [c_normal, c_highlight, c_correct, c_wrong, c_border] = *colors;
 
             let regions = self.regions.borrow();
             for region in regions.iter() {
                 if region.state == RegionState::Decorative {
-                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::EvenOdd, &c_border);
+                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_border);
                     continue;
                 }
                 let fill_color = match region.state {
@@ -172,41 +174,56 @@ mod imp {
                     RegionState::Wrong => c_wrong,
                     RegionState::Decorative => unreachable!(),
                 };
-                snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
-                snapshot.append_stroke(&region.path, &stroke, &c_border);
+                if region.is_river {
+                    snapshot.append_stroke(&region.path, &river_stroke, &fill_color);
+                } else {
+                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
+                    snapshot.append_stroke(&region.path, &stroke, &c_border);
+                }
             }
-            // Draw markers for tiny regions on top of everything
+            // Draw markers for tiny regions and rivers on top of everything
             for region in regions.iter() {
                 if region.state == RegionState::Decorative {
                     continue;
                 }
                 let b = &region.bounds;
-                if b.width() < 8.0 || b.height() < 8.0 {
-                    let fill_color = match region.state {
-                        RegionState::Normal => c_normal,
-                        RegionState::Highlighted => c_highlight,
-                        RegionState::Correct => c_correct,
-                        RegionState::Wrong => c_wrong,
-                        RegionState::Decorative => unreachable!(),
-                    };
-                    let cx = b.x() + b.width() / 2.0;
-                    let cy = b.y() + b.height() / 2.0;
-                    let r = 5.0 / scale;
-                    let marker = gtk::gsk::Path::parse(&format!(
-                        "M {},{} L {},{} L {},{} L {},{} Z",
-                        cx - r,
-                        cy - r,
-                        cx + r,
-                        cy - r,
-                        cx + r,
-                        cy + r,
-                        cx - r,
-                        cy + r
-                    ))
-                    .unwrap();
-                    snapshot.append_fill(&marker, gtk::gsk::FillRule::Winding, &fill_color);
-                    snapshot.append_stroke(&marker, &stroke, &c_border);
+                let is_small = b.width() < 8.0 || b.height() < 8.0;
+                if !is_small && !region.is_river {
+                    continue;
                 }
+                let fill_color = match region.state {
+                    RegionState::Normal => c_normal,
+                    RegionState::Highlighted => c_highlight,
+                    RegionState::Correct => c_correct,
+                    RegionState::Wrong => c_wrong,
+                    RegionState::Decorative => unreachable!(),
+                };
+                let (cx, cy) = if region.is_river {
+                    let measure = gtk::gsk::PathMeasure::new(&region.path);
+                    if let Some(pp) = measure.point(measure.length() / 2.0) {
+                        let pos = pp.position(&region.path);
+                        (pos.x(), pos.y())
+                    } else {
+                        (b.x() + b.width() / 2.0, b.y() + b.height() / 2.0)
+                    }
+                } else {
+                    (b.x() + b.width() / 2.0, b.y() + b.height() / 2.0)
+                };
+                let r = 5.0 / scale;
+                let marker = gtk::gsk::Path::parse(&format!(
+                    "M {},{} L {},{} L {},{} L {},{} Z",
+                    cx - r,
+                    cy - r,
+                    cx + r,
+                    cy - r,
+                    cx + r,
+                    cy + r,
+                    cx - r,
+                    cy + r
+                ))
+                .unwrap();
+                snapshot.append_fill(&marker, gtk::gsk::FillRule::Winding, &fill_color);
+                snapshot.append_stroke(&marker, &stroke, &c_border);
             }
 
             snapshot.restore();
@@ -289,16 +306,19 @@ impl MapWidget {
                                 let bounds = path
                                     .bounds()
                                     .unwrap_or(gtk::graphene::Rect::new(0.0, 0.0, 0.0, 0.0));
-                                let state = if id.starts_with("__") {
-                                    RegionState::Decorative
+                                let (id, state, is_river) = if id.starts_with("__") {
+                                    (id, RegionState::Decorative, false)
+                                } else if let Some(name) = id.strip_prefix("_river_") {
+                                    (name.to_string(), RegionState::Normal, true)
                                 } else {
-                                    RegionState::Normal
+                                    (id, RegionState::Normal, false)
                                 };
                                 regions.push(Region {
                                     id,
                                     path,
                                     bounds,
                                     state,
+                                    is_river,
                                 });
                             }
                         }
@@ -388,12 +408,30 @@ impl MapWidget {
         let (svg_x, svg_y) = self.transform_to_svg(x, y);
         let point = gtk::graphene::Point::new(svg_x, svg_y);
         let regions = self.imp().regions.borrow();
-        // Check tiny regions first (they'd be hidden behind larger neighbours)
+
+        // Check rivers first (stroke-based hit test)
+        let river_threshold = 5.0_f32;
+        let mut best_river: Option<(f32, &Region)> = None;
+        for region in regions.iter() {
+            if !region.is_river || region.state == RegionState::Decorative {
+                continue;
+            }
+            if let Some((_, dist)) = region.path.closest_point(&point, river_threshold) {
+                if best_river.is_none() || dist < best_river.unwrap().0 {
+                    best_river = Some((dist, region));
+                }
+            }
+        }
+        if let Some((_, r)) = best_river {
+            return Some(r.id.clone());
+        }
+
+        // Check tiny regions (they'd be hidden behind larger neighbours)
         let min_size = 8.0_f32;
         let tolerance = 10.0_f32;
         let mut best: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if region.state == RegionState::Decorative {
+            if region.state == RegionState::Decorative || region.is_river {
                 continue;
             }
             let b = &region.bounds;
@@ -411,7 +449,7 @@ impl MapWidget {
         }
         let mut smallest: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if region.state == RegionState::Decorative {
+            if region.state == RegionState::Decorative || region.is_river {
                 continue;
             }
             if region.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
@@ -494,7 +532,9 @@ impl MapWidget {
     pub fn reset_all_states(&self) {
         let mut regions = self.imp().regions.borrow_mut();
         for region in regions.iter_mut() {
-            region.state = RegionState::Normal;
+            if region.state != RegionState::Decorative {
+                region.state = RegionState::Normal;
+            }
         }
         drop(regions);
         self.queue_draw();

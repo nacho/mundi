@@ -421,3 +421,26 @@ pub const PORTUGAL_DISTRICTS: &[(&str, &str)] = &[
     ("Viseu", N_("Viseu")),
     ("Évora", N_("Évora")),
 ];
+
+pub const SPAIN_RIVERS: &[(&str, &str)] = &[
+    ("Bidasoa", N_("Bidasoa")),
+    ("Duero", N_("Duero")),
+    ("Ebro", N_("Ebro")),
+    ("Genil", N_("Genil")),
+    ("Guadalete", N_("Guadalete")),
+    ("Guadalquivir", N_("Guadalquivir")),
+    ("Guadiana", N_("Guadiana")),
+    ("Jarama", N_("Jarama")),
+    ("Júcar", N_("Júcar")),
+    ("Llobregat", N_("Llobregat")),
+    ("Miño", N_("Miño")),
+    ("Nalón", N_("Nalón")),
+    ("Navia", N_("Navia")),
+    ("Nervión", N_("Nervión")),
+    ("Pisuerga", N_("Pisuerga")),
+    ("Segre", N_("Segre")),
+    ("Segura", N_("Segura")),
+    ("Tajo", N_("Tajo")),
+    ("Ter", N_("Ter")),
+    ("Turia", N_("Turia")),
+];

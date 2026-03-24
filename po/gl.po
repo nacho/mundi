@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-24 10:51+0100\n"
+"POT-Creation-Date: 2026-03-24 12:34+0100\n"
 "PO-Revision-Date: 2026-03-23 15:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
@@ -444,7 +444,7 @@ msgstr "Islandia"
 msgid "Ireland"
 msgstr "Irlanda"
 
-#: src/region_names.rs:138 src/registry.rs:143
+#: src/region_names.rs:138 src/registry.rs:150
 msgid "Italy"
 msgstr "Italia"
 
@@ -496,11 +496,11 @@ msgstr "Macedonia do Norte"
 msgid "Norway"
 msgstr "Noruega"
 
-#: src/region_names.rs:151 src/registry.rs:148
+#: src/region_names.rs:151 src/registry.rs:155
 msgid "Poland"
 msgstr "Polonia"
 
-#: src/region_names.rs:152 src/registry.rs:153
+#: src/region_names.rs:152 src/registry.rs:160
 msgid "Portugal"
 msgstr "Portugal"
 
@@ -528,7 +528,7 @@ msgstr "Eslovaquia"
 msgid "Slovenia"
 msgstr "Eslovenia"
 
-#: src/region_names.rs:159 src/registry.rs:158
+#: src/region_names.rs:159 src/registry.rs:165
 msgid "Spain"
 msgstr "España"
 
@@ -656,7 +656,7 @@ msgstr "Surinam"
 msgid "Trinidad and Tobago"
 msgstr "Trindade e Tobago"
 
-#: src/region_names.rs:194 src/registry.rs:163
+#: src/region_names.rs:194 src/registry.rs:170
 msgid "United States"
 msgstr "Estados Unidos"
 
@@ -1460,6 +1460,86 @@ msgstr "Viseu"
 msgid "Évora"
 msgstr "Évora"
 
+#: src/region_names.rs:426
+msgid "Bidasoa"
+msgstr "Bidasoa"
+
+#: src/region_names.rs:427
+msgid "Duero"
+msgstr "Douro"
+
+#: src/region_names.rs:428
+msgid "Ebro"
+msgstr "Ebro"
+
+#: src/region_names.rs:429
+msgid "Genil"
+msgstr "Xenil"
+
+#: src/region_names.rs:430
+msgid "Guadalete"
+msgstr "Guadalete"
+
+#: src/region_names.rs:431
+msgid "Guadalquivir"
+msgstr "Guadalquivir"
+
+#: src/region_names.rs:432
+msgid "Guadiana"
+msgstr "Guadiana"
+
+#: src/region_names.rs:433
+msgid "Jarama"
+msgstr "Jarama"
+
+#: src/region_names.rs:434
+msgid "Júcar"
+msgstr "Xúcar"
+
+#: src/region_names.rs:435
+msgid "Llobregat"
+msgstr "Llobregat"
+
+#: src/region_names.rs:436
+msgid "Miño"
+msgstr "Miño"
+
+#: src/region_names.rs:437
+msgid "Nalón"
+msgstr "Nalón"
+
+#: src/region_names.rs:438
+msgid "Navia"
+msgstr "Navia"
+
+#: src/region_names.rs:439
+msgid "Nervión"
+msgstr "Nervión"
+
+#: src/region_names.rs:440
+msgid "Pisuerga"
+msgstr "Pisuerga"
+
+#: src/region_names.rs:441
+msgid "Segre"
+msgstr "Segre"
+
+#: src/region_names.rs:442
+msgid "Segura"
+msgstr "Segura"
+
+#: src/region_names.rs:443
+msgid "Tajo"
+msgstr "Texo"
+
+#: src/region_names.rs:444
+msgid "Ter"
+msgstr "Ter"
+
+#: src/region_names.rs:445
+msgid "Turia"
+msgstr "Turia"
+
 #: src/registry.rs:44
 msgid "Autonomous Communities"
 msgstr "Comunidades Autónomas"
@@ -1468,47 +1548,51 @@ msgstr "Comunidades Autónomas"
 msgid "Provinces"
 msgstr "Provincias"
 
-#: src/registry.rs:60
+#: src/registry.rs:58
+msgid "Rivers"
+msgstr "Ríos"
+
+#: src/registry.rs:67
 msgid "Regions"
 msgstr "Rexións"
 
-#: src/registry.rs:69
+#: src/registry.rs:76
 msgid "Continents"
 msgstr "Continentes"
 
-#: src/registry.rs:76
+#: src/registry.rs:83
 msgid "Countries of Africa"
 msgstr "Países de África"
 
-#: src/registry.rs:83
+#: src/registry.rs:90
 msgid "Countries of America"
 msgstr "Países de América"
 
-#: src/registry.rs:90
+#: src/registry.rs:97
 msgid "Countries of Asia"
 msgstr "Países de Asia"
 
-#: src/registry.rs:97
+#: src/registry.rs:104
 msgid "Countries of Europe"
 msgstr "Países de Europa"
 
-#: src/registry.rs:104
+#: src/registry.rs:111
 msgid "Countries of Oceania"
 msgstr "Países de Oceanía"
 
-#: src/registry.rs:113
+#: src/registry.rs:120
 msgid "Districts"
 msgstr "Distritos"
 
-#: src/registry.rs:121
+#: src/registry.rs:128
 msgid "Voivodeships"
 msgstr "Voivodatos"
 
-#: src/registry.rs:129
+#: src/registry.rs:136
 msgid "States"
 msgstr "Estados"
 
-#: src/registry.rs:138
+#: src/registry.rs:145
 msgid "World"
 msgstr "Mundo"
 

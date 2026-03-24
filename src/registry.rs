@@ -52,6 +52,13 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/spain/provinces.svg",
         regions: crate::region_names::SPAIN_PROVINCES,
     },
+    MapExercise {
+        id: "rivers",
+        country_id: "spain",
+        title_msgid: N_("Rivers"),
+        svg_resource: "/io/github/nacho/mundi/maps/spain/rivers.svg",
+        regions: crate::region_names::SPAIN_RIVERS,
+    },
 ];
 
 static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
