@@ -398,3 +398,26 @@ pub const POLAND_VOIVODESHIPS: &[(&str, &str)] = &[
     ("West Pomerania", N_("West Pomerania")),
     ("Łódź", N_("Łódź")),
 ];
+
+pub const PORTUGAL_DISTRICTS: &[(&str, &str)] = &[
+    ("Aveiro", N_("Aveiro")),
+    ("Azores", N_("Azores")),
+    ("Beja", N_("Beja")),
+    ("Braga", N_("Braga")),
+    ("Bragança", N_("Bragança")),
+    ("Castelo Branco", N_("Castelo Branco")),
+    ("Coimbra", N_("Coimbra")),
+    ("Faro", N_("Faro")),
+    ("Guarda", N_("Guarda")),
+    ("Leiria", N_("Leiria")),
+    ("Lisboa", N_("Lisboa")),
+    ("Madeira", N_("Madeira")),
+    ("Portalegre", N_("Portalegre")),
+    ("Porto", N_("Porto")),
+    ("Santarém", N_("Santarém")),
+    ("Setúbal", N_("Setúbal")),
+    ("Viana do Castelo", N_("Viana do Castelo")),
+    ("Vila Real", N_("Vila Real")),
+    ("Viseu", N_("Viseu")),
+    ("Évora", N_("Évora")),
+];

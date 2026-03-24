@@ -10,6 +10,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania
 - **Italy** — Regions
 - **Poland** — Voivodeships
+- **Portugal** — Districts
 - **Spain** — Autonomous Communities, Provinces
 - **United States** — States
 
@@ -36,6 +37,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - Spain: [Mapa de España - Provincias.svg](https://commons.wikimedia.org/wiki/File:Mapa_de_Espa%C3%B1a_-_Provincias.svg) (CC BY-SA 4.0)
 - Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use)
 - Poland: [simplemaps.com](https://simplemaps.com/svg/country/pl) (free for commercial and personal use)
+- Portugal: [simplemaps.com](https://simplemaps.com/svg/country/pt) (free for commercial and personal use)
 - United States: [simplemaps.com](https://simplemaps.com/svg/country/us) (free for commercial and personal use)
 
 ## License
