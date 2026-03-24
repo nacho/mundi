@@ -12,6 +12,7 @@ pub enum RegionState {
     Highlighted,
     Correct,
     Wrong,
+    Decorative,
 }
 
 pub struct Region {
@@ -160,17 +161,25 @@ mod imp {
 
             let regions = self.regions.borrow();
             for region in regions.iter() {
+                if region.state == RegionState::Decorative {
+                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::EvenOdd, &c_border);
+                    continue;
+                }
                 let fill_color = match region.state {
                     RegionState::Normal => c_normal,
                     RegionState::Highlighted => c_highlight,
                     RegionState::Correct => c_correct,
                     RegionState::Wrong => c_wrong,
+                    RegionState::Decorative => unreachable!(),
                 };
                 snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
                 snapshot.append_stroke(&region.path, &stroke, &c_border);
             }
             // Draw markers for tiny regions on top of everything
             for region in regions.iter() {
+                if region.state == RegionState::Decorative {
+                    continue;
+                }
                 let b = &region.bounds;
                 if b.width() < 8.0 || b.height() < 8.0 {
                     let fill_color = match region.state {
@@ -178,6 +187,7 @@ mod imp {
                         RegionState::Highlighted => c_highlight,
                         RegionState::Correct => c_correct,
                         RegionState::Wrong => c_wrong,
+                        RegionState::Decorative => unreachable!(),
                     };
                     let cx = b.x() + b.width() / 2.0;
                     let cy = b.y() + b.height() / 2.0;
@@ -279,11 +289,16 @@ impl MapWidget {
                                 let bounds = path
                                     .bounds()
                                     .unwrap_or(gtk::graphene::Rect::new(0.0, 0.0, 0.0, 0.0));
+                                let state = if id.starts_with("__") {
+                                    RegionState::Decorative
+                                } else {
+                                    RegionState::Normal
+                                };
                                 regions.push(Region {
                                     id,
                                     path,
                                     bounds,
-                                    state: RegionState::Normal,
+                                    state,
                                 });
                             }
                         }
@@ -378,6 +393,9 @@ impl MapWidget {
         let tolerance = 10.0_f32;
         let mut best: Option<(f32, &Region)> = None;
         for region in regions.iter() {
+            if region.state == RegionState::Decorative {
+                continue;
+            }
             let b = &region.bounds;
             if b.width() < min_size || b.height() < min_size {
                 let cx = b.x() + b.width() / 2.0;
@@ -393,6 +411,9 @@ impl MapWidget {
         }
         let mut smallest: Option<(f32, &Region)> = None;
         for region in regions.iter() {
+            if region.state == RegionState::Decorative {
+                continue;
+            }
             if region.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
                 let area = region.bounds.width() * region.bounds.height();
                 if smallest.is_none() || area < smallest.unwrap().0 {
@@ -414,14 +435,15 @@ impl MapWidget {
         let mut regions = self.imp().regions.borrow_mut();
         let mut changed = false;
         for region in regions.iter_mut() {
-            let new_state =
-                if region.state == RegionState::Correct || region.state == RegionState::Wrong {
-                    region.state
-                } else if hit.as_deref() == Some(&region.id) {
-                    RegionState::Highlighted
-                } else {
-                    RegionState::Normal
-                };
+            let new_state = if region.state == RegionState::Decorative {
+                RegionState::Decorative
+            } else if region.state == RegionState::Correct || region.state == RegionState::Wrong {
+                region.state
+            } else if hit.as_deref() == Some(&region.id) {
+                RegionState::Highlighted
+            } else {
+                RegionState::Normal
+            };
             if new_state != region.state {
                 region.state = new_state;
                 changed = true;
