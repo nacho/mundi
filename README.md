@@ -11,7 +11,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **Italy** — Regions
 - **Poland** — Voivodeships
 - **Portugal** — Districts
-- **Spain** — Autonomous Communities, Provinces, Rivers
+- **Spain** — Autonomous Communities, Provinces, Rivers; Galicia: Provinces
 - **United States** — States
 
 ## How to Play

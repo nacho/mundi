@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-24 12:34+0100\n"
+"POT-Creation-Date: 2026-03-24 15:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/map_exercise_view.rs:266
+msgid "Select"
+msgstr ""
+
+#: src/map_exercise_view.rs:269
+msgid "Attempts remaining"
+msgstr ""
+
+#: src/map_exercise_view.rs:308
+msgid "Score"
+msgstr ""
+
+#: src/map_exercise_view.rs:313
+msgid "Time"
+msgstr ""
 
 #: src/region_names.rs:11
 msgid "Abruzzo"
@@ -137,7 +153,7 @@ msgstr ""
 msgid "Extremadura"
 msgstr ""
 
-#: src/region_names.rs:44
+#: src/region_names.rs:44 src/registry.rs:72
 msgid "Galicia"
 msgstr ""
 
@@ -165,7 +181,7 @@ msgstr ""
 msgid "Valencia"
 msgstr ""
 
-#: src/region_names.rs:54
+#: src/region_names.rs:54 src/region_names.rs:449
 msgid "A Coruña"
 msgstr ""
 
@@ -257,7 +273,7 @@ msgstr ""
 msgid "Lleida"
 msgstr ""
 
-#: src/region_names.rs:81
+#: src/region_names.rs:81 src/region_names.rs:450
 msgid "Lugo"
 msgstr ""
 
@@ -265,7 +281,7 @@ msgstr ""
 msgid "Málaga"
 msgstr ""
 
-#: src/region_names.rs:86
+#: src/region_names.rs:86 src/region_names.rs:451
 msgid "Ourense"
 msgstr ""
 
@@ -273,7 +289,7 @@ msgstr ""
 msgid "Palencia"
 msgstr ""
 
-#: src/region_names.rs:88
+#: src/region_names.rs:88 src/region_names.rs:452
 msgid "Pontevedra"
 msgstr ""
 
@@ -445,7 +461,7 @@ msgstr ""
 msgid "Ireland"
 msgstr ""
 
-#: src/region_names.rs:138 src/registry.rs:150
+#: src/region_names.rs:138 src/registry.rs:172
 msgid "Italy"
 msgstr ""
 
@@ -497,11 +513,11 @@ msgstr ""
 msgid "Norway"
 msgstr ""
 
-#: src/region_names.rs:151 src/registry.rs:155
+#: src/region_names.rs:151 src/registry.rs:177
 msgid "Poland"
 msgstr ""
 
-#: src/region_names.rs:152 src/registry.rs:160
+#: src/region_names.rs:152 src/registry.rs:182
 msgid "Portugal"
 msgstr ""
 
@@ -529,7 +545,7 @@ msgstr ""
 msgid "Slovenia"
 msgstr ""
 
-#: src/region_names.rs:159 src/registry.rs:165
+#: src/region_names.rs:159 src/registry.rs:187
 msgid "Spain"
 msgstr ""
 
@@ -657,7 +673,7 @@ msgstr ""
 msgid "Trinidad and Tobago"
 msgstr ""
 
-#: src/region_names.rs:194 src/registry.rs:170
+#: src/region_names.rs:194 src/registry.rs:192
 msgid "United States"
 msgstr ""
 
@@ -1541,94 +1557,58 @@ msgstr ""
 msgid "Turia"
 msgstr ""
 
-#: src/registry.rs:44
+#: src/registry.rs:45
 msgid "Autonomous Communities"
 msgstr ""
 
-#: src/registry.rs:51
+#: src/registry.rs:53 src/registry.rs:69
 msgid "Provinces"
 msgstr ""
 
-#: src/registry.rs:58
+#: src/registry.rs:61
 msgid "Rivers"
 msgstr ""
 
-#: src/registry.rs:67
+#: src/registry.rs:79
 msgid "Regions"
 msgstr ""
 
-#: src/registry.rs:76
+#: src/registry.rs:89
 msgid "Continents"
 msgstr ""
 
-#: src/registry.rs:83
+#: src/registry.rs:97
 msgid "Countries of Africa"
 msgstr ""
 
-#: src/registry.rs:90
+#: src/registry.rs:105
 msgid "Countries of America"
 msgstr ""
 
-#: src/registry.rs:97
+#: src/registry.rs:113
 msgid "Countries of Asia"
 msgstr ""
 
-#: src/registry.rs:104
+#: src/registry.rs:121
 msgid "Countries of Europe"
 msgstr ""
 
-#: src/registry.rs:111
+#: src/registry.rs:129
 msgid "Countries of Oceania"
 msgstr ""
 
-#: src/registry.rs:120
+#: src/registry.rs:139
 msgid "Districts"
 msgstr ""
 
-#: src/registry.rs:128
+#: src/registry.rs:148
 msgid "Voivodeships"
 msgstr ""
 
-#: src/registry.rs:136
+#: src/registry.rs:157
 msgid "States"
 msgstr ""
 
-#: src/registry.rs:145
+#: src/registry.rs:167
 msgid "World"
-msgstr ""
-
-#: src/map_exercise_view.rs:266
-msgid "Select"
-msgstr ""
-
-#: src/map_exercise_view.rs:269
-msgid "Attempts remaining"
-msgstr ""
-
-#: src/map_exercise_view.rs:308
-msgid "Score"
-msgstr ""
-
-#: src/map_exercise_view.rs:313
-msgid "Time"
-msgstr ""
-
-#: resources/gtk/menus.ui:6
-msgid "_About Mundi"
-msgstr ""
-
-#: resources/ui/window.ui:21
-msgid "Main Menu"
-msgstr ""
-
-#: resources/ui/window.ui:30
-msgid "Countries"
-msgstr ""
-
-#: resources/ui/map_exercise_view.ui:30
-msgid "Start Quiz"
-msgstr ""
-
-#: resources/ui/map_exercise_view.ui:134
-msgid "Retry"
 msgstr ""

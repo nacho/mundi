@@ -444,3 +444,10 @@ pub const SPAIN_RIVERS: &[(&str, &str)] = &[
     ("Ter", N_("Ter")),
     ("Turia", N_("Turia")),
 ];
+
+pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
+    ("A Coruña", N_("A Coruña")),
+    ("Lugo", N_("Lugo")),
+    ("Ourense", N_("Ourense")),
+    ("Pontevedra", N_("Pontevedra")),
+];

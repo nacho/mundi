@@ -1,3 +1,4 @@
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use libadwaita as adw;
@@ -101,9 +102,20 @@ impl MundiWindow {
     }
 
     fn build_country_page(country: &registry::Country) -> adw::NavigationPage {
-        let group = adw::PreferencesGroup::new();
+        let prefs_page = adw::PreferencesPage::new();
+        let mut current_group: Option<Option<&str>> = None;
+        let mut group = adw::PreferencesGroup::new();
 
         for exercise in country.exercises {
+            if current_group != Some(exercise.group) {
+                current_group = Some(exercise.group);
+                group = adw::PreferencesGroup::new();
+                if let Some(g) = exercise.group {
+                    group.set_title(&gettext(g));
+                }
+                prefs_page.add(&group);
+            }
+
             let row = adw::ActionRow::builder()
                 .title(exercise.title())
                 .activatable(true)
@@ -122,9 +134,6 @@ impl MundiWindow {
 
             group.add(&row);
         }
-
-        let prefs_page = adw::PreferencesPage::new();
-        prefs_page.add(&group);
 
         let toolbar = adw::ToolbarView::new();
         toolbar.add_top_bar(&adw::HeaderBar::new());
