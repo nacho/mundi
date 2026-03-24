@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 15:28+0100\n"
+"POT-Creation-Date: 2026-03-24 10:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -445,7 +445,7 @@ msgstr ""
 msgid "Ireland"
 msgstr ""
 
-#: src/region_names.rs:138 src/registry.rs:135
+#: src/region_names.rs:138 src/registry.rs:143
 msgid "Italy"
 msgstr ""
 
@@ -497,11 +497,11 @@ msgstr ""
 msgid "Norway"
 msgstr ""
 
-#: src/region_names.rs:151 src/registry.rs:140
+#: src/region_names.rs:151 src/registry.rs:148
 msgid "Poland"
 msgstr ""
 
-#: src/region_names.rs:152
+#: src/region_names.rs:152 src/registry.rs:153
 msgid "Portugal"
 msgstr ""
 
@@ -529,7 +529,7 @@ msgstr ""
 msgid "Slovenia"
 msgstr ""
 
-#: src/region_names.rs:159 src/registry.rs:145
+#: src/region_names.rs:159 src/registry.rs:158
 msgid "Spain"
 msgstr ""
 
@@ -657,7 +657,7 @@ msgstr ""
 msgid "Trinidad and Tobago"
 msgstr ""
 
-#: src/region_names.rs:194 src/registry.rs:150
+#: src/region_names.rs:194 src/registry.rs:163
 msgid "United States"
 msgstr ""
 
@@ -1381,6 +1381,86 @@ msgstr ""
 msgid "Łódź"
 msgstr ""
 
+#: src/region_names.rs:403
+msgid "Aveiro"
+msgstr ""
+
+#: src/region_names.rs:404
+msgid "Azores"
+msgstr ""
+
+#: src/region_names.rs:405
+msgid "Beja"
+msgstr ""
+
+#: src/region_names.rs:406
+msgid "Braga"
+msgstr ""
+
+#: src/region_names.rs:407
+msgid "Bragança"
+msgstr ""
+
+#: src/region_names.rs:408
+msgid "Castelo Branco"
+msgstr ""
+
+#: src/region_names.rs:409
+msgid "Coimbra"
+msgstr ""
+
+#: src/region_names.rs:410
+msgid "Faro"
+msgstr ""
+
+#: src/region_names.rs:411
+msgid "Guarda"
+msgstr ""
+
+#: src/region_names.rs:412
+msgid "Leiria"
+msgstr ""
+
+#: src/region_names.rs:413
+msgid "Lisboa"
+msgstr ""
+
+#: src/region_names.rs:414
+msgid "Madeira"
+msgstr ""
+
+#: src/region_names.rs:415
+msgid "Portalegre"
+msgstr ""
+
+#: src/region_names.rs:416
+msgid "Porto"
+msgstr ""
+
+#: src/region_names.rs:417
+msgid "Santarém"
+msgstr ""
+
+#: src/region_names.rs:418
+msgid "Setúbal"
+msgstr ""
+
+#: src/region_names.rs:419
+msgid "Viana do Castelo"
+msgstr ""
+
+#: src/region_names.rs:420
+msgid "Vila Real"
+msgstr ""
+
+#: src/region_names.rs:421
+msgid "Viseu"
+msgstr ""
+
+#: src/region_names.rs:422
+msgid "Évora"
+msgstr ""
+
 #: src/registry.rs:44
 msgid "Autonomous Communities"
 msgstr ""
@@ -1418,14 +1498,18 @@ msgid "Countries of Oceania"
 msgstr ""
 
 #: src/registry.rs:113
-msgid "Voivodeships"
+msgid "Districts"
 msgstr ""
 
 #: src/registry.rs:121
+msgid "Voivodeships"
+msgstr ""
+
+#: src/registry.rs:129
 msgid "States"
 msgstr ""
 
-#: src/registry.rs:130
+#: src/registry.rs:138
 msgid "World"
 msgstr ""
 

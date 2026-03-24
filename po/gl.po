@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 15:24+0100\n"
+"POT-Creation-Date: 2026-03-24 10:51+0100\n"
 "PO-Revision-Date: 2026-03-23 15:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
@@ -444,7 +444,7 @@ msgstr "Islandia"
 msgid "Ireland"
 msgstr "Irlanda"
 
-#: src/region_names.rs:138
+#: src/region_names.rs:138 src/registry.rs:143
 msgid "Italy"
 msgstr "Italia"
 
@@ -496,11 +496,11 @@ msgstr "Macedonia do Norte"
 msgid "Norway"
 msgstr "Noruega"
 
-#: src/region_names.rs:151
+#: src/region_names.rs:151 src/registry.rs:148
 msgid "Poland"
 msgstr "Polonia"
 
-#: src/region_names.rs:152
+#: src/region_names.rs:152 src/registry.rs:153
 msgid "Portugal"
 msgstr "Portugal"
 
@@ -528,7 +528,7 @@ msgstr "Eslovaquia"
 msgid "Slovenia"
 msgstr "Eslovenia"
 
-#: src/region_names.rs:159
+#: src/region_names.rs:159 src/registry.rs:158
 msgid "Spain"
 msgstr "España"
 
@@ -656,7 +656,7 @@ msgstr "Surinam"
 msgid "Trinidad and Tobago"
 msgstr "Trindade e Tobago"
 
-#: src/region_names.rs:194
+#: src/region_names.rs:194 src/registry.rs:163
 msgid "United States"
 msgstr "Estados Unidos"
 
@@ -1380,51 +1380,135 @@ msgstr "Pomerania Occidental"
 msgid "Łódź"
 msgstr "Łódź"
 
+#: src/region_names.rs:403
+msgid "Aveiro"
+msgstr "Aveiro"
+
+#: src/region_names.rs:404
+msgid "Azores"
+msgstr "Azores"
+
 #: src/region_names.rs:405
+msgid "Beja"
+msgstr "Beja"
+
+#: src/region_names.rs:406
+msgid "Braga"
+msgstr "Braga"
+
+#: src/region_names.rs:407
+msgid "Bragança"
+msgstr "Bragança"
+
+#: src/region_names.rs:408
+msgid "Castelo Branco"
+msgstr "Castelo Branco"
+
+#: src/region_names.rs:409
+msgid "Coimbra"
+msgstr "Coimbra"
+
+#: src/region_names.rs:410
+msgid "Faro"
+msgstr "Faro"
+
+#: src/region_names.rs:411
+msgid "Guarda"
+msgstr "Guarda"
+
+#: src/region_names.rs:412
+msgid "Leiria"
+msgstr "Leiria"
+
+#: src/region_names.rs:413
+msgid "Lisboa"
+msgstr "Lisboa"
+
+#: src/region_names.rs:414
+msgid "Madeira"
+msgstr "Madeira"
+
+#: src/region_names.rs:415
+msgid "Portalegre"
+msgstr "Portalegre"
+
+#: src/region_names.rs:416
+msgid "Porto"
+msgstr "Porto"
+
+#: src/region_names.rs:417
+msgid "Santarém"
+msgstr "Santarém"
+
+#: src/region_names.rs:418
+msgid "Setúbal"
+msgstr "Setúbal"
+
+#: src/region_names.rs:419
+msgid "Viana do Castelo"
+msgstr "Viana do Castelo"
+
+#: src/region_names.rs:420
+msgid "Vila Real"
+msgstr "Vila Real"
+
+#: src/region_names.rs:421
+msgid "Viseu"
+msgstr "Viseu"
+
+#: src/region_names.rs:422
+msgid "Évora"
+msgstr "Évora"
+
+#: src/registry.rs:44
 msgid "Autonomous Communities"
 msgstr "Comunidades Autónomas"
 
-#: src/region_names.rs:406
+#: src/registry.rs:51
 msgid "Provinces"
 msgstr "Provincias"
 
-#: src/region_names.rs:407
+#: src/registry.rs:60
 msgid "Regions"
 msgstr "Rexións"
 
-#: src/region_names.rs:408
+#: src/registry.rs:69
 msgid "Continents"
 msgstr "Continentes"
 
-#: src/region_names.rs:409
+#: src/registry.rs:76
 msgid "Countries of Africa"
 msgstr "Países de África"
 
-#: src/region_names.rs:410
+#: src/registry.rs:83
 msgid "Countries of America"
 msgstr "Países de América"
 
-#: src/region_names.rs:411
+#: src/registry.rs:90
 msgid "Countries of Asia"
 msgstr "Países de Asia"
 
-#: src/region_names.rs:412
+#: src/registry.rs:97
 msgid "Countries of Europe"
 msgstr "Países de Europa"
 
-#: src/region_names.rs:413
+#: src/registry.rs:104
 msgid "Countries of Oceania"
 msgstr "Países de Oceanía"
 
-#: src/region_names.rs:414
+#: src/registry.rs:113
+msgid "Districts"
+msgstr "Distritos"
+
+#: src/registry.rs:121
 msgid "Voivodeships"
 msgstr "Voivodatos"
 
-#: src/region_names.rs:415
+#: src/registry.rs:129
 msgid "States"
 msgstr "Estados"
 
-#: src/region_names.rs:416
+#: src/registry.rs:138
 msgid "World"
 msgstr "Mundo"
 
