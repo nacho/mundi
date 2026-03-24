@@ -1274,7 +1274,7 @@ msgstr "Rhode Island"
 
 #: src/region_names.rs:370
 msgid "South Carolina"
-msgstr "South Carolina"
+msgstr "Carolina del Sud"
 
 #: src/region_names.rs:371
 msgid "South Dakota"
