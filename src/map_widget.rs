@@ -13,6 +13,7 @@ pub enum RegionState {
     Correct,
     Wrong,
     Decorative,
+    Background,
 }
 
 pub struct Region {
@@ -167,12 +168,21 @@ mod imp {
                     snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_border);
                     continue;
                 }
+                if region.state == RegionState::Background {
+                    let b = &region.bounds;
+                    if b.width() < 8.0 || b.height() < 8.0 {
+                        continue;
+                    }
+                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_normal);
+                    snapshot.append_stroke(&region.path, &stroke, &c_border);
+                    continue;
+                }
                 let fill_color = match region.state {
                     RegionState::Normal => c_normal,
                     RegionState::Highlighted => c_highlight,
                     RegionState::Correct => c_correct,
                     RegionState::Wrong => c_wrong,
-                    RegionState::Decorative => unreachable!(),
+                    RegionState::Decorative | RegionState::Background => unreachable!(),
                 };
                 if region.is_river {
                     snapshot.append_stroke(&region.path, &river_stroke, &fill_color);
@@ -183,7 +193,9 @@ mod imp {
             }
             // Draw markers for tiny regions and rivers on top of everything
             for region in regions.iter() {
-                if region.state == RegionState::Decorative {
+                if region.state == RegionState::Decorative
+                    || region.state == RegionState::Background
+                {
                     continue;
                 }
                 let b = &region.bounds;
@@ -196,7 +208,7 @@ mod imp {
                     RegionState::Highlighted => c_highlight,
                     RegionState::Correct => c_correct,
                     RegionState::Wrong => c_wrong,
-                    RegionState::Decorative => unreachable!(),
+                    RegionState::Decorative | RegionState::Background => unreachable!(),
                 };
                 let (cx, cy) = if region.is_river {
                     let measure = gtk::gsk::PathMeasure::new(&region.path);
@@ -308,6 +320,8 @@ impl MapWidget {
                                     .unwrap_or(gtk::graphene::Rect::new(0.0, 0.0, 0.0, 0.0));
                                 let (id, state, is_river) = if id.starts_with("__") {
                                     (id, RegionState::Decorative, false)
+                                } else if let Some(name) = id.strip_prefix("_bg_") {
+                                    (name.to_string(), RegionState::Background, false)
                                 } else if let Some(name) = id.strip_prefix("_river_") {
                                     (name.to_string(), RegionState::Normal, true)
                                 } else {
@@ -413,7 +427,10 @@ impl MapWidget {
         let river_threshold = 5.0_f32;
         let mut best_river: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if !region.is_river || region.state == RegionState::Decorative {
+            if !region.is_river
+                || region.state == RegionState::Decorative
+                || region.state == RegionState::Background
+            {
                 continue;
             }
             if let Some((_, dist)) = region.path.closest_point(&point, river_threshold) {
@@ -431,7 +448,11 @@ impl MapWidget {
         let tolerance = 10.0_f32;
         let mut best: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if region.state == RegionState::Decorative || region.is_river {
+            if matches!(
+                region.state,
+                RegionState::Decorative | RegionState::Background
+            ) || region.is_river
+            {
                 continue;
             }
             let b = &region.bounds;
@@ -449,7 +470,11 @@ impl MapWidget {
         }
         let mut smallest: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if region.state == RegionState::Decorative || region.is_river {
+            if matches!(
+                region.state,
+                RegionState::Decorative | RegionState::Background
+            ) || region.is_river
+            {
                 continue;
             }
             if region.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
@@ -473,9 +498,11 @@ impl MapWidget {
         let mut regions = self.imp().regions.borrow_mut();
         let mut changed = false;
         for region in regions.iter_mut() {
-            let new_state = if region.state == RegionState::Decorative {
-                RegionState::Decorative
-            } else if region.state == RegionState::Correct || region.state == RegionState::Wrong {
+            let new_state = if region.state == RegionState::Decorative
+                || region.state == RegionState::Background
+                || region.state == RegionState::Correct
+                || region.state == RegionState::Wrong
+            {
                 region.state
             } else if hit.as_deref() == Some(&region.id) {
                 RegionState::Highlighted
@@ -520,7 +547,12 @@ impl MapWidget {
     pub fn set_region_state(&self, region_id: &str, state: RegionState) {
         let mut regions = self.imp().regions.borrow_mut();
         for region in regions.iter_mut() {
-            if region.id == region_id {
+            if region.id == region_id
+                && !matches!(
+                    region.state,
+                    RegionState::Decorative | RegionState::Background
+                )
+            {
                 region.state = state;
                 break;
             }
@@ -532,7 +564,10 @@ impl MapWidget {
     pub fn reset_all_states(&self) {
         let mut regions = self.imp().regions.borrow_mut();
         for region in regions.iter_mut() {
-            if region.state != RegionState::Decorative {
+            if !matches!(
+                region.state,
+                RegionState::Decorative | RegionState::Background
+            ) {
                 region.state = RegionState::Normal;
             }
         }

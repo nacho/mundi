@@ -15,6 +15,13 @@ impl Country {
     }
 }
 
+#[derive(Clone, Copy, Default, PartialEq)]
+pub enum ExerciseKind {
+    #[default]
+    Standard,
+    Capitals,
+}
+
 #[derive(Clone)]
 pub struct MapExercise {
     pub id: &'static str,
@@ -23,6 +30,7 @@ pub struct MapExercise {
     pub svg_resource: &'static str,
     pub regions: &'static [(&'static str, &'static str)],
     pub group: Option<&'static str>,
+    pub kind: ExerciseKind,
 }
 
 impl MapExercise {
@@ -46,6 +54,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/spain/communities.svg",
         regions: crate::region_names::SPAIN_COMMUNITIES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "provinces",
@@ -54,6 +63,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/spain/provinces.svg",
         regions: crate::region_names::SPAIN_PROVINCES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "rivers",
@@ -62,6 +72,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/spain/rivers.svg",
         regions: crate::region_names::SPAIN_RIVERS,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "galicia-provinces",
@@ -70,6 +81,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/galicia/provinces.svg",
         regions: crate::region_names::GALICIA_PROVINCES,
         group: Some(N_("Galicia")),
+        kind: ExerciseKind::Standard,
     },
 ];
 
@@ -80,6 +92,7 @@ static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
     svg_resource: "/io/github/nacho/mundi/maps/italy/regions.svg",
     regions: crate::region_names::ITALY_REGIONS,
     group: None,
+    kind: ExerciseKind::Standard,
 }];
 
 static WORLD_EXERCISES: &[MapExercise] = &[
@@ -90,6 +103,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/world/continents.svg",
         regions: crate::region_names::WORLD_CONTINENTS,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "africa-countries",
@@ -98,6 +112,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/africa/countries.svg",
         regions: crate::region_names::AFRICA_COUNTRIES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "america-countries",
@@ -106,6 +121,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/america/countries.svg",
         regions: crate::region_names::AMERICA_COUNTRIES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "asia-countries",
@@ -114,6 +130,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/asia/countries.svg",
         regions: crate::region_names::ASIA_COUNTRIES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
     MapExercise {
         id: "europe-countries",
@@ -122,6 +139,16 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/europe/countries.svg",
         regions: crate::region_names::EUROPE_COUNTRIES,
         group: None,
+        kind: ExerciseKind::Standard,
+    },
+    MapExercise {
+        id: "europe-capitals",
+        country_id: "world",
+        title_msgid: N_("Capitals of Europe"),
+        svg_resource: "/io/github/nacho/mundi/maps/europe/capitals.svg",
+        regions: crate::region_names::EUROPE_CAPITALS,
+        group: None,
+        kind: ExerciseKind::Capitals,
     },
     MapExercise {
         id: "oceania-countries",
@@ -130,6 +157,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         svg_resource: "/io/github/nacho/mundi/maps/oceania/countries.svg",
         regions: crate::region_names::OCEANIA_COUNTRIES,
         group: None,
+        kind: ExerciseKind::Standard,
     },
 ];
 
@@ -140,6 +168,7 @@ static PORTUGAL_EXERCISES: &[MapExercise] = &[MapExercise {
     svg_resource: "/io/github/nacho/mundi/maps/portugal/districts.svg",
     regions: crate::region_names::PORTUGAL_DISTRICTS,
     group: None,
+    kind: ExerciseKind::Standard,
 }];
 
 static POLAND_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -149,6 +178,7 @@ static POLAND_EXERCISES: &[MapExercise] = &[MapExercise {
     svg_resource: "/io/github/nacho/mundi/maps/poland/voivodeships.svg",
     regions: crate::region_names::POLAND_VOIVODESHIPS,
     group: None,
+    kind: ExerciseKind::Standard,
 }];
 
 static US_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -158,6 +188,7 @@ static US_EXERCISES: &[MapExercise] = &[MapExercise {
     svg_resource: "/io/github/nacho/mundi/maps/united_states/states.svg",
     regions: crate::region_names::US_STATES,
     group: None,
+    kind: ExerciseKind::Standard,
 }];
 
 pub fn countries() -> &'static [Country] {

@@ -10,7 +10,7 @@ use std::time::Instant;
 
 use crate::map_widget::{MapWidget, RegionState};
 use crate::quiz::Quiz;
-use crate::registry::MapExercise;
+use crate::registry::{ExerciseKind, MapExercise};
 
 mod imp {
     use super::*;
@@ -136,7 +136,13 @@ impl MapExerciseView {
             ex.regions
                 .iter()
                 .find(|(id, _)| *id == region_id)
-                .map(|(_, name)| gettext(*name))
+                .map(|(_, name)| {
+                    if ex.kind == ExerciseKind::Capitals {
+                        i18n_format!("{}, capital of {}", gettext(region_id), gettext(*name))
+                    } else {
+                        gettext(*name)
+                    }
+                })
         })
     }
 
@@ -261,7 +267,12 @@ impl MapExerciseView {
         if quiz.is_finished() {
             self.show_results(quiz.session_correct, quiz.session_total);
         } else if let Some(name) = quiz.current_name() {
-            let translated = gettext(name);
+            let exercise = imp.exercise.borrow();
+            let translated = if exercise.as_ref().map(|e| e.kind) == Some(ExerciseKind::Capitals) {
+                gettext(quiz.current_id().unwrap())
+            } else {
+                gettext(name)
+            };
             imp.prompt_label
                 .set_text(&i18n_format!("{}: {}", gettext("Select"), translated));
             imp.attempts_label.set_text(&i18n_format!(
