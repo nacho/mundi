@@ -1,34 +1,204 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <clipPath id="globe-clip">
-      <circle cx="64" cy="64" r="44"/>
-    </clipPath>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128.00002"
+   height="127.99999"
+   viewBox="0 0 33.866671 33.866665"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="io.github.nacho.mundi.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="currentColor"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="64.877047"
+     inkscape:cy="111.54609"
+     inkscape:window-width="3072"
+     inkscape:window-height="1588"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="pin"
+       x1="47.101089"
+       y1="131.25455"
+       x2="47.101089"
+       y2="142.60381"
+       gradientTransform="matrix(0.99304096,0,0,1.1420487,-3.2742379,-10.193058)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#f66151"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#c01c28"
+         id="stop5" />
+    </linearGradient>
   </defs>
-
-  <!-- Background -->
-  <rect x="4" y="4" width="120" height="120" rx="24" fill="#613583"/>
-
-  <!-- Globe circle -->
-  <circle cx="64" cy="64" r="44" fill="#62a0ea"/>
-
-  <!-- Grid lines clipped to globe -->
-  <g clip-path="url(#globe-clip)" opacity="0.35">
-    <!-- Meridians -->
-    <ellipse cx="64" cy="64" rx="14" ry="44" fill="none" stroke="#ffffff" stroke-width="1.2"/>
-    <ellipse cx="64" cy="64" rx="32" ry="44" fill="none" stroke="#ffffff" stroke-width="1.2"/>
-    <!-- Parallels -->
-    <line x1="10" y1="48" x2="118" y2="48" stroke="#ffffff" stroke-width="1.2"/>
-    <line x1="10" y1="64" x2="118" y2="64" stroke="#ffffff" stroke-width="1.2"/>
-    <line x1="10" y1="80" x2="118" y2="80" stroke="#ffffff" stroke-width="1.2"/>
-  </g>
-
-  <!-- Globe outline -->
-  <circle cx="64" cy="64" r="44" fill="none" stroke="#613583" stroke-width="2.5"/>
-
-  <!-- Question mark badge -->
-  <g transform="translate(64,58)">
-    <rect x="-14" y="-14" width="28" height="28" rx="6" fill="#f5c211" stroke="#e5a50a" stroke-width="1.5"/>
-    <text x="0" y="8" font-family="sans-serif" font-weight="bold" font-size="24" fill="#613583" text-anchor="middle">?</text>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.279167,-138.64166)">
+    <rect
+       x="35.609993"
+       y="146.46843"
+       width="27.049526"
+       height="22.541624"
+       rx="1.6911279"
+       fill="#3584e4"
+       id="rect12"
+       style="stroke-width:1.06494" />
+    <rect
+       x="35.609993"
+       y="146.46843"
+       width="27.049526"
+       height="22.541624"
+       rx="1.6911279"
+       fill="none"
+       stroke="#1c71d8"
+       stroke-width="0.28221"
+       id="rect64" />
+    <g
+       stroke="#62a0ea"
+       stroke-width="0.212"
+       stroke-linecap="round"
+       opacity="0.4"
+       id="g28"
+       transform="matrix(1.0649419,0,0,1.0649419,-3.2742381,-10.193058)">
+      <line
+         x1="36.513"
+         y1="154.44901"
+         x2="61.912998"
+         y2="154.44901"
+         id="line16" />
+      <line
+         x1="36.513"
+         y1="157.692"
+         x2="61.912998"
+         y2="157.692"
+         id="line18" />
+      <line
+         x1="36.513"
+         y1="160.935"
+         x2="61.912998"
+         y2="160.935"
+         id="line20" />
+      <line
+         x1="42.862999"
+         y1="147.108"
+         x2="42.862999"
+         y2="168.27499"
+         id="line22" />
+      <line
+         x1="49.213001"
+         y1="147.108"
+         x2="49.213001"
+         y2="168.27499"
+         id="line24" />
+      <line
+         x1="55.563"
+         y1="147.108"
+         x2="55.563"
+         y2="168.27499"
+         id="line26" />
+    </g>
+    <g
+       fill="#2ec27e"
+       id="g60"
+       transform="matrix(1.3414931,0,0,1.3414931,-16.576873,-52.670834)">
+      <!-- Africa -->
+      <path
+         d="m 49.153,154.761 -0.983,0.098 -0.879,1.687 0.657,0.82 1.232,0.054 0.385,2.448 0.212,0.586 0.423,-0.011 1.145,-1.487 -0.086,-0.814 0.857,-1.264 -0.608,-0.087 -0.792,-1.569 -0.885,0.082 z"
+         id="path30" />
+      <!-- Asia -->
+      <path
+         d="m 53.43,151.819 -1.086,0.272 0.152,0.456 -0.445,-0.332 -0.098,1.108 0.402,0.352 -0.695,0.049 0.434,1.042 -0.971,-0.553 -0.841,0.456 0.651,0.119 -0.195,0.548 0.825,1.373 1.09,-0.776 -0.803,-0.613 1.666,0.629 0.435,1.124 0.863,-1.156 1.036,1.758 -0.336,-1.015 0.358,0.38 0.266,-0.217 -0.288,-0.673 0.939,-0.7 -0.548,-0.836 0.814,0.348 0.081,-1.352 0.44,0.445 -0.982,-0.673 0.125,-0.314 0.96,-0.256 0.44,0.869 -0.261,-0.668 0.885,-0.423 z"
+         id="path32" />
+      <path
+         d="m 57.63,154.424 -0.293,0.831 0.521,-0.337 z"
+         id="path34" />
+      <path
+         d="m 56.724,157.133 -0.456,0.825 0.418,0.081 z"
+         id="path36" />
+      <path
+         d="m 55.204,157.274 0.695,0.988 1.395,0.114 -1.341,-0.185 z"
+         id="path38" />
+      <!-- Oceania -->
+      <path
+         d="m 57.788,157.762 0.38,0.624 0.933,0.174 z"
+         id="path40" />
+      <path
+         d="m 58.472,158.582 -0.201,0.537 -0.521,-0.521 -1.368,0.858 -0.184,0.993 1.166,-0.212 0.435,0.537 0.591,-0.059 0.641,-1.01 z"
+         id="path42" />
+      <!-- Europe -->
+      <path
+         d="m 49.56,151.673 -0.32,0.081 0.727,-0.06 z"
+         id="path44" />
+      <path
+         d="m 49.989,152.226 -1.042,0.619 0.417,0.44 -1.058,0.586 0.185,0.353 -0.5,0.059 -0.021,0.489 1.183,-0.576 0.391,0.603 0.222,-0.282 -0.347,-0.429 0.651,0.754 0.461,-0.819 1.287,0.477 -0.158,-0.814 0.695,-0.011 -0.402,-0.352 0.152,-0.923 -1.411,0.315 -0.239,-0.179 0.364,-0.082 z"
+         id="path46" />
+      <path
+         d="m 49.999,152.601 -0.146,0.369 0.429,0.032 -0.999,0.435 z"
+         id="path48" />
+      <path
+         d="m 48.464,153.057 -0.196,0.694 0.434,-0.097 z"
+         id="path50" />
+      <!-- South America -->
+      <path
+         d="m 43.487,156.731 -0.527,0.223 -0.152,1.237 0.847,1.042 0.282,2.361 0.722,0.526 -0.282,-1.145 1.329,-1.503 0.353,-1.254 z"
+         id="path52" />
+      <!-- North America -->
+      <path
+         d="m 47.248,151.51 -3.36,0.407 2.296,-0.331 -0.738,0.244 0.559,0.12 0.174,1.069 2.1,-1.422 z"
+         id="path54" />
+      <path
+         d="m 43.351,151.83 -0.337,0.087 0.798,0.005 z"
+         id="path56" />
+      <path
+         d="m 42.797,152.015 -0.287,0.157 0.7,0.206 -2.665,-0.103 -1.65,1.14 1.878,-0.391 -0.049,2.502 0.277,0.358 -0.109,-0.667 0.364,0.96 1.596,0.977 -0.125,-0.635 -0.38,-0.07 0.19,-0.445 -0.657,0.195 0.054,-0.678 0.929,-0.19 0.162,0.401 0.559,-1.069 1.259,-0.608 -0.542,-0.162 0.879,-0.25 -0.266,0.288 0.418,0.005 -0.277,-0.988 -0.667,-0.136 -0.603,0.836 -0.494,-0.591 1.254,-0.738 0.374,0.168 -0.434,0.195 0.581,0.217 0.418,-0.374 -0.521,-0.462 -0.825,0.418 0.244,-0.439 -0.96,0.407 0.26,-0.386 z"
+         id="path58" />
+    </g>
+    <path
+       d="m 49.13475,139.70604 c -3.38119,0 -5.635672,2.25448 -5.635672,5.07232 0,3.38119 5.635672,7.88909 5.635672,7.88909 0,0 5.634608,-4.5079 5.634608,-7.88909 0,-2.81784 -2.253417,-5.07232 -5.634608,-5.07232 z"
+       fill="url(#pin)"
+       id="path66"
+       style="fill:url(#pin);stroke-width:1.06494" />
+    <circle
+       cx="49.13475"
+       cy="144.21501"
+       r="2.2544823"
+       fill="#ffffff"
+       opacity="0.9"
+       id="circle68"
+       style="stroke-width:1.06494" />
+    <text
+       x="49.13475"
+       y="145.62393"
+       font-family="sans-serif"
+       font-weight="bold"
+       font-size="4.5079px"
+       fill="#c01c28"
+       text-anchor="middle"
+       id="text70"
+       style="stroke-width:1.06494">?</text>
   </g>
 </svg>
