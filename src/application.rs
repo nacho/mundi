@@ -79,7 +79,7 @@ impl MundiApplication {
         let dialog = adw::AboutDialog::builder()
             .application_name("Mundi")
             .application_icon("io.github.nacho.mundi")
-            .version("0.1.0")
+            .version(crate::config::VERSION)
             .developer_name("Ignacio Casal Quinteiro")
             .license_type(gtk::License::Gpl30)
             .website("https://github.com/nacho/mundi")

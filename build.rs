@@ -14,7 +14,7 @@ fn generate_config() {
         .replace_all(&template, |captures: &regex::Captures| {
             let var_name = &captures[1];
             env::var(var_name).unwrap_or_else(|_| match var_name {
-                "VERSION" => "0.1.0".to_string(),
+                "VERSION" => "0.3.0".to_string(),
                 "APPLICATION_ID" => "io.github.nacho.mundi".to_string(),
                 "GETTEXT_PACKAGE" => "mundi".to_string(),
                 "DATADIR" => "/usr/share".to_string(),
