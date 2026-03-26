@@ -7,7 +7,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 
 ## Exercises
 
-- **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania
+- **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania; Capitals of Europe
 - **Italy** — Regions
 - **Poland** — Voivodeships
 - **Portugal** — Districts
