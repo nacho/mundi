@@ -14,13 +14,14 @@ impl Quiz {
             .iter()
             .map(|(id, name)| (id.to_string(), name.to_string()))
             .collect();
+        let total = regions.len() as u32 * 3;
         regions.shuffle(&mut rand::rng());
         Quiz {
             regions,
             current: 0,
             attempts_left: 3,
             session_correct: 0,
-            session_total: 0,
+            session_total: total,
         }
     }
 
@@ -42,8 +43,7 @@ impl Quiz {
     pub fn answer(&mut self, region_id: &str) -> bool {
         if let Some(target) = self.current_id() {
             if region_id == target {
-                self.session_correct += 1;
-                self.session_total += 1;
+                self.session_correct += self.attempts_left;
                 self.current += 1;
                 self.attempts_left = 3;
                 return true;
@@ -51,7 +51,6 @@ impl Quiz {
         }
         self.attempts_left = self.attempts_left.saturating_sub(1);
         if self.attempts_left == 0 {
-            self.session_total += 1;
             self.current += 1;
             self.attempts_left = 3;
         }
