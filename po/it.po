@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-27 19:37+0100\n"
-"PO-Revision-Date: 2026-03-24 22:28+0100\n"
+"PO-Revision-Date: 2026-03-27 20:28+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -1384,7 +1384,7 @@ msgstr "Opole"
 
 #: src/region_names.rs:412
 msgid "Podlachia"
-msgstr ""
+msgstr "Podlachia"
 
 #: src/region_names.rs:413
 msgid "Pomerania"
@@ -1416,355 +1416,343 @@ msgstr "Łódź"
 
 #: src/region_names.rs:423
 msgid "Aveiro"
-msgstr ""
+msgstr "Aveiro"
 
 #: src/region_names.rs:424
 msgid "Azores"
-msgstr ""
+msgstr "Azzorre"
 
 #: src/region_names.rs:425
 msgid "Beja"
-msgstr ""
+msgstr "Beja"
 
 #: src/region_names.rs:426
 msgid "Braga"
-msgstr ""
+msgstr "Braga"
 
 #: src/region_names.rs:427
 msgid "Bragança"
-msgstr ""
+msgstr "Bragança"
 
 #: src/region_names.rs:428
 msgid "Castelo Branco"
-msgstr ""
+msgstr "Castelo Branco"
 
 #: src/region_names.rs:429
 msgid "Coimbra"
-msgstr ""
+msgstr "Coimbra"
 
 #: src/region_names.rs:430
 msgid "Faro"
-msgstr ""
+msgstr "Faro"
 
 #: src/region_names.rs:431
 msgid "Guarda"
-msgstr ""
+msgstr "Guarda"
 
 #: src/region_names.rs:432
 msgid "Leiria"
-msgstr ""
+msgstr "Leiria"
 
 #: src/region_names.rs:433
 msgid "Lisboa"
-msgstr ""
+msgstr "Lisbona"
 
 #: src/region_names.rs:434
 msgid "Madeira"
-msgstr ""
+msgstr "Madeira"
 
 #: src/region_names.rs:435
-#, fuzzy
 msgid "Portalegre"
-msgstr "Portogallo"
+msgstr "Portalegre"
 
 #: src/region_names.rs:436
-#, fuzzy
 msgid "Porto"
-msgstr "Portogallo"
+msgstr "Porto"
 
 #: src/region_names.rs:437
 msgid "Santarém"
-msgstr ""
+msgstr "Santarém"
 
 #: src/region_names.rs:438
 msgid "Setúbal"
-msgstr ""
+msgstr "Setúbal"
 
 #: src/region_names.rs:439
 msgid "Viana do Castelo"
-msgstr ""
+msgstr "Viana do Castelo"
 
 #: src/region_names.rs:440
-#, fuzzy
 msgid "Vila Real"
-msgstr "Ciudad Real"
+msgstr "Vila Real"
 
 #: src/region_names.rs:441
 msgid "Viseu"
-msgstr ""
+msgstr "Viseu"
 
 #: src/region_names.rs:442
 msgid "Évora"
-msgstr ""
+msgstr "Évora"
 
 #: src/region_names.rs:446
 msgid "Bidasoa"
-msgstr ""
+msgstr "Bidasoa"
 
 #: src/region_names.rs:447
 msgid "Duero"
-msgstr ""
+msgstr "Duero"
 
 #: src/region_names.rs:448
 msgid "Ebro"
-msgstr ""
+msgstr "Ebro"
 
 #: src/region_names.rs:449
 msgid "Genil"
-msgstr ""
+msgstr "Genil"
 
 #: src/region_names.rs:450
-#, fuzzy
 msgid "Guadalete"
-msgstr "Guadalajara"
+msgstr "Guadalete"
 
 #: src/region_names.rs:451
-#, fuzzy
 msgid "Guadalquivir"
-msgstr "Guadalajara"
+msgstr "Guadalquivir"
 
 #: src/region_names.rs:452
-#, fuzzy
 msgid "Guadiana"
-msgstr "Indiana"
+msgstr "Guadiana"
 
 #: src/region_names.rs:453
 msgid "Jarama"
-msgstr ""
+msgstr "Jarama"
 
 #: src/region_names.rs:454
 msgid "Júcar"
-msgstr ""
+msgstr "Júcar"
 
 #: src/region_names.rs:455
 msgid "Llobregat"
-msgstr ""
+msgstr "Llobregat"
 
 #: src/region_names.rs:456
 msgid "Miño"
-msgstr ""
+msgstr "Miño"
 
 #: src/region_names.rs:457
 msgid "Nalón"
-msgstr ""
+msgstr "Nalón"
 
 #: src/region_names.rs:458
 msgid "Navia"
-msgstr ""
+msgstr "Navia"
 
 #: src/region_names.rs:459
 msgid "Nervión"
-msgstr ""
+msgstr "Nervión"
 
 #: src/region_names.rs:460
 msgid "Pisuerga"
-msgstr ""
+msgstr "Pisuerga"
 
 #: src/region_names.rs:461
 msgid "Segre"
-msgstr ""
+msgstr "Segre"
 
 #: src/region_names.rs:462
 msgid "Segura"
-msgstr ""
+msgstr "Segura"
 
 #: src/region_names.rs:463
 msgid "Tajo"
-msgstr ""
+msgstr "Tajo"
 
 #: src/region_names.rs:464
-#, fuzzy
 msgid "Ter"
-msgstr "Teruel"
+msgstr "Ter"
 
 #: src/region_names.rs:465
-#, fuzzy
 msgid "Turia"
-msgstr "Liguria"
+msgstr "Turia"
 
 #: src/region_names.rs:476
-#, fuzzy
 msgid "Tirana"
-msgstr "Granada"
+msgstr "Tirana"
 
 #: src/region_names.rs:477
-#, fuzzy
 msgid "Andorra la Vella"
-msgstr "Andorra"
+msgstr "Andorra la Vella"
 
 #: src/region_names.rs:478
 msgid "Yerevan"
-msgstr ""
+msgstr "Yerevan"
 
 #: src/region_names.rs:479
 msgid "Vienna"
-msgstr ""
+msgstr "Vienna"
 
 #: src/region_names.rs:480
 msgid "Baku"
-msgstr ""
+msgstr "Baku"
 
 #: src/region_names.rs:481
 msgid "Minsk"
-msgstr ""
+msgstr "Minsk"
 
 #: src/region_names.rs:482
 msgid "Brussels"
-msgstr ""
+msgstr "Bruxelles"
 
 #: src/region_names.rs:483
 msgid "Sarajevo"
-msgstr ""
+msgstr "Sarajevo"
 
 #: src/region_names.rs:484
 msgid "Sofia"
-msgstr ""
+msgstr "Sofia"
 
 #: src/region_names.rs:485
 msgid "Zagreb"
-msgstr ""
+msgstr "Zagabria"
 
 #: src/region_names.rs:486
 msgid "Nicosia"
-msgstr ""
+msgstr "Nicosia"
 
 #: src/region_names.rs:487
-#, fuzzy
 msgid "Prague"
-msgstr "Paraguay"
+msgstr "Praga"
 
 #: src/region_names.rs:488
 msgid "Copenhagen"
-msgstr ""
+msgstr "Copenaghen"
 
 #: src/region_names.rs:489
 msgid "Tallinn"
-msgstr ""
+msgstr "Tallinn"
 
 #: src/region_names.rs:490
 msgid "Helsinki"
-msgstr ""
+msgstr "Helsinki"
 
 #: src/region_names.rs:491
 msgid "Paris"
-msgstr ""
+msgstr "Parigi"
 
 #: src/region_names.rs:492
-msgid "Tbilisi"
-msgstr ""
+msgid "Tblilisi"
+msgstr "Tbilisi"
 
 #: src/region_names.rs:493
 msgid "Berlin"
-msgstr ""
+msgstr "Berlino"
 
 #: src/region_names.rs:494
 msgid "Athens"
-msgstr ""
+msgstr "Atene"
 
 #: src/region_names.rs:495
 msgid "Budapest"
-msgstr ""
+msgstr "Budapest"
 
 #: src/region_names.rs:496
 msgid "Reykjavik"
-msgstr ""
+msgstr "Reykjavik"
 
 #: src/region_names.rs:497
-#, fuzzy
 msgid "Dublin"
-msgstr "Lublino"
+msgstr "Dublino"
 
 #: src/region_names.rs:498
 msgid "Rome"
-msgstr ""
+msgstr "Roma"
 
 #: src/region_names.rs:499
 msgid "Pristina"
-msgstr ""
+msgstr "Pristina"
 
 #: src/region_names.rs:500
 msgid "Riga"
-msgstr ""
+msgstr "Riga"
 
 #: src/region_names.rs:501
 msgid "Vaduz"
-msgstr ""
+msgstr "Vaduz"
 
 #: src/region_names.rs:502
 msgid "Vilnius"
-msgstr ""
+msgstr "Vilnius"
 
 #: src/region_names.rs:504
 msgid "Valletta"
-msgstr ""
+msgstr "Valletta"
 
 #: src/region_names.rs:505
 msgid "Chisinau"
-msgstr ""
+msgstr "Chișinău"
 
 #: src/region_names.rs:507
 msgid "Podgorica"
-msgstr ""
+msgstr "Podgorica"
 
 #: src/region_names.rs:508
 msgid "Amsterdam"
-msgstr ""
+msgstr "Amsterdam"
 
 #: src/region_names.rs:509
 msgid "Skopje"
-msgstr ""
+msgstr "Skopje"
 
 #: src/region_names.rs:510
 msgid "Oslo"
-msgstr ""
+msgstr "Oslo"
 
 #: src/region_names.rs:511
 msgid "Warsaw"
-msgstr ""
+msgstr "Varsavia"
 
 #: src/region_names.rs:512
 msgid "Lisbon"
-msgstr ""
+msgstr "Lisbona"
 
 #: src/region_names.rs:513
 msgid "Bucharest"
-msgstr ""
+msgstr "Bucarest"
 
 #: src/region_names.rs:514
 msgid "Moscow"
-msgstr ""
+msgstr "Mosca"
 
 #: src/region_names.rs:516
 msgid "Belgrade"
-msgstr ""
+msgstr "Belgrado"
 
 #: src/region_names.rs:517
 msgid "Bratislava"
-msgstr ""
+msgstr "Bratislava"
 
 #: src/region_names.rs:518
 msgid "Ljubljana"
-msgstr ""
+msgstr "Lubiana"
 
 #: src/region_names.rs:520
 msgid "Stockholm"
-msgstr ""
+msgstr "Stoccolma"
 
 #: src/region_names.rs:521
 msgid "Bern"
-msgstr ""
+msgstr "Berna"
 
 #: src/region_names.rs:522
 msgid "Ankara"
-msgstr ""
+msgstr "Ankara"
 
 #: src/region_names.rs:523
 msgid "Kyiv"
-msgstr ""
+msgstr "Kiev"
 
 #: src/region_names.rs:524
 msgid "London"
-msgstr ""
+msgstr "Londra"
 
 #: src/registry.rs:54
 msgid "Autonomous Communities"
@@ -1780,7 +1768,7 @@ msgstr "Province"
 
 #: src/registry.rs:84
 msgid "Rivers"
-msgstr ""
+msgstr "Fiumi"
 
 #: src/registry.rs:106
 msgid "Regions"
@@ -1807,9 +1795,8 @@ msgid "Countries of Europe"
 msgstr "Paesi d'Europa"
 
 #: src/registry.rs:168
-#, fuzzy
 msgid "Capitals of Europe"
-msgstr "Paesi d'Europa"
+msgstr "Capitali d'Europa"
 
 #: src/registry.rs:178
 msgid "Countries of Oceania"
@@ -1817,7 +1804,7 @@ msgstr "Paesi dell’Oceania"
 
 #: src/registry.rs:190
 msgid "Districts"
-msgstr ""
+msgstr "Distretti"
 
 #: src/registry.rs:201
 msgid "Voivodeships"
