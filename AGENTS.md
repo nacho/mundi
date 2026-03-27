@@ -68,6 +68,15 @@ git push && git push --tags
 4. SVG paths must use simple absolute `M L Z` coordinates (no curves, no transforms)
 5. Enclaves/exclaves and islands are additional `M...L...Z` subpaths within the same `<path>` element
 
+## Adding Capitals Exercises
+Capitals exercises use `ExerciseKind::Capitals` and have a different SVG and quiz structure:
+
+1. **SVG format**: Background region outlines use `_bg_` prefixed IDs (e.g. `_bg_Andalucía`), clickable capital dots are small 1×1 `<path>` squares with the capital name as ID (e.g. `id="Seville" d="M 170,440 L 171,440 L 171,441 L 170,441 Z"`)
+2. **Region names**: Tuples are `(capital_name, region_name)` — e.g. `(N_("Seville"), N_("Andalusia"))`
+3. **Quiz prompt**: Shows the capital name (e.g. "Select: Seville"), user clicks the correct dot on the map
+4. **Discovery mode**: Shows "Seville, capital of Andalusia" when clicking a dot
+5. **Dual capitals**: Use the `alternates` field on `MapExercise` to map alternate IDs to a primary ID — e.g. `alternates: &[("Las Palmas", "Santa Cruz de Tenerife")]` makes either Canary Islands capital dot count as correct
+
 ## Icon Design
 - Application icon: `io.github.nacho.mundi.svg`
 - **MUST follow GNOME HIG palette**: https://developer.gnome.org/hig/reference/palette.html

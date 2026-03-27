@@ -133,9 +133,15 @@ impl MapExerciseView {
     fn find_region_name(&self, region_id: &str) -> Option<String> {
         let exercise = self.imp().exercise.borrow();
         exercise.as_ref().and_then(|ex| {
+            let primary = ex
+                .alternates
+                .iter()
+                .find(|(alt, _)| *alt == region_id)
+                .map(|(_, p)| *p)
+                .unwrap_or(region_id);
             ex.regions
                 .iter()
-                .find(|(id, _)| *id == region_id)
+                .find(|(id, _)| *id == primary)
                 .map(|(_, name)| {
                     if ex.kind == ExerciseKind::Capitals {
                         i18n_format!("{}, capital of {}", gettext(region_id), gettext(*name))
@@ -171,7 +177,7 @@ impl MapExerciseView {
         }
 
         *imp.quiz_active.borrow_mut() = true;
-        *imp.quiz.borrow_mut() = Some(Quiz::new(exercise.regions));
+        *imp.quiz.borrow_mut() = Some(Quiz::new(exercise.regions, exercise.alternates));
 
         // UI: hide discovery + results, show quiz elements
         imp.quiz_button.set_visible(false);

@@ -50,6 +50,26 @@ pub const SPAIN_COMMUNITIES: &[(&str, &str)] = &[
     ("Valencia", N_("Valencia")),
 ];
 
+pub const SPAIN_COMMUNITY_CAPITALS: &[(&str, &str)] = &[
+    (N_("Barcelona"), N_("Catalonia")),
+    (N_("Logroño"), N_("La Rioja")),
+    (N_("Madrid"), N_("Madrid")),
+    (N_("Mérida"), N_("Extremadura")),
+    (N_("Murcia"), N_("Murcia")),
+    (N_("Oviedo"), N_("Asturias")),
+    (N_("Palma"), N_("Balearic Islands")),
+    (N_("Pamplona"), N_("Navarre")),
+    (N_("Santa Cruz de Tenerife"), N_("Canary Islands")),
+    (N_("Santander"), N_("Cantabria")),
+    (N_("Santiago de Compostela"), N_("Galicia")),
+    (N_("Seville"), N_("Andalusia")),
+    (N_("Toledo"), N_("Castilla-La Mancha")),
+    (N_("Valencia"), N_("Valencia")),
+    (N_("Valladolid"), N_("Castile and León")),
+    (N_("Vitoria-Gasteiz"), N_("Basque Country")),
+    (N_("Zaragoza"), N_("Aragon")),
+];
+
 pub const SPAIN_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Albacete", N_("Albacete")),

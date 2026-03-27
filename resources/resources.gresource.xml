@@ -6,6 +6,7 @@
     <file preprocess="xml-stripblanks">ui/map_exercise_view.ui</file>
     <file>style.css</file>
     <file>maps/spain/communities.svg</file>
+    <file>maps/spain/community-capitals.svg</file>
     <file>maps/spain/provinces.svg</file>
     <file>maps/spain/rivers.svg</file>
     <file>maps/galicia/provinces.svg</file>

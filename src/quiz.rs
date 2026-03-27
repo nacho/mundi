@@ -1,7 +1,8 @@
 use rand::seq::SliceRandom;
 
 pub struct Quiz {
-    regions: Vec<(String, String)>, // (id, name_msgid)
+    regions: Vec<(String, String)>,    // (id, name_msgid)
+    alternates: Vec<(String, String)>, // (alternate_id, primary_id)
     current: usize,
     pub attempts_left: u32,
     pub session_correct: u32,
@@ -9,7 +10,7 @@ pub struct Quiz {
 }
 
 impl Quiz {
-    pub fn new(regions: &[(&str, &str)]) -> Self {
+    pub fn new(regions: &[(&str, &str)], alternates: &[(&str, &str)]) -> Self {
         let mut regions: Vec<(String, String)> = regions
             .iter()
             .map(|(id, name)| (id.to_string(), name.to_string()))
@@ -18,6 +19,10 @@ impl Quiz {
         regions.shuffle(&mut rand::rng());
         Quiz {
             regions,
+            alternates: alternates
+                .iter()
+                .map(|(a, p)| (a.to_string(), p.to_string()))
+                .collect(),
             current: 0,
             attempts_left: 3,
             session_correct: 0,
@@ -42,7 +47,12 @@ impl Quiz {
     /// Returns true if correct
     pub fn answer(&mut self, region_id: &str) -> bool {
         if let Some(target) = self.current_id() {
-            if region_id == target {
+            let matches = region_id == target
+                || self
+                    .alternates
+                    .iter()
+                    .any(|(alt, primary)| region_id == alt && primary == target);
+            if matches {
                 self.session_correct += self.attempts_left;
                 self.current += 1;
                 self.attempts_left = 3;

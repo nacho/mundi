@@ -31,6 +31,7 @@ pub struct MapExercise {
     pub regions: &'static [(&'static str, &'static str)],
     pub group: Option<&'static str>,
     pub kind: ExerciseKind,
+    pub alternates: &'static [(&'static str, &'static str)],
 }
 
 impl MapExercise {
@@ -55,6 +56,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::SPAIN_COMMUNITIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "community-capitals",
+        country_id: "spain",
+        title_msgid: N_("Capitals of Autonomous Communities"),
+        svg_resource: "/io/github/nacho/mundi/maps/spain/community-capitals.svg",
+        regions: crate::region_names::SPAIN_COMMUNITY_CAPITALS,
+        group: None,
+        kind: ExerciseKind::Capitals,
+        alternates: &[("Las Palmas", "Santa Cruz de Tenerife")],
     },
     MapExercise {
         id: "provinces",
@@ -64,6 +76,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::SPAIN_PROVINCES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "rivers",
@@ -73,6 +86,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::SPAIN_RIVERS,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "galicia-provinces",
@@ -82,6 +96,7 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::GALICIA_PROVINCES,
         group: Some(N_("Galicia")),
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
 ];
 
@@ -93,6 +108,7 @@ static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
     regions: crate::region_names::ITALY_REGIONS,
     group: None,
     kind: ExerciseKind::Standard,
+    alternates: &[],
 }];
 
 static WORLD_EXERCISES: &[MapExercise] = &[
@@ -104,6 +120,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::WORLD_CONTINENTS,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "africa-countries",
@@ -113,6 +130,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::AFRICA_COUNTRIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "america-countries",
@@ -122,6 +140,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::AMERICA_COUNTRIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "asia-countries",
@@ -131,6 +150,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::ASIA_COUNTRIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "europe-countries",
@@ -140,6 +160,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::EUROPE_COUNTRIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
     MapExercise {
         id: "europe-capitals",
@@ -149,6 +170,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::EUROPE_CAPITALS,
         group: None,
         kind: ExerciseKind::Capitals,
+        alternates: &[],
     },
     MapExercise {
         id: "oceania-countries",
@@ -158,6 +180,7 @@ static WORLD_EXERCISES: &[MapExercise] = &[
         regions: crate::region_names::OCEANIA_COUNTRIES,
         group: None,
         kind: ExerciseKind::Standard,
+        alternates: &[],
     },
 ];
 
@@ -169,6 +192,7 @@ static PORTUGAL_EXERCISES: &[MapExercise] = &[MapExercise {
     regions: crate::region_names::PORTUGAL_DISTRICTS,
     group: None,
     kind: ExerciseKind::Standard,
+    alternates: &[],
 }];
 
 static POLAND_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -179,6 +203,7 @@ static POLAND_EXERCISES: &[MapExercise] = &[MapExercise {
     regions: crate::region_names::POLAND_VOIVODESHIPS,
     group: None,
     kind: ExerciseKind::Standard,
+    alternates: &[],
 }];
 
 static US_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -189,6 +214,7 @@ static US_EXERCISES: &[MapExercise] = &[MapExercise {
     regions: crate::region_names::US_STATES,
     group: None,
     kind: ExerciseKind::Standard,
+    alternates: &[],
 }];
 
 pub fn countries() -> &'static [Country] {
