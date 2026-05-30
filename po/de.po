@@ -1,7 +1,7 @@
 # German translations for PACKAGE package.
 # Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# fungus <junkstuff7489@gmail.com>, 2026.
+# Crispyfires <junkstuff7489@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
@@ -1469,7 +1469,7 @@ msgstr "Szczecin"
 
 #: src/region_names.rs:441 src/region_names.rs:558
 msgid "Warsaw"
-msgstr "Warsaw"
+msgstr "Warschau"
 
 #: src/region_names.rs:442
 msgid "Wrocław"
