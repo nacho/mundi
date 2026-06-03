@@ -122,6 +122,17 @@ static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
     alternates: &[],
 }];
 
+static JAPAN_EXERCISES: &[MapExercise] = &[MapExercise {
+    id: "prefectures",
+    country_id: "japan",
+    title_msgid: N_("Prefectures"),
+    svg_resource: "/io/github/nacho/mundi/maps/japan/prefectures.svg",
+    regions: crate::region_names::JAPAN_PREFECTURES,
+    group: None,
+    kind: ExerciseKind::Standard,
+    alternates: &[],
+}];
+
 static WORLD_EXERCISES: &[MapExercise] = &[
     MapExercise {
         id: "continents",
@@ -259,6 +270,11 @@ pub fn countries() -> &'static [Country] {
             id: "italy",
             name_msgid: N_("Italy"),
             exercises: ITALY_EXERCISES,
+        },
+        Country {
+            id: "japan",
+            name_msgid: N_("Japan"),
+            exercises: JAPAN_EXERCISES,
         },
         Country {
             id: "poland",

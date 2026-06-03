@@ -10,6 +10,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania; Capitals of Europe
 - **France** — Regions
 - **Italy** — Regions
+- **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
 - **Portugal** — Districts
 - **Spain** — Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers; Galicia: Provinces
@@ -43,6 +44,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - France: [simplemaps.com](https://simplemaps.com/svg/country/fr) (free for commercial and personal use), overseas territories from [Régions de France 2016 avec outremer.svg](https://commons.wikimedia.org/wiki/File:R%C3%A9gions_de_France_2016_avec_outremer.svg) (CC BY-SA 4.0)
 - Spain: [Mapa de España - Provincias.svg](https://commons.wikimedia.org/wiki/File:Mapa_de_Espa%C3%B1a_-_Provincias.svg) (CC BY-SA 4.0), [Blank map of Iberia.svg](https://commons.wikimedia.org/wiki/File:Blank_map_of_Iberia.svg) (CC BY-SA 4.0), [Spain, administrative divisions - Nmbrs - colored.svg](https://commons.wikimedia.org/wiki/File:Spain,_administrative_divisions_-_Nmbrs_-_colored.svg) (CC BY-SA 3.0, African coastline)
 - Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use)
+- Japan: [Natural Earth Admin 1 - States, Provinces](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/) (public domain)
 - Poland: [simplemaps.com](https://simplemaps.com/svg/country/pl) (free for commercial and personal use)
 - Portugal: [simplemaps.com](https://simplemaps.com/svg/country/pt) (free for commercial and personal use)
 - United States: [simplemaps.com](https://simplemaps.com/svg/country/us) (free for commercial and personal use)
