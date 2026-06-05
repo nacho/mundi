@@ -1,0 +1,48 @@
+name: mundi
+version: '0.11.0'
+summary: Geography learning application for GNOME
+description: |
+  Test your knowledge of world regions by clicking on an interactive map.
+  Explore discovery mode or take timed quizzes identifying regions, countries,
+  capitals, and rivers.
+license: GPL-3.0-or-later
+grade: stable
+confinement: strict
+base: core24
+
+apps:
+  mundi:
+    extensions: [gnome]
+    command: usr/bin/mundi
+    desktop: usr/share/applications/io.github.nacho.mundi.desktop
+    common-id: io.github.nacho.mundi
+    plugs:
+      - audio-playback
+
+slots:
+  mundi:
+    interface: dbus
+    bus: session
+    name: io.github.nacho.mundi
+
+parts:
+  mundi:
+    source: .
+    plugin: meson
+    meson-parameters:
+      - --prefix=/usr
+      - --buildtype=release
+    build-packages:
+      - cargo
+      - rustc
+      - libgtk-4-dev
+      - libadwaita-1-dev
+      - gettext
+      - desktop-file-utils
+      - appstream
+    override-pull: |
+      craftctl default
+      cargo fetch --manifest-path ${CRAFT_PART_SRC}/Cargo.toml
+    override-build: |
+      craftctl default
+    parse-info: [usr/share/metainfo/io.github.nacho.mundi.metainfo.xml]
