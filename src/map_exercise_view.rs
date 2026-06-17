@@ -276,15 +276,25 @@ impl MapExerciseView {
 
     fn update_quiz_ui(&self) {
         let imp = self.imp();
-        let quiz = imp.quiz.borrow();
-        let quiz = match quiz.as_ref() {
-            Some(q) => q,
-            None => return,
+
+        let (finished, correct, total) = {
+            let quiz = imp.quiz.borrow();
+            let quiz = match quiz.as_ref() {
+                Some(q) => q,
+                None => return,
+            };
+            (quiz.is_finished(), quiz.session_correct, quiz.session_total)
         };
 
-        if quiz.is_finished() {
-            self.show_results(quiz.session_correct, quiz.session_total);
-        } else if let Some(name) = quiz.current_name() {
+        if finished {
+            self.show_results(correct, total);
+            return;
+        }
+
+        let quiz = imp.quiz.borrow();
+        let quiz = quiz.as_ref().unwrap();
+
+        if let Some(name) = quiz.current_name() {
             let exercise = imp.exercise.borrow();
             let translated = if exercise.as_ref().map(|e| e.kind) == Some(ExerciseKind::Capitals) {
                 gettext(quiz.current_id().unwrap())
