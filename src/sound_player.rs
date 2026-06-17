@@ -33,6 +33,7 @@ impl SoundPlayer {
 
     pub fn play_music(&self) {
         if self.settings.boolean("sound-effects") {
+            self.music.pause();
             self.music.seek(0);
             self.music.play();
         }
@@ -44,6 +45,7 @@ impl SoundPlayer {
 
     fn play(&self, media: &gtk::MediaFile) {
         if self.settings.boolean("sound-effects") {
+            media.pause();
             media.seek(0);
             media.play();
         }
