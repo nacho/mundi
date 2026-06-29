@@ -108,7 +108,7 @@ For deeper information, see `.agents/summary/index.md` which indexes:
 - Production: `meson setup builddir && meson compile -C builddir`
 
 ### Release Process
-1. Update version in `Cargo.toml` and `meson.build`
+1. Update version in `Cargo.toml`, `meson.build`, and `snap/snapcraft.yaml`
 2. Add release entry in metainfo XML with version, date, and changelog
 3. `cargo fmt && cargo update -p mundi`
 4. `git commit -am "Release X.Y.Z" && git tag vX.Y.Z && git push && git push --tags`
