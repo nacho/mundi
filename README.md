@@ -15,6 +15,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **Portugal** — Districts
 - **Spain** — Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers; Galicia: Provinces
 - **United States** — States
+- **India** - States
 
 ## How to Play
 
@@ -48,6 +49,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - Poland: [simplemaps.com](https://simplemaps.com/svg/country/pl) (free for commercial and personal use)
 - Portugal: [simplemaps.com](https://simplemaps.com/svg/country/pt) (free for commercial and personal use)
 - United States: [simplemaps.com](https://simplemaps.com/svg/country/us) (free for commercial and personal use)
+- India: [simplemaps.com](https://simplemaps.com/svg/country/in#admin1) (free for commercial and personal use)
 
 ## License
 
