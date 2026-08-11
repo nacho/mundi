@@ -76,6 +76,15 @@
   </screenshots>
 
   <releases>
+    <release version="0.13.0" date="2026-08-11">
+      <description>
+        <ul>
+          <li>Add India states exercise</li>
+          <li>Fix difficult-to-click regions: Cape Verde and Palestine</li>
+          <li>Updated dependencies</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.12.0" date="2026-06-29">
       <description>
         <ul>

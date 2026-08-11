@@ -623,7 +623,7 @@ dependencies = [
 
 [[package]]
 name = "mundi"
-version = "0.12.0"
+version = "0.13.0"
 dependencies = [
  "anyhow",
  "gettext-rs 0.8.0",
