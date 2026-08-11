@@ -274,6 +274,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "gettext-rs"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9df5e3fa8c077b15fdfa8ce130e2bc73d663b8aaa6d51b71421b8659980b1d80"
+dependencies = [
+ "gettext-sys",
+ "locale_config",
+]
+
+[[package]]
 name = "gettext-sys"
 version = "0.26.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -497,7 +507,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f24f35ae2e31a52498d50755e28bef173da86913238c1eb0e48e76b724acd2c6"
 dependencies = [
  "formatx",
- "gettext-rs",
+ "gettext-rs 0.7.7",
  "i18n-format-macro",
 ]
 
@@ -616,7 +626,7 @@ name = "mundi"
 version = "0.12.0"
 dependencies = [
  "anyhow",
- "gettext-rs",
+ "gettext-rs 0.8.0",
  "gio",
  "glib",
  "glib-build-tools",

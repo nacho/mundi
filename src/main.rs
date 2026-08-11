@@ -23,7 +23,8 @@ use std::path::PathBuf;
 use application::MundiApplication;
 
 fn run_application() -> Result<()> {
-    setlocale(LocaleCategory::LcAll, "");
+    // SAFETY: Called at program start before any threads are spawned.
+    unsafe { setlocale(LocaleCategory::LcAll, "") };
 
     let localedir = PathBuf::from(config::DATADIR).join("locale");
     bindtextdomain(config::PACKAGE, localedir)?;
