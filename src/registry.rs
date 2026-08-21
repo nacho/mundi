@@ -111,6 +111,17 @@ static FRANCE_EXERCISES: &[MapExercise] = &[MapExercise {
     alternates: &[],
 }];
 
+static GERMANY_EXERCISES: &[MapExercise] = &[MapExercise {
+    id: "states",
+    country_id: "germany",
+    title_msgid: N_("States"),
+    svg_resource: "/io/github/nacho/mundi/maps/germany/states.svg",
+    regions: crate::region_names::GERMANY_STATES,
+    group: None,
+    kind: ExerciseKind::Standard,
+    alternates: &[],
+}];
+
 static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
     id: "regions",
     country_id: "italy",
@@ -278,6 +289,11 @@ pub fn countries() -> &'static [Country] {
             exercises: FRANCE_EXERCISES,
         },
         Country {
+            id: "germany",
+            name_msgid: N_("Germany"),
+            exercises: GERMANY_EXERCISES,
+        },
+        Country {
             id: "india",
             name_msgid: N_("India"),
             exercises: INDIA_EXERCISES,
@@ -314,4 +330,78 @@ pub fn countries() -> &'static [Country] {
         },
     ];
     COUNTRIES
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::PathBuf;
+
+    fn country(id: &str) -> &'static Country {
+        countries()
+            .iter()
+            .find(|c| c.id == id)
+            .unwrap_or_else(|| panic!("country '{id}' not found in registry"))
+    }
+
+    fn exercise(country_id: &str, exercise_id: &str) -> &'static MapExercise {
+        country(country_id)
+            .exercises
+            .iter()
+            .find(|e| e.id == exercise_id)
+            .unwrap_or_else(|| panic!("exercise '{exercise_id}' not found for '{country_id}'"))
+    }
+
+    /// Reads an SVG resource from the repo (svg_resource is a GResource path
+    /// like "/io/github/nacho/mundi/maps/germany/states.svg"; the on-disk file
+    /// lives under resources/<same tail>).
+    fn read_svg(svg_resource: &str) -> String {
+        let tail = svg_resource
+            .strip_prefix("/io/github/nacho/mundi/")
+            .expect("unexpected svg_resource prefix");
+        let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join(tail);
+        std::fs::read_to_string(&path)
+            .unwrap_or_else(|e| panic!("cannot read {}: {e}", path.display()))
+    }
+
+    fn assert_ids_present(svg: &str, ids: impl IntoIterator<Item = String>) {
+        for id in ids {
+            let needle = format!("id=\"{id}\"");
+            assert!(
+                svg.contains(&needle),
+                "SVG is missing element with {needle}"
+            );
+        }
+    }
+
+    #[test]
+    fn germany_states_registered() {
+        let ex = exercise("germany", "states");
+        assert!(ex.kind == ExerciseKind::Standard);
+        assert_eq!(ex.regions.len(), 16, "Germany should have 16 states");
+    }
+
+    #[test]
+    fn germany_states_names_unique() {
+        let mut names: Vec<&str> = crate::region_names::GERMANY_STATES
+            .iter()
+            .map(|(svg_id, _)| *svg_id)
+            .collect();
+        names.sort_unstable();
+        let count = names.len();
+        names.dedup();
+        assert_eq!(names.len(), count, "duplicate state svg_id found");
+    }
+
+    #[test]
+    fn germany_states_svg_ids_present() {
+        let ex = exercise("germany", "states");
+        let svg = read_svg(ex.svg_resource);
+        assert_ids_present(
+            &svg,
+            ex.regions.iter().map(|(svg_id, _)| svg_id.to_string()),
+        );
+    }
 }

@@ -9,6 +9,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 
 - **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania; Capitals of Europe
 - **France** — Regions
+- **Germany** — States
 - **Italy** — Regions
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
@@ -43,6 +44,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - World / Americas / Africa / Asia / Oceania: [BlankMap-World.svg](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg) (public domain)
 - Europe: [Blank map of Europe (with disputed regions)](https://commons.wikimedia.org/wiki/File:Blank_map_of_Europe_(with_disputed_regions).svg) (CC BY-SA 3.0)
 - France: [simplemaps.com](https://simplemaps.com/svg/country/fr) (free for commercial and personal use), overseas territories from [Régions de France 2016 avec outremer.svg](https://commons.wikimedia.org/wiki/File:R%C3%A9gions_de_France_2016_avec_outremer.svg) (CC BY-SA 4.0)
+- Germany: [simplemaps.com](https://simplemaps.com/svg/country/de#admin1) (free for commercial and personal use)
 - Spain: [Mapa de España - Provincias.svg](https://commons.wikimedia.org/wiki/File:Mapa_de_Espa%C3%B1a_-_Provincias.svg) (CC BY-SA 4.0), [Blank map of Iberia.svg](https://commons.wikimedia.org/wiki/File:Blank_map_of_Iberia.svg) (CC BY-SA 4.0), [Spain, administrative divisions - Nmbrs - colored.svg](https://commons.wikimedia.org/wiki/File:Spain,_administrative_divisions_-_Nmbrs_-_colored.svg) (CC BY-SA 3.0, African coastline)
 - Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use)
 - Japan: [Natural Earth Admin 1 - States, Provinces](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/) (public domain)

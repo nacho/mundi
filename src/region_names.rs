@@ -30,6 +30,28 @@ pub const ITALY_REGIONS: &[(&str, &str)] = &[
     ("Veneto", N_("Veneto")),
 ];
 
+pub const GERMANY_STATES: &[(&str, &str)] = &[
+    ("Baden-Württemberg", N_("Baden-Württemberg")),
+    ("Bavaria", N_("Bavaria")),
+    ("Berlin", N_("Berlin")),
+    ("Brandenburg", N_("Brandenburg")),
+    ("Bremen", N_("Bremen")),
+    ("Hamburg", N_("Hamburg")),
+    ("Hesse", N_("Hesse")),
+    ("Lower Saxony", N_("Lower Saxony")),
+    (
+        "Mecklenburg-Western Pomerania",
+        N_("Mecklenburg-Western Pomerania"),
+    ),
+    ("North Rhine-Westphalia", N_("North Rhine-Westphalia")),
+    ("Rhineland-Palatinate", N_("Rhineland-Palatinate")),
+    ("Saarland", N_("Saarland")),
+    ("Saxony", N_("Saxony")),
+    ("Saxony-Anhalt", N_("Saxony-Anhalt")),
+    ("Schleswig-Holstein", N_("Schleswig-Holstein")),
+    ("Thuringia", N_("Thuringia")),
+];
+
 pub const SPAIN_COMMUNITIES: &[(&str, &str)] = &[
     ("Andalucía", N_("Andalusia")),
     ("Aragón", N_("Aragon")),
