@@ -9,7 +9,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 
 - **World** — Continents, Countries of Africa, America, Asia, Europe, Oceania; Capitals of Europe
 - **France** — Regions
-- **Germany** — States
+- **Germany** — States, State Capitals
 - **Italy** — Regions
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships

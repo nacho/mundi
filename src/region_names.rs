@@ -52,6 +52,25 @@ pub const GERMANY_STATES: &[(&str, &str)] = &[
     ("Thuringia", N_("Thuringia")),
 ];
 
+pub const GERMANY_STATE_CAPITALS: &[(&str, &str)] = &[
+    (N_("Berlin"), N_("Berlin")),
+    (N_("Bremen"), N_("Bremen")),
+    (N_("Dresden"), N_("Saxony")),
+    (N_("Düsseldorf"), N_("North Rhine-Westphalia")),
+    (N_("Erfurt"), N_("Thuringia")),
+    (N_("Hamburg"), N_("Hamburg")),
+    (N_("Hanover"), N_("Lower Saxony")),
+    (N_("Kiel"), N_("Schleswig-Holstein")),
+    (N_("Magdeburg"), N_("Saxony-Anhalt")),
+    (N_("Mainz"), N_("Rhineland-Palatinate")),
+    (N_("Munich"), N_("Bavaria")),
+    (N_("Potsdam"), N_("Brandenburg")),
+    (N_("Saarbrücken"), N_("Saarland")),
+    (N_("Schwerin"), N_("Mecklenburg-Western Pomerania")),
+    (N_("Stuttgart"), N_("Baden-Württemberg")),
+    (N_("Wiesbaden"), N_("Hesse")),
+];
+
 pub const SPAIN_COMMUNITIES: &[(&str, &str)] = &[
     ("Andalucía", N_("Andalusia")),
     ("Aragón", N_("Aragon")),
