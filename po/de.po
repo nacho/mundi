@@ -100,11 +100,11 @@ msgstr "Venetien"
 
 #: src/region_names.rs:34 src/region_names.rs:70
 msgid "Baden-Württemberg"
-msgstr ""
+msgstr "Baden-Württemberg"
 
 #: src/region_names.rs:35 src/region_names.rs:66
 msgid "Bavaria"
-msgstr ""
+msgstr "Bayern"
 
 #: src/region_names.rs:36 src/region_names.rs:56 src/region_names.rs:676
 msgid "Berlin"
@@ -112,107 +112,107 @@ msgstr "Berlin"
 
 #: src/region_names.rs:37 src/region_names.rs:67
 msgid "Brandenburg"
-msgstr ""
+msgstr "Brandenburg"
 
 #: src/region_names.rs:38 src/region_names.rs:57
 msgid "Bremen"
-msgstr ""
+msgstr "Bremen"
 
 #: src/region_names.rs:39 src/region_names.rs:61
 msgid "Hamburg"
-msgstr ""
+msgstr "Hamburg"
 
 #: src/region_names.rs:40 src/region_names.rs:71
 msgid "Hesse"
-msgstr ""
+msgstr "Hessen"
 
 #: src/region_names.rs:41 src/region_names.rs:62
 msgid "Lower Saxony"
-msgstr ""
+msgstr "Niedersachsen"
 
 #: src/region_names.rs:44 src/region_names.rs:69
 msgid "Mecklenburg-Western Pomerania"
-msgstr ""
+msgstr "Mecklenburg-Vorpommern"
 
 #: src/region_names.rs:46 src/region_names.rs:59
 msgid "North Rhine-Westphalia"
-msgstr ""
+msgstr "Nordrhein-Westfalen"
 
 #: src/region_names.rs:47 src/region_names.rs:65
 msgid "Rhineland-Palatinate"
-msgstr ""
+msgstr "Rheinland-Pfalz"
 
 #: src/region_names.rs:48 src/region_names.rs:68
 msgid "Saarland"
-msgstr ""
+msgstr "Saarland"
 
 #: src/region_names.rs:49 src/region_names.rs:58
 msgid "Saxony"
-msgstr ""
+msgstr "Sachsen"
 
 #: src/region_names.rs:50 src/region_names.rs:64
 msgid "Saxony-Anhalt"
-msgstr ""
+msgstr "Sachsen-Anhalt"
 
 #: src/region_names.rs:51 src/region_names.rs:63
 msgid "Schleswig-Holstein"
-msgstr ""
+msgstr "Schleswig-Holstein"
 
 #: src/region_names.rs:52 src/region_names.rs:60
 msgid "Thuringia"
-msgstr ""
+msgstr "Thüringen"
 
 #: src/region_names.rs:58
 msgid "Dresden"
-msgstr ""
+msgstr "Dresden"
 
 #: src/region_names.rs:59
 msgid "Düsseldorf"
-msgstr ""
+msgstr "Düsseldorf"
 
 #: src/region_names.rs:60
 msgid "Erfurt"
-msgstr ""
+msgstr "Erfurt"
 
 #: src/region_names.rs:62
 msgid "Hanover"
-msgstr ""
+msgstr "Hannover"
 
 #: src/region_names.rs:63
 msgid "Kiel"
-msgstr ""
+msgstr "Kiel"
 
 #: src/region_names.rs:64
 msgid "Magdeburg"
-msgstr ""
+msgstr "Magdeburg"
 
 #: src/region_names.rs:65
 msgid "Mainz"
-msgstr ""
+msgstr "Mainz"
 
 #: src/region_names.rs:66
 msgid "Munich"
-msgstr ""
+msgstr "München"
 
 #: src/region_names.rs:67
 msgid "Potsdam"
-msgstr ""
+msgstr "Potsdam"
 
 #: src/region_names.rs:68
 msgid "Saarbrücken"
-msgstr ""
+msgstr "Saarbrücken"
 
 #: src/region_names.rs:69
 msgid "Schwerin"
-msgstr ""
+msgstr "Schwerin"
 
 #: src/region_names.rs:70
 msgid "Stuttgart"
-msgstr ""
+msgstr "Stuttgart"
 
 #: src/region_names.rs:71
 msgid "Wiesbaden"
-msgstr ""
+msgstr "Wiesbaden"
 
 #: src/region_names.rs:75 src/region_names.rs:110
 msgid "Andalusia"
@@ -1278,147 +1278,147 @@ msgstr "Jemen"
 
 #: src/region_names.rs:397
 msgid "Andaman and Nicobar Islands"
-msgstr ""
+msgstr "Andamanen und Nikobaren"
 
 #: src/region_names.rs:399
 msgid "Andhra Pradesh"
-msgstr ""
+msgstr "Andhra Pradesh"
 
 #: src/region_names.rs:400
 msgid "Arunachal Pradesh"
-msgstr ""
+msgstr "Arunachal Pradesh"
 
 #: src/region_names.rs:401
 msgid "Assam"
-msgstr ""
+msgstr "Assam"
 
 #: src/region_names.rs:402
 msgid "Bihar"
-msgstr ""
+msgstr "Bihar"
 
 #: src/region_names.rs:403
 msgid "Chandigarh"
-msgstr ""
+msgstr "Chandigarh"
 
 #: src/region_names.rs:404
 msgid "Chhattisgarh"
-msgstr ""
+msgstr "Chhattisgarh"
 
 #: src/region_names.rs:407
 msgid "Dadra and Nagar Haveli and Daman and Diu"
-msgstr ""
+msgstr "Dadra und Nagar Haveli und Daman und Diu"
 
 #: src/region_names.rs:409
 msgid "Delhi"
-msgstr ""
+msgstr "Delhi"
 
 #: src/region_names.rs:410
 msgid "Goa"
-msgstr ""
+msgstr "Goa"
 
 #: src/region_names.rs:411
 msgid "Gujarat"
-msgstr ""
+msgstr "Gujarat"
 
 #: src/region_names.rs:412
 msgid "Haryana"
-msgstr ""
+msgstr "Haryana"
 
 #: src/region_names.rs:413
 msgid "Himachal Pradesh"
-msgstr ""
+msgstr "Himachal Pradesh"
 
 #: src/region_names.rs:414
 msgid "Jammu and Kashmir"
-msgstr ""
+msgstr "Jammu und Kaschmir"
 
 #: src/region_names.rs:415
 msgid "Jharkhand"
-msgstr ""
+msgstr "Jharkhand"
 
 #: src/region_names.rs:416
 msgid "Karnataka"
-msgstr ""
+msgstr "Karnataka"
 
 #: src/region_names.rs:417
 msgid "Kerala"
-msgstr ""
+msgstr "Kerala"
 
 #: src/region_names.rs:418
 msgid "Ladakh"
-msgstr ""
+msgstr "Ladakh"
 
 #: src/region_names.rs:419
 msgid "Lakshadweep"
-msgstr ""
+msgstr "Lakshadweep"
 
 #: src/region_names.rs:420
 msgid "Madhya Pradesh"
-msgstr ""
+msgstr "Madhya Pradesh"
 
 #: src/region_names.rs:421
 msgid "Maharashtra"
-msgstr ""
+msgstr "Maharashtra"
 
 #: src/region_names.rs:422
 msgid "Manipur"
-msgstr ""
+msgstr "Manipur"
 
 #: src/region_names.rs:423
 msgid "Meghalaya"
-msgstr ""
+msgstr "Meghalaya"
 
 #: src/region_names.rs:424
 msgid "Mizoram"
-msgstr ""
+msgstr "Mizoram"
 
 #: src/region_names.rs:425
 msgid "Nagaland"
-msgstr ""
+msgstr "Nagaland"
 
 #: src/region_names.rs:426
 msgid "Odisha"
-msgstr ""
+msgstr "Odisha"
 
 #: src/region_names.rs:427
 msgid "Puducherry"
-msgstr ""
+msgstr "Puducherry"
 
 #: src/region_names.rs:428
 msgid "Punjab"
-msgstr ""
+msgstr "Punjab"
 
 #: src/region_names.rs:429
 msgid "Rajasthan"
-msgstr ""
+msgstr "Rajasthan"
 
 #: src/region_names.rs:430
 msgid "Sikkim"
-msgstr ""
+msgstr "Sikkim"
 
 #: src/region_names.rs:431
 msgid "Tamil Nadu"
-msgstr ""
+msgstr "Tamil Nadu"
 
 #: src/region_names.rs:432
 msgid "Telangana"
-msgstr ""
+msgstr "Telangana"
 
 #: src/region_names.rs:433
 msgid "Tripura"
-msgstr ""
+msgstr "Tripura"
 
 #: src/region_names.rs:434
 msgid "Uttar Pradesh"
-msgstr ""
+msgstr "Uttar Pradesh"
 
 #: src/region_names.rs:435
 msgid "Uttarakhand"
-msgstr ""
+msgstr "Uttarakhand"
 
 #: src/region_names.rs:436
 msgid "West Bengal"
-msgstr ""
+msgstr "Westbengalen"
 
 #: src/region_names.rs:440
 msgid "Hokkaidō"
@@ -2354,7 +2354,7 @@ msgstr "Länder"
 
 #: src/registry.rs:128
 msgid "State Capitals"
-msgstr ""
+msgstr "Landeshauptstädte"
 
 #: src/registry.rs:162
 msgid "Prefectures"

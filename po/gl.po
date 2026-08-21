@@ -98,11 +98,11 @@ msgstr "Véneto"
 
 #: src/region_names.rs:34 src/region_names.rs:70
 msgid "Baden-Württemberg"
-msgstr ""
+msgstr "Baden-Württemberg"
 
 #: src/region_names.rs:35 src/region_names.rs:66
 msgid "Bavaria"
-msgstr ""
+msgstr "Baviera"
 
 #: src/region_names.rs:36 src/region_names.rs:56 src/region_names.rs:676
 msgid "Berlin"
@@ -110,107 +110,107 @@ msgstr "Berlín"
 
 #: src/region_names.rs:37 src/region_names.rs:67
 msgid "Brandenburg"
-msgstr ""
+msgstr "Brandeburgo"
 
 #: src/region_names.rs:38 src/region_names.rs:57
 msgid "Bremen"
-msgstr ""
+msgstr "Bremen"
 
 #: src/region_names.rs:39 src/region_names.rs:61
 msgid "Hamburg"
-msgstr ""
+msgstr "Hamburgo"
 
 #: src/region_names.rs:40 src/region_names.rs:71
 msgid "Hesse"
-msgstr ""
+msgstr "Hesse"
 
 #: src/region_names.rs:41 src/region_names.rs:62
 msgid "Lower Saxony"
-msgstr ""
+msgstr "Baixa Saxonia"
 
 #: src/region_names.rs:44 src/region_names.rs:69
 msgid "Mecklenburg-Western Pomerania"
-msgstr ""
+msgstr "Mecklemburgo-Pomerania Occidental"
 
 #: src/region_names.rs:46 src/region_names.rs:59
 msgid "North Rhine-Westphalia"
-msgstr ""
+msgstr "Renania do Norte-Vestfalia"
 
 #: src/region_names.rs:47 src/region_names.rs:65
 msgid "Rhineland-Palatinate"
-msgstr ""
+msgstr "Renania-Palatinado"
 
 #: src/region_names.rs:48 src/region_names.rs:68
 msgid "Saarland"
-msgstr ""
+msgstr "Sarre"
 
 #: src/region_names.rs:49 src/region_names.rs:58
 msgid "Saxony"
-msgstr ""
+msgstr "Saxonia"
 
 #: src/region_names.rs:50 src/region_names.rs:64
 msgid "Saxony-Anhalt"
-msgstr ""
+msgstr "Saxonia-Anhalt"
 
 #: src/region_names.rs:51 src/region_names.rs:63
 msgid "Schleswig-Holstein"
-msgstr ""
+msgstr "Schleswig-Holstein"
 
 #: src/region_names.rs:52 src/region_names.rs:60
 msgid "Thuringia"
-msgstr ""
+msgstr "Turinxia"
 
 #: src/region_names.rs:58
 msgid "Dresden"
-msgstr ""
+msgstr "Dresde"
 
 #: src/region_names.rs:59
 msgid "Düsseldorf"
-msgstr ""
+msgstr "Düsseldorf"
 
 #: src/region_names.rs:60
 msgid "Erfurt"
-msgstr ""
+msgstr "Erfurt"
 
 #: src/region_names.rs:62
 msgid "Hanover"
-msgstr ""
+msgstr "Hánover"
 
 #: src/region_names.rs:63
 msgid "Kiel"
-msgstr ""
+msgstr "Kiel"
 
 #: src/region_names.rs:64
 msgid "Magdeburg"
-msgstr ""
+msgstr "Magdeburgo"
 
 #: src/region_names.rs:65
 msgid "Mainz"
-msgstr ""
+msgstr "Maguncia"
 
 #: src/region_names.rs:66
 msgid "Munich"
-msgstr ""
+msgstr "Múnic"
 
 #: src/region_names.rs:67
 msgid "Potsdam"
-msgstr ""
+msgstr "Potsdam"
 
 #: src/region_names.rs:68
 msgid "Saarbrücken"
-msgstr ""
+msgstr "Saarbrücken"
 
 #: src/region_names.rs:69
 msgid "Schwerin"
-msgstr ""
+msgstr "Schwerin"
 
 #: src/region_names.rs:70
 msgid "Stuttgart"
-msgstr ""
+msgstr "Stuttgart"
 
 #: src/region_names.rs:71
 msgid "Wiesbaden"
-msgstr ""
+msgstr "Wiesbaden"
 
 #: src/region_names.rs:75 src/region_names.rs:110
 msgid "Andalusia"
@@ -1276,335 +1276,335 @@ msgstr "Iemen"
 
 #: src/region_names.rs:397
 msgid "Andaman and Nicobar Islands"
-msgstr ""
+msgstr "Illas Andaman e Nicobar"
 
 #: src/region_names.rs:399
 msgid "Andhra Pradesh"
-msgstr ""
+msgstr "Andhra Pradesh"
 
 #: src/region_names.rs:400
 msgid "Arunachal Pradesh"
-msgstr ""
+msgstr "Arunachal Pradesh"
 
 #: src/region_names.rs:401
 msgid "Assam"
-msgstr ""
+msgstr "Assam"
 
 #: src/region_names.rs:402
 msgid "Bihar"
-msgstr ""
+msgstr "Bihar"
 
 #: src/region_names.rs:403
 msgid "Chandigarh"
-msgstr ""
+msgstr "Chandigarh"
 
 #: src/region_names.rs:404
 msgid "Chhattisgarh"
-msgstr ""
+msgstr "Chhattisgarh"
 
 #: src/region_names.rs:407
 msgid "Dadra and Nagar Haveli and Daman and Diu"
-msgstr ""
+msgstr "Dadra e Nagar Haveli e Damán e Diu"
 
 #: src/region_names.rs:409
 msgid "Delhi"
-msgstr ""
+msgstr "Delhi"
 
 #: src/region_names.rs:410
 msgid "Goa"
-msgstr ""
+msgstr "Goa"
 
 #: src/region_names.rs:411
 msgid "Gujarat"
-msgstr ""
+msgstr "Gujarat"
 
 #: src/region_names.rs:412
 msgid "Haryana"
-msgstr ""
+msgstr "Haryana"
 
 #: src/region_names.rs:413
 msgid "Himachal Pradesh"
-msgstr ""
+msgstr "Himachal Pradesh"
 
 #: src/region_names.rs:414
 msgid "Jammu and Kashmir"
-msgstr ""
+msgstr "Jammu e Caxemira"
 
 #: src/region_names.rs:415
 msgid "Jharkhand"
-msgstr ""
+msgstr "Jharkhand"
 
 #: src/region_names.rs:416
 msgid "Karnataka"
-msgstr ""
+msgstr "Karnataka"
 
 #: src/region_names.rs:417
 msgid "Kerala"
-msgstr ""
+msgstr "Kerala"
 
 #: src/region_names.rs:418
 msgid "Ladakh"
-msgstr ""
+msgstr "Ladakh"
 
 #: src/region_names.rs:419
 msgid "Lakshadweep"
-msgstr ""
+msgstr "Lakshadweep"
 
 #: src/region_names.rs:420
 msgid "Madhya Pradesh"
-msgstr ""
+msgstr "Madhya Pradesh"
 
 #: src/region_names.rs:421
 msgid "Maharashtra"
-msgstr ""
+msgstr "Maharashtra"
 
 #: src/region_names.rs:422
 msgid "Manipur"
-msgstr ""
+msgstr "Manipur"
 
 #: src/region_names.rs:423
 msgid "Meghalaya"
-msgstr ""
+msgstr "Meghalaya"
 
 #: src/region_names.rs:424
 msgid "Mizoram"
-msgstr ""
+msgstr "Mizoram"
 
 #: src/region_names.rs:425
 msgid "Nagaland"
-msgstr ""
+msgstr "Nagaland"
 
 #: src/region_names.rs:426
 msgid "Odisha"
-msgstr ""
+msgstr "Odisha"
 
 #: src/region_names.rs:427
 msgid "Puducherry"
-msgstr ""
+msgstr "Puducherry"
 
 #: src/region_names.rs:428
 msgid "Punjab"
-msgstr ""
+msgstr "Punjab"
 
 #: src/region_names.rs:429
 msgid "Rajasthan"
-msgstr ""
+msgstr "Rajasthan"
 
 #: src/region_names.rs:430
 msgid "Sikkim"
-msgstr ""
+msgstr "Sikkim"
 
 #: src/region_names.rs:431
 msgid "Tamil Nadu"
-msgstr ""
+msgstr "Tamil Nadu"
 
 #: src/region_names.rs:432
 msgid "Telangana"
-msgstr ""
+msgstr "Telangana"
 
 #: src/region_names.rs:433
 msgid "Tripura"
-msgstr ""
+msgstr "Tripura"
 
 #: src/region_names.rs:434
 msgid "Uttar Pradesh"
-msgstr ""
+msgstr "Uttar Pradesh"
 
 #: src/region_names.rs:435
 msgid "Uttarakhand"
-msgstr ""
+msgstr "Uttarakhand"
 
 #: src/region_names.rs:436
 msgid "West Bengal"
-msgstr ""
+msgstr "Bengala Occidental"
 
 #: src/region_names.rs:440
 msgid "Hokkaidō"
-msgstr ""
+msgstr "Hokkaidō"
 
 #: src/region_names.rs:441
 msgid "Aomori"
-msgstr ""
+msgstr "Aomori"
 
 #: src/region_names.rs:442
 msgid "Iwate"
-msgstr ""
+msgstr "Iwate"
 
 #: src/region_names.rs:443
 msgid "Miyagi"
-msgstr ""
+msgstr "Miyagi"
 
 #: src/region_names.rs:444
 msgid "Akita"
-msgstr ""
+msgstr "Akita"
 
 #: src/region_names.rs:445
 msgid "Yamagata"
-msgstr ""
+msgstr "Yamagata"
 
 #: src/region_names.rs:446
 msgid "Fukushima"
-msgstr ""
+msgstr "Fukushima"
 
 #: src/region_names.rs:447
 msgid "Ibaraki"
-msgstr ""
+msgstr "Ibaraki"
 
 #: src/region_names.rs:448
 msgid "Tochigi"
-msgstr ""
+msgstr "Tochigi"
 
 #: src/region_names.rs:449
 msgid "Gunma"
-msgstr ""
+msgstr "Gunma"
 
 #: src/region_names.rs:450
 msgid "Saitama"
-msgstr ""
+msgstr "Saitama"
 
 #: src/region_names.rs:451
 msgid "Chiba"
-msgstr ""
+msgstr "Chiba"
 
 #: src/region_names.rs:452
 msgid "Tokyo"
-msgstr ""
+msgstr "Toquio"
 
 #: src/region_names.rs:453
 msgid "Kanagawa"
-msgstr ""
+msgstr "Kanagawa"
 
 #: src/region_names.rs:454
 msgid "Niigata"
-msgstr ""
+msgstr "Niigata"
 
 #: src/region_names.rs:455
 msgid "Toyama"
-msgstr ""
+msgstr "Toyama"
 
 #: src/region_names.rs:456
 msgid "Ishikawa"
-msgstr ""
+msgstr "Ishikawa"
 
 #: src/region_names.rs:457
 msgid "Fukui"
-msgstr ""
+msgstr "Fukui"
 
 #: src/region_names.rs:458
 msgid "Yamanashi"
-msgstr ""
+msgstr "Yamanashi"
 
 #: src/region_names.rs:459
 msgid "Nagano"
-msgstr ""
+msgstr "Nagano"
 
 #: src/region_names.rs:460
 msgid "Gifu"
-msgstr ""
+msgstr "Gifu"
 
 #: src/region_names.rs:461
 msgid "Shizuoka"
-msgstr ""
+msgstr "Shizuoka"
 
 #: src/region_names.rs:462
 msgid "Aichi"
-msgstr ""
+msgstr "Aichi"
 
 #: src/region_names.rs:463
 msgid "Mie"
-msgstr ""
+msgstr "Mie"
 
 #: src/region_names.rs:464
 msgid "Shiga"
-msgstr ""
+msgstr "Shiga"
 
 #: src/region_names.rs:465
 msgid "Kyōto"
-msgstr ""
+msgstr "Quioto"
 
 #: src/region_names.rs:466
 msgid "Ōsaka"
-msgstr ""
+msgstr "Osaka"
 
 #: src/region_names.rs:467
 msgid "Hyōgo"
-msgstr ""
+msgstr "Hyōgo"
 
 #: src/region_names.rs:468
 msgid "Nara"
-msgstr ""
+msgstr "Nara"
 
 #: src/region_names.rs:469
 msgid "Wakayama"
-msgstr ""
+msgstr "Wakayama"
 
 #: src/region_names.rs:470
 msgid "Tottori"
-msgstr ""
+msgstr "Tottori"
 
 #: src/region_names.rs:471
 msgid "Shimane"
-msgstr ""
+msgstr "Shimane"
 
 #: src/region_names.rs:472
 msgid "Okayama"
-msgstr ""
+msgstr "Okayama"
 
 #: src/region_names.rs:473
 msgid "Hiroshima"
-msgstr ""
+msgstr "Hiroshima"
 
 #: src/region_names.rs:474
 msgid "Yamaguchi"
-msgstr ""
+msgstr "Yamaguchi"
 
 #: src/region_names.rs:475
 msgid "Tokushima"
-msgstr ""
+msgstr "Tokushima"
 
 #: src/region_names.rs:476
 msgid "Kagawa"
-msgstr ""
+msgstr "Kagawa"
 
 #: src/region_names.rs:477
 msgid "Ehime"
-msgstr ""
+msgstr "Ehime"
 
 #: src/region_names.rs:478
 msgid "Kōchi"
-msgstr ""
+msgstr "Kōchi"
 
 #: src/region_names.rs:479
 msgid "Fukuoka"
-msgstr ""
+msgstr "Fukuoka"
 
 #: src/region_names.rs:480
 msgid "Saga"
-msgstr ""
+msgstr "Saga"
 
 #: src/region_names.rs:481
 msgid "Nagasaki"
-msgstr ""
+msgstr "Nagasaki"
 
 #: src/region_names.rs:482
 msgid "Kumamoto"
-msgstr ""
+msgstr "Kumamoto"
 
 #: src/region_names.rs:483
 msgid "Ōita"
-msgstr ""
+msgstr "Ōita"
 
 #: src/region_names.rs:484
 msgid "Miyazaki"
-msgstr ""
+msgstr "Miyazaki"
 
 #: src/region_names.rs:485
 msgid "Kagoshima"
-msgstr ""
+msgstr "Kagoshima"
 
 #: src/region_names.rs:486
 msgid "Okinawa"
-msgstr ""
+msgstr "Okinawa"
 
 #: src/region_names.rs:490
 msgid "Alabama"
@@ -2352,11 +2352,11 @@ msgstr "Estados"
 
 #: src/registry.rs:128
 msgid "State Capitals"
-msgstr ""
+msgstr "Capitais de estado"
 
 #: src/registry.rs:162
 msgid "Prefectures"
-msgstr ""
+msgstr "Prefecturas"
 
 #: src/registry.rs:174
 msgid "Continents"
