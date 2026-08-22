@@ -2350,7 +2350,7 @@ msgstr "Regionen"
 
 #: src/registry.rs:118 src/registry.rs:151 src/registry.rs:283
 msgid "States"
-msgstr "Länder"
+msgstr "Bundesländer"
 
 #: src/registry.rs:128
 msgid "State Capitals"
