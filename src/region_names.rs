@@ -7,6 +7,14 @@ pub const fn N_(s: &str) -> &str {
     s
 }
 
+// NC_ marks a string that carries a gettext message context for extraction
+// (--keyword=NC_:1c,2). It returns the msgid; the context is applied at
+// runtime via pgettext(context, msgid).
+#[allow(non_snake_case)]
+pub const fn NC_(_context: &str, msgid: &'static str) -> &'static str {
+    msgid
+}
+
 pub const ITALY_REGIONS: &[(&str, &str)] = &[
     ("Abruzzo", N_("Abruzzo")),
     ("Basilicata", N_("Basilicata")),
