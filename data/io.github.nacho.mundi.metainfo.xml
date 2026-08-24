@@ -76,6 +76,16 @@
   </screenshots>
 
   <releases>
+    <release version="0.14.0" date="2026-08-24">
+      <description>
+        <ul>
+          <li>Add Germany states (Bundesländer) exercise</li>
+          <li>Add Germany state capitals exercise</li>
+          <li>Translated region and place names in all languages</li>
+          <li>Updated dependencies</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.13.0" date="2026-08-11">
       <description>
         <ul>
