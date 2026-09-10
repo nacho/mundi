@@ -312,15 +312,13 @@ impl MapWidget {
             match reader.read_event() {
                 Ok(Event::Empty(ref e)) | Ok(Event::Start(ref e)) => {
                     let tag = e.name();
-                    if tag.as_ref() == b"path" {
+                    if tag.as_ref() == "path" {
                         let mut id = None;
                         let mut d = None;
                         for attr in e.attributes().flatten() {
                             match attr.key.as_ref() {
-                                b"id" => {
-                                    id = Some(String::from_utf8_lossy(&attr.value).to_string())
-                                }
-                                b"d" => d = Some(String::from_utf8_lossy(&attr.value).to_string()),
+                                "id" => id = Some(attr.value.to_string()),
+                                "d" => d = Some(attr.value.to_string()),
                                 _ => {}
                             }
                         }
@@ -351,21 +349,15 @@ impl MapWidget {
                                 });
                             }
                         }
-                    } else if tag.as_ref() == b"circle" {
+                    } else if tag.as_ref() == "circle" {
                         let mut id = None;
                         let mut cx = None;
                         let mut cy = None;
                         for attr in e.attributes().flatten() {
                             match attr.key.as_ref() {
-                                b"id" => {
-                                    id = Some(String::from_utf8_lossy(&attr.value).to_string())
-                                }
-                                b"cx" => {
-                                    cx = String::from_utf8_lossy(&attr.value).parse::<f32>().ok()
-                                }
-                                b"cy" => {
-                                    cy = String::from_utf8_lossy(&attr.value).parse::<f32>().ok()
-                                }
+                                "id" => id = Some(attr.value.to_string()),
+                                "cx" => cx = attr.value.parse::<f32>().ok(),
+                                "cy" => cy = attr.value.parse::<f32>().ok(),
                                 _ => {}
                             }
                         }
