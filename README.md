@@ -17,6 +17,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **Spain** — Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers; Galicia: Provinces
 - **United States** — States
 - **India** - States
+- **Turkiye** - Turkish - States 
 
 ## How to Play
 
