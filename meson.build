@@ -1,5 +1,5 @@
 project('mundi', 'rust',
-  version: '0.15.0',
+  version: '1.0.0',
   meson_version: '>= 0.59.0',
 )
 

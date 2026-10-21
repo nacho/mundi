@@ -87,6 +87,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.0" date="2026-10-21">
+      <description>
+        <ul>
+          <li>Zoom and pan the map with scroll, pinch, middle-drag, and on-screen controls</li>
+          <li>Adaptive layout with support for small and mobile screens</li>
+          <li>Add Switzerland cantons exercise</li>
+          <li>Add Turkish translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.15.0" date="2026-09-11">
       <description>
         <ul>

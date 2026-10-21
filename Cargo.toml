@@ -1,6 +1,6 @@
 [package]
 name = "mundi"
-version = "0.15.0"
+version = "1.0.0"
 edition = "2024"
 
 [dependencies]
@@ -9,7 +9,7 @@ libadwaita = { version = "0.9", package = "libadwaita", features = ["v1_5"] }
 gio = "0.22"
 glib = { version = "0.22", features = ["log_macros"] }
 gettext-rs = { version = "0.8", features = ["gettext-system"] }
-i18n-format = { version = "0.4", features = ["legacy"] }
+i18n-format = { version = "0.5", features = ["legacy"] }
 anyhow = "1.0"
 rand = "0.10"
 serde = { version = "1", features = ["derive"] }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-21 11:46+0200\n"
+"POT-Creation-Date: 2026-10-21 12:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2566,31 +2566,31 @@ msgstr ""
 msgid "Countries"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:30
+#: resources/ui/map_exercise_view.ui:34
 msgid "Start Quiz"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:93
+#: resources/ui/map_exercise_view.ui:97
 msgid "Zoom In"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:102
+#: resources/ui/map_exercise_view.ui:106
 msgid "Zoom Out"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:111
+#: resources/ui/map_exercise_view.ui:115
 msgid "Reset Zoom"
 msgstr ""
 
-#: resources/ui/quiz_results_view.ui:60
+#: resources/ui/quiz_results_view.ui:72
 msgid "Retry"
 msgstr ""
 
-#: resources/ui/quiz_results_view.ui:76
+#: resources/ui/quiz_results_view.ui:88
 msgid "Your name"
 msgstr ""
 
-#: resources/ui/quiz_results_view.ui:82
+#: resources/ui/quiz_results_view.ui:94
 msgid "Save"
 msgstr ""
 
