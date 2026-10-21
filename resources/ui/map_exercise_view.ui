@@ -4,8 +4,8 @@
     <property name="title">Exercise</property>
     <property name="child">
       <object class="AdwBreakpointBin">
-        <property name="width-request">120</property>
-        <property name="height-request">120</property>
+        <property name="width-request">280</property>
+        <property name="height-request">280</property>
         <child>
           <object class="AdwToolbarView">
         <child type="top">
