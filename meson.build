@@ -9,7 +9,7 @@ gnome = import('gnome')
 cargo = find_program('cargo')
 rustc = find_program('rustc')
 
-gtk4_dep = dependency('gtk4', version: '>= 4.14')
+gtk4_dep = dependency('gtk4', version: '>= 4.16')
 adwaita_dep = dependency('libadwaita-1', version: '>= 1.5')
 
 gettext_package = meson.project_name()

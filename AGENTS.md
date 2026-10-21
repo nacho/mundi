@@ -4,7 +4,7 @@
 ## Project Overview
 <!-- metadata: scope=orientation -->
 
-Mundi is a geography learning application for GNOME. Users explore interactive SVG maps in discovery mode and take timed quizzes identifying regions, countries, capitals, and rivers. Built with Rust, GTK4 4.14+, and libadwaita 1.5+.
+Mundi is a geography learning application for GNOME. Users explore interactive SVG maps in discovery mode and take timed quizzes identifying regions, countries, capitals, and rivers. Built with Rust, GTK4 4.16+, and libadwaita 1.5+.
 
 **Key entry points**: `src/main.rs` → `MundiApplication` → `MundiWindow` → `MapExerciseView`
 

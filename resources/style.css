@@ -4,8 +4,8 @@
 
 @define-color map-region-color @view_bg_color;
 @define-color map-region-highlight-color mix(@accent_bg_color, @view_bg_color, 0.4);
-@define-color map-region-correct-color @success_bg_color;
-@define-color map-region-wrong-color @error_bg_color;
+@define-color map-region-correct-color color-mix(in srgb, oklab(from @green_3 0.6 a b) 35%, @view_bg_color);
+@define-color map-region-wrong-color color-mix(in srgb, oklab(from @red_4 0.45 a b) 55%, @view_bg_color);
 @define-color map-border-color @borders;
 
 .key-number {
