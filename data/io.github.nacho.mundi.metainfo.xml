@@ -52,6 +52,17 @@
 
   <content_rating type="oars-1.1" />
 
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+
+
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/nacho/mundi/main/data/screenshots/1-continents.png</image>
