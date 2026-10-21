@@ -238,8 +238,8 @@ impl MapExerciseView {
         imp.attempts_label.set_visible(true);
 
         // Show map (in case results were showing)
+        imp.map_overlay.set_visible(true);
         if let Some(map) = imp.map_widget.borrow().as_ref() {
-            map.set_visible(true);
             map.reset_all_states();
         }
 
@@ -378,9 +378,7 @@ impl MapExerciseView {
         // Hide quiz UI
         imp.prompt_label.set_visible(false);
         imp.attempts_label.set_visible(false);
-        if let Some(map) = imp.map_widget.borrow().as_ref() {
-            map.set_visible(false);
-        }
+        imp.map_overlay.set_visible(false);
 
         // Show results
         let time_secs = elapsed.as_secs();
