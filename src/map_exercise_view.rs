@@ -37,6 +37,14 @@ mod imp {
         pub attempts_label: TemplateChild<gtk::Label>,
         #[template_child]
         pub quiz_results_view: TemplateChild<QuizResultsView>,
+        #[template_child]
+        pub map_overlay: TemplateChild<gtk::Overlay>,
+        #[template_child]
+        pub zoom_in_button: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub zoom_out_button: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub zoom_reset_button: TemplateChild<gtk::Button>,
         pub map_widget: RefCell<Option<MapWidget>>,
         pub quiz: RefCell<Option<Quiz>>,
         pub exercise: RefCell<Option<MapExercise>>,
@@ -91,8 +99,44 @@ impl MapExerciseView {
         let map = MapWidget::new();
         map.set_vexpand(true);
         map.set_hexpand(true);
-        imp.content_box
-            .insert_child_after(&map, Some(&*imp.attempts_label));
+        imp.map_overlay.set_child(Some(&map));
+
+        let m = map.downgrade();
+        imp.zoom_in_button.connect_clicked(move |_| {
+            if let Some(m) = m.upgrade() {
+                m.zoom_at_center(1.25);
+            }
+        });
+        let m = map.downgrade();
+        imp.zoom_out_button.connect_clicked(move |_| {
+            if let Some(m) = m.upgrade() {
+                m.zoom_at_center(1.0 / 1.25);
+            }
+        });
+        let m = map.downgrade();
+        imp.zoom_reset_button.connect_clicked(move |_| {
+            if let Some(m) = m.upgrade() {
+                m.reset_view();
+            }
+        });
+
+        imp.zoom_out_button.set_sensitive(false);
+        imp.zoom_reset_button.set_sensitive(false);
+
+        let zoom_out = imp.zoom_out_button.get();
+        let zoom_in = imp.zoom_in_button.get();
+        let zoom_reset = imp.zoom_reset_button.get();
+        map.connect_closure(
+            "zoom-changed",
+            false,
+            glib::closure_local!(move |_widget: &MapWidget, zoom: f32| {
+                let at_min = zoom <= MapWidget::MIN_ZOOM + f32::EPSILON;
+                let at_max = zoom >= MapWidget::MAX_ZOOM - f32::EPSILON;
+                zoom_out.set_sensitive(!at_min);
+                zoom_reset.set_sensitive(!at_min);
+                zoom_in.set_sensitive(!at_max);
+            }),
+        );
 
         let view = self.downgrade();
         map.connect_closure(

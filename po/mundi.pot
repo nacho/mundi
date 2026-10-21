@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-17 19:04+0200\n"
+"POT-Creation-Date: 2026-10-21 11:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2518,28 +2518,23 @@ msgstr ""
 msgid "World"
 msgstr ""
 
-#: src/map_exercise_view.rs:154
-#, rust-format
+#: src/map_exercise_view.rs:198
 msgid "{}, capital of {}"
 msgstr ""
 
-#: src/map_exercise_view.rs:306
-#, rust-format
+#: src/map_exercise_view.rs:350
 msgid "Select: {}"
 msgstr ""
 
-#: src/map_exercise_view.rs:308
-#, rust-format
+#: src/map_exercise_view.rs:352
 msgid "Attempts remaining: {}"
 msgstr ""
 
 #: src/quiz_results_view.rs:102
-#, rust-format
 msgid "{}/{}"
 msgstr ""
 
 #: src/quiz_results_view.rs:104
-#, rust-format
 msgid "Score — {}%"
 msgstr ""
 
@@ -2552,7 +2547,6 @@ msgid "Your score didn't make the top 50"
 msgstr ""
 
 #: src/quiz_results_view.rs:179
-#, rust-format
 msgid "{}% — {}:{:02}"
 msgstr ""
 
@@ -2574,6 +2568,18 @@ msgstr ""
 
 #: resources/ui/map_exercise_view.ui:30
 msgid "Start Quiz"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:93
+msgid "Zoom In"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:102
+msgid "Zoom Out"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:111
+msgid "Reset Zoom"
 msgstr ""
 
 #: resources/ui/quiz_results_view.ui:60

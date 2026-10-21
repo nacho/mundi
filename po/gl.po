@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-17 19:04+0200\n"
+"POT-Creation-Date: 2026-10-21 11:46+0200\n"
 "PO-Revision-Date: 2026-03-23 15:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
@@ -2517,28 +2517,23 @@ msgstr "Estados"
 msgid "World"
 msgstr "Mundo"
 
-#: src/map_exercise_view.rs:154
-#, rust-format
+#: src/map_exercise_view.rs:198
 msgid "{}, capital of {}"
 msgstr "{}, capital de {}"
 
-#: src/map_exercise_view.rs:306
-#, rust-format
+#: src/map_exercise_view.rs:350
 msgid "Select: {}"
 msgstr "Selecciona: {}"
 
-#: src/map_exercise_view.rs:308
-#, rust-format
+#: src/map_exercise_view.rs:352
 msgid "Attempts remaining: {}"
 msgstr "Intentos restantes: {}"
 
 #: src/quiz_results_view.rs:102
-#, rust-format
 msgid "{}/{}"
 msgstr "{}/{}"
 
 #: src/quiz_results_view.rs:104
-#, rust-format
 msgid "Score — {}%"
 msgstr "Puntuación — {}%"
 
@@ -2551,7 +2546,6 @@ msgid "Your score didn't make the top 50"
 msgstr "A túa puntuación non entrou no top 50"
 
 #: src/quiz_results_view.rs:179
-#, rust-format
 msgid "{}% — {}:{:02}"
 msgstr "{}% — {}:{:02}"
 
@@ -2574,6 +2568,18 @@ msgstr "Países"
 #: resources/ui/map_exercise_view.ui:30
 msgid "Start Quiz"
 msgstr "Iniciar proba"
+
+#: resources/ui/map_exercise_view.ui:93
+msgid "Zoom In"
+msgstr "Achegar"
+
+#: resources/ui/map_exercise_view.ui:102
+msgid "Zoom Out"
+msgstr "Afastar"
+
+#: resources/ui/map_exercise_view.ui:111
+msgid "Reset Zoom"
+msgstr "Restabelecer a ampliación"
 
 #: resources/ui/quiz_results_view.ui:60
 msgid "Retry"

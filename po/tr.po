@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-17 19:04+0200\n"
+"POT-Creation-Date: 2026-10-21 11:46+0200\n"
 "PO-Revision-Date: 2026-09-23 13:40+0300\n"
 "Last-Translator: Ümit Solmaz <umablognot@users.noreply.github.com>\n"
 "Language-Team: Turkish Team\n"
@@ -2532,28 +2532,23 @@ msgid "World"
 msgstr "Dünya"
 
 # Polonya'nın il başkentleri, Almanya'nın eyalet başkentleri, İspanya'nın özerk topluluk başkentleri ve Avrupa ülkelerinin başkentleri için kullanılır
-#: src/map_exercise_view.rs:154
-#, rust-format
+#: src/map_exercise_view.rs:198
 msgid "{}, capital of {}"
 msgstr "{}, {} başkenti"
 
-#: src/map_exercise_view.rs:306
-#, rust-format
+#: src/map_exercise_view.rs:350
 msgid "Select: {}"
 msgstr "Seç: {}"
 
-#: src/map_exercise_view.rs:308
-#, rust-format
+#: src/map_exercise_view.rs:352
 msgid "Attempts remaining: {}"
 msgstr "Kalan deneme hakkı: {}"
 
 #: src/quiz_results_view.rs:102
-#, rust-format
 msgid "{}/{}"
 msgstr "{}/{}"
 
 #: src/quiz_results_view.rs:104
-#, rust-format
 msgid "Score — {}%"
 msgstr "Puan — %{}"
 
@@ -2566,7 +2561,6 @@ msgid "Your score didn't make the top 50"
 msgstr "Puanınız ilk 50'ye giremedi"
 
 #: src/quiz_results_view.rs:179
-#, rust-format
 msgid "{}% — {}:{:02}"
 msgstr "%{} — {}:{:02}"
 
@@ -2590,6 +2584,18 @@ msgstr "Ülkeler"
 #: resources/ui/map_exercise_view.ui:30
 msgid "Start Quiz"
 msgstr "Testi Başlat"
+
+#: resources/ui/map_exercise_view.ui:93
+msgid "Zoom In"
+msgstr "Yakınlaştır"
+
+#: resources/ui/map_exercise_view.ui:102
+msgid "Zoom Out"
+msgstr "Uzaklaştır"
+
+#: resources/ui/map_exercise_view.ui:111
+msgid "Reset Zoom"
+msgstr "Yakınlaştırmayı Sıfırla"
 
 #: resources/ui/quiz_results_view.ui:60
 msgid "Retry"

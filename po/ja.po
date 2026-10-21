@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-17 19:04+0200\n"
+"POT-Creation-Date: 2026-10-21 11:46+0200\n"
 "PO-Revision-Date: 2026-09-09 03:06-0700\n"
-"Last-Translator: Jacob Padgett "
-"<74161959+jpadgett314@users.noreply.github.com>\n"
+"Last-Translator: Jacob Padgett <74161959+jpadgett314@users.noreply.github."
+"com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -2531,28 +2531,23 @@ msgid "World"
 msgstr "世界"
 
 # ポーランドの県都、ドイツの州都、スペインの州都、ヨーロッパ各国の首都に対して使われます
-#: src/map_exercise_view.rs:154
-#, rust-format
+#: src/map_exercise_view.rs:198
 msgid "{}, capital of {}"
 msgstr "{}（{}の首都）"
 
-#: src/map_exercise_view.rs:306
-#, rust-format
+#: src/map_exercise_view.rs:350
 msgid "Select: {}"
 msgstr "{}をクリック"
 
-#: src/map_exercise_view.rs:308
-#, rust-format
+#: src/map_exercise_view.rs:352
 msgid "Attempts remaining: {}"
 msgstr "残り{}回"
 
 #: src/quiz_results_view.rs:102
-#, rust-format
 msgid "{}/{}"
 msgstr "{}/{}"
 
 #: src/quiz_results_view.rs:104
-#, rust-format
 msgid "Score — {}%"
 msgstr "正解（{}%）"
 
@@ -2565,7 +2560,6 @@ msgid "Your score didn't make the top 50"
 msgstr "スコアはトップ50に入れませんでした"
 
 #: src/quiz_results_view.rs:179
-#, rust-format
 msgid "{}% — {}:{:02}"
 msgstr "{}%（{}:{:02}）"
 
@@ -2589,6 +2583,18 @@ msgstr "国・地域"
 #: resources/ui/map_exercise_view.ui:30
 msgid "Start Quiz"
 msgstr "クイズを始める"
+
+#: resources/ui/map_exercise_view.ui:93
+msgid "Zoom In"
+msgstr "拡大"
+
+#: resources/ui/map_exercise_view.ui:102
+msgid "Zoom Out"
+msgstr "縮小"
+
+#: resources/ui/map_exercise_view.ui:111
+msgid "Reset Zoom"
+msgstr "ズームを戻す"
 
 #: resources/ui/quiz_results_view.ui:60
 msgid "Retry"

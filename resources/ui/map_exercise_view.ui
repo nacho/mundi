@@ -70,7 +70,54 @@
                 </style>
               </object>
             </child>
-            <!-- MapWidget inserted here programmatically -->
+            <!-- MapWidget set as the overlay's child programmatically -->
+            <child>
+              <object class="GtkOverlay" id="map_overlay">
+                <property name="hexpand">true</property>
+                <property name="vexpand">true</property>
+                <child type="overlay">
+                  <object class="GtkBox" id="zoom_box">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">6</property>
+                    <property name="halign">end</property>
+                    <property name="valign">end</property>
+                    <property name="margin-end">12</property>
+                    <property name="margin-bottom">12</property>
+                    <style>
+                      <class name="osd"/>
+                      <class name="toolbar"/>
+                    </style>
+                    <child>
+                      <object class="GtkButton" id="zoom_in_button">
+                        <property name="icon-name">zoom-in-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Zoom In</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="zoom_out_button">
+                        <property name="icon-name">zoom-out-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Zoom Out</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="zoom_reset_button">
+                        <property name="icon-name">zoom-original-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Reset Zoom</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
             <child>
               <object class="QuizResultsView" id="quiz_results_view">
                 <property name="visible">false</property>

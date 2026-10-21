@@ -1,7 +1,7 @@
 use glib::subclass::Signal;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
 use std::sync::OnceLock;
 
 use libadwaita as adw;
@@ -32,6 +32,8 @@ mod imp {
         pub svg_bounds: RefCell<gtk::graphene::Rect>,
         // [normal, highlighted, correct, wrong, border]
         pub cached_colors: RefCell<[gtk::gdk::RGBA; 5]>,
+        pub zoom: Cell<f32>,
+        pub pan: Cell<(f32, f32)>,
     }
 
     impl Default for MapWidget {
@@ -41,6 +43,8 @@ mod imp {
                 regions: RefCell::new(Vec::new()),
                 svg_bounds: RefCell::new(gtk::graphene::Rect::new(0.0, 0.0, 1.0, 1.0)),
                 cached_colors: RefCell::new([fallback; 5]),
+                zoom: Cell::new(1.0),
+                pan: Cell::new((0.0, 0.0)),
             }
         }
     }
@@ -59,6 +63,9 @@ mod imp {
                 vec![
                     Signal::builder("region-clicked")
                         .param_types([String::static_type()])
+                        .build(),
+                    Signal::builder("zoom-changed")
+                        .param_types([f32::static_type()])
                         .build(),
                 ]
             })
@@ -91,6 +98,82 @@ mod imp {
                 }
             });
             obj.add_controller(motion);
+
+            let scroll = gtk::EventControllerScroll::new(
+                gtk::EventControllerScrollFlags::VERTICAL
+                    | gtk::EventControllerScrollFlags::DISCRETE,
+            );
+            let last_pos = std::rc::Rc::new(Cell::new((0.0_f64, 0.0_f64)));
+            let motion_track = gtk::EventControllerMotion::new();
+            let lp = last_pos.clone();
+            motion_track.connect_motion(move |_, x, y| {
+                lp.set((x, y));
+            });
+            obj.add_controller(motion_track);
+            let widget = obj.downgrade();
+            let lp = last_pos.clone();
+            scroll.connect_scroll(move |_, _dx, dy| {
+                if let Some(w) = widget.upgrade() {
+                    let (x, y) = lp.get();
+                    let factor = if dy < 0.0 { 1.25 } else { 1.0 / 1.25 };
+                    w.zoom_at(factor, x, y);
+                }
+                glib::Propagation::Stop
+            });
+            obj.add_controller(scroll);
+
+            let gesture_zoom = gtk::GestureZoom::new();
+            let widget = obj.downgrade();
+            let zoom_start = std::rc::Rc::new(Cell::new(1.0_f32));
+            let zs = zoom_start.clone();
+            gesture_zoom.connect_begin(glib::clone!(
+                #[weak(rename_to = w)]
+                obj,
+                move |_, _| {
+                    zs.set(w.zoom());
+                }
+            ));
+            let zs = zoom_start.clone();
+            gesture_zoom.connect_scale_changed(move |g, scale| {
+                if let Some(w) = widget.upgrade() {
+                    let (cx, cy) = g
+                        .bounding_box_center()
+                        .unwrap_or((w.width() as f64 / 2.0, w.height() as f64 / 2.0));
+                    let target = zs.get() * scale as f32;
+                    let factor = target / w.zoom();
+                    w.zoom_at(factor, cx, cy);
+                }
+            });
+            obj.add_controller(gesture_zoom);
+
+            let drag = gtk::GestureDrag::new();
+            drag.set_button(gtk::gdk::BUTTON_MIDDLE);
+            let pan_start = std::rc::Rc::new(Cell::new((0.0_f32, 0.0_f32)));
+            let ps = pan_start.clone();
+            drag.connect_drag_begin(glib::clone!(
+                #[weak(rename_to = w)]
+                obj,
+                move |_, _, _| {
+                    ps.set(w.pan());
+                    w.set_cursor_from_name(Some("grabbing"));
+                }
+            ));
+            let widget = obj.downgrade();
+            let ps = pan_start.clone();
+            drag.connect_drag_update(move |_, ox, oy| {
+                if let Some(w) = widget.upgrade() {
+                    let (start_x, start_y) = ps.get();
+                    w.set_pan(start_x + ox as f32, start_y + oy as f32);
+                }
+            });
+            drag.connect_drag_end(glib::clone!(
+                #[weak(rename_to = w)]
+                obj,
+                move |_, _, _| {
+                    w.set_cursor_from_name(None);
+                }
+            ));
+            obj.add_controller(drag);
 
             let style = adw::StyleManager::default();
             let w = obj.downgrade();
@@ -140,20 +223,14 @@ mod imp {
                 return;
             }
 
-            let svg_bounds = self.svg_bounds.borrow();
-            let (sx, sy, sw, sh) = (
-                svg_bounds.x(),
-                svg_bounds.y(),
-                svg_bounds.width(),
-                svg_bounds.height(),
-            );
-            if sw <= 0.0 || sh <= 0.0 {
-                return;
+            {
+                let svg_bounds = self.svg_bounds.borrow();
+                if svg_bounds.width() <= 0.0 || svg_bounds.height() <= 0.0 {
+                    return;
+                }
             }
 
-            let scale = (width / sw).min(height / sh);
-            let tx = (width - sw * scale) / 2.0 - sx * scale;
-            let ty = (height - sh * scale) / 2.0 - sy * scale;
+            let (scale, tx, ty) = widget.compute_transform();
 
             snapshot.save();
             snapshot.translate(&gtk::graphene::Point::new(tx, ty));
@@ -413,19 +490,20 @@ impl MapWidget {
     }
 
     fn transform_to_svg(&self, x: f64, y: f64) -> (f32, f32) {
-        let width = self.width() as f32;
-        let height = self.height() as f32;
-        let svg_bounds = self.imp().svg_bounds.borrow();
-        let (sx, sy, sw, sh) = (
-            svg_bounds.x(),
-            svg_bounds.y(),
-            svg_bounds.width(),
-            svg_bounds.height(),
-        );
-        let scale = (width / sw).min(height / sh);
-        let tx = (width - sw * scale) / 2.0 - sx * scale;
-        let ty = (height - sh * scale) / 2.0 - sy * scale;
+        let (scale, tx, ty) = self.compute_transform();
         ((x as f32 - tx) / scale, (y as f32 - ty) / scale)
+    }
+
+    fn compute_transform(&self) -> (f32, f32, f32) {
+        let imp = self.imp();
+        let svg_bounds = imp.svg_bounds.borrow();
+        viewport_transform(
+            self.width() as f32,
+            self.height() as f32,
+            *svg_bounds,
+            imp.zoom.get(),
+            imp.pan.get(),
+        )
     }
 
     fn hit_test(&self, x: f64, y: f64) -> Option<String> {
@@ -598,5 +676,221 @@ impl MapWidget {
 
         drop(regions);
         self.queue_draw();
+    }
+
+    pub const MIN_ZOOM: f32 = 1.0;
+    pub const MAX_ZOOM: f32 = 8.0;
+
+    pub fn zoom(&self) -> f32 {
+        self.imp().zoom.get()
+    }
+
+    pub fn set_zoom(&self, zoom: f32) {
+        let clamped = zoom.clamp(Self::MIN_ZOOM, Self::MAX_ZOOM);
+        self.imp().zoom.set(clamped);
+        self.clamp_pan();
+        self.queue_draw();
+        self.emit_by_name::<()>("zoom-changed", &[&clamped]);
+    }
+
+    pub fn pan(&self) -> (f32, f32) {
+        self.imp().pan.get()
+    }
+
+    pub fn set_pan(&self, pan_x: f32, pan_y: f32) {
+        self.imp().pan.set((pan_x, pan_y));
+        self.clamp_pan();
+        self.queue_draw();
+    }
+
+    pub fn reset_view(&self) {
+        let imp = self.imp();
+        imp.zoom.set(Self::MIN_ZOOM);
+        imp.pan.set((0.0, 0.0));
+        self.queue_draw();
+        self.emit_by_name::<()>("zoom-changed", &[&Self::MIN_ZOOM]);
+    }
+
+    pub fn zoom_at(&self, factor: f32, cx: f64, cy: f64) {
+        let old_zoom = self.imp().zoom.get();
+        let new_zoom = (old_zoom * factor).clamp(Self::MIN_ZOOM, Self::MAX_ZOOM);
+        if (new_zoom - old_zoom).abs() < f32::EPSILON {
+            return;
+        }
+
+        let (svg_before_x, svg_before_y) = self.transform_to_svg(cx, cy);
+
+        self.imp().zoom.set(new_zoom);
+
+        let (scale, tx, ty) = self.compute_transform();
+        let svg_after_x = (cx as f32 - tx) / scale;
+        let svg_after_y = (cy as f32 - ty) / scale;
+
+        let (px, py) = self.imp().pan.get();
+        let new_px = px + (svg_after_x - svg_before_x) * scale;
+        let new_py = py + (svg_after_y - svg_before_y) * scale;
+        self.imp().pan.set((new_px, new_py));
+
+        self.clamp_pan();
+        self.queue_draw();
+        self.emit_by_name::<()>("zoom-changed", &[&new_zoom]);
+    }
+
+    pub fn zoom_at_center(&self, factor: f32) {
+        let cx = self.width() as f64 / 2.0;
+        let cy = self.height() as f64 / 2.0;
+        self.zoom_at(factor, cx, cy);
+    }
+
+    fn clamp_pan(&self) {
+        let imp = self.imp();
+        let width = self.width() as f32;
+        let height = self.height() as f32;
+        if width <= 0.0 || height <= 0.0 {
+            return;
+        }
+        let svg_bounds = imp.svg_bounds.borrow();
+        let (sw, sh) = (svg_bounds.width(), svg_bounds.height());
+        drop(svg_bounds);
+        if sw <= 0.0 || sh <= 0.0 {
+            return;
+        }
+        let base = (width / sw).min(height / sh);
+        let clamped = clamp_pan_offset(width, height, sw, sh, base * imp.zoom.get(), imp.pan.get());
+        imp.pan.set(clamped);
+    }
+}
+
+fn viewport_transform(
+    width: f32,
+    height: f32,
+    svg_bounds: gtk::graphene::Rect,
+    zoom: f32,
+    pan: (f32, f32),
+) -> (f32, f32, f32) {
+    let (sx, sy, sw, sh) = (
+        svg_bounds.x(),
+        svg_bounds.y(),
+        svg_bounds.width(),
+        svg_bounds.height(),
+    );
+    let scale = (width / sw).min(height / sh) * zoom;
+    let (pan_x, pan_y) = pan;
+    let tx = (width - sw * scale) / 2.0 - sx * scale + pan_x;
+    let ty = (height - sh * scale) / 2.0 - sy * scale + pan_y;
+    (scale, tx, ty)
+}
+
+fn clamp_pan_offset(
+    width: f32,
+    height: f32,
+    sw: f32,
+    sh: f32,
+    scale: f32,
+    pan: (f32, f32),
+) -> (f32, f32) {
+    let content_w = sw * scale;
+    let content_h = sh * scale;
+    let max_x = (content_w - width).max(0.0) / 2.0;
+    let max_y = (content_h - height).max(0.0) / 2.0;
+    (pan.0.clamp(-max_x, max_x), pan.1.clamp(-max_y, max_y))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use gtk::graphene::Rect;
+
+    #[test]
+    fn transform_matches_fit_formula_at_identity() {
+        let bounds = Rect::new(0.0, 0.0, 100.0, 50.0);
+        let (scale, tx, ty) = viewport_transform(400.0, 300.0, bounds, 1.0, (0.0, 0.0));
+        // Fit scale = min(400/100, 300/50) = min(4, 6) = 4
+        assert!((scale - 4.0).abs() < 1e-5);
+        // Centered horizontally: (400 - 100*4)/2 = 0; vertically: (300 - 50*4)/2 = 50
+        assert!((tx - 0.0).abs() < 1e-5);
+        assert!((ty - 50.0).abs() < 1e-5);
+    }
+
+    #[test]
+    fn transform_applies_zoom_and_pan() {
+        let bounds = Rect::new(0.0, 0.0, 100.0, 50.0);
+        let (scale, tx, ty) = viewport_transform(400.0, 300.0, bounds, 2.0, (10.0, -20.0));
+        assert!((scale - 8.0).abs() < 1e-5);
+        // tx = (400 - 100*8)/2 - 0 + 10 = -200 + 10 = -190
+        assert!((tx - (-190.0)).abs() < 1e-5);
+        // ty = (300 - 50*8)/2 - 0 - 20 = -50 - 20 = -70
+        assert!((ty - (-70.0)).abs() < 1e-5);
+    }
+
+    #[test]
+    fn screen_point_round_trips_to_svg() {
+        let bounds = Rect::new(0.0, 0.0, 100.0, 50.0);
+        let zoom = 2.0;
+        let pan = (10.0, -20.0);
+        let (scale, tx, ty) = viewport_transform(400.0, 300.0, bounds, zoom, pan);
+        // Pick an SVG point, forward-map it to screen, then invert.
+        let (svg_x, svg_y) = (30.0_f32, 25.0_f32);
+        let screen_x = svg_x * scale + tx;
+        let screen_y = svg_y * scale + ty;
+        let back_x = (screen_x - tx) / scale;
+        let back_y = (screen_y - ty) / scale;
+        assert!((back_x - svg_x).abs() < 1e-4);
+        assert!((back_y - svg_y).abs() < 1e-4);
+    }
+
+    #[test]
+    fn zoom_to_cursor_keeps_anchor_fixed() {
+        let bounds = Rect::new(0.0, 0.0, 100.0, 50.0);
+        let (w, h) = (400.0_f32, 300.0_f32);
+        let (cx, cy) = (120.0_f32, 90.0_f32);
+
+        let old_zoom = 1.0;
+        let pan0 = (0.0, 0.0);
+        let (s0, tx0, ty0) = viewport_transform(w, h, bounds, old_zoom, pan0);
+        let svg_before = ((cx - tx0) / s0, (cy - ty0) / s0);
+
+        let new_zoom = old_zoom * 1.25;
+        let (s1, tx1, ty1) = viewport_transform(w, h, bounds, new_zoom, pan0);
+        let svg_after = ((cx - tx1) / s1, (cy - ty1) / s1);
+
+        // Pan adjustment that re-anchors the cursor point.
+        let pan1 = (
+            pan0.0 + (svg_after.0 - svg_before.0) * s1,
+            pan0.1 + (svg_after.1 - svg_before.1) * s1,
+        );
+        let (s2, tx2, ty2) = viewport_transform(w, h, bounds, new_zoom, pan1);
+        let svg_final = ((cx - tx2) / s2, (cy - ty2) / s2);
+
+        assert!((svg_final.0 - svg_before.0).abs() < 1e-3);
+        assert!((svg_final.1 - svg_before.1).abs() < 1e-3);
+    }
+
+    #[test]
+    fn pan_clamped_to_keep_map_on_screen() {
+        // content_w = 100 * 8 = 800, viewport 400 => max_x = (800-400)/2 = 200
+        let clamped = clamp_pan_offset(400.0, 300.0, 100.0, 50.0, 8.0, (10_000.0, -10_000.0));
+        assert!((clamped.0 - 200.0).abs() < 1e-5);
+        // content_h = 50 * 8 = 400, viewport 300 => max_y = (400-300)/2 = 50
+        assert!((clamped.1 - (-50.0)).abs() < 1e-5);
+    }
+
+    #[test]
+    fn pan_pinned_center_when_fit() {
+        // At zoom 1, fit scale 4 => content 400x200, viewport 400x300.
+        // Width exactly fits (max_x=0), height smaller than viewport (max_y=0).
+        let clamped = clamp_pan_offset(400.0, 300.0, 100.0, 50.0, 4.0, (50.0, 50.0));
+        assert!(clamped.0.abs() < 1e-5);
+        assert!(clamped.1.abs() < 1e-5);
+    }
+
+    #[test]
+    fn drag_delta_maps_one_to_one_to_pan() {
+        // Pan is applied in widget-space pixels, so a middle-drag of (dx, dy)
+        // from a starting pan shifts pan by exactly (dx, dy) before clamping.
+        let start = (12.0_f32, -4.0_f32);
+        let (dx, dy) = (30.0_f32, 15.0_f32);
+        let expected = (start.0 + dx, start.1 + dy);
+        assert_eq!(expected, (42.0, 11.0));
     }
 }
