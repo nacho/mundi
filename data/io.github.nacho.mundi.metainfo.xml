@@ -87,6 +87,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.1" date="2026-10-21">
+      <description>
+        <ul>
+          <li>Fix the application icon failing to render in some environments</li>
+          <li>Fix layout warnings on the exercise screen at small window sizes</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2026-10-21">
       <description>
         <ul>
