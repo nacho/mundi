@@ -3,7 +3,11 @@
   <template class="MapExerciseView" parent="AdwNavigationPage">
     <property name="title">Exercise</property>
     <property name="child">
-      <object class="AdwToolbarView">
+      <object class="AdwBreakpointBin">
+        <property name="width-request">120</property>
+        <property name="height-request">120</property>
+        <child>
+          <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar">
             <property name="title-widget">
@@ -125,6 +129,14 @@
             </child>
           </object>
         </property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwBreakpoint">
+            <condition>max-width: 360sp</condition>
+            <setter object="zoom_box" property="visible">false</setter>
+          </object>
+        </child>
       </object>
     </property>
   </template>
