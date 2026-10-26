@@ -79,6 +79,8 @@
               <object class="GtkOverlay" id="map_overlay">
                 <property name="hexpand">true</property>
                 <property name="vexpand">true</property>
+                <!-- Clip the zoomed/panned map so it never paints over the prompt labels -->
+                <property name="overflow">hidden</property>
                 <child type="overlay">
                   <object class="GtkBox" id="zoom_box">
                     <property name="orientation">vertical</property>
