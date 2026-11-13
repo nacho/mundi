@@ -31,5 +31,13 @@
   <path id="Golfo di Cagliari" data-arrow="s" d="M 300 690 L 301 690 L 301 691 L 300 691 Z"/>
   <path id="Gargano" data-arrow="n" d="M 697 477 L 698 477 L 698 478 L 697 478 Z"/>
   <path id="Salento" data-arrow="e" d="M 826 610 L 827 610 L 827 611 L 826 611 Z"/>
+  <path id="Golfo di Policastro" data-arrow="w" d="M 673 623 L 674 623 L 674 624 L 673 624 Z"/>
+  <path id="Golfo di Sant'Eufemia" data-arrow="w" d="M 706 709 L 707 709 L 707 710 L 706 710 Z"/>
+  <path id="Golfo di Squillace" data-arrow="e" d="M 742 716 L 743 716 L 743 717 L 742 717 Z"/>
+  <path id="Golfo di Palermo" data-arrow="n" d="M 548 758 L 549 758 L 549 759 L 548 759 Z"/>
+  <path id="Golfo di Catania" data-arrow="e" d="M 653 816 L 654 816 L 654 817 L 653 817 Z"/>
+  <path id="Golfo dell'Asinara" data-arrow="n" d="M 262 544 L 263 544 L 263 545 L 262 545 Z"/>
+  <path id="Golfo di Orosei" data-arrow="e" d="M 335 606 L 336 606 L 336 607 L 335 607 Z"/>
+  <path id="Golfo di Oristano" data-arrow="w" d="M 254 633 L 255 633 L 255 634 L 254 634 Z"/>
   <path id="Penisola Sorrentina" data-arrow="s" d="M 606 573 L 607 573 L 607 574 L 606 574 Z"/>
 </svg>
