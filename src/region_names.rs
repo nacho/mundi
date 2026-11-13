@@ -134,6 +134,61 @@ pub const ITALY_PEAKS: &[(&str, &str)] = &[
     ("Vulcano", N_("Vulcano")),
 ];
 
+pub const ITALY_SEAS: &[(&str, &str)] = &[
+    ("Canale di Sicilia", N_("Strait of Sicily")),
+    ("Mar Adriatico", N_("Adriatic Sea")),
+    ("Mar di Sardegna", N_("Sea of Sardinia")),
+    ("Mar Ionio", N_("Ionian Sea")),
+    ("Mar Ligure", N_("Ligurian Sea")),
+    ("Mar Tirreno", N_("Tyrrhenian Sea")),
+];
+
+pub const ITALY_ISLANDS: &[(&str, &str)] = &[
+    ("Arcipelago Toscano", N_("Tuscan Archipelago")),
+    ("Capri", N_("Capri")),
+    ("Ischia", N_("Ischia")),
+    ("Isole Egadi", N_("Egadi Islands")),
+    ("Isole Eolie", N_("Aeolian Islands")),
+    ("Isole Pelagie", N_("Pelagie Islands")),
+    ("Isole Ponziane", N_("Pontine Islands")),
+    ("Isole Tremiti", N_("Tremiti Islands")),
+    ("La Maddalena", N_("La Maddalena Archipelago")),
+    ("Pantelleria", N_("Pantelleria")),
+    ("Sardegna", N_("Sardinia")),
+    ("Sicilia", N_("Sicily")),
+];
+
+pub const ITALY_PLAINS_HILLS: &[(&str, &str)] = &[
+    ("Agro Pontino", N_("Agro Pontino")),
+    ("Campidano", N_("Campidano")),
+    ("Chianti", N_("Chianti")),
+    ("Colli Euganei", N_("Euganean Hills")),
+    ("Colline Metallifere", N_("Colline Metallifere")),
+    ("Langhe", N_("Langhe")),
+    ("Maremma", N_("Maremma")),
+    ("Monferrato", N_("Monferrato")),
+    ("Murge", N_("Murge")),
+    ("Piana di Catania", N_("Plain of Catania")),
+    ("Pianura Campana", N_("Campanian Plain")),
+    ("Pianura Padana", N_("Po Valley")),
+    ("Tavoliere delle Puglie", N_("Tavoliere delle Puglie")),
+];
+
+pub const ITALY_GULFS_PENINSULAS: &[(&str, &str)] = &[
+    ("Gargano", N_("Gargano")),
+    ("Golfo di Cagliari", N_("Gulf of Cagliari")),
+    ("Golfo di Gaeta", N_("Gulf of Gaeta")),
+    ("Golfo di Genova", N_("Gulf of Genoa")),
+    ("Golfo di Manfredonia", N_("Gulf of Manfredonia")),
+    ("Golfo di Napoli", N_("Gulf of Naples")),
+    ("Golfo di Salerno", N_("Gulf of Salerno")),
+    ("Golfo di Taranto", N_("Gulf of Taranto")),
+    ("Golfo di Trieste", N_("Gulf of Trieste")),
+    ("Golfo di Venezia", N_("Gulf of Venice")),
+    ("Penisola Sorrentina", N_("Sorrento Peninsula")),
+    ("Salento", N_("Salento")),
+];
+
 pub const GERMANY_STATES: &[(&str, &str)] = &[
     ("Baden-Württemberg", N_("Baden-Württemberg")),
     ("Bavaria", N_("Bavaria")),
