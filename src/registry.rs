@@ -228,6 +228,50 @@ static ITALY_EXERCISES: &[MapExercise] = &[
         kind: ExerciseKind::Standard,
         alternates: &[],
     },
+    MapExercise {
+        id: "seas",
+        country_id: "italy",
+        title_msgid: N_("Seas"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/seas.svg",
+        regions: crate::region_names::ITALY_SEAS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "islands",
+        country_id: "italy",
+        title_msgid: N_("Islands and Archipelagos"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/islands.svg",
+        regions: crate::region_names::ITALY_ISLANDS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "plains-hills",
+        country_id: "italy",
+        title_msgid: N_("Plains and Hills"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/plains-hills.svg",
+        regions: crate::region_names::ITALY_PLAINS_HILLS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "gulfs-peninsulas",
+        country_id: "italy",
+        title_msgid: N_("Gulfs and Peninsulas"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/gulfs-peninsulas.svg",
+        regions: crate::region_names::ITALY_GULFS_PENINSULAS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
 ];
 
 static INDIA_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -635,5 +679,33 @@ mod tests {
         assert!(svg.contains(r#"data-marker="arrow""#));
         // Each peak or volcano is a dot with its own id.
         assert_ids_present(&svg, peaks.regions.iter().map(|(peak, _)| peak.to_string()));
+    }
+
+    #[test]
+    fn italy_coasts_svg_ids_present() {
+        // (exercise id, number of items, uses arrow markers)
+        for (id, count, arrows) in [
+            ("seas", 6, false),
+            ("islands", 12, true),
+            ("plains-hills", 13, true),
+            ("gulfs-peninsulas", 12, true),
+        ] {
+            let ex = exercise("italy", id);
+            assert_eq!(ex.regions.len(), count, "{id}: wrong number of items");
+            let svg = read_svg(ex.svg_resource);
+            assert_ids_present(&svg, ex.regions.iter().map(|(name, _)| name.to_string()));
+            assert_eq!(
+                svg.contains(r#"data-marker="arrow""#),
+                arrows,
+                "{id}: arrow markers"
+            );
+            // The land is decorative, so only the quiz items are clickable.
+            assert_ids_present(
+                &svg,
+                crate::region_names::ITALY_REGIONS
+                    .iter()
+                    .map(|(region, _)| format!("__{region}")),
+            );
+        }
     }
 }

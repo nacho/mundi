@@ -11,7 +11,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **France** — Regions
 - **Germany** — States, State Capitals
 - **Switzerland** — Cantons
-- **Italy** — Regions, Capitals of Regions, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes
+- **Italy** — Regions, Capitals of Regions, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes, Seas, Islands and Archipelagos, Plains and Hills, Gulfs and Peninsulas
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
 - **Portugal** — Districts
