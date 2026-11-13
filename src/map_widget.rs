@@ -66,12 +66,6 @@ fn distance_to_segment(p: (f32, f32), a: (f32, f32), b: (f32, f32)) -> f32 {
     ((p.0 - a.0 - t * vx).powi(2) + (p.1 - a.1 - t * vy).powi(2)).sqrt()
 }
 
-fn distance_to_rect(p: (f32, f32), r: &gtk::graphene::Rect) -> f32 {
-    let dx = (r.x() - p.0).max(p.0 - (r.x() + r.width())).max(0.0);
-    let dy = (r.y() - p.1).max(p.1 - (r.y() + r.height())).max(0.0);
-    (dx * dx + dy * dy).sqrt()
-}
-
 /// A clickable region filled as an area: not a line, not decorative.
 fn is_clickable_area(region: &Region) -> bool {
     !region.is_river
@@ -702,7 +696,7 @@ impl MapWidget {
         // click wins, so an arrow passing by never steals a click on a dot.
         if self.imp().arrow_markers.get() {
             let scale = self.compute_transform().0;
-            let p = (svg_x, svg_y);
+            let threshold = 8.0 / scale;
             let nearest = regions
                 .iter()
                 .filter(|r| is_clickable_area(r))
@@ -711,11 +705,16 @@ impl MapWidget {
                     let to_shape = if r.path.in_fill(&point, gtk::gsk::FillRule::Winding) {
                         0.0
                     } else {
-                        distance_to_rect(p, &r.bounds)
+                        r.path
+                            .closest_point(&point, threshold)
+                            .map_or(f32::INFINITY, |(_, dist)| dist)
                     };
-                    (distance_to_segment(p, tail, tip).min(to_shape), r)
+                    (
+                        distance_to_segment((svg_x, svg_y), tail, tip).min(to_shape),
+                        r,
+                    )
                 })
-                .filter(|(dist, _)| *dist < 8.0 / scale)
+                .filter(|(dist, _)| *dist < threshold)
                 .min_by(|a, b| a.0.total_cmp(&b.0));
             if let Some((_, r)) = nearest {
                 return Some(r.id.clone());
@@ -727,11 +726,7 @@ impl MapWidget {
         let tolerance = 10.0_f32;
         let mut best: Option<(f32, &Region)> = None;
         for region in regions.iter() {
-            if matches!(
-                region.state,
-                RegionState::Decorative | RegionState::Background
-            ) || region.is_river
-            {
+            if !is_clickable_area(region) {
                 continue;
             }
 
