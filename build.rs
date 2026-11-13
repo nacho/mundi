@@ -25,6 +25,13 @@ fn generate_config() {
 
     fs::write(&dest_path, content).unwrap();
     println!("cargo:rerun-if-changed=src/config.rs.in");
+    // Meson passes these through the environment: regenerate config.rs when
+    // they change, otherwise a previous plain `cargo build` (with the
+    // defaults above) is reused and e.g. translations are looked up in the
+    // wrong DATADIR.
+    for var in ["VERSION", "APPLICATION_ID", "GETTEXT_PACKAGE", "DATADIR"] {
+        println!("cargo:rerun-if-env-changed={var}");
+    }
 }
 
 fn main() {
