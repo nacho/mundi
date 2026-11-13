@@ -146,6 +146,7 @@ pub const ITALY_SEAS: &[(&str, &str)] = &[
 pub const ITALY_ISLANDS: &[(&str, &str)] = &[
     ("Arcipelago Toscano", N_("Tuscan Archipelago")),
     ("Capri", N_("Capri")),
+    ("Elba", N_("Elba")),
     ("Ischia", N_("Ischia")),
     ("Isole Egadi", N_("Egadi Islands")),
     ("Isole Eolie", N_("Aeolian Islands")),
@@ -179,6 +180,8 @@ pub const ITALY_GULFS_PENINSULAS: &[(&str, &str)] = &[
     ("Golfo di Cagliari", N_("Gulf of Cagliari")),
     ("Golfo dell'Asinara", N_("Gulf of Asinara")),
     ("Golfo di Catania", N_("Gulf of Catania")),
+    ("Golfo della Spezia", N_("Gulf of La Spezia")),
+    ("Golfo di Follonica", N_("Gulf of Follonica")),
     ("Golfo di Orosei", N_("Gulf of Orosei")),
     ("Golfo di Oristano", N_("Gulf of Oristano")),
     ("Golfo di Palermo", N_("Gulf of Palermo")),
@@ -193,6 +196,7 @@ pub const ITALY_GULFS_PENINSULAS: &[(&str, &str)] = &[
     ("Golfo di Taranto", N_("Gulf of Taranto")),
     ("Golfo di Trieste", N_("Gulf of Trieste")),
     ("Golfo di Venezia", N_("Gulf of Venice")),
+    ("Monte Argentario", N_("Monte Argentario")),
     ("Penisola Sorrentina", N_("Sorrento Peninsula")),
     ("Salento", N_("Salento")),
 ];

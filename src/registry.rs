@@ -686,9 +686,9 @@ mod tests {
         // (exercise id, number of items, uses arrow markers)
         for (id, count, arrows) in [
             ("seas", 6, false),
-            ("islands", 12, true),
+            ("islands", 13, true),
             ("plains-hills", 13, false),
-            ("gulfs-peninsulas", 20, true),
+            ("gulfs-peninsulas", 23, true),
         ] {
             let ex = exercise("italy", id);
             assert_eq!(ex.regions.len(), count, "{id}: wrong number of items");

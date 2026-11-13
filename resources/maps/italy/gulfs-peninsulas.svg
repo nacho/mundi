@@ -31,6 +31,9 @@
   <path id="Golfo di Cagliari" data-arrow="s" d="M 300 690 L 301 690 L 301 691 L 300 691 Z"/>
   <path id="Gargano" data-arrow="n" d="M 697 477 L 698 477 L 698 478 L 697 478 Z"/>
   <path id="Salento" data-arrow="e" d="M 826 610 L 827 610 L 827 611 L 826 611 Z"/>
+  <path id="Golfo di Follonica" data-arrow="s" d="M 387 395 L 388 395 L 388 396 L 387 396 Z"/>
+  <path id="Golfo della Spezia" data-arrow="s" d="M 339 300 L 340 300 L 340 301 L 339 301 Z"/>
+  <path id="Monte Argentario" data-arrow="s" d="M 415 432 L 416 432 L 416 433 L 415 433 Z"/>
   <path id="Golfo di Policastro" data-arrow="w" d="M 673 623 L 674 623 L 674 624 L 673 624 Z"/>
   <path id="Golfo di Sant'Eufemia" data-arrow="w" d="M 706 709 L 707 709 L 707 710 L 706 710 Z"/>
   <path id="Golfo di Squillace" data-arrow="e" d="M 742 716 L 743 716 L 743 717 L 742 717 Z"/>
