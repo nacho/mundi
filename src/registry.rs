@@ -683,12 +683,12 @@ mod tests {
 
     #[test]
     fn italy_coasts_svg_ids_present() {
-        // (exercise id, number of items, uses arrow markers)
-        for (id, count, arrows) in [
-            ("seas", 6, false),
-            ("islands", 12, true),
-            ("plains-hills", 14, false),
-            ("gulfs-peninsulas", 23, true),
+        // (exercise id, number of items, uses arrow markers, land prefix)
+        for (id, count, arrows, land) in [
+            ("seas", 6, false, "__"),
+            ("islands", 12, true, "_bg_"),
+            ("plains-hills", 14, false, "__"),
+            ("gulfs-peninsulas", 23, true, "__"),
         ] {
             let ex = exercise("italy", id);
             assert_eq!(ex.regions.len(), count, "{id}: wrong number of items");
@@ -699,13 +699,28 @@ mod tests {
                 arrows,
                 "{id}: arrow markers"
             );
-            // The land is decorative, so only the quiz items are clickable.
+            // The land is not clickable, so only the quiz items are.
             assert_ids_present(
                 &svg,
                 crate::region_names::ITALY_REGIONS
                     .iter()
-                    .map(|(region, _)| format!("__{region}")),
+                    .map(|(region, _)| format!("{land}{region}")),
             );
+        }
+    }
+
+    #[test]
+    fn italy_arrow_directions_valid() {
+        for ex in ITALY_EXERCISES {
+            let svg = read_svg(ex.svg_resource);
+            for value in svg.split(r#"data-arrow=""#).skip(1) {
+                let dir = &value[..value.find('"').unwrap()];
+                assert!(
+                    crate::map_widget::arrow_direction(dir).is_some(),
+                    "{}: unknown data-arrow {dir:?}",
+                    ex.id
+                );
+            }
         }
     }
 }
