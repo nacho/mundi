@@ -11,7 +11,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **France** — Regions
 - **Germany** — States, State Capitals
 - **Switzerland** — Cantons
-- **Italy** — Regions, Capitals of Regions
+- **Italy** — Regions, Capitals of Regions, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
 - **Portugal** — Districts
@@ -48,7 +48,7 @@ GSETTINGS_SCHEMA_DIR=data cargo run
 - Germany: [simplemaps.com](https://simplemaps.com/svg/country/de#admin1) (free for commercial and personal use)
 - Switzerland: [simplemaps.com](https://simplemaps.com/svg/country/ch)  (free for commercial and personal use)
 - Spain: [Mapa de España - Provincias.svg](https://commons.wikimedia.org/wiki/File:Mapa_de_Espa%C3%B1a_-_Provincias.svg) (CC BY-SA 4.0), [Blank map of Iberia.svg](https://commons.wikimedia.org/wiki/File:Blank_map_of_Iberia.svg) (CC BY-SA 4.0), [Spain, administrative divisions - Nmbrs - colored.svg](https://commons.wikimedia.org/wiki/File:Spain,_administrative_divisions_-_Nmbrs_-_colored.svg) (CC BY-SA 3.0, African coastline)
-- Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use)
+- Italy: [simplemaps.com](https://simplemaps.com/svg/country/it) (free for commercial and personal use); rivers from [Natural Earth rivers and lake centerlines](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/) and its Europe supplement, lakes from [Natural Earth lakes](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-lakes/) and its Europe supplement (public domain)
 - Japan: [Natural Earth Admin 1 - States, Provinces](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/) (public domain)
 - Poland: [simplemaps.com](https://simplemaps.com/svg/country/pl) (free for commercial and personal use)
 - Portugal: [simplemaps.com](https://simplemaps.com/svg/country/pt) (free for commercial and personal use)

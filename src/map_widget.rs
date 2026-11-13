@@ -16,12 +16,61 @@ pub enum RegionState {
     Background,
 }
 
+/// Arrow markers (`data-marker="arrow"` on the root `<svg>`): every
+/// clickable region gets an arrow pointing at it, coming from the direction
+/// given by the path's `data-arrow` attribute (n, ne, e, se, s, sw, w, nw).
+const ARROW_LENGTH_PX: f32 = 26.0;
+const ARROW_HEAD_PX: f32 = 8.0;
+const ARROW_GAP_PX: f32 = 2.0;
+
+/// Unit vector from the arrow tail to its tip, for an arrow coming from
+/// `from` (a compass direction).
+fn arrow_direction(from: &str) -> (f32, f32) {
+    let (x, y): (f32, f32) = match from {
+        "n" => (0.0, 1.0),
+        "ne" => (-1.0, 1.0),
+        "e" => (-1.0, 0.0),
+        "se" => (-1.0, -1.0),
+        "s" => (0.0, -1.0),
+        "sw" => (1.0, -1.0),
+        "w" => (1.0, 0.0),
+        _ => (1.0, 1.0), // nw, default
+    };
+    let len = (x * x + y * y).sqrt();
+    (x / len, y / len)
+}
+
+/// Tail and tip of the arrow pointing at `region`, in SVG units.
+fn arrow_points(region: &Region, scale: f32) -> ((f32, f32), (f32, f32)) {
+    let b = &region.bounds;
+    let (dx, dy) = region.arrow;
+    let (cx, cy) = (b.x() + b.width() / 2.0, b.y() + b.height() / 2.0);
+    // Stop just outside the region's bounding box.
+    let reach = dx.abs() * b.width() / 2.0 + dy.abs() * b.height() / 2.0 + ARROW_GAP_PX / scale;
+    let tip = (cx - dx * reach, cy - dy * reach);
+    let len = ARROW_LENGTH_PX / scale;
+    ((tip.0 - dx * len, tip.1 - dy * len), tip)
+}
+
+fn distance_to_segment(p: (f32, f32), a: (f32, f32), b: (f32, f32)) -> f32 {
+    let (vx, vy) = (b.0 - a.0, b.1 - a.1);
+    let len2 = vx * vx + vy * vy;
+    let t = if len2 > 0.0 {
+        (((p.0 - a.0) * vx + (p.1 - a.1) * vy) / len2).clamp(0.0, 1.0)
+    } else {
+        0.0
+    };
+    ((p.0 - a.0 - t * vx).powi(2) + (p.1 - a.1 - t * vy).powi(2)).sqrt()
+}
+
 pub struct Region {
     pub id: String,
     pub path: gtk::gsk::Path,
     pub bounds: gtk::graphene::Rect,
     pub state: RegionState,
     pub is_river: bool,
+    // Direction of the arrow marker (see `arrow_direction`).
+    pub arrow: (f32, f32),
 }
 
 mod imp {
@@ -34,6 +83,12 @@ mod imp {
         pub cached_colors: RefCell<[gtk::gdk::RGBA; 5]>,
         pub zoom: Cell<f32>,
         pub pan: Cell<(f32, f32)>,
+        // Point at every clickable region with an arrow.
+        pub arrow_markers: Cell<bool>,
+        // Draw river-style lines with a light halo (`data-line-halo="true"`
+        // on the root `<svg>`), for lines that leave the land, such as
+        // mountain crests along the border.
+        pub line_halo: Cell<bool>,
     }
 
     impl Default for MapWidget {
@@ -45,6 +100,8 @@ mod imp {
                 cached_colors: RefCell::new([fallback; 5]),
                 zoom: Cell::new(1.0),
                 pan: Cell::new((0.0, 0.0)),
+                arrow_markers: Cell::new(false),
+                line_halo: Cell::new(false),
             }
         }
     }
@@ -238,6 +295,10 @@ mod imp {
 
             let stroke = gtk::gsk::Stroke::new(1.5 / scale);
             let river_stroke = gtk::gsk::Stroke::new(3.0 / scale);
+            let line_halo = self.line_halo.get();
+            let line_halo_stroke = gtk::gsk::Stroke::new(7.0 / scale);
+            line_halo_stroke.set_line_join(gtk::gsk::LineJoin::Round);
+            line_halo_stroke.set_line_cap(gtk::gsk::LineCap::Round);
             let colors = self.cached_colors.borrow();
             let [c_normal, c_highlight, c_correct, c_wrong, c_border] = *colors;
 
@@ -267,6 +328,9 @@ mod imp {
                 };
 
                 if region.is_river {
+                    if line_halo {
+                        snapshot.append_stroke(&region.path, &line_halo_stroke, &c_border);
+                    }
                     snapshot.append_stroke(&region.path, &river_stroke, &fill_color);
                 } else {
                     snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &fill_color);
@@ -275,16 +339,15 @@ mod imp {
             }
 
             // Draw markers for tiny regions and rivers on top of everything
+            let arrow_stroke = gtk::gsk::Stroke::new(2.5 / scale);
+            let arrow_markers = self.arrow_markers.get();
+            let arrow_halo = gtk::gsk::Stroke::new(6.0 / scale);
+            arrow_halo.set_line_join(gtk::gsk::LineJoin::Round);
+            arrow_halo.set_line_cap(gtk::gsk::LineCap::Round);
             for region in regions.iter() {
                 if region.state == RegionState::Decorative
                     || region.state == RegionState::Background
                 {
-                    continue;
-                }
-
-                let b = &region.bounds;
-                let is_small = b.width() < 8.0 || b.height() < 8.0;
-                if !is_small && !region.is_river {
                     continue;
                 }
 
@@ -295,6 +358,38 @@ mod imp {
                     RegionState::Wrong => c_wrong,
                     RegionState::Decorative | RegionState::Background => unreachable!(),
                 };
+
+                if arrow_markers && !region.is_river {
+                    let (tail, tip) = arrow_points(region, scale);
+                    let (dx, dy) = region.arrow;
+                    let head = ARROW_HEAD_PX / scale;
+                    // Shaft stops at the base of the head, so the tip stays sharp.
+                    let base = (tip.0 - dx * head, tip.1 - dy * head);
+                    let shaft = gtk::gsk::PathBuilder::new();
+                    shaft.move_to(tail.0, tail.1);
+                    shaft.line_to(base.0, base.1);
+                    let shaft = shaft.to_path();
+                    let (px, py) = (-dy * head * 0.6, dx * head * 0.6);
+                    let arrow_head = gtk::gsk::PathBuilder::new();
+                    arrow_head.move_to(tip.0, tip.1);
+                    arrow_head.line_to(base.0 + px, base.1 + py);
+                    arrow_head.line_to(base.0 - px, base.1 - py);
+                    arrow_head.close();
+                    let arrow_head = arrow_head.to_path();
+                    // Light halo first, so the arrow stays visible both on
+                    // the land and on the dark background around the map.
+                    snapshot.append_stroke(&shaft, &arrow_halo, &c_border);
+                    snapshot.append_stroke(&arrow_head, &arrow_halo, &c_border);
+                    snapshot.append_stroke(&shaft, &arrow_stroke, &fill_color);
+                    snapshot.append_fill(&arrow_head, gtk::gsk::FillRule::Winding, &fill_color);
+                    continue;
+                }
+
+                let b = &region.bounds;
+                let is_small = b.width() < 8.0 || b.height() < 8.0;
+                if !is_small && !region.is_river {
+                    continue;
+                }
 
                 let (cx, cy) = if region.is_river {
                     let measure = gtk::gsk::PathMeasure::new(&region.path);
@@ -384,18 +479,30 @@ impl MapWidget {
         let mut regions = Vec::new();
         let mut markers: Vec<(String, f32, f32)> = Vec::new();
         let mut reader = Reader::from_str(data);
+        imp.arrow_markers.set(false);
+        imp.line_halo.set(false);
 
         loop {
             match reader.read_event() {
                 Ok(Event::Empty(ref e)) | Ok(Event::Start(ref e)) => {
                     let tag = e.name();
-                    if tag.as_ref() == "path" {
+                    if tag.as_ref() == "svg" {
+                        for attr in e.attributes().flatten() {
+                            if attr.key.as_ref() == "data-marker" {
+                                imp.arrow_markers.set(attr.value.as_ref() == "arrow");
+                            } else if attr.key.as_ref() == "data-line-halo" {
+                                imp.line_halo.set(attr.value.as_ref() == "true");
+                            }
+                        }
+                    } else if tag.as_ref() == "path" {
                         let mut id = None;
                         let mut d = None;
+                        let mut arrow = arrow_direction("nw");
                         for attr in e.attributes().flatten() {
                             match attr.key.as_ref() {
                                 "id" => id = Some(attr.value.to_string()),
                                 "d" => d = Some(attr.value.to_string()),
+                                "data-arrow" => arrow = arrow_direction(attr.value.as_ref()),
                                 _ => {}
                             }
                         }
@@ -423,6 +530,7 @@ impl MapWidget {
                                     bounds,
                                     state,
                                     is_river,
+                                    arrow,
                                 });
                             }
                         }
@@ -531,6 +639,29 @@ impl MapWidget {
 
         if let Some((_, r)) = best_river {
             return Some(r.id.clone());
+        }
+
+        // Arrow markers: clicking on an arrow selects the region it points at
+        if self.imp().arrow_markers.get() {
+            let scale = self.compute_transform().0;
+            let mut best_arrow: Option<(f32, &Region)> = None;
+            for region in regions.iter() {
+                if matches!(
+                    region.state,
+                    RegionState::Decorative | RegionState::Background
+                ) || region.is_river
+                {
+                    continue;
+                }
+                let (tail, tip) = arrow_points(region, scale);
+                let dist = distance_to_segment((svg_x, svg_y), tail, tip);
+                if dist < 8.0 / scale && (best_arrow.is_none() || dist < best_arrow.unwrap().0) {
+                    best_arrow = Some((dist, region));
+                }
+            }
+            if let Some((_, r)) = best_arrow {
+                return Some(r.id.clone());
+            }
         }
 
         // Check tiny regions (they'd be hidden behind larger neighbours)
