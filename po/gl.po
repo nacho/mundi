@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:48+0100\n"
+"POT-Creation-Date: 2026-11-13 18:52+0100\n"
 "PO-Revision-Date: 2026-03-23 15:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
@@ -68,11 +68,11 @@ msgstr "Piamonte"
 msgid "Apulia"
 msgstr "Apulia"
 
-#: src/region_names.rs:32 src/region_names.rs:46 src/region_names.rs:158
+#: src/region_names.rs:32 src/region_names.rs:46 src/region_names.rs:157
 msgid "Sardinia"
 msgstr "Sardeña"
 
-#: src/region_names.rs:33 src/region_names.rs:54 src/region_names.rs:159
+#: src/region_names.rs:33 src/region_names.rs:54 src/region_names.rs:158
 msgid "Sicily"
 msgstr "Sicilia"
 
@@ -449,7 +449,7 @@ msgid "Tuscan Archipelago"
 msgstr ""
 
 #: src/region_names.rs:148
-msgid "Capri"
+msgid "Campanian Archipelago"
 msgstr ""
 
 #: src/region_names.rs:149
@@ -457,39 +457,39 @@ msgid "Elba"
 msgstr ""
 
 #: src/region_names.rs:150
-msgid "Ischia"
-msgstr ""
-
-#: src/region_names.rs:151
 msgid "Egadi Islands"
 msgstr ""
 
-#: src/region_names.rs:152
+#: src/region_names.rs:151
 msgid "Aeolian Islands"
 msgstr ""
 
-#: src/region_names.rs:153
+#: src/region_names.rs:152
 msgid "Pelagie Islands"
 msgstr ""
 
-#: src/region_names.rs:154
+#: src/region_names.rs:153
 msgid "Pontine Islands"
 msgstr ""
 
-#: src/region_names.rs:155
+#: src/region_names.rs:154
 msgid "Tremiti Islands"
 msgstr ""
 
-#: src/region_names.rs:156
+#: src/region_names.rs:155
 msgid "La Maddalena Archipelago"
 msgstr ""
 
-#: src/region_names.rs:157
+#: src/region_names.rs:156
 msgid "Pantelleria"
 msgstr ""
 
-#: src/region_names.rs:163
+#: src/region_names.rs:162
 msgid "Agro Pontino"
+msgstr ""
+
+#: src/region_names.rs:163
+msgid "Agro Romano"
 msgstr ""
 
 #: src/region_names.rs:164

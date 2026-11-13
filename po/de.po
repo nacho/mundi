@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:48+0100\n"
+"POT-Creation-Date: 2026-11-13 18:52+0100\n"
 "PO-Revision-Date: 2026-10-17 19:56+0200\n"
 "Last-Translator: Florian Frauenfelder <florian.l.frauenfelder@gmail.com>\n"
 "Language-Team: Swiss German\n"
@@ -69,11 +69,11 @@ msgstr "Piemont"
 msgid "Apulia"
 msgstr "Apulien"
 
-#: src/region_names.rs:32 src/region_names.rs:46 src/region_names.rs:158
+#: src/region_names.rs:32 src/region_names.rs:46 src/region_names.rs:157
 msgid "Sardinia"
 msgstr "Sardinien"
 
-#: src/region_names.rs:33 src/region_names.rs:54 src/region_names.rs:159
+#: src/region_names.rs:33 src/region_names.rs:54 src/region_names.rs:158
 msgid "Sicily"
 msgstr "Sizilien"
 
@@ -450,48 +450,48 @@ msgid "Tuscan Archipelago"
 msgstr "Toskanischer Archipel"
 
 #: src/region_names.rs:148
-msgid "Capri"
-msgstr "Capri"
+msgid "Campanian Archipelago"
+msgstr "Kampanischer Archipel"
 
 #: src/region_names.rs:149
 msgid "Elba"
 msgstr "Elba"
 
 #: src/region_names.rs:150
-msgid "Ischia"
-msgstr "Ischia"
-
-#: src/region_names.rs:151
 msgid "Egadi Islands"
 msgstr "Ägadische Inseln"
 
-#: src/region_names.rs:152
+#: src/region_names.rs:151
 msgid "Aeolian Islands"
 msgstr "Liparische Inseln"
 
-#: src/region_names.rs:153
+#: src/region_names.rs:152
 msgid "Pelagie Islands"
 msgstr "Pelagische Inseln"
 
-#: src/region_names.rs:154
+#: src/region_names.rs:153
 msgid "Pontine Islands"
 msgstr "Pontinische Inseln"
 
-#: src/region_names.rs:155
+#: src/region_names.rs:154
 msgid "Tremiti Islands"
 msgstr "Tremiti-Inseln"
 
-#: src/region_names.rs:156
+#: src/region_names.rs:155
 msgid "La Maddalena Archipelago"
 msgstr "La-Maddalena-Archipel"
 
-#: src/region_names.rs:157
+#: src/region_names.rs:156
 msgid "Pantelleria"
 msgstr "Pantelleria"
 
-#: src/region_names.rs:163
+#: src/region_names.rs:162
 msgid "Agro Pontino"
 msgstr "Pontinische Ebene"
+
+#: src/region_names.rs:163
+msgid "Agro Romano"
+msgstr "Agro Romano"
 
 #: src/region_names.rs:164
 msgid "Campidano"
@@ -3163,3 +3163,5 @@ msgstr "Speichern"
 #: resources/ui/preferences_dialog.ui:10
 msgid "Sound Effects"
 msgstr "Soundeffekte"
+
+

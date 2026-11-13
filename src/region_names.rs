@@ -145,9 +145,8 @@ pub const ITALY_SEAS: &[(&str, &str)] = &[
 
 pub const ITALY_ISLANDS: &[(&str, &str)] = &[
     ("Arcipelago Toscano", N_("Tuscan Archipelago")),
-    ("Capri", N_("Capri")),
+    ("Arcipelago Campano", N_("Campanian Archipelago")),
     ("Elba", N_("Elba")),
-    ("Ischia", N_("Ischia")),
     ("Isole Egadi", N_("Egadi Islands")),
     ("Isole Eolie", N_("Aeolian Islands")),
     ("Isole Pelagie", N_("Pelagie Islands")),
@@ -161,6 +160,7 @@ pub const ITALY_ISLANDS: &[(&str, &str)] = &[
 
 pub const ITALY_PLAINS_HILLS: &[(&str, &str)] = &[
     ("Agro Pontino", N_("Agro Pontino")),
+    ("Agro Romano", N_("Agro Romano")),
     ("Campidano", N_("Campidano")),
     ("Chianti", N_("Chianti")),
     ("Colli Euganei", N_("Euganean Hills")),
