@@ -161,17 +161,30 @@ static SWITZERLAND_EXERCISES: &[MapExercise] = &[MapExercise {
     alternates: &[],
 }];
 
-static ITALY_EXERCISES: &[MapExercise] = &[MapExercise {
-    id: "regions",
-    country_id: "italy",
-    title_msgid: N_("Regions"),
-    title_context: None,
-    svg_resource: "/io/github/nacho/mundi/maps/italy/regions.svg",
-    regions: crate::region_names::ITALY_REGIONS,
-    group: None,
-    kind: ExerciseKind::Standard,
-    alternates: &[],
-}];
+static ITALY_EXERCISES: &[MapExercise] = &[
+    MapExercise {
+        id: "regions",
+        country_id: "italy",
+        title_msgid: N_("Regions"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/regions.svg",
+        regions: crate::region_names::ITALY_REGIONS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "region-capitals",
+        country_id: "italy",
+        title_msgid: N_("Capitals of Regions"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/region-capitals.svg",
+        regions: crate::region_names::ITALY_REGION_CAPITALS,
+        group: None,
+        kind: ExerciseKind::Capitals,
+        alternates: &[],
+    },
+];
 
 static INDIA_EXERCISES: &[MapExercise] = &[MapExercise {
     id: "states",
@@ -486,6 +499,32 @@ mod tests {
             crate::region_names::GERMANY_STATES
                 .iter()
                 .map(|(state, _)| format!("_bg_{state}")),
+        );
+    }
+
+    #[test]
+    fn italy_capitals_registered() {
+        let ex = exercise("italy", "region-capitals");
+        assert!(ex.kind == ExerciseKind::Capitals);
+        assert_eq!(
+            ex.regions.len(),
+            20,
+            "Italy should have 20 regional capitals"
+        );
+    }
+
+    #[test]
+    fn italy_capitals_svg_ids_present() {
+        let ex = exercise("italy", "region-capitals");
+        let svg = read_svg(ex.svg_resource);
+        // Each capital dot must be present by its own id.
+        assert_ids_present(&svg, ex.regions.iter().map(|(cap, _)| cap.to_string()));
+        // Each region must have a background outline (_bg_<Region>).
+        assert_ids_present(
+            &svg,
+            crate::region_names::ITALY_REGIONS
+                .iter()
+                .map(|(region, _)| format!("_bg_{region}")),
         );
     }
 }

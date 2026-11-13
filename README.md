@@ -11,7 +11,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **France** — Regions
 - **Germany** — States, State Capitals
 - **Switzerland** — Cantons
-- **Italy** — Regions
+- **Italy** — Regions, Capitals of Regions
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
 - **Portugal** — Districts
