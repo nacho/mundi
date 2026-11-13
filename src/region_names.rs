@@ -61,6 +61,79 @@ pub const ITALY_REGION_CAPITALS: &[(&str, &str)] = &[
     (N_("Venice"), N_("Veneto")),
 ];
 
+pub const ITALY_RIVERS: &[(&str, &str)] = &[
+    ("Adda", N_("Adda")),
+    ("Adige", N_("Adige")),
+    ("Arno", N_("Arno")),
+    ("Brenta", N_("Brenta")),
+    ("Crati", N_("Crati")),
+    ("Dora Baltea", N_("Dora Baltea")),
+    ("Isonzo", N_("Isonzo")),
+    ("Mincio", N_("Mincio")),
+    ("Ofanto", N_("Ofanto")),
+    ("Oglio", N_("Oglio")),
+    ("Pescara", N_("Pescara")),
+    ("Piave", N_("Piave")),
+    ("Po", N_("Po")),
+    ("Reno", N_("Reno")),
+    ("Simeto", N_("Simeto")),
+    ("Tagliamento", N_("Tagliamento")),
+    ("Tanaro", N_("Tanaro")),
+    ("Tevere", N_("Tiber")),
+    ("Ticino", N_("Ticino")),
+    ("Tirso", N_("Tirso")),
+    ("Volturno", N_("Volturno")),
+];
+
+pub const ITALY_LAKES: &[(&str, &str)] = &[
+    ("Albano", N_("Lake Albano")),
+    ("Bolsena", N_("Lake Bolsena")),
+    ("Bracciano", N_("Lake Bracciano")),
+    ("Coghinas", N_("Lake Coghinas")),
+    ("Como", N_("Lake Como")),
+    ("Garda", N_("Lake Garda")),
+    ("Iseo", N_("Lake Iseo")),
+    ("Lesina", N_("Lake Lesina")),
+    ("Lugano", N_("Lake Lugano")),
+    ("Maggiore", N_("Lake Maggiore")),
+    ("Omodeo", N_("Lake Omodeo")),
+    ("Trasimeno", N_("Lake Trasimeno")),
+    ("Varano", N_("Lake Varano")),
+    ("Vico", N_("Lake Vico")),
+];
+
+pub const ITALY_MOUNTAIN_RANGES: &[(&str, &str)] = &[
+    ("Alpi Centrali", N_("Central Alps")),
+    ("Alpi Occidentali", N_("Western Alps")),
+    ("Alpi Orientali", N_("Eastern Alps")),
+    ("Appennino Centrale", N_("Central Apennines")),
+    ("Appennino Meridionale", N_("Southern Apennines")),
+    ("Appennino Settentrionale", N_("Northern Apennines")),
+    ("Appennino Siculo", N_("Sicilian Apennines")),
+    ("Dolomiti", N_("Dolomites")),
+    ("Gennargentu", N_("Gennargentu")),
+];
+
+pub const ITALY_PEAKS: &[(&str, &str)] = &[
+    ("Cervino", N_("Matterhorn")),
+    ("Etna", N_("Mount Etna")),
+    ("Gran Paradiso", N_("Gran Paradiso")),
+    ("Gran Sasso", N_("Gran Sasso")),
+    ("Maiella", N_("Maiella")),
+    ("Marmolada", N_("Marmolada")),
+    ("Monte Amiata", N_("Monte Amiata")),
+    ("Monte Bianco", N_("Mont Blanc")),
+    ("Monte Cimone", N_("Monte Cimone")),
+    ("Monte Rosa", N_("Monte Rosa")),
+    ("Ortles", N_("Ortler")),
+    ("Pizzo Bernina", N_("Piz Bernina")),
+    ("Pollino", N_("Pollino")),
+    ("Punta La Marmora", N_("Punta La Marmora")),
+    ("Stromboli", N_("Stromboli")),
+    ("Vesuvio", N_("Mount Vesuvius")),
+    ("Vulcano", N_("Vulcano")),
+];
+
 pub const GERMANY_STATES: &[(&str, &str)] = &[
     ("Baden-Württemberg", N_("Baden-Württemberg")),
     ("Bavaria", N_("Bavaria")),

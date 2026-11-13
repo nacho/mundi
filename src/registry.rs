@@ -184,6 +184,50 @@ static ITALY_EXERCISES: &[MapExercise] = &[
         kind: ExerciseKind::Capitals,
         alternates: &[],
     },
+    MapExercise {
+        id: "rivers",
+        country_id: "italy",
+        title_msgid: N_("Rivers"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/rivers.svg",
+        regions: crate::region_names::ITALY_RIVERS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "lakes",
+        country_id: "italy",
+        title_msgid: N_("Lakes"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/lakes.svg",
+        regions: crate::region_names::ITALY_LAKES,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "mountain-ranges",
+        country_id: "italy",
+        title_msgid: N_("Mountain Ranges"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/mountains.svg",
+        regions: crate::region_names::ITALY_MOUNTAIN_RANGES,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
+        id: "peaks",
+        country_id: "italy",
+        title_msgid: N_("Peaks and Volcanoes"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/italy/peaks.svg",
+        regions: crate::region_names::ITALY_PEAKS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
 ];
 
 static INDIA_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -526,5 +570,70 @@ mod tests {
                 .iter()
                 .map(|(region, _)| format!("_bg_{region}")),
         );
+    }
+
+    #[test]
+    fn italy_rivers_svg_ids_present() {
+        let ex = exercise("italy", "rivers");
+        assert_eq!(ex.regions.len(), 21, "Italy should have 21 rivers");
+        let svg = read_svg(ex.svg_resource);
+        // Each river must be a stroke path (_river_<Name>).
+        assert_ids_present(
+            &svg,
+            ex.regions
+                .iter()
+                .map(|(river, _)| format!("_river_{river}")),
+        );
+        // Regions are decorative (__<Region>), like the Spain rivers map, so
+        // the rivers are drawn in a different color than the land.
+        assert_ids_present(
+            &svg,
+            crate::region_names::ITALY_REGIONS
+                .iter()
+                .map(|(region, _)| format!("__{region}")),
+        );
+    }
+
+    #[test]
+    fn italy_lakes_svg_ids_present() {
+        let ex = exercise("italy", "lakes");
+        assert_eq!(ex.regions.len(), 14, "Italy should have 14 lakes");
+        let svg = read_svg(ex.svg_resource);
+        // Every lake gets an arrow marker so even small ones are easy to find.
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        // Each lake is a clickable region with its own id.
+        assert_ids_present(&svg, ex.regions.iter().map(|(lake, _)| lake.to_string()));
+        // Regions are decorative (__<Region>) so the lakes stand out.
+        assert_ids_present(
+            &svg,
+            crate::region_names::ITALY_REGIONS
+                .iter()
+                .map(|(region, _)| format!("__{region}")),
+        );
+    }
+
+    #[test]
+    fn italy_mountains_svg_ids_present() {
+        let ranges = exercise("italy", "mountain-ranges");
+        assert_eq!(ranges.regions.len(), 9, "Italy should have 9 ranges");
+        let svg = read_svg(ranges.svg_resource);
+        // Crests along the border leave the land: draw them with a halo.
+        assert!(svg.contains(r#"data-line-halo="true""#));
+        // Ranges are drawn and clicked like rivers (_river_<Name>).
+        assert_ids_present(
+            &svg,
+            ranges
+                .regions
+                .iter()
+                .map(|(range, _)| format!("_river_{range}")),
+        );
+
+        let peaks = exercise("italy", "peaks");
+        assert_eq!(peaks.regions.len(), 17, "Italy should have 17 peaks");
+        let svg = read_svg(peaks.svg_resource);
+        // Every peak gets an arrow marker, like the lakes.
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        // Each peak or volcano is a dot with its own id.
+        assert_ids_present(&svg, peaks.regions.iter().map(|(peak, _)| peak.to_string()));
     }
 }
