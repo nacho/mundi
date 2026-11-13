@@ -99,63 +99,63 @@ msgstr "Veneto"
 
 #: src/region_names.rs:42
 msgid "Ancona"
-msgstr ""
+msgstr "Ancona"
 
 #: src/region_names.rs:43
 msgid "Aosta"
-msgstr ""
+msgstr "Aosta"
 
 #: src/region_names.rs:44
 msgid "Bari"
-msgstr ""
+msgstr "Bari"
 
 #: src/region_names.rs:45
 msgid "Bologna"
-msgstr ""
+msgstr "Bologna"
 
 #: src/region_names.rs:46
 msgid "Cagliari"
-msgstr ""
+msgstr "Cagliari"
 
 #: src/region_names.rs:47
 msgid "Campobasso"
-msgstr ""
+msgstr "Campobasso"
 
 #: src/region_names.rs:48
 msgid "Catanzaro"
-msgstr ""
+msgstr "Catanzaro"
 
 #: src/region_names.rs:49
 msgid "Florence"
-msgstr ""
+msgstr "Floransa"
 
 #: src/region_names.rs:50
 msgid "Genoa"
-msgstr ""
+msgstr "Cenova"
 
 #: src/region_names.rs:51
 msgid "L'Aquila"
-msgstr ""
+msgstr "L'Aquila"
 
 #: src/region_names.rs:52
 msgid "Milan"
-msgstr ""
+msgstr "Milano"
 
 #: src/region_names.rs:53
 msgid "Naples"
-msgstr ""
+msgstr "Napoli"
 
 #: src/region_names.rs:54
 msgid "Palermo"
-msgstr ""
+msgstr "Palermo"
 
 #: src/region_names.rs:55
 msgid "Perugia"
-msgstr ""
+msgstr "Perugia"
 
 #: src/region_names.rs:56
 msgid "Potenza"
-msgstr ""
+msgstr "Potenza"
 
 #: src/region_names.rs:57 src/region_names.rs:741
 msgid "Rome"
@@ -163,19 +163,19 @@ msgstr "Roma"
 
 #: src/region_names.rs:58
 msgid "Trento"
-msgstr ""
+msgstr "Trento"
 
 #: src/region_names.rs:59
 msgid "Trieste"
-msgstr ""
+msgstr "Trieste"
 
 #: src/region_names.rs:60
 msgid "Turin"
-msgstr ""
+msgstr "Torino"
 
 #: src/region_names.rs:61
 msgid "Venice"
-msgstr ""
+msgstr "Venedik"
 
 #: src/region_names.rs:65 src/region_names.rs:101
 msgid "Baden-Württemberg"
@@ -295,23 +295,23 @@ msgstr "Wiesbaden"
 
 #: src/region_names.rs:106
 msgid "Aargau"
-msgstr ""
+msgstr "Aargau"
 
 #: src/region_names.rs:107
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "Appenzell Ausserrhoden"
 
 #: src/region_names.rs:108
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "Appenzell Innerrhoden"
 
 #: src/region_names.rs:109
 msgid "Basel-Landschaft"
-msgstr ""
+msgstr "Basel-Landschaft"
 
 #: src/region_names.rs:110
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "Basel-Stadt"
 
 #: src/region_names.rs:111 src/region_names.rs:764
 msgid "Bern"
@@ -319,83 +319,83 @@ msgstr "Bern"
 
 #: src/region_names.rs:112
 msgid "Fribourg"
-msgstr ""
+msgstr "Fribourg"
 
 #: src/region_names.rs:113
 msgid "Geneva"
-msgstr ""
+msgstr "Cenevre"
 
 #: src/region_names.rs:114
 msgid "Glarus"
-msgstr ""
+msgstr "Glarus"
 
 #: src/region_names.rs:115
 msgid "Graubünden"
-msgstr ""
+msgstr "Graubünden"
 
 #: src/region_names.rs:116
 msgid "Jura"
-msgstr ""
+msgstr "Jura"
 
 #: src/region_names.rs:117
 msgid "Lucerne"
-msgstr ""
+msgstr "Luzern"
 
 #: src/region_names.rs:118
 msgid "Neuchâtel"
-msgstr ""
+msgstr "Neuchâtel"
 
 #: src/region_names.rs:119
 msgid "Nidwalden"
-msgstr ""
+msgstr "Nidwalden"
 
 #: src/region_names.rs:120
 msgid "Obwalden"
-msgstr ""
+msgstr "Obwalden"
 
 #: src/region_names.rs:121
 msgid "Schaffhausen"
-msgstr ""
+msgstr "Schaffhausen"
 
 #: src/region_names.rs:122
 msgid "Schwyz"
-msgstr ""
+msgstr "Schwyz"
 
 #: src/region_names.rs:123
 msgid "Solothurn"
-msgstr ""
+msgstr "Solothurn"
 
 #: src/region_names.rs:124
 msgid "St. Gallen"
-msgstr ""
+msgstr "St. Gallen"
 
 #: src/region_names.rs:125
 msgid "Thurgau"
-msgstr ""
+msgstr "Thurgau"
 
 #: src/region_names.rs:126
 msgid "Ticino"
-msgstr ""
+msgstr "Ticino"
 
 #: src/region_names.rs:127
 msgid "Uri"
-msgstr ""
+msgstr "Uri"
 
 #: src/region_names.rs:128
 msgid "Valais"
-msgstr ""
+msgstr "Valais"
 
 #: src/region_names.rs:129
 msgid "Vaud"
-msgstr ""
+msgstr "Vaud"
 
 #: src/region_names.rs:130
 msgid "Zug"
-msgstr ""
+msgstr "Zug"
 
 #: src/region_names.rs:131
 msgid "Zurich"
-msgstr ""
+msgstr "Zürih"
 
 #: src/region_names.rs:135 src/region_names.rs:170
 msgid "Andalusia"
@@ -2547,11 +2547,11 @@ msgstr "Eyalet Başkentleri"
 
 #: src/registry.rs:155
 msgid "Cantons"
-msgstr ""
+msgstr "Kantonlar"
 
 #: src/registry.rs:179
 msgid "Capitals of Regions"
-msgstr ""
+msgstr "Bölge Başkentleri"
 
 #: src/registry.rs:192
 msgctxt "India"

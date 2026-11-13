@@ -295,23 +295,23 @@ msgstr "Wiesbaden"
 
 #: src/region_names.rs:106
 msgid "Aargau"
-msgstr ""
+msgstr "Argovia"
 
 #: src/region_names.rs:107
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "Appenzell Rodas Exteriores"
 
 #: src/region_names.rs:108
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "Appenzell Rodas Interiores"
 
 #: src/region_names.rs:109
 msgid "Basel-Landschaft"
-msgstr ""
+msgstr "Basilea-Campiña"
 
 #: src/region_names.rs:110
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "Basilea-Ciudad"
 
 #: src/region_names.rs:111 src/region_names.rs:764
 msgid "Bern"
@@ -319,83 +319,83 @@ msgstr "Berna"
 
 #: src/region_names.rs:112
 msgid "Fribourg"
-msgstr ""
+msgstr "Friburgo"
 
 #: src/region_names.rs:113
 msgid "Geneva"
-msgstr ""
+msgstr "Ginebra"
 
 #: src/region_names.rs:114
 msgid "Glarus"
-msgstr ""
+msgstr "Glaris"
 
 #: src/region_names.rs:115
 msgid "Graubünden"
-msgstr ""
+msgstr "Grisones"
 
 #: src/region_names.rs:116
 msgid "Jura"
-msgstr ""
+msgstr "Jura"
 
 #: src/region_names.rs:117
 msgid "Lucerne"
-msgstr ""
+msgstr "Lucerna"
 
 #: src/region_names.rs:118
 msgid "Neuchâtel"
-msgstr ""
+msgstr "Neuchâtel"
 
 #: src/region_names.rs:119
 msgid "Nidwalden"
-msgstr ""
+msgstr "Nidwalden"
 
 #: src/region_names.rs:120
 msgid "Obwalden"
-msgstr ""
+msgstr "Obwalden"
 
 #: src/region_names.rs:121
 msgid "Schaffhausen"
-msgstr ""
+msgstr "Schaffhausen"
 
 #: src/region_names.rs:122
 msgid "Schwyz"
-msgstr ""
+msgstr "Schwyz"
 
 #: src/region_names.rs:123
 msgid "Solothurn"
-msgstr ""
+msgstr "Soleura"
 
 #: src/region_names.rs:124
 msgid "St. Gallen"
-msgstr ""
+msgstr "San Galo"
 
 #: src/region_names.rs:125
 msgid "Thurgau"
-msgstr ""
+msgstr "Turgovia"
 
 #: src/region_names.rs:126
 msgid "Ticino"
-msgstr ""
+msgstr "Tesino"
 
 #: src/region_names.rs:127
 msgid "Uri"
-msgstr ""
+msgstr "Uri"
 
 #: src/region_names.rs:128
 msgid "Valais"
-msgstr ""
+msgstr "Valais"
 
 #: src/region_names.rs:129
 msgid "Vaud"
-msgstr ""
+msgstr "Vaud"
 
 #: src/region_names.rs:130
 msgid "Zug"
-msgstr ""
+msgstr "Zug"
 
 #: src/region_names.rs:131
 msgid "Zurich"
-msgstr ""
+msgstr "Zúrich"
 
 #: src/region_names.rs:135 src/region_names.rs:170
 msgid "Andalusia"
@@ -2534,7 +2534,7 @@ msgstr "Capitales de estado"
 
 #: src/registry.rs:155
 msgid "Cantons"
-msgstr ""
+msgstr "Cantones"
 
 #: src/registry.rs:179
 msgid "Capitals of Regions"

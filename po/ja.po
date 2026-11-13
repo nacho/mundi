@@ -98,63 +98,63 @@ msgstr "ヴェネト州"
 
 #: src/region_names.rs:42
 msgid "Ancona"
-msgstr ""
+msgstr "アンコーナ"
 
 #: src/region_names.rs:43
 msgid "Aosta"
-msgstr ""
+msgstr "アオスタ"
 
 #: src/region_names.rs:44
 msgid "Bari"
-msgstr ""
+msgstr "バーリ"
 
 #: src/region_names.rs:45
 msgid "Bologna"
-msgstr ""
+msgstr "ボローニャ"
 
 #: src/region_names.rs:46
 msgid "Cagliari"
-msgstr ""
+msgstr "カリャリ"
 
 #: src/region_names.rs:47
 msgid "Campobasso"
-msgstr ""
+msgstr "カンポバッソ"
 
 #: src/region_names.rs:48
 msgid "Catanzaro"
-msgstr ""
+msgstr "カタンザーロ"
 
 #: src/region_names.rs:49
 msgid "Florence"
-msgstr ""
+msgstr "フィレンツェ"
 
 #: src/region_names.rs:50
 msgid "Genoa"
-msgstr ""
+msgstr "ジェノヴァ"
 
 #: src/region_names.rs:51
 msgid "L'Aquila"
-msgstr ""
+msgstr "ラクイラ"
 
 #: src/region_names.rs:52
 msgid "Milan"
-msgstr ""
+msgstr "ミラノ"
 
 #: src/region_names.rs:53
 msgid "Naples"
-msgstr ""
+msgstr "ナポリ"
 
 #: src/region_names.rs:54
 msgid "Palermo"
-msgstr ""
+msgstr "パレルモ"
 
 #: src/region_names.rs:55
 msgid "Perugia"
-msgstr ""
+msgstr "ペルージャ"
 
 #: src/region_names.rs:56
 msgid "Potenza"
-msgstr ""
+msgstr "ポテンツァ"
 
 #: src/region_names.rs:57 src/region_names.rs:741
 msgid "Rome"
@@ -162,19 +162,19 @@ msgstr "ローマ"
 
 #: src/region_names.rs:58
 msgid "Trento"
-msgstr ""
+msgstr "トレント"
 
 #: src/region_names.rs:59
 msgid "Trieste"
-msgstr ""
+msgstr "トリエステ"
 
 #: src/region_names.rs:60
 msgid "Turin"
-msgstr ""
+msgstr "トリノ"
 
 #: src/region_names.rs:61
 msgid "Venice"
-msgstr ""
+msgstr "ヴェネツィア"
 
 #: src/region_names.rs:65 src/region_names.rs:101
 msgid "Baden-Württemberg"
@@ -294,23 +294,23 @@ msgstr "ヴィースバーデン"
 
 #: src/region_names.rs:106
 msgid "Aargau"
-msgstr ""
+msgstr "アールガウ州"
 
 #: src/region_names.rs:107
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "アッペンツェル・アウサーローデン州"
 
 #: src/region_names.rs:108
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "アッペンツェル・インナーローデン州"
 
 #: src/region_names.rs:109
 msgid "Basel-Landschaft"
-msgstr ""
+msgstr "バーゼル＝ラント州"
 
 #: src/region_names.rs:110
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "バーゼル＝シュタット州"
 
 #: src/region_names.rs:111 src/region_names.rs:764
 msgid "Bern"
@@ -318,83 +318,83 @@ msgstr "ベルン"
 
 #: src/region_names.rs:112
 msgid "Fribourg"
-msgstr ""
+msgstr "フリブール州"
 
 #: src/region_names.rs:113
 msgid "Geneva"
-msgstr ""
+msgstr "ジュネーヴ州"
 
 #: src/region_names.rs:114
 msgid "Glarus"
-msgstr ""
+msgstr "グラールス州"
 
 #: src/region_names.rs:115
 msgid "Graubünden"
-msgstr ""
+msgstr "グラウビュンデン州"
 
 #: src/region_names.rs:116
 msgid "Jura"
-msgstr ""
+msgstr "ジュラ州"
 
 #: src/region_names.rs:117
 msgid "Lucerne"
-msgstr ""
+msgstr "ルツェルン州"
 
 #: src/region_names.rs:118
 msgid "Neuchâtel"
-msgstr ""
+msgstr "ヌーシャテル州"
 
 #: src/region_names.rs:119
 msgid "Nidwalden"
-msgstr ""
+msgstr "ニトヴァルデン州"
 
 #: src/region_names.rs:120
 msgid "Obwalden"
-msgstr ""
+msgstr "オプヴァルデン州"
 
 #: src/region_names.rs:121
 msgid "Schaffhausen"
-msgstr ""
+msgstr "シャフハウゼン州"
 
 #: src/region_names.rs:122
 msgid "Schwyz"
-msgstr ""
+msgstr "シュヴィーツ州"
 
 #: src/region_names.rs:123
 msgid "Solothurn"
-msgstr ""
+msgstr "ゾロトゥルン州"
 
 #: src/region_names.rs:124
 msgid "St. Gallen"
-msgstr ""
+msgstr "ザンクト・ガレン州"
 
 #: src/region_names.rs:125
 msgid "Thurgau"
-msgstr ""
+msgstr "トゥールガウ州"
 
 #: src/region_names.rs:126
 msgid "Ticino"
-msgstr ""
+msgstr "ティチーノ州"
 
 #: src/region_names.rs:127
 msgid "Uri"
-msgstr ""
+msgstr "ウーリ州"
 
 #: src/region_names.rs:128
 msgid "Valais"
-msgstr ""
+msgstr "ヴァレー州"
 
 #: src/region_names.rs:129
 msgid "Vaud"
-msgstr ""
+msgstr "ヴォー州"
 
 #: src/region_names.rs:130
 msgid "Zug"
-msgstr ""
+msgstr "ツーク州"
 
 #: src/region_names.rs:131
 msgid "Zurich"
-msgstr ""
+msgstr "チューリッヒ州"
 
 #: src/region_names.rs:135 src/region_names.rs:170
 msgid "Andalusia"
@@ -2546,11 +2546,11 @@ msgstr "州都"
 
 #: src/registry.rs:155
 msgid "Cantons"
-msgstr ""
+msgstr "州"
 
 #: src/registry.rs:179
 msgid "Capitals of Regions"
-msgstr ""
+msgstr "州都"
 
 #: src/registry.rs:192
 msgctxt "India"
