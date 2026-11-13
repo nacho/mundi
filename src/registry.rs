@@ -686,8 +686,8 @@ mod tests {
         // (exercise id, number of items, uses arrow markers)
         for (id, count, arrows) in [
             ("seas", 6, false),
-            ("islands", 13, true),
-            ("plains-hills", 13, false),
+            ("islands", 12, true),
+            ("plains-hills", 14, false),
             ("gulfs-peninsulas", 23, true),
         ] {
             let ex = exercise("italy", id);
