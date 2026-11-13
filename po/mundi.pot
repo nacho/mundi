@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-21 12:05+0200\n"
+"POT-Creation-Date: 2026-11-13 17:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,2413 +17,2489 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/region_names.rs:19
+#: src/region_names.rs:19 src/region_names.rs:51
 msgid "Abruzzo"
 msgstr ""
 
-#: src/region_names.rs:20
+#: src/region_names.rs:20 src/region_names.rs:56
 msgid "Basilicata"
 msgstr ""
 
-#: src/region_names.rs:21
+#: src/region_names.rs:21 src/region_names.rs:48
 msgid "Calabria"
 msgstr ""
 
-#: src/region_names.rs:22
+#: src/region_names.rs:22 src/region_names.rs:53
 msgid "Campania"
 msgstr ""
 
-#: src/region_names.rs:23
+#: src/region_names.rs:23 src/region_names.rs:45
 msgid "Emilia-Romagna"
 msgstr ""
 
-#: src/region_names.rs:24
+#: src/region_names.rs:24 src/region_names.rs:59
 msgid "Friuli Venezia Giulia"
 msgstr ""
 
-#: src/region_names.rs:25
+#: src/region_names.rs:25 src/region_names.rs:57
 msgid "Lazio"
 msgstr ""
 
-#: src/region_names.rs:26
+#: src/region_names.rs:26 src/region_names.rs:50
 msgid "Liguria"
 msgstr ""
 
-#: src/region_names.rs:27
+#: src/region_names.rs:27 src/region_names.rs:52
 msgid "Lombardy"
 msgstr ""
 
-#: src/region_names.rs:28
+#: src/region_names.rs:28 src/region_names.rs:42
 msgid "Marche"
 msgstr ""
 
-#: src/region_names.rs:29
+#: src/region_names.rs:29 src/region_names.rs:47
 msgid "Molise"
 msgstr ""
 
-#: src/region_names.rs:30
+#: src/region_names.rs:30 src/region_names.rs:60
 msgid "Piedmont"
 msgstr ""
 
-#: src/region_names.rs:31
+#: src/region_names.rs:31 src/region_names.rs:44
 msgid "Apulia"
 msgstr ""
 
-#: src/region_names.rs:32
+#: src/region_names.rs:32 src/region_names.rs:46
 msgid "Sardinia"
 msgstr ""
 
-#: src/region_names.rs:33
+#: src/region_names.rs:33 src/region_names.rs:54
 msgid "Sicily"
 msgstr ""
 
-#: src/region_names.rs:34
+#: src/region_names.rs:34 src/region_names.rs:58
 msgid "Trentino-South Tyrol"
 msgstr ""
 
-#: src/region_names.rs:35
+#: src/region_names.rs:35 src/region_names.rs:49
 msgid "Tuscany"
 msgstr ""
 
-#: src/region_names.rs:36
+#: src/region_names.rs:36 src/region_names.rs:55
 msgid "Umbria"
 msgstr ""
 
-#: src/region_names.rs:37
+#: src/region_names.rs:37 src/region_names.rs:43
 msgid "Aosta Valley"
 msgstr ""
 
-#: src/region_names.rs:38
+#: src/region_names.rs:38 src/region_names.rs:61
 msgid "Veneto"
 msgstr ""
 
-#: src/region_names.rs:42 src/region_names.rs:78
-msgid "Baden-Württemberg"
+#: src/region_names.rs:42
+msgid "Ancona"
 msgstr ""
 
-#: src/region_names.rs:43 src/region_names.rs:74
-msgid "Bavaria"
+#: src/region_names.rs:43
+msgid "Aosta"
 msgstr ""
 
-#: src/region_names.rs:44 src/region_names.rs:64 src/region_names.rs:713
-msgid "Berlin"
+#: src/region_names.rs:44
+msgid "Bari"
 msgstr ""
 
-#: src/region_names.rs:45 src/region_names.rs:75
-msgid "Brandenburg"
+#: src/region_names.rs:45
+msgid "Bologna"
 msgstr ""
 
-#: src/region_names.rs:46 src/region_names.rs:65
-msgid "Bremen"
+#: src/region_names.rs:46
+msgid "Cagliari"
 msgstr ""
 
-#: src/region_names.rs:47 src/region_names.rs:69
-msgid "Hamburg"
+#: src/region_names.rs:47
+msgid "Campobasso"
 msgstr ""
 
-#: src/region_names.rs:48 src/region_names.rs:79
-msgid "Hesse"
+#: src/region_names.rs:48
+msgid "Catanzaro"
 msgstr ""
 
-#: src/region_names.rs:49 src/region_names.rs:70
-msgid "Lower Saxony"
+#: src/region_names.rs:49
+msgid "Florence"
 msgstr ""
 
-#: src/region_names.rs:52 src/region_names.rs:77
-msgid "Mecklenburg-Western Pomerania"
+#: src/region_names.rs:50
+msgid "Genoa"
 msgstr ""
 
-#: src/region_names.rs:54 src/region_names.rs:67
-msgid "North Rhine-Westphalia"
+#: src/region_names.rs:51
+msgid "L'Aquila"
 msgstr ""
 
-#: src/region_names.rs:55 src/region_names.rs:73
-msgid "Rhineland-Palatinate"
+#: src/region_names.rs:52
+msgid "Milan"
 msgstr ""
 
-#: src/region_names.rs:56 src/region_names.rs:76
-msgid "Saarland"
+#: src/region_names.rs:53
+msgid "Naples"
 msgstr ""
 
-#: src/region_names.rs:57 src/region_names.rs:66
-msgid "Saxony"
+#: src/region_names.rs:54
+msgid "Palermo"
 msgstr ""
 
-#: src/region_names.rs:58 src/region_names.rs:72
-msgid "Saxony-Anhalt"
+#: src/region_names.rs:55
+msgid "Perugia"
 msgstr ""
 
-#: src/region_names.rs:59 src/region_names.rs:71
-msgid "Schleswig-Holstein"
+#: src/region_names.rs:56
+msgid "Potenza"
 msgstr ""
 
-#: src/region_names.rs:60 src/region_names.rs:68
-msgid "Thuringia"
-msgstr ""
-
-#: src/region_names.rs:66
-msgid "Dresden"
-msgstr ""
-
-#: src/region_names.rs:67
-msgid "Düsseldorf"
-msgstr ""
-
-#: src/region_names.rs:68
-msgid "Erfurt"
-msgstr ""
-
-#: src/region_names.rs:70
-msgid "Hanover"
-msgstr ""
-
-#: src/region_names.rs:71
-msgid "Kiel"
-msgstr ""
-
-#: src/region_names.rs:72
-msgid "Magdeburg"
-msgstr ""
-
-#: src/region_names.rs:73
-msgid "Mainz"
-msgstr ""
-
-#: src/region_names.rs:74
-msgid "Munich"
-msgstr ""
-
-#: src/region_names.rs:75
-msgid "Potsdam"
-msgstr ""
-
-#: src/region_names.rs:76
-msgid "Saarbrücken"
-msgstr ""
-
-#: src/region_names.rs:77
-msgid "Schwerin"
-msgstr ""
-
-#: src/region_names.rs:78
-msgid "Stuttgart"
-msgstr ""
-
-#: src/region_names.rs:79
-msgid "Wiesbaden"
-msgstr ""
-
-#: src/region_names.rs:83
-msgid "Aargau"
-msgstr ""
-
-#: src/region_names.rs:84
-msgid "Appenzell Ausserrhoden"
-msgstr ""
-
-#: src/region_names.rs:85
-msgid "Appenzell Innerrhoden"
-msgstr ""
-
-#: src/region_names.rs:86
-msgid "Basel-Landschaft"
-msgstr ""
-
-#: src/region_names.rs:87
-msgid "Basel-Stadt"
-msgstr ""
-
-#: src/region_names.rs:88 src/region_names.rs:741
-msgid "Bern"
-msgstr ""
-
-#: src/region_names.rs:89
-msgid "Fribourg"
-msgstr ""
-
-#: src/region_names.rs:90
-msgid "Geneva"
-msgstr ""
-
-#: src/region_names.rs:91
-msgid "Glarus"
-msgstr ""
-
-#: src/region_names.rs:92
-msgid "Graubünden"
-msgstr ""
-
-#: src/region_names.rs:93
-msgid "Jura"
-msgstr ""
-
-#: src/region_names.rs:94
-msgid "Lucerne"
-msgstr ""
-
-#: src/region_names.rs:95
-msgid "Neuchâtel"
-msgstr ""
-
-#: src/region_names.rs:96
-msgid "Nidwalden"
-msgstr ""
-
-#: src/region_names.rs:97
-msgid "Obwalden"
-msgstr ""
-
-#: src/region_names.rs:98
-msgid "Schaffhausen"
-msgstr ""
-
-#: src/region_names.rs:99
-msgid "Schwyz"
-msgstr ""
-
-#: src/region_names.rs:100
-msgid "Solothurn"
-msgstr ""
-
-#: src/region_names.rs:101
-msgid "St. Gallen"
-msgstr ""
-
-#: src/region_names.rs:102
-msgid "Thurgau"
-msgstr ""
-
-#: src/region_names.rs:103
-msgid "Ticino"
-msgstr ""
-
-#: src/region_names.rs:104
-msgid "Uri"
-msgstr ""
-
-#: src/region_names.rs:105
-msgid "Valais"
-msgstr ""
-
-#: src/region_names.rs:106
-msgid "Vaud"
-msgstr ""
-
-#: src/region_names.rs:107
-msgid "Zug"
-msgstr ""
-
-#: src/region_names.rs:108
-msgid "Zurich"
-msgstr ""
-
-#: src/region_names.rs:112 src/region_names.rs:147
-msgid "Andalusia"
-msgstr ""
-
-#: src/region_names.rs:113 src/region_names.rs:152
-msgid "Aragon"
-msgstr ""
-
-#: src/region_names.rs:114 src/region_names.rs:141 src/region_names.rs:160
-msgid "Asturias"
-msgstr ""
-
-#: src/region_names.rs:115 src/region_names.rs:142 src/region_names.rs:177
-msgid "Balearic Islands"
-msgstr ""
-
-#: src/region_names.rs:116 src/region_names.rs:144
-msgid "Canary Islands"
-msgstr ""
-
-#: src/region_names.rs:117 src/region_names.rs:145 src/region_names.rs:164
-msgid "Cantabria"
-msgstr ""
-
-#: src/region_names.rs:118 src/region_names.rs:148
-msgid "Castilla-La Mancha"
-msgstr ""
-
-#: src/region_names.rs:119 src/region_names.rs:150
-msgid "Castile and León"
-msgstr ""
-
-#: src/region_names.rs:120 src/region_names.rs:134
-msgid "Catalonia"
-msgstr ""
-
-#: src/region_names.rs:121 src/region_names.rs:135
-msgid "Ceuta"
-msgstr ""
-
-#: src/region_names.rs:122 src/region_names.rs:139
-msgid "Extremadura"
-msgstr ""
-
-#: src/region_names.rs:123 src/region_names.rs:146 src/registry.rs:109
-msgid "Galicia"
-msgstr ""
-
-#: src/region_names.rs:124 src/region_names.rs:136 src/region_names.rs:179
-msgid "La Rioja"
-msgstr ""
-
-#: src/region_names.rs:125 src/region_names.rs:137 src/region_names.rs:184
-#: src/region_names.rs:739
-msgid "Madrid"
-msgstr ""
-
-#: src/region_names.rs:126 src/region_names.rs:138
-msgid "Melilla"
-msgstr ""
-
-#: src/region_names.rs:127 src/region_names.rs:140 src/region_names.rs:185
-msgid "Murcia"
-msgstr ""
-
-#: src/region_names.rs:128 src/region_names.rs:143 src/region_names.rs:187
-msgid "Navarre"
-msgstr ""
-
-#: src/region_names.rs:129 src/region_names.rs:151
-msgid "Basque Country"
-msgstr ""
-
-#: src/region_names.rs:130 src/region_names.rs:149 src/region_names.rs:199
-msgid "Valencia"
-msgstr ""
-
-#: src/region_names.rs:134 src/region_names.rs:162
-msgid "Barcelona"
-msgstr ""
-
-#: src/region_names.rs:136
-msgid "Logroño"
-msgstr ""
-
-#: src/region_names.rs:139
-msgid "Mérida"
-msgstr ""
-
-#: src/region_names.rs:141
-msgid "Oviedo"
-msgstr ""
-
-#: src/region_names.rs:142
-msgid "Palma"
-msgstr ""
-
-#: src/region_names.rs:143
-msgid "Pamplona"
-msgstr ""
-
-#: src/region_names.rs:144 src/region_names.rs:192
-msgid "Santa Cruz de Tenerife"
-msgstr ""
-
-#: src/region_names.rs:145
-msgid "Santander"
-msgstr ""
-
-#: src/region_names.rs:146
-msgid "Santiago de Compostela"
-msgstr ""
-
-#: src/region_names.rs:147 src/region_names.rs:194
-msgid "Seville"
-msgstr ""
-
-#: src/region_names.rs:148 src/region_names.rs:198
-msgid "Toledo"
-msgstr ""
-
-#: src/region_names.rs:150 src/region_names.rs:200
-msgid "Valladolid"
-msgstr ""
-
-#: src/region_names.rs:151
-msgid "Vitoria-Gasteiz"
-msgstr ""
-
-#: src/region_names.rs:152 src/region_names.rs:203
-msgid "Zaragoza"
-msgstr ""
-
-#: src/region_names.rs:156 src/region_names.rs:665
-msgid "A Coruña"
-msgstr ""
-
-#: src/region_names.rs:157
-msgid "Albacete"
-msgstr ""
-
-#: src/region_names.rs:158
-msgid "Alicante"
-msgstr ""
-
-#: src/region_names.rs:159
-msgid "Almería"
-msgstr ""
-
-#: src/region_names.rs:161
-msgid "Badajoz"
-msgstr ""
-
-#: src/region_names.rs:163
-msgid "Burgos"
-msgstr ""
-
-#: src/region_names.rs:165
-msgid "Castellón"
-msgstr ""
-
-#: src/region_names.rs:166
-msgid "Ciudad Real"
-msgstr ""
-
-#: src/region_names.rs:167
-msgid "Cuenca"
-msgstr ""
-
-#: src/region_names.rs:168
-msgid "Cáceres"
-msgstr ""
-
-#: src/region_names.rs:169
-msgid "Cádiz"
-msgstr ""
-
-#: src/region_names.rs:170
-msgid "Córdoba"
-msgstr ""
-
-#: src/region_names.rs:171
-msgid "Girona"
-msgstr ""
-
-#: src/region_names.rs:172
-msgid "Granada"
-msgstr ""
-
-#: src/region_names.rs:173
-msgid "Guadalajara"
-msgstr ""
-
-#: src/region_names.rs:174
-msgid "Gipuzkoa"
-msgstr ""
-
-#: src/region_names.rs:175
-msgid "Huelva"
-msgstr ""
-
-#: src/region_names.rs:176
-msgid "Huesca"
-msgstr ""
-
-#: src/region_names.rs:178
-msgid "Jaén"
-msgstr ""
-
-#: src/region_names.rs:180
-msgid "Las Palmas"
-msgstr ""
-
-#: src/region_names.rs:181
-msgid "León"
-msgstr ""
-
-#: src/region_names.rs:182
-msgid "Lleida"
-msgstr ""
-
-#: src/region_names.rs:183 src/region_names.rs:666
-msgid "Lugo"
-msgstr ""
-
-#: src/region_names.rs:186
-msgid "Málaga"
-msgstr ""
-
-#: src/region_names.rs:188 src/region_names.rs:667
-msgid "Ourense"
-msgstr ""
-
-#: src/region_names.rs:189
-msgid "Palencia"
-msgstr ""
-
-#: src/region_names.rs:190 src/region_names.rs:668
-msgid "Pontevedra"
-msgstr ""
-
-#: src/region_names.rs:191
-msgid "Salamanca"
-msgstr ""
-
-#: src/region_names.rs:193
-msgid "Segovia"
-msgstr ""
-
-#: src/region_names.rs:195
-msgid "Soria"
-msgstr ""
-
-#: src/region_names.rs:196
-msgid "Tarragona"
-msgstr ""
-
-#: src/region_names.rs:197
-msgid "Teruel"
-msgstr ""
-
-#: src/region_names.rs:201
-msgid "Biscay"
-msgstr ""
-
-#: src/region_names.rs:202
-msgid "Zamora"
-msgstr ""
-
-#: src/region_names.rs:204
-msgid "Álava"
-msgstr ""
-
-#: src/region_names.rs:205
-msgid "Ávila"
-msgstr ""
-
-#: src/region_names.rs:209
-msgid "Africa"
-msgstr ""
-
-#: src/region_names.rs:210
-msgid "Asia"
-msgstr ""
-
-#: src/region_names.rs:211
-msgid "Europe"
-msgstr ""
-
-#: src/region_names.rs:212
-msgid "North America"
-msgstr ""
-
-#: src/region_names.rs:213
-msgid "Oceania"
-msgstr ""
-
-#: src/region_names.rs:214
-msgid "South America"
-msgstr ""
-
-#: src/region_names.rs:218 src/region_names.rs:696
-msgid "Albania"
-msgstr ""
-
-#: src/region_names.rs:219 src/region_names.rs:697
-msgid "Andorra"
-msgstr ""
-
-#: src/region_names.rs:220 src/region_names.rs:380 src/region_names.rs:698
-msgid "Armenia"
-msgstr ""
-
-#: src/region_names.rs:221 src/region_names.rs:699
-msgid "Austria"
-msgstr ""
-
-#: src/region_names.rs:222 src/region_names.rs:381 src/region_names.rs:700
-msgid "Azerbaijan"
-msgstr ""
-
-#: src/region_names.rs:223 src/region_names.rs:701
-msgid "Belarus"
-msgstr ""
-
-#: src/region_names.rs:224 src/region_names.rs:702
-msgid "Belgium"
-msgstr ""
-
-#: src/region_names.rs:225 src/region_names.rs:703
-msgid "Bosnia and Herzegovina"
-msgstr ""
-
-#: src/region_names.rs:226 src/region_names.rs:704
-msgid "Bulgaria"
-msgstr ""
-
-#: src/region_names.rs:227 src/region_names.rs:705
-msgid "Croatia"
-msgstr ""
-
-#: src/region_names.rs:228 src/region_names.rs:388 src/region_names.rs:706
-msgid "Cyprus"
-msgstr ""
-
-#: src/region_names.rs:229 src/region_names.rs:707
-msgid "Czech Republic"
-msgstr ""
-
-#: src/region_names.rs:230 src/region_names.rs:708
-msgid "Denmark"
-msgstr ""
-
-#: src/region_names.rs:231 src/region_names.rs:709
-msgid "Estonia"
-msgstr ""
-
-#: src/region_names.rs:232 src/region_names.rs:710
-msgid "Finland"
-msgstr ""
-
-#: src/region_names.rs:233 src/region_names.rs:711 src/registry.rs:341
-msgid "France"
-msgstr ""
-
-#: src/region_names.rs:234 src/region_names.rs:390 src/region_names.rs:537
-#: src/region_names.rs:712
-msgid "Georgia"
-msgstr ""
-
-#: src/region_names.rs:235 src/region_names.rs:713 src/registry.rs:346
-msgid "Germany"
-msgstr ""
-
-#: src/region_names.rs:236 src/region_names.rs:714
-msgid "Greece"
-msgstr ""
-
-#: src/region_names.rs:237 src/region_names.rs:715
-msgid "Hungary"
-msgstr ""
-
-#: src/region_names.rs:238 src/region_names.rs:716
-msgid "Iceland"
-msgstr ""
-
-#: src/region_names.rs:239 src/region_names.rs:717
-msgid "Ireland"
-msgstr ""
-
-#: src/region_names.rs:240 src/region_names.rs:718 src/registry.rs:361
-msgid "Italy"
-msgstr ""
-
-#: src/region_names.rs:241 src/region_names.rs:719
-msgid "Kosovo"
-msgstr ""
-
-#: src/region_names.rs:242 src/region_names.rs:720
-msgid "Latvia"
-msgstr ""
-
-#: src/region_names.rs:243 src/region_names.rs:721
-msgid "Liechtenstein"
-msgstr ""
-
-#: src/region_names.rs:244 src/region_names.rs:722
-msgid "Lithuania"
-msgstr ""
-
-#: src/region_names.rs:245 src/region_names.rs:723
-msgid "Luxembourg"
-msgstr ""
-
-#: src/region_names.rs:246 src/region_names.rs:724
-msgid "Malta"
-msgstr ""
-
-#: src/region_names.rs:247 src/region_names.rs:725
-msgid "Moldova"
-msgstr ""
-
-#: src/region_names.rs:248 src/region_names.rs:726
-msgid "Monaco"
-msgstr ""
-
-#: src/region_names.rs:249 src/region_names.rs:727
-msgid "Montenegro"
-msgstr ""
-
-#: src/region_names.rs:250 src/region_names.rs:728
-msgid "Netherlands"
-msgstr ""
-
-#: src/region_names.rs:251 src/region_names.rs:729
-msgid "North Macedonia"
-msgstr ""
-
-#: src/region_names.rs:252 src/region_names.rs:730
-msgid "Norway"
-msgstr ""
-
-#: src/region_names.rs:253 src/region_names.rs:731 src/registry.rs:371
-msgid "Poland"
-msgstr ""
-
-#: src/region_names.rs:254 src/region_names.rs:732 src/registry.rs:376
-msgid "Portugal"
-msgstr ""
-
-#: src/region_names.rs:255 src/region_names.rs:733
-msgid "Romania"
-msgstr ""
-
-#: src/region_names.rs:256 src/region_names.rs:414 src/region_names.rs:734
-msgid "Russia"
-msgstr ""
-
-#: src/region_names.rs:257 src/region_names.rs:735
-msgid "San Marino"
-msgstr ""
-
-#: src/region_names.rs:258 src/region_names.rs:736
-msgid "Serbia"
-msgstr ""
-
-#: src/region_names.rs:259 src/region_names.rs:737
-msgid "Slovakia"
-msgstr ""
-
-#: src/region_names.rs:260 src/region_names.rs:738
-msgid "Slovenia"
-msgstr ""
-
-#: src/region_names.rs:261 src/region_names.rs:739 src/registry.rs:381
-msgid "Spain"
-msgstr ""
-
-#: src/region_names.rs:262 src/region_names.rs:740
-msgid "Sweden"
-msgstr ""
-
-#: src/region_names.rs:263 src/region_names.rs:741 src/registry.rs:351
-msgid "Switzerland"
-msgstr ""
-
-#: src/region_names.rs:264 src/region_names.rs:423 src/region_names.rs:742
-msgid "Turkey"
-msgstr ""
-
-#: src/region_names.rs:265 src/region_names.rs:743
-msgid "Ukraine"
-msgstr ""
-
-#: src/region_names.rs:266 src/region_names.rs:744
-msgid "United Kingdom"
-msgstr ""
-
-#: src/region_names.rs:267 src/region_names.rs:745
-msgid "Vatican City"
-msgstr ""
-
-#: src/region_names.rs:271
-msgid "Argentina"
-msgstr ""
-
-#: src/region_names.rs:272
-msgid "Bahamas"
-msgstr ""
-
-#: src/region_names.rs:273
-msgid "Belize"
-msgstr ""
-
-#: src/region_names.rs:274
-msgid "Bolivia"
-msgstr ""
-
-#: src/region_names.rs:275
-msgid "Brazil"
-msgstr ""
-
-#: src/region_names.rs:276
-msgid "Canada"
-msgstr ""
-
-#: src/region_names.rs:277
-msgid "Chile"
-msgstr ""
-
-#: src/region_names.rs:278
-msgid "Colombia"
-msgstr ""
-
-#: src/region_names.rs:279
-msgid "Costa Rica"
-msgstr ""
-
-#: src/region_names.rs:280
-msgid "Cuba"
-msgstr ""
-
-#: src/region_names.rs:281
-msgid "Dominican Republic"
-msgstr ""
-
-#: src/region_names.rs:282
-msgid "Ecuador"
-msgstr ""
-
-#: src/region_names.rs:283
-msgid "El Salvador"
-msgstr ""
-
-#: src/region_names.rs:284
-msgid "Guatemala"
-msgstr ""
-
-#: src/region_names.rs:285
-msgid "Guyana"
-msgstr ""
-
-#: src/region_names.rs:286
-msgid "Haiti"
-msgstr ""
-
-#: src/region_names.rs:287
-msgid "Honduras"
-msgstr ""
-
-#: src/region_names.rs:288
-msgid "Jamaica"
-msgstr ""
-
-#: src/region_names.rs:289
-msgid "Mexico"
-msgstr ""
-
-#: src/region_names.rs:290
-msgid "Nicaragua"
-msgstr ""
-
-#: src/region_names.rs:291
-msgid "Panama"
-msgstr ""
-
-#: src/region_names.rs:292
-msgid "Paraguay"
-msgstr ""
-
-#: src/region_names.rs:293
-msgid "Peru"
-msgstr ""
-
-#: src/region_names.rs:294
-msgid "Suriname"
-msgstr ""
-
-#: src/region_names.rs:295
-msgid "Trinidad and Tobago"
-msgstr ""
-
-#: src/region_names.rs:296 src/registry.rs:386
-msgid "United States"
-msgstr ""
-
-#: src/region_names.rs:297
-msgid "Uruguay"
-msgstr ""
-
-#: src/region_names.rs:298
-msgid "Venezuela"
-msgstr ""
-
-#: src/region_names.rs:302
-msgid "Algeria"
-msgstr ""
-
-#: src/region_names.rs:303
-msgid "Angola"
-msgstr ""
-
-#: src/region_names.rs:304
-msgid "Benin"
-msgstr ""
-
-#: src/region_names.rs:305
-msgid "Botswana"
-msgstr ""
-
-#: src/region_names.rs:306
-msgid "Burkina Faso"
-msgstr ""
-
-#: src/region_names.rs:307
-msgid "Burundi"
-msgstr ""
-
-#: src/region_names.rs:308
-msgid "Cameroon"
-msgstr ""
-
-#: src/region_names.rs:309
-msgid "Cape Verde"
-msgstr ""
-
-#: src/region_names.rs:310
-msgid "Central African Republic"
-msgstr ""
-
-#: src/region_names.rs:311
-msgid "Chad"
-msgstr ""
-
-#: src/region_names.rs:312
-msgid "Comoros"
-msgstr ""
-
-#: src/region_names.rs:313
-msgid "Côte d'Ivoire"
-msgstr ""
-
-#: src/region_names.rs:316
-msgid "Democratic Republic of the Congo"
-msgstr ""
-
-#: src/region_names.rs:318
-msgid "Djibouti"
-msgstr ""
-
-#: src/region_names.rs:319
-msgid "Egypt"
-msgstr ""
-
-#: src/region_names.rs:320
-msgid "Equatorial Guinea"
-msgstr ""
-
-#: src/region_names.rs:321
-msgid "Eritrea"
-msgstr ""
-
-#: src/region_names.rs:322
-msgid "Eswatini"
-msgstr ""
-
-#: src/region_names.rs:323
-msgid "Ethiopia"
-msgstr ""
-
-#: src/region_names.rs:324
-msgid "Gabon"
-msgstr ""
-
-#: src/region_names.rs:325
-msgid "Gambia"
-msgstr ""
-
-#: src/region_names.rs:326
-msgid "Ghana"
-msgstr ""
-
-#: src/region_names.rs:327
-msgid "Guinea"
-msgstr ""
-
-#: src/region_names.rs:328
-msgid "Guinea-Bissau"
-msgstr ""
-
-#: src/region_names.rs:329
-msgid "Kenya"
-msgstr ""
-
-#: src/region_names.rs:330
-msgid "Lesotho"
-msgstr ""
-
-#: src/region_names.rs:331
-msgid "Liberia"
-msgstr ""
-
-#: src/region_names.rs:332
-msgid "Libya"
-msgstr ""
-
-#: src/region_names.rs:333
-msgid "Madagascar"
-msgstr ""
-
-#: src/region_names.rs:334
-msgid "Malawi"
-msgstr ""
-
-#: src/region_names.rs:335
-msgid "Mali"
-msgstr ""
-
-#: src/region_names.rs:336
-msgid "Mauritania"
-msgstr ""
-
-#: src/region_names.rs:337
-msgid "Mauritius"
-msgstr ""
-
-#: src/region_names.rs:338
-msgid "Morocco"
-msgstr ""
-
-#: src/region_names.rs:339
-msgid "Mozambique"
-msgstr ""
-
-#: src/region_names.rs:340
-msgid "Namibia"
-msgstr ""
-
-#: src/region_names.rs:341
-msgid "Niger"
-msgstr ""
-
-#: src/region_names.rs:342
-msgid "Nigeria"
-msgstr ""
-
-#: src/region_names.rs:343
-msgid "Republic of the Congo"
-msgstr ""
-
-#: src/region_names.rs:344
-msgid "Rwanda"
-msgstr ""
-
-#: src/region_names.rs:345
-msgid "São Tomé and Príncipe"
-msgstr ""
-
-#: src/region_names.rs:346
-msgid "Senegal"
-msgstr ""
-
-#: src/region_names.rs:347
-msgid "Sierra Leone"
-msgstr ""
-
-#: src/region_names.rs:348
-msgid "Somalia"
-msgstr ""
-
-#: src/region_names.rs:349
-msgid "South Africa"
-msgstr ""
-
-#: src/region_names.rs:350
-msgid "South Sudan"
-msgstr ""
-
-#: src/region_names.rs:351
-msgid "Sudan"
-msgstr ""
-
-#: src/region_names.rs:352
-msgid "Tanzania"
-msgstr ""
-
-#: src/region_names.rs:353
-msgid "Togo"
-msgstr ""
-
-#: src/region_names.rs:354
-msgid "Tunisia"
-msgstr ""
-
-#: src/region_names.rs:355
-msgid "Uganda"
-msgstr ""
-
-#: src/region_names.rs:356
-msgid "Western Sahara"
-msgstr ""
-
-#: src/region_names.rs:357
-msgid "Zambia"
-msgstr ""
-
-#: src/region_names.rs:358
-msgid "Zimbabwe"
-msgstr ""
-
-#: src/region_names.rs:362
-msgid "Australia"
-msgstr ""
-
-#: src/region_names.rs:363
-msgid "Fiji"
-msgstr ""
-
-#: src/region_names.rs:364
-msgid "Kiribati"
-msgstr ""
-
-#: src/region_names.rs:365
-msgid "Marshall Islands"
-msgstr ""
-
-#: src/region_names.rs:366
-msgid "Micronesia"
-msgstr ""
-
-#: src/region_names.rs:367
-msgid "Nauru"
-msgstr ""
-
-#: src/region_names.rs:368
-msgid "New Zealand"
-msgstr ""
-
-#: src/region_names.rs:369
-msgid "Palau"
-msgstr ""
-
-#: src/region_names.rs:370
-msgid "Papua New Guinea"
-msgstr ""
-
-#: src/region_names.rs:371
-msgid "Samoa"
-msgstr ""
-
-#: src/region_names.rs:372
-msgid "Solomon Islands"
-msgstr ""
-
-#: src/region_names.rs:373
-msgid "Tonga"
-msgstr ""
-
-#: src/region_names.rs:374
-msgid "Tuvalu"
-msgstr ""
-
-#: src/region_names.rs:375
-msgid "Vanuatu"
-msgstr ""
-
-#: src/region_names.rs:379
-msgid "Afghanistan"
-msgstr ""
-
-#: src/region_names.rs:382
-msgid "Bahrain"
-msgstr ""
-
-#: src/region_names.rs:383
-msgid "Bangladesh"
-msgstr ""
-
-#: src/region_names.rs:384
-msgid "Bhutan"
-msgstr ""
-
-#: src/region_names.rs:385
-msgid "Brunei"
-msgstr ""
-
-#: src/region_names.rs:386
-msgid "Cambodia"
-msgstr ""
-
-#: src/region_names.rs:387
-msgid "China"
-msgstr ""
-
-#: src/region_names.rs:389
-msgid "East Timor"
-msgstr ""
-
-#: src/region_names.rs:391 src/registry.rs:356
-msgid "India"
-msgstr ""
-
-#: src/region_names.rs:392
-msgid "Indonesia"
-msgstr ""
-
-#: src/region_names.rs:393
-msgid "Iran"
-msgstr ""
-
-#: src/region_names.rs:394
-msgid "Iraq"
-msgstr ""
-
-#: src/region_names.rs:395
-msgid "Israel"
-msgstr ""
-
-#: src/region_names.rs:396 src/registry.rs:366
-msgid "Japan"
-msgstr ""
-
-#: src/region_names.rs:397
-msgid "Jordan"
-msgstr ""
-
-#: src/region_names.rs:398
-msgid "Kazakhstan"
-msgstr ""
-
-#: src/region_names.rs:399
-msgid "Kuwait"
-msgstr ""
-
-#: src/region_names.rs:400
-msgid "Kyrgyzstan"
-msgstr ""
-
-#: src/region_names.rs:401
-msgid "Laos"
-msgstr ""
-
-#: src/region_names.rs:402
-msgid "Lebanon"
-msgstr ""
-
-#: src/region_names.rs:403
-msgid "Malaysia"
-msgstr ""
-
-#: src/region_names.rs:404
-msgid "Maldives"
-msgstr ""
-
-#: src/region_names.rs:405
-msgid "Mongolia"
-msgstr ""
-
-#: src/region_names.rs:406
-msgid "Myanmar"
-msgstr ""
-
-#: src/region_names.rs:407
-msgid "Nepal"
-msgstr ""
-
-#: src/region_names.rs:408
-msgid "North Korea"
-msgstr ""
-
-#: src/region_names.rs:409
-msgid "Oman"
-msgstr ""
-
-#: src/region_names.rs:410
-msgid "Pakistan"
-msgstr ""
-
-#: src/region_names.rs:411
-msgid "Palestine"
-msgstr ""
-
-#: src/region_names.rs:412
-msgid "Philippines"
-msgstr ""
-
-#: src/region_names.rs:413
-msgid "Qatar"
-msgstr ""
-
-#: src/region_names.rs:415
-msgid "Saudi Arabia"
-msgstr ""
-
-#: src/region_names.rs:416
-msgid "Singapore"
-msgstr ""
-
-#: src/region_names.rs:417
-msgid "South Korea"
-msgstr ""
-
-#: src/region_names.rs:418
-msgid "Sri Lanka"
-msgstr ""
-
-#: src/region_names.rs:419
-msgid "Syria"
-msgstr ""
-
-#: src/region_names.rs:420
-msgid "Taiwan"
-msgstr ""
-
-#: src/region_names.rs:421
-msgid "Tajikistan"
-msgstr ""
-
-#: src/region_names.rs:422
-msgid "Thailand"
-msgstr ""
-
-#: src/region_names.rs:424
-msgid "Turkmenistan"
-msgstr ""
-
-#: src/region_names.rs:425
-msgid "United Arab Emirates"
-msgstr ""
-
-#: src/region_names.rs:426
-msgid "Uzbekistan"
-msgstr ""
-
-#: src/region_names.rs:427
-msgid "Vietnam"
-msgstr ""
-
-#: src/region_names.rs:428
-msgid "Yemen"
-msgstr ""
-
-#: src/region_names.rs:434
-msgid "Andaman and Nicobar Islands"
-msgstr ""
-
-#: src/region_names.rs:436
-msgid "Andhra Pradesh"
-msgstr ""
-
-#: src/region_names.rs:437
-msgid "Arunachal Pradesh"
-msgstr ""
-
-#: src/region_names.rs:438
-msgid "Assam"
-msgstr ""
-
-#: src/region_names.rs:439
-msgid "Bihar"
-msgstr ""
-
-#: src/region_names.rs:440
-msgid "Chandigarh"
-msgstr ""
-
-#: src/region_names.rs:441
-msgid "Chhattisgarh"
-msgstr ""
-
-#: src/region_names.rs:444
-msgid "Dadra and Nagar Haveli and Daman and Diu"
-msgstr ""
-
-#: src/region_names.rs:446
-msgid "Delhi"
-msgstr ""
-
-#: src/region_names.rs:447
-msgid "Goa"
-msgstr ""
-
-#: src/region_names.rs:448
-msgid "Gujarat"
-msgstr ""
-
-#: src/region_names.rs:449
-msgid "Haryana"
-msgstr ""
-
-#: src/region_names.rs:450
-msgid "Himachal Pradesh"
-msgstr ""
-
-#: src/region_names.rs:451
-msgid "Jammu and Kashmir"
-msgstr ""
-
-#: src/region_names.rs:452
-msgid "Jharkhand"
-msgstr ""
-
-#: src/region_names.rs:453
-msgid "Karnataka"
-msgstr ""
-
-#: src/region_names.rs:454
-msgid "Kerala"
-msgstr ""
-
-#: src/region_names.rs:455
-msgid "Ladakh"
-msgstr ""
-
-#: src/region_names.rs:456
-msgid "Lakshadweep"
-msgstr ""
-
-#: src/region_names.rs:457
-msgid "Madhya Pradesh"
-msgstr ""
-
-#: src/region_names.rs:458
-msgid "Maharashtra"
-msgstr ""
-
-#: src/region_names.rs:459
-msgid "Manipur"
-msgstr ""
-
-#: src/region_names.rs:460
-msgid "Meghalaya"
-msgstr ""
-
-#: src/region_names.rs:461
-msgid "Mizoram"
-msgstr ""
-
-#: src/region_names.rs:462
-msgid "Nagaland"
-msgstr ""
-
-#: src/region_names.rs:463
-msgid "Odisha"
-msgstr ""
-
-#: src/region_names.rs:464
-msgid "Puducherry"
-msgstr ""
-
-#: src/region_names.rs:465
-msgid "Punjab"
-msgstr ""
-
-#: src/region_names.rs:466
-msgid "Rajasthan"
-msgstr ""
-
-#: src/region_names.rs:467
-msgid "Sikkim"
-msgstr ""
-
-#: src/region_names.rs:468
-msgid "Tamil Nadu"
-msgstr ""
-
-#: src/region_names.rs:469
-msgid "Telangana"
-msgstr ""
-
-#: src/region_names.rs:470
-msgid "Tripura"
-msgstr ""
-
-#: src/region_names.rs:471
-msgid "Uttar Pradesh"
-msgstr ""
-
-#: src/region_names.rs:472
-msgid "Uttarakhand"
-msgstr ""
-
-#: src/region_names.rs:473
-msgid "West Bengal"
-msgstr ""
-
-#: src/region_names.rs:477
-msgid "Hokkaidō"
-msgstr ""
-
-#: src/region_names.rs:478
-msgid "Aomori"
-msgstr ""
-
-#: src/region_names.rs:479
-msgid "Iwate"
-msgstr ""
-
-#: src/region_names.rs:480
-msgid "Miyagi"
-msgstr ""
-
-#: src/region_names.rs:481
-msgid "Akita"
-msgstr ""
-
-#: src/region_names.rs:482
-msgid "Yamagata"
-msgstr ""
-
-#: src/region_names.rs:483
-msgid "Fukushima"
-msgstr ""
-
-#: src/region_names.rs:484
-msgid "Ibaraki"
-msgstr ""
-
-#: src/region_names.rs:485
-msgid "Tochigi"
-msgstr ""
-
-#: src/region_names.rs:486
-msgid "Gunma"
-msgstr ""
-
-#: src/region_names.rs:487
-msgid "Saitama"
-msgstr ""
-
-#: src/region_names.rs:488
-msgid "Chiba"
-msgstr ""
-
-#: src/region_names.rs:489
-msgid "Tokyo"
-msgstr ""
-
-#: src/region_names.rs:490
-msgid "Kanagawa"
-msgstr ""
-
-#: src/region_names.rs:491
-msgid "Niigata"
-msgstr ""
-
-#: src/region_names.rs:492
-msgid "Toyama"
-msgstr ""
-
-#: src/region_names.rs:493
-msgid "Ishikawa"
-msgstr ""
-
-#: src/region_names.rs:494
-msgid "Fukui"
-msgstr ""
-
-#: src/region_names.rs:495
-msgid "Yamanashi"
-msgstr ""
-
-#: src/region_names.rs:496
-msgid "Nagano"
-msgstr ""
-
-#: src/region_names.rs:497
-msgid "Gifu"
-msgstr ""
-
-#: src/region_names.rs:498
-msgid "Shizuoka"
-msgstr ""
-
-#: src/region_names.rs:499
-msgid "Aichi"
-msgstr ""
-
-#: src/region_names.rs:500
-msgid "Mie"
-msgstr ""
-
-#: src/region_names.rs:501
-msgid "Shiga"
-msgstr ""
-
-#: src/region_names.rs:502
-msgid "Kyōto"
-msgstr ""
-
-#: src/region_names.rs:503
-msgid "Ōsaka"
-msgstr ""
-
-#: src/region_names.rs:504
-msgid "Hyōgo"
-msgstr ""
-
-#: src/region_names.rs:505
-msgid "Nara"
-msgstr ""
-
-#: src/region_names.rs:506
-msgid "Wakayama"
-msgstr ""
-
-#: src/region_names.rs:507
-msgid "Tottori"
-msgstr ""
-
-#: src/region_names.rs:508
-msgid "Shimane"
-msgstr ""
-
-#: src/region_names.rs:509
-msgid "Okayama"
-msgstr ""
-
-#: src/region_names.rs:510
-msgid "Hiroshima"
-msgstr ""
-
-#: src/region_names.rs:511
-msgid "Yamaguchi"
-msgstr ""
-
-#: src/region_names.rs:512
-msgid "Tokushima"
-msgstr ""
-
-#: src/region_names.rs:513
-msgid "Kagawa"
-msgstr ""
-
-#: src/region_names.rs:514
-msgid "Ehime"
-msgstr ""
-
-#: src/region_names.rs:515
-msgid "Kōchi"
-msgstr ""
-
-#: src/region_names.rs:516
-msgid "Fukuoka"
-msgstr ""
-
-#: src/region_names.rs:517
-msgid "Saga"
-msgstr ""
-
-#: src/region_names.rs:518
-msgid "Nagasaki"
-msgstr ""
-
-#: src/region_names.rs:519
-msgid "Kumamoto"
-msgstr ""
-
-#: src/region_names.rs:520
-msgid "Ōita"
-msgstr ""
-
-#: src/region_names.rs:521
-msgid "Miyazaki"
-msgstr ""
-
-#: src/region_names.rs:522
-msgid "Kagoshima"
-msgstr ""
-
-#: src/region_names.rs:523
-msgid "Okinawa"
-msgstr ""
-
-#: src/region_names.rs:527
-msgid "Alabama"
-msgstr ""
-
-#: src/region_names.rs:528
-msgid "Alaska"
-msgstr ""
-
-#: src/region_names.rs:529
-msgid "Arizona"
-msgstr ""
-
-#: src/region_names.rs:530
-msgid "Arkansas"
-msgstr ""
-
-#: src/region_names.rs:531
-msgid "California"
-msgstr ""
-
-#: src/region_names.rs:532
-msgid "Colorado"
-msgstr ""
-
-#: src/region_names.rs:533
-msgid "Connecticut"
-msgstr ""
-
-#: src/region_names.rs:534
-msgid "Delaware"
-msgstr ""
-
-#: src/region_names.rs:535
-msgid "District of Columbia"
-msgstr ""
-
-#: src/region_names.rs:536
-msgid "Florida"
-msgstr ""
-
-#: src/region_names.rs:538
-msgid "Hawaii"
-msgstr ""
-
-#: src/region_names.rs:539
-msgid "Idaho"
-msgstr ""
-
-#: src/region_names.rs:540
-msgid "Illinois"
-msgstr ""
-
-#: src/region_names.rs:541
-msgid "Indiana"
-msgstr ""
-
-#: src/region_names.rs:542
-msgid "Iowa"
-msgstr ""
-
-#: src/region_names.rs:543
-msgid "Kansas"
-msgstr ""
-
-#: src/region_names.rs:544
-msgid "Kentucky"
-msgstr ""
-
-#: src/region_names.rs:545
-msgid "Louisiana"
-msgstr ""
-
-#: src/region_names.rs:546
-msgid "Maine"
-msgstr ""
-
-#: src/region_names.rs:547
-msgid "Maryland"
-msgstr ""
-
-#: src/region_names.rs:548
-msgid "Massachusetts"
-msgstr ""
-
-#: src/region_names.rs:549
-msgid "Michigan"
-msgstr ""
-
-#: src/region_names.rs:550
-msgid "Minnesota"
-msgstr ""
-
-#: src/region_names.rs:551
-msgid "Mississippi"
-msgstr ""
-
-#: src/region_names.rs:552
-msgid "Missouri"
-msgstr ""
-
-#: src/region_names.rs:553
-msgid "Montana"
-msgstr ""
-
-#: src/region_names.rs:554
-msgid "Nebraska"
-msgstr ""
-
-#: src/region_names.rs:555
-msgid "Nevada"
-msgstr ""
-
-#: src/region_names.rs:556
-msgid "New Hampshire"
-msgstr ""
-
-#: src/region_names.rs:557
-msgid "New Jersey"
-msgstr ""
-
-#: src/region_names.rs:558
-msgid "New Mexico"
-msgstr ""
-
-#: src/region_names.rs:559
-msgid "New York"
-msgstr ""
-
-#: src/region_names.rs:560
-msgid "North Carolina"
-msgstr ""
-
-#: src/region_names.rs:561
-msgid "North Dakota"
-msgstr ""
-
-#: src/region_names.rs:562
-msgid "Ohio"
-msgstr ""
-
-#: src/region_names.rs:563
-msgid "Oklahoma"
-msgstr ""
-
-#: src/region_names.rs:564
-msgid "Oregon"
-msgstr ""
-
-#: src/region_names.rs:565
-msgid "Pennsylvania"
-msgstr ""
-
-#: src/region_names.rs:566
-msgid "Rhode Island"
-msgstr ""
-
-#: src/region_names.rs:567
-msgid "South Carolina"
-msgstr ""
-
-#: src/region_names.rs:568
-msgid "South Dakota"
-msgstr ""
-
-#: src/region_names.rs:569
-msgid "Tennessee"
-msgstr ""
-
-#: src/region_names.rs:570
-msgid "Texas"
-msgstr ""
-
-#: src/region_names.rs:571
-msgid "Utah"
-msgstr ""
-
-#: src/region_names.rs:572
-msgid "Vermont"
-msgstr ""
-
-#: src/region_names.rs:573
-msgid "Virginia"
-msgstr ""
-
-#: src/region_names.rs:574
-msgid "Washington"
-msgstr ""
-
-#: src/region_names.rs:575
-msgid "West Virginia"
-msgstr ""
-
-#: src/region_names.rs:576
-msgid "Wisconsin"
-msgstr ""
-
-#: src/region_names.rs:577
-msgid "Wyoming"
-msgstr ""
-
-#: src/region_names.rs:581 src/region_names.rs:611
-msgid "Greater Poland"
-msgstr ""
-
-#: src/region_names.rs:582 src/region_names.rs:601
-msgid "Kuyavia-Pomerania"
-msgstr ""
-
-#: src/region_names.rs:583 src/region_names.rs:606
-msgid "Lesser Poland"
-msgstr ""
-
-#: src/region_names.rs:584 src/region_names.rs:615
-msgid "Lower Silesia"
-msgstr ""
-
-#: src/region_names.rs:585 src/region_names.rs:607
-msgid "Lublin"
-msgstr ""
-
-#: src/region_names.rs:586 src/region_names.rs:603
-msgid "Lubusz"
-msgstr ""
-
-#: src/region_names.rs:587 src/region_names.rs:614
-msgid "Masovia"
-msgstr ""
-
-#: src/region_names.rs:588 src/region_names.rs:610
-msgid "Opole"
-msgstr ""
-
-#: src/region_names.rs:589 src/region_names.rs:600
-msgid "Podlachia"
-msgstr ""
-
-#: src/region_names.rs:590 src/region_names.rs:602
-msgid "Pomerania"
-msgstr ""
-
-#: src/region_names.rs:591 src/region_names.rs:604
-msgid "Silesia"
-msgstr ""
-
-#: src/region_names.rs:592 src/region_names.rs:612
-msgid "Subcarpathia"
-msgstr ""
-
-#: src/region_names.rs:593 src/region_names.rs:605
-msgid "Świętokrzyskie"
-msgstr ""
-
-#: src/region_names.rs:594 src/region_names.rs:609
-msgid "Warmia-Masuria"
-msgstr ""
-
-#: src/region_names.rs:595 src/region_names.rs:613
-msgid "West Pomerania"
-msgstr ""
-
-#: src/region_names.rs:596 src/region_names.rs:608
-msgid "Łódź"
-msgstr ""
-
-#: src/region_names.rs:600
-msgid "Białystok"
-msgstr ""
-
-#: src/region_names.rs:601
-msgid "Bydgoszcz"
-msgstr ""
-
-#: src/region_names.rs:602
-msgid "Gdańsk"
-msgstr ""
-
-#: src/region_names.rs:603
-msgid "Gorzów Wielkopolski"
-msgstr ""
-
-#: src/region_names.rs:604
-msgid "Katowice"
-msgstr ""
-
-#: src/region_names.rs:605
-msgid "Kielce"
-msgstr ""
-
-#: src/region_names.rs:606
-msgid "Kraków"
-msgstr ""
-
-#: src/region_names.rs:609
-msgid "Olsztyn"
-msgstr ""
-
-#: src/region_names.rs:611
-msgid "Poznań"
-msgstr ""
-
-#: src/region_names.rs:612
-msgid "Rzeszów"
-msgstr ""
-
-#: src/region_names.rs:613
-msgid "Szczecin"
-msgstr ""
-
-#: src/region_names.rs:614 src/region_names.rs:731
-msgid "Warsaw"
-msgstr ""
-
-#: src/region_names.rs:615
-msgid "Wrocław"
-msgstr ""
-
-#: src/region_names.rs:619
-msgid "Aveiro"
-msgstr ""
-
-#: src/region_names.rs:620
-msgid "Azores"
-msgstr ""
-
-#: src/region_names.rs:621
-msgid "Beja"
-msgstr ""
-
-#: src/region_names.rs:622
-msgid "Braga"
-msgstr ""
-
-#: src/region_names.rs:623
-msgid "Bragança"
-msgstr ""
-
-#: src/region_names.rs:624
-msgid "Castelo Branco"
-msgstr ""
-
-#: src/region_names.rs:625
-msgid "Coimbra"
-msgstr ""
-
-#: src/region_names.rs:626
-msgid "Faro"
-msgstr ""
-
-#: src/region_names.rs:627
-msgid "Guarda"
-msgstr ""
-
-#: src/region_names.rs:628
-msgid "Leiria"
-msgstr ""
-
-#: src/region_names.rs:629
-msgid "Lisboa"
-msgstr ""
-
-#: src/region_names.rs:630
-msgid "Madeira"
-msgstr ""
-
-#: src/region_names.rs:631
-msgid "Portalegre"
-msgstr ""
-
-#: src/region_names.rs:632
-msgid "Porto"
-msgstr ""
-
-#: src/region_names.rs:633
-msgid "Santarém"
-msgstr ""
-
-#: src/region_names.rs:634
-msgid "Setúbal"
-msgstr ""
-
-#: src/region_names.rs:635
-msgid "Viana do Castelo"
-msgstr ""
-
-#: src/region_names.rs:636
-msgid "Vila Real"
-msgstr ""
-
-#: src/region_names.rs:637
-msgid "Viseu"
-msgstr ""
-
-#: src/region_names.rs:638
-msgid "Évora"
-msgstr ""
-
-#: src/region_names.rs:642
-msgid "Bidasoa"
-msgstr ""
-
-#: src/region_names.rs:643
-msgid "Duero"
-msgstr ""
-
-#: src/region_names.rs:644
-msgid "Ebro"
-msgstr ""
-
-#: src/region_names.rs:645
-msgid "Genil"
-msgstr ""
-
-#: src/region_names.rs:646
-msgid "Guadalete"
-msgstr ""
-
-#: src/region_names.rs:647
-msgid "Guadalquivir"
-msgstr ""
-
-#: src/region_names.rs:648
-msgid "Guadiana"
-msgstr ""
-
-#: src/region_names.rs:649
-msgid "Jarama"
-msgstr ""
-
-#: src/region_names.rs:650
-msgid "Júcar"
-msgstr ""
-
-#: src/region_names.rs:651
-msgid "Llobregat"
-msgstr ""
-
-#: src/region_names.rs:652
-msgid "Miño"
-msgstr ""
-
-#: src/region_names.rs:653
-msgid "Nalón"
-msgstr ""
-
-#: src/region_names.rs:654
-msgid "Navia"
-msgstr ""
-
-#: src/region_names.rs:655
-msgid "Nervión"
-msgstr ""
-
-#: src/region_names.rs:656
-msgid "Pisuerga"
-msgstr ""
-
-#: src/region_names.rs:657
-msgid "Segre"
-msgstr ""
-
-#: src/region_names.rs:658
-msgid "Segura"
-msgstr ""
-
-#: src/region_names.rs:659
-msgid "Tajo"
-msgstr ""
-
-#: src/region_names.rs:660
-msgid "Ter"
-msgstr ""
-
-#: src/region_names.rs:661
-msgid "Turia"
-msgstr ""
-
-#: src/region_names.rs:672
-msgid "Auvergne-Rhône-Alpes"
-msgstr ""
-
-#: src/region_names.rs:673
-msgid "Bourgogne-Franche-Comté"
-msgstr ""
-
-#: src/region_names.rs:674
-msgid "Brittany"
-msgstr ""
-
-#: src/region_names.rs:675
-msgid "Centre-Val de Loire"
-msgstr ""
-
-#: src/region_names.rs:676
-msgid "Corsica"
-msgstr ""
-
-#: src/region_names.rs:677
-msgid "Grand Est"
-msgstr ""
-
-#: src/region_names.rs:678
-msgid "Guadeloupe"
-msgstr ""
-
-#: src/region_names.rs:679
-msgid "French Guiana"
-msgstr ""
-
-#: src/region_names.rs:680
-msgid "Hauts-de-France"
-msgstr ""
-
-#: src/region_names.rs:681
-msgid "Île-de-France"
-msgstr ""
-
-#: src/region_names.rs:682
-msgid "Réunion"
-msgstr ""
-
-#: src/region_names.rs:683
-msgid "Martinique"
-msgstr ""
-
-#: src/region_names.rs:684
-msgid "Mayotte"
-msgstr ""
-
-#: src/region_names.rs:685
-msgid "Normandy"
-msgstr ""
-
-#: src/region_names.rs:686
-msgid "New Aquitaine"
-msgstr ""
-
-#: src/region_names.rs:687
-msgid "Occitanie"
-msgstr ""
-
-#: src/region_names.rs:688
-msgid "Pays de la Loire"
-msgstr ""
-
-#: src/region_names.rs:691
-msgid "Provence-Alpes-Côte d'Azur"
-msgstr ""
-
-#: src/region_names.rs:696
-msgid "Tirana"
-msgstr ""
-
-#: src/region_names.rs:697
-msgid "Andorra la Vella"
-msgstr ""
-
-#: src/region_names.rs:698
-msgid "Yerevan"
-msgstr ""
-
-#: src/region_names.rs:699
-msgid "Vienna"
-msgstr ""
-
-#: src/region_names.rs:700
-msgid "Baku"
-msgstr ""
-
-#: src/region_names.rs:701
-msgid "Minsk"
-msgstr ""
-
-#: src/region_names.rs:702
-msgid "Brussels"
-msgstr ""
-
-#: src/region_names.rs:703
-msgid "Sarajevo"
-msgstr ""
-
-#: src/region_names.rs:704
-msgid "Sofia"
-msgstr ""
-
-#: src/region_names.rs:705
-msgid "Zagreb"
-msgstr ""
-
-#: src/region_names.rs:706
-msgid "Nicosia"
-msgstr ""
-
-#: src/region_names.rs:707
-msgid "Prague"
-msgstr ""
-
-#: src/region_names.rs:708
-msgid "Copenhagen"
-msgstr ""
-
-#: src/region_names.rs:709
-msgid "Tallinn"
-msgstr ""
-
-#: src/region_names.rs:710
-msgid "Helsinki"
-msgstr ""
-
-#: src/region_names.rs:711
-msgid "Paris"
-msgstr ""
-
-#: src/region_names.rs:712
-msgid "Tbilisi"
-msgstr ""
-
-#: src/region_names.rs:714
-msgid "Athens"
-msgstr ""
-
-#: src/region_names.rs:715
-msgid "Budapest"
-msgstr ""
-
-#: src/region_names.rs:716
-msgid "Reykjavik"
-msgstr ""
-
-#: src/region_names.rs:717
-msgid "Dublin"
-msgstr ""
-
-#: src/region_names.rs:718
+#: src/region_names.rs:57 src/region_names.rs:741
 msgid "Rome"
 msgstr ""
 
+#: src/region_names.rs:58
+msgid "Trento"
+msgstr ""
+
+#: src/region_names.rs:59
+msgid "Trieste"
+msgstr ""
+
+#: src/region_names.rs:60
+msgid "Turin"
+msgstr ""
+
+#: src/region_names.rs:61
+msgid "Venice"
+msgstr ""
+
+#: src/region_names.rs:65 src/region_names.rs:101
+msgid "Baden-Württemberg"
+msgstr ""
+
+#: src/region_names.rs:66 src/region_names.rs:97
+msgid "Bavaria"
+msgstr ""
+
+#: src/region_names.rs:67 src/region_names.rs:87 src/region_names.rs:736
+msgid "Berlin"
+msgstr ""
+
+#: src/region_names.rs:68 src/region_names.rs:98
+msgid "Brandenburg"
+msgstr ""
+
+#: src/region_names.rs:69 src/region_names.rs:88
+msgid "Bremen"
+msgstr ""
+
+#: src/region_names.rs:70 src/region_names.rs:92
+msgid "Hamburg"
+msgstr ""
+
+#: src/region_names.rs:71 src/region_names.rs:102
+msgid "Hesse"
+msgstr ""
+
+#: src/region_names.rs:72 src/region_names.rs:93
+msgid "Lower Saxony"
+msgstr ""
+
+#: src/region_names.rs:75 src/region_names.rs:100
+msgid "Mecklenburg-Western Pomerania"
+msgstr ""
+
+#: src/region_names.rs:77 src/region_names.rs:90
+msgid "North Rhine-Westphalia"
+msgstr ""
+
+#: src/region_names.rs:78 src/region_names.rs:96
+msgid "Rhineland-Palatinate"
+msgstr ""
+
+#: src/region_names.rs:79 src/region_names.rs:99
+msgid "Saarland"
+msgstr ""
+
+#: src/region_names.rs:80 src/region_names.rs:89
+msgid "Saxony"
+msgstr ""
+
+#: src/region_names.rs:81 src/region_names.rs:95
+msgid "Saxony-Anhalt"
+msgstr ""
+
+#: src/region_names.rs:82 src/region_names.rs:94
+msgid "Schleswig-Holstein"
+msgstr ""
+
+#: src/region_names.rs:83 src/region_names.rs:91
+msgid "Thuringia"
+msgstr ""
+
+#: src/region_names.rs:89
+msgid "Dresden"
+msgstr ""
+
+#: src/region_names.rs:90
+msgid "Düsseldorf"
+msgstr ""
+
+#: src/region_names.rs:91
+msgid "Erfurt"
+msgstr ""
+
+#: src/region_names.rs:93
+msgid "Hanover"
+msgstr ""
+
+#: src/region_names.rs:94
+msgid "Kiel"
+msgstr ""
+
+#: src/region_names.rs:95
+msgid "Magdeburg"
+msgstr ""
+
+#: src/region_names.rs:96
+msgid "Mainz"
+msgstr ""
+
+#: src/region_names.rs:97
+msgid "Munich"
+msgstr ""
+
+#: src/region_names.rs:98
+msgid "Potsdam"
+msgstr ""
+
+#: src/region_names.rs:99
+msgid "Saarbrücken"
+msgstr ""
+
+#: src/region_names.rs:100
+msgid "Schwerin"
+msgstr ""
+
+#: src/region_names.rs:101
+msgid "Stuttgart"
+msgstr ""
+
+#: src/region_names.rs:102
+msgid "Wiesbaden"
+msgstr ""
+
+#: src/region_names.rs:106
+msgid "Aargau"
+msgstr ""
+
+#: src/region_names.rs:107
+msgid "Appenzell Ausserrhoden"
+msgstr ""
+
+#: src/region_names.rs:108
+msgid "Appenzell Innerrhoden"
+msgstr ""
+
+#: src/region_names.rs:109
+msgid "Basel-Landschaft"
+msgstr ""
+
+#: src/region_names.rs:110
+msgid "Basel-Stadt"
+msgstr ""
+
+#: src/region_names.rs:111 src/region_names.rs:764
+msgid "Bern"
+msgstr ""
+
+#: src/region_names.rs:112
+msgid "Fribourg"
+msgstr ""
+
+#: src/region_names.rs:113
+msgid "Geneva"
+msgstr ""
+
+#: src/region_names.rs:114
+msgid "Glarus"
+msgstr ""
+
+#: src/region_names.rs:115
+msgid "Graubünden"
+msgstr ""
+
+#: src/region_names.rs:116
+msgid "Jura"
+msgstr ""
+
+#: src/region_names.rs:117
+msgid "Lucerne"
+msgstr ""
+
+#: src/region_names.rs:118
+msgid "Neuchâtel"
+msgstr ""
+
+#: src/region_names.rs:119
+msgid "Nidwalden"
+msgstr ""
+
+#: src/region_names.rs:120
+msgid "Obwalden"
+msgstr ""
+
+#: src/region_names.rs:121
+msgid "Schaffhausen"
+msgstr ""
+
+#: src/region_names.rs:122
+msgid "Schwyz"
+msgstr ""
+
+#: src/region_names.rs:123
+msgid "Solothurn"
+msgstr ""
+
+#: src/region_names.rs:124
+msgid "St. Gallen"
+msgstr ""
+
+#: src/region_names.rs:125
+msgid "Thurgau"
+msgstr ""
+
+#: src/region_names.rs:126
+msgid "Ticino"
+msgstr ""
+
+#: src/region_names.rs:127
+msgid "Uri"
+msgstr ""
+
+#: src/region_names.rs:128
+msgid "Valais"
+msgstr ""
+
+#: src/region_names.rs:129
+msgid "Vaud"
+msgstr ""
+
+#: src/region_names.rs:130
+msgid "Zug"
+msgstr ""
+
+#: src/region_names.rs:131
+msgid "Zurich"
+msgstr ""
+
+#: src/region_names.rs:135 src/region_names.rs:170
+msgid "Andalusia"
+msgstr ""
+
+#: src/region_names.rs:136 src/region_names.rs:175
+msgid "Aragon"
+msgstr ""
+
+#: src/region_names.rs:137 src/region_names.rs:164 src/region_names.rs:183
+msgid "Asturias"
+msgstr ""
+
+#: src/region_names.rs:138 src/region_names.rs:165 src/region_names.rs:200
+msgid "Balearic Islands"
+msgstr ""
+
+#: src/region_names.rs:139 src/region_names.rs:167
+msgid "Canary Islands"
+msgstr ""
+
+#: src/region_names.rs:140 src/region_names.rs:168 src/region_names.rs:187
+msgid "Cantabria"
+msgstr ""
+
+#: src/region_names.rs:141 src/region_names.rs:171
+msgid "Castilla-La Mancha"
+msgstr ""
+
+#: src/region_names.rs:142 src/region_names.rs:173
+msgid "Castile and León"
+msgstr ""
+
+#: src/region_names.rs:143 src/region_names.rs:157
+msgid "Catalonia"
+msgstr ""
+
+#: src/region_names.rs:144 src/region_names.rs:158
+msgid "Ceuta"
+msgstr ""
+
+#: src/region_names.rs:145 src/region_names.rs:162
+msgid "Extremadura"
+msgstr ""
+
+#: src/region_names.rs:146 src/region_names.rs:169 src/registry.rs:109
+msgid "Galicia"
+msgstr ""
+
+#: src/region_names.rs:147 src/region_names.rs:159 src/region_names.rs:202
+msgid "La Rioja"
+msgstr ""
+
+#: src/region_names.rs:148 src/region_names.rs:160 src/region_names.rs:207
+#: src/region_names.rs:762
+msgid "Madrid"
+msgstr ""
+
+#: src/region_names.rs:149 src/region_names.rs:161
+msgid "Melilla"
+msgstr ""
+
+#: src/region_names.rs:150 src/region_names.rs:163 src/region_names.rs:208
+msgid "Murcia"
+msgstr ""
+
+#: src/region_names.rs:151 src/region_names.rs:166 src/region_names.rs:210
+msgid "Navarre"
+msgstr ""
+
+#: src/region_names.rs:152 src/region_names.rs:174
+msgid "Basque Country"
+msgstr ""
+
+#: src/region_names.rs:153 src/region_names.rs:172 src/region_names.rs:222
+msgid "Valencia"
+msgstr ""
+
+#: src/region_names.rs:157 src/region_names.rs:185
+msgid "Barcelona"
+msgstr ""
+
+#: src/region_names.rs:159
+msgid "Logroño"
+msgstr ""
+
+#: src/region_names.rs:162
+msgid "Mérida"
+msgstr ""
+
+#: src/region_names.rs:164
+msgid "Oviedo"
+msgstr ""
+
+#: src/region_names.rs:165
+msgid "Palma"
+msgstr ""
+
+#: src/region_names.rs:166
+msgid "Pamplona"
+msgstr ""
+
+#: src/region_names.rs:167 src/region_names.rs:215
+msgid "Santa Cruz de Tenerife"
+msgstr ""
+
+#: src/region_names.rs:168
+msgid "Santander"
+msgstr ""
+
+#: src/region_names.rs:169
+msgid "Santiago de Compostela"
+msgstr ""
+
+#: src/region_names.rs:170 src/region_names.rs:217
+msgid "Seville"
+msgstr ""
+
+#: src/region_names.rs:171 src/region_names.rs:221
+msgid "Toledo"
+msgstr ""
+
+#: src/region_names.rs:173 src/region_names.rs:223
+msgid "Valladolid"
+msgstr ""
+
+#: src/region_names.rs:174
+msgid "Vitoria-Gasteiz"
+msgstr ""
+
+#: src/region_names.rs:175 src/region_names.rs:226
+msgid "Zaragoza"
+msgstr ""
+
+#: src/region_names.rs:179 src/region_names.rs:688
+msgid "A Coruña"
+msgstr ""
+
+#: src/region_names.rs:180
+msgid "Albacete"
+msgstr ""
+
+#: src/region_names.rs:181
+msgid "Alicante"
+msgstr ""
+
+#: src/region_names.rs:182
+msgid "Almería"
+msgstr ""
+
+#: src/region_names.rs:184
+msgid "Badajoz"
+msgstr ""
+
+#: src/region_names.rs:186
+msgid "Burgos"
+msgstr ""
+
+#: src/region_names.rs:188
+msgid "Castellón"
+msgstr ""
+
+#: src/region_names.rs:189
+msgid "Ciudad Real"
+msgstr ""
+
+#: src/region_names.rs:190
+msgid "Cuenca"
+msgstr ""
+
+#: src/region_names.rs:191
+msgid "Cáceres"
+msgstr ""
+
+#: src/region_names.rs:192
+msgid "Cádiz"
+msgstr ""
+
+#: src/region_names.rs:193
+msgid "Córdoba"
+msgstr ""
+
+#: src/region_names.rs:194
+msgid "Girona"
+msgstr ""
+
+#: src/region_names.rs:195
+msgid "Granada"
+msgstr ""
+
+#: src/region_names.rs:196
+msgid "Guadalajara"
+msgstr ""
+
+#: src/region_names.rs:197
+msgid "Gipuzkoa"
+msgstr ""
+
+#: src/region_names.rs:198
+msgid "Huelva"
+msgstr ""
+
+#: src/region_names.rs:199
+msgid "Huesca"
+msgstr ""
+
+#: src/region_names.rs:201
+msgid "Jaén"
+msgstr ""
+
+#: src/region_names.rs:203
+msgid "Las Palmas"
+msgstr ""
+
+#: src/region_names.rs:204
+msgid "León"
+msgstr ""
+
+#: src/region_names.rs:205
+msgid "Lleida"
+msgstr ""
+
+#: src/region_names.rs:206 src/region_names.rs:689
+msgid "Lugo"
+msgstr ""
+
+#: src/region_names.rs:209
+msgid "Málaga"
+msgstr ""
+
+#: src/region_names.rs:211 src/region_names.rs:690
+msgid "Ourense"
+msgstr ""
+
+#: src/region_names.rs:212
+msgid "Palencia"
+msgstr ""
+
+#: src/region_names.rs:213 src/region_names.rs:691
+msgid "Pontevedra"
+msgstr ""
+
+#: src/region_names.rs:214
+msgid "Salamanca"
+msgstr ""
+
+#: src/region_names.rs:216
+msgid "Segovia"
+msgstr ""
+
+#: src/region_names.rs:218
+msgid "Soria"
+msgstr ""
+
+#: src/region_names.rs:219
+msgid "Tarragona"
+msgstr ""
+
+#: src/region_names.rs:220
+msgid "Teruel"
+msgstr ""
+
+#: src/region_names.rs:224
+msgid "Biscay"
+msgstr ""
+
+#: src/region_names.rs:225
+msgid "Zamora"
+msgstr ""
+
+#: src/region_names.rs:227
+msgid "Álava"
+msgstr ""
+
+#: src/region_names.rs:228
+msgid "Ávila"
+msgstr ""
+
+#: src/region_names.rs:232
+msgid "Africa"
+msgstr ""
+
+#: src/region_names.rs:233
+msgid "Asia"
+msgstr ""
+
+#: src/region_names.rs:234
+msgid "Europe"
+msgstr ""
+
+#: src/region_names.rs:235
+msgid "North America"
+msgstr ""
+
+#: src/region_names.rs:236
+msgid "Oceania"
+msgstr ""
+
+#: src/region_names.rs:237
+msgid "South America"
+msgstr ""
+
+#: src/region_names.rs:241 src/region_names.rs:719
+msgid "Albania"
+msgstr ""
+
+#: src/region_names.rs:242 src/region_names.rs:720
+msgid "Andorra"
+msgstr ""
+
+#: src/region_names.rs:243 src/region_names.rs:403 src/region_names.rs:721
+msgid "Armenia"
+msgstr ""
+
+#: src/region_names.rs:244 src/region_names.rs:722
+msgid "Austria"
+msgstr ""
+
+#: src/region_names.rs:245 src/region_names.rs:404 src/region_names.rs:723
+msgid "Azerbaijan"
+msgstr ""
+
+#: src/region_names.rs:246 src/region_names.rs:724
+msgid "Belarus"
+msgstr ""
+
+#: src/region_names.rs:247 src/region_names.rs:725
+msgid "Belgium"
+msgstr ""
+
+#: src/region_names.rs:248 src/region_names.rs:726
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: src/region_names.rs:249 src/region_names.rs:727
+msgid "Bulgaria"
+msgstr ""
+
+#: src/region_names.rs:250 src/region_names.rs:728
+msgid "Croatia"
+msgstr ""
+
+#: src/region_names.rs:251 src/region_names.rs:411 src/region_names.rs:729
+msgid "Cyprus"
+msgstr ""
+
+#: src/region_names.rs:252 src/region_names.rs:730
+msgid "Czech Republic"
+msgstr ""
+
+#: src/region_names.rs:253 src/region_names.rs:731
+msgid "Denmark"
+msgstr ""
+
+#: src/region_names.rs:254 src/region_names.rs:732
+msgid "Estonia"
+msgstr ""
+
+#: src/region_names.rs:255 src/region_names.rs:733
+msgid "Finland"
+msgstr ""
+
+#: src/region_names.rs:256 src/region_names.rs:734 src/registry.rs:354
+msgid "France"
+msgstr ""
+
+#: src/region_names.rs:257 src/region_names.rs:413 src/region_names.rs:560
+#: src/region_names.rs:735
+msgid "Georgia"
+msgstr ""
+
+#: src/region_names.rs:258 src/region_names.rs:736 src/registry.rs:359
+msgid "Germany"
+msgstr ""
+
+#: src/region_names.rs:259 src/region_names.rs:737
+msgid "Greece"
+msgstr ""
+
+#: src/region_names.rs:260 src/region_names.rs:738
+msgid "Hungary"
+msgstr ""
+
+#: src/region_names.rs:261 src/region_names.rs:739
+msgid "Iceland"
+msgstr ""
+
+#: src/region_names.rs:262 src/region_names.rs:740
+msgid "Ireland"
+msgstr ""
+
+#: src/region_names.rs:263 src/region_names.rs:741 src/registry.rs:374
+msgid "Italy"
+msgstr ""
+
+#: src/region_names.rs:264 src/region_names.rs:742
+msgid "Kosovo"
+msgstr ""
+
+#: src/region_names.rs:265 src/region_names.rs:743
+msgid "Latvia"
+msgstr ""
+
+#: src/region_names.rs:266 src/region_names.rs:744
+msgid "Liechtenstein"
+msgstr ""
+
+#: src/region_names.rs:267 src/region_names.rs:745
+msgid "Lithuania"
+msgstr ""
+
+#: src/region_names.rs:268 src/region_names.rs:746
+msgid "Luxembourg"
+msgstr ""
+
+#: src/region_names.rs:269 src/region_names.rs:747
+msgid "Malta"
+msgstr ""
+
+#: src/region_names.rs:270 src/region_names.rs:748
+msgid "Moldova"
+msgstr ""
+
+#: src/region_names.rs:271 src/region_names.rs:749
+msgid "Monaco"
+msgstr ""
+
+#: src/region_names.rs:272 src/region_names.rs:750
+msgid "Montenegro"
+msgstr ""
+
+#: src/region_names.rs:273 src/region_names.rs:751
+msgid "Netherlands"
+msgstr ""
+
+#: src/region_names.rs:274 src/region_names.rs:752
+msgid "North Macedonia"
+msgstr ""
+
+#: src/region_names.rs:275 src/region_names.rs:753
+msgid "Norway"
+msgstr ""
+
+#: src/region_names.rs:276 src/region_names.rs:754 src/registry.rs:384
+msgid "Poland"
+msgstr ""
+
+#: src/region_names.rs:277 src/region_names.rs:755 src/registry.rs:389
+msgid "Portugal"
+msgstr ""
+
+#: src/region_names.rs:278 src/region_names.rs:756
+msgid "Romania"
+msgstr ""
+
+#: src/region_names.rs:279 src/region_names.rs:437 src/region_names.rs:757
+msgid "Russia"
+msgstr ""
+
+#: src/region_names.rs:280 src/region_names.rs:758
+msgid "San Marino"
+msgstr ""
+
+#: src/region_names.rs:281 src/region_names.rs:759
+msgid "Serbia"
+msgstr ""
+
+#: src/region_names.rs:282 src/region_names.rs:760
+msgid "Slovakia"
+msgstr ""
+
+#: src/region_names.rs:283 src/region_names.rs:761
+msgid "Slovenia"
+msgstr ""
+
+#: src/region_names.rs:284 src/region_names.rs:762 src/registry.rs:394
+msgid "Spain"
+msgstr ""
+
+#: src/region_names.rs:285 src/region_names.rs:763
+msgid "Sweden"
+msgstr ""
+
+#: src/region_names.rs:286 src/region_names.rs:764 src/registry.rs:364
+msgid "Switzerland"
+msgstr ""
+
+#: src/region_names.rs:287 src/region_names.rs:446 src/region_names.rs:765
+msgid "Turkey"
+msgstr ""
+
+#: src/region_names.rs:288 src/region_names.rs:766
+msgid "Ukraine"
+msgstr ""
+
+#: src/region_names.rs:289 src/region_names.rs:767
+msgid "United Kingdom"
+msgstr ""
+
+#: src/region_names.rs:290 src/region_names.rs:768
+msgid "Vatican City"
+msgstr ""
+
+#: src/region_names.rs:294
+msgid "Argentina"
+msgstr ""
+
+#: src/region_names.rs:295
+msgid "Bahamas"
+msgstr ""
+
+#: src/region_names.rs:296
+msgid "Belize"
+msgstr ""
+
+#: src/region_names.rs:297
+msgid "Bolivia"
+msgstr ""
+
+#: src/region_names.rs:298
+msgid "Brazil"
+msgstr ""
+
+#: src/region_names.rs:299
+msgid "Canada"
+msgstr ""
+
+#: src/region_names.rs:300
+msgid "Chile"
+msgstr ""
+
+#: src/region_names.rs:301
+msgid "Colombia"
+msgstr ""
+
+#: src/region_names.rs:302
+msgid "Costa Rica"
+msgstr ""
+
+#: src/region_names.rs:303
+msgid "Cuba"
+msgstr ""
+
+#: src/region_names.rs:304
+msgid "Dominican Republic"
+msgstr ""
+
+#: src/region_names.rs:305
+msgid "Ecuador"
+msgstr ""
+
+#: src/region_names.rs:306
+msgid "El Salvador"
+msgstr ""
+
+#: src/region_names.rs:307
+msgid "Guatemala"
+msgstr ""
+
+#: src/region_names.rs:308
+msgid "Guyana"
+msgstr ""
+
+#: src/region_names.rs:309
+msgid "Haiti"
+msgstr ""
+
+#: src/region_names.rs:310
+msgid "Honduras"
+msgstr ""
+
+#: src/region_names.rs:311
+msgid "Jamaica"
+msgstr ""
+
+#: src/region_names.rs:312
+msgid "Mexico"
+msgstr ""
+
+#: src/region_names.rs:313
+msgid "Nicaragua"
+msgstr ""
+
+#: src/region_names.rs:314
+msgid "Panama"
+msgstr ""
+
+#: src/region_names.rs:315
+msgid "Paraguay"
+msgstr ""
+
+#: src/region_names.rs:316
+msgid "Peru"
+msgstr ""
+
+#: src/region_names.rs:317
+msgid "Suriname"
+msgstr ""
+
+#: src/region_names.rs:318
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: src/region_names.rs:319 src/registry.rs:399
+msgid "United States"
+msgstr ""
+
+#: src/region_names.rs:320
+msgid "Uruguay"
+msgstr ""
+
+#: src/region_names.rs:321
+msgid "Venezuela"
+msgstr ""
+
+#: src/region_names.rs:325
+msgid "Algeria"
+msgstr ""
+
+#: src/region_names.rs:326
+msgid "Angola"
+msgstr ""
+
+#: src/region_names.rs:327
+msgid "Benin"
+msgstr ""
+
+#: src/region_names.rs:328
+msgid "Botswana"
+msgstr ""
+
+#: src/region_names.rs:329
+msgid "Burkina Faso"
+msgstr ""
+
+#: src/region_names.rs:330
+msgid "Burundi"
+msgstr ""
+
+#: src/region_names.rs:331
+msgid "Cameroon"
+msgstr ""
+
+#: src/region_names.rs:332
+msgid "Cape Verde"
+msgstr ""
+
+#: src/region_names.rs:333
+msgid "Central African Republic"
+msgstr ""
+
+#: src/region_names.rs:334
+msgid "Chad"
+msgstr ""
+
+#: src/region_names.rs:335
+msgid "Comoros"
+msgstr ""
+
+#: src/region_names.rs:336
+msgid "Côte d'Ivoire"
+msgstr ""
+
+#: src/region_names.rs:339
+msgid "Democratic Republic of the Congo"
+msgstr ""
+
+#: src/region_names.rs:341
+msgid "Djibouti"
+msgstr ""
+
+#: src/region_names.rs:342
+msgid "Egypt"
+msgstr ""
+
+#: src/region_names.rs:343
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: src/region_names.rs:344
+msgid "Eritrea"
+msgstr ""
+
+#: src/region_names.rs:345
+msgid "Eswatini"
+msgstr ""
+
+#: src/region_names.rs:346
+msgid "Ethiopia"
+msgstr ""
+
+#: src/region_names.rs:347
+msgid "Gabon"
+msgstr ""
+
+#: src/region_names.rs:348
+msgid "Gambia"
+msgstr ""
+
+#: src/region_names.rs:349
+msgid "Ghana"
+msgstr ""
+
+#: src/region_names.rs:350
+msgid "Guinea"
+msgstr ""
+
+#: src/region_names.rs:351
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: src/region_names.rs:352
+msgid "Kenya"
+msgstr ""
+
+#: src/region_names.rs:353
+msgid "Lesotho"
+msgstr ""
+
+#: src/region_names.rs:354
+msgid "Liberia"
+msgstr ""
+
+#: src/region_names.rs:355
+msgid "Libya"
+msgstr ""
+
+#: src/region_names.rs:356
+msgid "Madagascar"
+msgstr ""
+
+#: src/region_names.rs:357
+msgid "Malawi"
+msgstr ""
+
+#: src/region_names.rs:358
+msgid "Mali"
+msgstr ""
+
+#: src/region_names.rs:359
+msgid "Mauritania"
+msgstr ""
+
+#: src/region_names.rs:360
+msgid "Mauritius"
+msgstr ""
+
+#: src/region_names.rs:361
+msgid "Morocco"
+msgstr ""
+
+#: src/region_names.rs:362
+msgid "Mozambique"
+msgstr ""
+
+#: src/region_names.rs:363
+msgid "Namibia"
+msgstr ""
+
+#: src/region_names.rs:364
+msgid "Niger"
+msgstr ""
+
+#: src/region_names.rs:365
+msgid "Nigeria"
+msgstr ""
+
+#: src/region_names.rs:366
+msgid "Republic of the Congo"
+msgstr ""
+
+#: src/region_names.rs:367
+msgid "Rwanda"
+msgstr ""
+
+#: src/region_names.rs:368
+msgid "São Tomé and Príncipe"
+msgstr ""
+
+#: src/region_names.rs:369
+msgid "Senegal"
+msgstr ""
+
+#: src/region_names.rs:370
+msgid "Sierra Leone"
+msgstr ""
+
+#: src/region_names.rs:371
+msgid "Somalia"
+msgstr ""
+
+#: src/region_names.rs:372
+msgid "South Africa"
+msgstr ""
+
+#: src/region_names.rs:373
+msgid "South Sudan"
+msgstr ""
+
+#: src/region_names.rs:374
+msgid "Sudan"
+msgstr ""
+
+#: src/region_names.rs:375
+msgid "Tanzania"
+msgstr ""
+
+#: src/region_names.rs:376
+msgid "Togo"
+msgstr ""
+
+#: src/region_names.rs:377
+msgid "Tunisia"
+msgstr ""
+
+#: src/region_names.rs:378
+msgid "Uganda"
+msgstr ""
+
+#: src/region_names.rs:379
+msgid "Western Sahara"
+msgstr ""
+
+#: src/region_names.rs:380
+msgid "Zambia"
+msgstr ""
+
+#: src/region_names.rs:381
+msgid "Zimbabwe"
+msgstr ""
+
+#: src/region_names.rs:385
+msgid "Australia"
+msgstr ""
+
+#: src/region_names.rs:386
+msgid "Fiji"
+msgstr ""
+
+#: src/region_names.rs:387
+msgid "Kiribati"
+msgstr ""
+
+#: src/region_names.rs:388
+msgid "Marshall Islands"
+msgstr ""
+
+#: src/region_names.rs:389
+msgid "Micronesia"
+msgstr ""
+
+#: src/region_names.rs:390
+msgid "Nauru"
+msgstr ""
+
+#: src/region_names.rs:391
+msgid "New Zealand"
+msgstr ""
+
+#: src/region_names.rs:392
+msgid "Palau"
+msgstr ""
+
+#: src/region_names.rs:393
+msgid "Papua New Guinea"
+msgstr ""
+
+#: src/region_names.rs:394
+msgid "Samoa"
+msgstr ""
+
+#: src/region_names.rs:395
+msgid "Solomon Islands"
+msgstr ""
+
+#: src/region_names.rs:396
+msgid "Tonga"
+msgstr ""
+
+#: src/region_names.rs:397
+msgid "Tuvalu"
+msgstr ""
+
+#: src/region_names.rs:398
+msgid "Vanuatu"
+msgstr ""
+
+#: src/region_names.rs:402
+msgid "Afghanistan"
+msgstr ""
+
+#: src/region_names.rs:405
+msgid "Bahrain"
+msgstr ""
+
+#: src/region_names.rs:406
+msgid "Bangladesh"
+msgstr ""
+
+#: src/region_names.rs:407
+msgid "Bhutan"
+msgstr ""
+
+#: src/region_names.rs:408
+msgid "Brunei"
+msgstr ""
+
+#: src/region_names.rs:409
+msgid "Cambodia"
+msgstr ""
+
+#: src/region_names.rs:410
+msgid "China"
+msgstr ""
+
+#: src/region_names.rs:412
+msgid "East Timor"
+msgstr ""
+
+#: src/region_names.rs:414 src/registry.rs:369
+msgid "India"
+msgstr ""
+
+#: src/region_names.rs:415
+msgid "Indonesia"
+msgstr ""
+
+#: src/region_names.rs:416
+msgid "Iran"
+msgstr ""
+
+#: src/region_names.rs:417
+msgid "Iraq"
+msgstr ""
+
+#: src/region_names.rs:418
+msgid "Israel"
+msgstr ""
+
+#: src/region_names.rs:419 src/registry.rs:379
+msgid "Japan"
+msgstr ""
+
+#: src/region_names.rs:420
+msgid "Jordan"
+msgstr ""
+
+#: src/region_names.rs:421
+msgid "Kazakhstan"
+msgstr ""
+
+#: src/region_names.rs:422
+msgid "Kuwait"
+msgstr ""
+
+#: src/region_names.rs:423
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: src/region_names.rs:424
+msgid "Laos"
+msgstr ""
+
+#: src/region_names.rs:425
+msgid "Lebanon"
+msgstr ""
+
+#: src/region_names.rs:426
+msgid "Malaysia"
+msgstr ""
+
+#: src/region_names.rs:427
+msgid "Maldives"
+msgstr ""
+
+#: src/region_names.rs:428
+msgid "Mongolia"
+msgstr ""
+
+#: src/region_names.rs:429
+msgid "Myanmar"
+msgstr ""
+
+#: src/region_names.rs:430
+msgid "Nepal"
+msgstr ""
+
+#: src/region_names.rs:431
+msgid "North Korea"
+msgstr ""
+
+#: src/region_names.rs:432
+msgid "Oman"
+msgstr ""
+
+#: src/region_names.rs:433
+msgid "Pakistan"
+msgstr ""
+
+#: src/region_names.rs:434
+msgid "Palestine"
+msgstr ""
+
+#: src/region_names.rs:435
+msgid "Philippines"
+msgstr ""
+
+#: src/region_names.rs:436
+msgid "Qatar"
+msgstr ""
+
+#: src/region_names.rs:438
+msgid "Saudi Arabia"
+msgstr ""
+
+#: src/region_names.rs:439
+msgid "Singapore"
+msgstr ""
+
+#: src/region_names.rs:440
+msgid "South Korea"
+msgstr ""
+
+#: src/region_names.rs:441
+msgid "Sri Lanka"
+msgstr ""
+
+#: src/region_names.rs:442
+msgid "Syria"
+msgstr ""
+
+#: src/region_names.rs:443
+msgid "Taiwan"
+msgstr ""
+
+#: src/region_names.rs:444
+msgid "Tajikistan"
+msgstr ""
+
+#: src/region_names.rs:445
+msgid "Thailand"
+msgstr ""
+
+#: src/region_names.rs:447
+msgid "Turkmenistan"
+msgstr ""
+
+#: src/region_names.rs:448
+msgid "United Arab Emirates"
+msgstr ""
+
+#: src/region_names.rs:449
+msgid "Uzbekistan"
+msgstr ""
+
+#: src/region_names.rs:450
+msgid "Vietnam"
+msgstr ""
+
+#: src/region_names.rs:451
+msgid "Yemen"
+msgstr ""
+
+#: src/region_names.rs:457
+msgid "Andaman and Nicobar Islands"
+msgstr ""
+
+#: src/region_names.rs:459
+msgid "Andhra Pradesh"
+msgstr ""
+
+#: src/region_names.rs:460
+msgid "Arunachal Pradesh"
+msgstr ""
+
+#: src/region_names.rs:461
+msgid "Assam"
+msgstr ""
+
+#: src/region_names.rs:462
+msgid "Bihar"
+msgstr ""
+
+#: src/region_names.rs:463
+msgid "Chandigarh"
+msgstr ""
+
+#: src/region_names.rs:464
+msgid "Chhattisgarh"
+msgstr ""
+
+#: src/region_names.rs:467
+msgid "Dadra and Nagar Haveli and Daman and Diu"
+msgstr ""
+
+#: src/region_names.rs:469
+msgid "Delhi"
+msgstr ""
+
+#: src/region_names.rs:470
+msgid "Goa"
+msgstr ""
+
+#: src/region_names.rs:471
+msgid "Gujarat"
+msgstr ""
+
+#: src/region_names.rs:472
+msgid "Haryana"
+msgstr ""
+
+#: src/region_names.rs:473
+msgid "Himachal Pradesh"
+msgstr ""
+
+#: src/region_names.rs:474
+msgid "Jammu and Kashmir"
+msgstr ""
+
+#: src/region_names.rs:475
+msgid "Jharkhand"
+msgstr ""
+
+#: src/region_names.rs:476
+msgid "Karnataka"
+msgstr ""
+
+#: src/region_names.rs:477
+msgid "Kerala"
+msgstr ""
+
+#: src/region_names.rs:478
+msgid "Ladakh"
+msgstr ""
+
+#: src/region_names.rs:479
+msgid "Lakshadweep"
+msgstr ""
+
+#: src/region_names.rs:480
+msgid "Madhya Pradesh"
+msgstr ""
+
+#: src/region_names.rs:481
+msgid "Maharashtra"
+msgstr ""
+
+#: src/region_names.rs:482
+msgid "Manipur"
+msgstr ""
+
+#: src/region_names.rs:483
+msgid "Meghalaya"
+msgstr ""
+
+#: src/region_names.rs:484
+msgid "Mizoram"
+msgstr ""
+
+#: src/region_names.rs:485
+msgid "Nagaland"
+msgstr ""
+
+#: src/region_names.rs:486
+msgid "Odisha"
+msgstr ""
+
+#: src/region_names.rs:487
+msgid "Puducherry"
+msgstr ""
+
+#: src/region_names.rs:488
+msgid "Punjab"
+msgstr ""
+
+#: src/region_names.rs:489
+msgid "Rajasthan"
+msgstr ""
+
+#: src/region_names.rs:490
+msgid "Sikkim"
+msgstr ""
+
+#: src/region_names.rs:491
+msgid "Tamil Nadu"
+msgstr ""
+
+#: src/region_names.rs:492
+msgid "Telangana"
+msgstr ""
+
+#: src/region_names.rs:493
+msgid "Tripura"
+msgstr ""
+
+#: src/region_names.rs:494
+msgid "Uttar Pradesh"
+msgstr ""
+
+#: src/region_names.rs:495
+msgid "Uttarakhand"
+msgstr ""
+
+#: src/region_names.rs:496
+msgid "West Bengal"
+msgstr ""
+
+#: src/region_names.rs:500
+msgid "Hokkaidō"
+msgstr ""
+
+#: src/region_names.rs:501
+msgid "Aomori"
+msgstr ""
+
+#: src/region_names.rs:502
+msgid "Iwate"
+msgstr ""
+
+#: src/region_names.rs:503
+msgid "Miyagi"
+msgstr ""
+
+#: src/region_names.rs:504
+msgid "Akita"
+msgstr ""
+
+#: src/region_names.rs:505
+msgid "Yamagata"
+msgstr ""
+
+#: src/region_names.rs:506
+msgid "Fukushima"
+msgstr ""
+
+#: src/region_names.rs:507
+msgid "Ibaraki"
+msgstr ""
+
+#: src/region_names.rs:508
+msgid "Tochigi"
+msgstr ""
+
+#: src/region_names.rs:509
+msgid "Gunma"
+msgstr ""
+
+#: src/region_names.rs:510
+msgid "Saitama"
+msgstr ""
+
+#: src/region_names.rs:511
+msgid "Chiba"
+msgstr ""
+
+#: src/region_names.rs:512
+msgid "Tokyo"
+msgstr ""
+
+#: src/region_names.rs:513
+msgid "Kanagawa"
+msgstr ""
+
+#: src/region_names.rs:514
+msgid "Niigata"
+msgstr ""
+
+#: src/region_names.rs:515
+msgid "Toyama"
+msgstr ""
+
+#: src/region_names.rs:516
+msgid "Ishikawa"
+msgstr ""
+
+#: src/region_names.rs:517
+msgid "Fukui"
+msgstr ""
+
+#: src/region_names.rs:518
+msgid "Yamanashi"
+msgstr ""
+
+#: src/region_names.rs:519
+msgid "Nagano"
+msgstr ""
+
+#: src/region_names.rs:520
+msgid "Gifu"
+msgstr ""
+
+#: src/region_names.rs:521
+msgid "Shizuoka"
+msgstr ""
+
+#: src/region_names.rs:522
+msgid "Aichi"
+msgstr ""
+
+#: src/region_names.rs:523
+msgid "Mie"
+msgstr ""
+
+#: src/region_names.rs:524
+msgid "Shiga"
+msgstr ""
+
+#: src/region_names.rs:525
+msgid "Kyōto"
+msgstr ""
+
+#: src/region_names.rs:526
+msgid "Ōsaka"
+msgstr ""
+
+#: src/region_names.rs:527
+msgid "Hyōgo"
+msgstr ""
+
+#: src/region_names.rs:528
+msgid "Nara"
+msgstr ""
+
+#: src/region_names.rs:529
+msgid "Wakayama"
+msgstr ""
+
+#: src/region_names.rs:530
+msgid "Tottori"
+msgstr ""
+
+#: src/region_names.rs:531
+msgid "Shimane"
+msgstr ""
+
+#: src/region_names.rs:532
+msgid "Okayama"
+msgstr ""
+
+#: src/region_names.rs:533
+msgid "Hiroshima"
+msgstr ""
+
+#: src/region_names.rs:534
+msgid "Yamaguchi"
+msgstr ""
+
+#: src/region_names.rs:535
+msgid "Tokushima"
+msgstr ""
+
+#: src/region_names.rs:536
+msgid "Kagawa"
+msgstr ""
+
+#: src/region_names.rs:537
+msgid "Ehime"
+msgstr ""
+
+#: src/region_names.rs:538
+msgid "Kōchi"
+msgstr ""
+
+#: src/region_names.rs:539
+msgid "Fukuoka"
+msgstr ""
+
+#: src/region_names.rs:540
+msgid "Saga"
+msgstr ""
+
+#: src/region_names.rs:541
+msgid "Nagasaki"
+msgstr ""
+
+#: src/region_names.rs:542
+msgid "Kumamoto"
+msgstr ""
+
+#: src/region_names.rs:543
+msgid "Ōita"
+msgstr ""
+
+#: src/region_names.rs:544
+msgid "Miyazaki"
+msgstr ""
+
+#: src/region_names.rs:545
+msgid "Kagoshima"
+msgstr ""
+
+#: src/region_names.rs:546
+msgid "Okinawa"
+msgstr ""
+
+#: src/region_names.rs:550
+msgid "Alabama"
+msgstr ""
+
+#: src/region_names.rs:551
+msgid "Alaska"
+msgstr ""
+
+#: src/region_names.rs:552
+msgid "Arizona"
+msgstr ""
+
+#: src/region_names.rs:553
+msgid "Arkansas"
+msgstr ""
+
+#: src/region_names.rs:554
+msgid "California"
+msgstr ""
+
+#: src/region_names.rs:555
+msgid "Colorado"
+msgstr ""
+
+#: src/region_names.rs:556
+msgid "Connecticut"
+msgstr ""
+
+#: src/region_names.rs:557
+msgid "Delaware"
+msgstr ""
+
+#: src/region_names.rs:558
+msgid "District of Columbia"
+msgstr ""
+
+#: src/region_names.rs:559
+msgid "Florida"
+msgstr ""
+
+#: src/region_names.rs:561
+msgid "Hawaii"
+msgstr ""
+
+#: src/region_names.rs:562
+msgid "Idaho"
+msgstr ""
+
+#: src/region_names.rs:563
+msgid "Illinois"
+msgstr ""
+
+#: src/region_names.rs:564
+msgid "Indiana"
+msgstr ""
+
+#: src/region_names.rs:565
+msgid "Iowa"
+msgstr ""
+
+#: src/region_names.rs:566
+msgid "Kansas"
+msgstr ""
+
+#: src/region_names.rs:567
+msgid "Kentucky"
+msgstr ""
+
+#: src/region_names.rs:568
+msgid "Louisiana"
+msgstr ""
+
+#: src/region_names.rs:569
+msgid "Maine"
+msgstr ""
+
+#: src/region_names.rs:570
+msgid "Maryland"
+msgstr ""
+
+#: src/region_names.rs:571
+msgid "Massachusetts"
+msgstr ""
+
+#: src/region_names.rs:572
+msgid "Michigan"
+msgstr ""
+
+#: src/region_names.rs:573
+msgid "Minnesota"
+msgstr ""
+
+#: src/region_names.rs:574
+msgid "Mississippi"
+msgstr ""
+
+#: src/region_names.rs:575
+msgid "Missouri"
+msgstr ""
+
+#: src/region_names.rs:576
+msgid "Montana"
+msgstr ""
+
+#: src/region_names.rs:577
+msgid "Nebraska"
+msgstr ""
+
+#: src/region_names.rs:578
+msgid "Nevada"
+msgstr ""
+
+#: src/region_names.rs:579
+msgid "New Hampshire"
+msgstr ""
+
+#: src/region_names.rs:580
+msgid "New Jersey"
+msgstr ""
+
+#: src/region_names.rs:581
+msgid "New Mexico"
+msgstr ""
+
+#: src/region_names.rs:582
+msgid "New York"
+msgstr ""
+
+#: src/region_names.rs:583
+msgid "North Carolina"
+msgstr ""
+
+#: src/region_names.rs:584
+msgid "North Dakota"
+msgstr ""
+
+#: src/region_names.rs:585
+msgid "Ohio"
+msgstr ""
+
+#: src/region_names.rs:586
+msgid "Oklahoma"
+msgstr ""
+
+#: src/region_names.rs:587
+msgid "Oregon"
+msgstr ""
+
+#: src/region_names.rs:588
+msgid "Pennsylvania"
+msgstr ""
+
+#: src/region_names.rs:589
+msgid "Rhode Island"
+msgstr ""
+
+#: src/region_names.rs:590
+msgid "South Carolina"
+msgstr ""
+
+#: src/region_names.rs:591
+msgid "South Dakota"
+msgstr ""
+
+#: src/region_names.rs:592
+msgid "Tennessee"
+msgstr ""
+
+#: src/region_names.rs:593
+msgid "Texas"
+msgstr ""
+
+#: src/region_names.rs:594
+msgid "Utah"
+msgstr ""
+
+#: src/region_names.rs:595
+msgid "Vermont"
+msgstr ""
+
+#: src/region_names.rs:596
+msgid "Virginia"
+msgstr ""
+
+#: src/region_names.rs:597
+msgid "Washington"
+msgstr ""
+
+#: src/region_names.rs:598
+msgid "West Virginia"
+msgstr ""
+
+#: src/region_names.rs:599
+msgid "Wisconsin"
+msgstr ""
+
+#: src/region_names.rs:600
+msgid "Wyoming"
+msgstr ""
+
+#: src/region_names.rs:604 src/region_names.rs:634
+msgid "Greater Poland"
+msgstr ""
+
+#: src/region_names.rs:605 src/region_names.rs:624
+msgid "Kuyavia-Pomerania"
+msgstr ""
+
+#: src/region_names.rs:606 src/region_names.rs:629
+msgid "Lesser Poland"
+msgstr ""
+
+#: src/region_names.rs:607 src/region_names.rs:638
+msgid "Lower Silesia"
+msgstr ""
+
+#: src/region_names.rs:608 src/region_names.rs:630
+msgid "Lublin"
+msgstr ""
+
+#: src/region_names.rs:609 src/region_names.rs:626
+msgid "Lubusz"
+msgstr ""
+
+#: src/region_names.rs:610 src/region_names.rs:637
+msgid "Masovia"
+msgstr ""
+
+#: src/region_names.rs:611 src/region_names.rs:633
+msgid "Opole"
+msgstr ""
+
+#: src/region_names.rs:612 src/region_names.rs:623
+msgid "Podlachia"
+msgstr ""
+
+#: src/region_names.rs:613 src/region_names.rs:625
+msgid "Pomerania"
+msgstr ""
+
+#: src/region_names.rs:614 src/region_names.rs:627
+msgid "Silesia"
+msgstr ""
+
+#: src/region_names.rs:615 src/region_names.rs:635
+msgid "Subcarpathia"
+msgstr ""
+
+#: src/region_names.rs:616 src/region_names.rs:628
+msgid "Świętokrzyskie"
+msgstr ""
+
+#: src/region_names.rs:617 src/region_names.rs:632
+msgid "Warmia-Masuria"
+msgstr ""
+
+#: src/region_names.rs:618 src/region_names.rs:636
+msgid "West Pomerania"
+msgstr ""
+
+#: src/region_names.rs:619 src/region_names.rs:631
+msgid "Łódź"
+msgstr ""
+
+#: src/region_names.rs:623
+msgid "Białystok"
+msgstr ""
+
+#: src/region_names.rs:624
+msgid "Bydgoszcz"
+msgstr ""
+
+#: src/region_names.rs:625
+msgid "Gdańsk"
+msgstr ""
+
+#: src/region_names.rs:626
+msgid "Gorzów Wielkopolski"
+msgstr ""
+
+#: src/region_names.rs:627
+msgid "Katowice"
+msgstr ""
+
+#: src/region_names.rs:628
+msgid "Kielce"
+msgstr ""
+
+#: src/region_names.rs:629
+msgid "Kraków"
+msgstr ""
+
+#: src/region_names.rs:632
+msgid "Olsztyn"
+msgstr ""
+
+#: src/region_names.rs:634
+msgid "Poznań"
+msgstr ""
+
+#: src/region_names.rs:635
+msgid "Rzeszów"
+msgstr ""
+
+#: src/region_names.rs:636
+msgid "Szczecin"
+msgstr ""
+
+#: src/region_names.rs:637 src/region_names.rs:754
+msgid "Warsaw"
+msgstr ""
+
+#: src/region_names.rs:638
+msgid "Wrocław"
+msgstr ""
+
+#: src/region_names.rs:642
+msgid "Aveiro"
+msgstr ""
+
+#: src/region_names.rs:643
+msgid "Azores"
+msgstr ""
+
+#: src/region_names.rs:644
+msgid "Beja"
+msgstr ""
+
+#: src/region_names.rs:645
+msgid "Braga"
+msgstr ""
+
+#: src/region_names.rs:646
+msgid "Bragança"
+msgstr ""
+
+#: src/region_names.rs:647
+msgid "Castelo Branco"
+msgstr ""
+
+#: src/region_names.rs:648
+msgid "Coimbra"
+msgstr ""
+
+#: src/region_names.rs:649
+msgid "Faro"
+msgstr ""
+
+#: src/region_names.rs:650
+msgid "Guarda"
+msgstr ""
+
+#: src/region_names.rs:651
+msgid "Leiria"
+msgstr ""
+
+#: src/region_names.rs:652
+msgid "Lisboa"
+msgstr ""
+
+#: src/region_names.rs:653
+msgid "Madeira"
+msgstr ""
+
+#: src/region_names.rs:654
+msgid "Portalegre"
+msgstr ""
+
+#: src/region_names.rs:655
+msgid "Porto"
+msgstr ""
+
+#: src/region_names.rs:656
+msgid "Santarém"
+msgstr ""
+
+#: src/region_names.rs:657
+msgid "Setúbal"
+msgstr ""
+
+#: src/region_names.rs:658
+msgid "Viana do Castelo"
+msgstr ""
+
+#: src/region_names.rs:659
+msgid "Vila Real"
+msgstr ""
+
+#: src/region_names.rs:660
+msgid "Viseu"
+msgstr ""
+
+#: src/region_names.rs:661
+msgid "Évora"
+msgstr ""
+
+#: src/region_names.rs:665
+msgid "Bidasoa"
+msgstr ""
+
+#: src/region_names.rs:666
+msgid "Duero"
+msgstr ""
+
+#: src/region_names.rs:667
+msgid "Ebro"
+msgstr ""
+
+#: src/region_names.rs:668
+msgid "Genil"
+msgstr ""
+
+#: src/region_names.rs:669
+msgid "Guadalete"
+msgstr ""
+
+#: src/region_names.rs:670
+msgid "Guadalquivir"
+msgstr ""
+
+#: src/region_names.rs:671
+msgid "Guadiana"
+msgstr ""
+
+#: src/region_names.rs:672
+msgid "Jarama"
+msgstr ""
+
+#: src/region_names.rs:673
+msgid "Júcar"
+msgstr ""
+
+#: src/region_names.rs:674
+msgid "Llobregat"
+msgstr ""
+
+#: src/region_names.rs:675
+msgid "Miño"
+msgstr ""
+
+#: src/region_names.rs:676
+msgid "Nalón"
+msgstr ""
+
+#: src/region_names.rs:677
+msgid "Navia"
+msgstr ""
+
+#: src/region_names.rs:678
+msgid "Nervión"
+msgstr ""
+
+#: src/region_names.rs:679
+msgid "Pisuerga"
+msgstr ""
+
+#: src/region_names.rs:680
+msgid "Segre"
+msgstr ""
+
+#: src/region_names.rs:681
+msgid "Segura"
+msgstr ""
+
+#: src/region_names.rs:682
+msgid "Tajo"
+msgstr ""
+
+#: src/region_names.rs:683
+msgid "Ter"
+msgstr ""
+
+#: src/region_names.rs:684
+msgid "Turia"
+msgstr ""
+
+#: src/region_names.rs:695
+msgid "Auvergne-Rhône-Alpes"
+msgstr ""
+
+#: src/region_names.rs:696
+msgid "Bourgogne-Franche-Comté"
+msgstr ""
+
+#: src/region_names.rs:697
+msgid "Brittany"
+msgstr ""
+
+#: src/region_names.rs:698
+msgid "Centre-Val de Loire"
+msgstr ""
+
+#: src/region_names.rs:699
+msgid "Corsica"
+msgstr ""
+
+#: src/region_names.rs:700
+msgid "Grand Est"
+msgstr ""
+
+#: src/region_names.rs:701
+msgid "Guadeloupe"
+msgstr ""
+
+#: src/region_names.rs:702
+msgid "French Guiana"
+msgstr ""
+
+#: src/region_names.rs:703
+msgid "Hauts-de-France"
+msgstr ""
+
+#: src/region_names.rs:704
+msgid "Île-de-France"
+msgstr ""
+
+#: src/region_names.rs:705
+msgid "Réunion"
+msgstr ""
+
+#: src/region_names.rs:706
+msgid "Martinique"
+msgstr ""
+
+#: src/region_names.rs:707
+msgid "Mayotte"
+msgstr ""
+
+#: src/region_names.rs:708
+msgid "Normandy"
+msgstr ""
+
+#: src/region_names.rs:709
+msgid "New Aquitaine"
+msgstr ""
+
+#: src/region_names.rs:710
+msgid "Occitanie"
+msgstr ""
+
+#: src/region_names.rs:711
+msgid "Pays de la Loire"
+msgstr ""
+
+#: src/region_names.rs:714
+msgid "Provence-Alpes-Côte d'Azur"
+msgstr ""
+
 #: src/region_names.rs:719
-msgid "Pristina"
+msgid "Tirana"
 msgstr ""
 
 #: src/region_names.rs:720
-msgid "Riga"
+msgid "Andorra la Vella"
 msgstr ""
 
 #: src/region_names.rs:721
-msgid "Vaduz"
+msgid "Yerevan"
 msgstr ""
 
 #: src/region_names.rs:722
-msgid "Vilnius"
+msgid "Vienna"
+msgstr ""
+
+#: src/region_names.rs:723
+msgid "Baku"
 msgstr ""
 
 #: src/region_names.rs:724
-msgid "Valletta"
+msgid "Minsk"
 msgstr ""
 
 #: src/region_names.rs:725
-msgid "Chisinau"
+msgid "Brussels"
+msgstr ""
+
+#: src/region_names.rs:726
+msgid "Sarajevo"
 msgstr ""
 
 #: src/region_names.rs:727
-msgid "Podgorica"
+msgid "Sofia"
 msgstr ""
 
 #: src/region_names.rs:728
-msgid "Amsterdam"
+msgid "Zagreb"
 msgstr ""
 
 #: src/region_names.rs:729
-msgid "Skopje"
+msgid "Nicosia"
 msgstr ""
 
 #: src/region_names.rs:730
-msgid "Oslo"
+msgid "Prague"
+msgstr ""
+
+#: src/region_names.rs:731
+msgid "Copenhagen"
 msgstr ""
 
 #: src/region_names.rs:732
-msgid "Lisbon"
+msgid "Tallinn"
 msgstr ""
 
 #: src/region_names.rs:733
-msgid "Bucharest"
+msgid "Helsinki"
 msgstr ""
 
 #: src/region_names.rs:734
-msgid "Moscow"
+msgid "Paris"
 msgstr ""
 
-#: src/region_names.rs:736
-msgid "Belgrade"
+#: src/region_names.rs:735
+msgid "Tbilisi"
 msgstr ""
 
 #: src/region_names.rs:737
-msgid "Bratislava"
+msgid "Athens"
 msgstr ""
 
 #: src/region_names.rs:738
-msgid "Ljubljana"
+msgid "Budapest"
+msgstr ""
+
+#: src/region_names.rs:739
+msgid "Reykjavik"
 msgstr ""
 
 #: src/region_names.rs:740
-msgid "Stockholm"
+msgid "Dublin"
 msgstr ""
 
 #: src/region_names.rs:742
-msgid "Ankara"
+msgid "Pristina"
 msgstr ""
 
 #: src/region_names.rs:743
-msgid "Kyiv"
+msgid "Riga"
 msgstr ""
 
 #: src/region_names.rs:744
+msgid "Vaduz"
+msgstr ""
+
+#: src/region_names.rs:745
+msgid "Vilnius"
+msgstr ""
+
+#: src/region_names.rs:747
+msgid "Valletta"
+msgstr ""
+
+#: src/region_names.rs:748
+msgid "Chisinau"
+msgstr ""
+
+#: src/region_names.rs:750
+msgid "Podgorica"
+msgstr ""
+
+#: src/region_names.rs:751
+msgid "Amsterdam"
+msgstr ""
+
+#: src/region_names.rs:752
+msgid "Skopje"
+msgstr ""
+
+#: src/region_names.rs:753
+msgid "Oslo"
+msgstr ""
+
+#: src/region_names.rs:755
+msgid "Lisbon"
+msgstr ""
+
+#: src/region_names.rs:756
+msgid "Bucharest"
+msgstr ""
+
+#: src/region_names.rs:757
+msgid "Moscow"
+msgstr ""
+
+#: src/region_names.rs:759
+msgid "Belgrade"
+msgstr ""
+
+#: src/region_names.rs:760
+msgid "Bratislava"
+msgstr ""
+
+#: src/region_names.rs:761
+msgid "Ljubljana"
+msgstr ""
+
+#: src/region_names.rs:763
+msgid "Stockholm"
+msgstr ""
+
+#: src/region_names.rs:765
+msgid "Ankara"
+msgstr ""
+
+#: src/region_names.rs:766
+msgid "Kyiv"
+msgstr ""
+
+#: src/region_names.rs:767
 msgid "London"
 msgstr ""
 
@@ -2443,7 +2519,7 @@ msgstr ""
 msgid "Rivers"
 msgstr ""
 
-#: src/registry.rs:118 src/registry.rs:167
+#: src/registry.rs:118 src/registry.rs:168
 msgid "Regions"
 msgstr ""
 
@@ -2461,80 +2537,89 @@ msgid "Cantons"
 msgstr ""
 
 #: src/registry.rs:179
+msgid "Capitals of Regions"
+msgstr ""
+
+#: src/registry.rs:192
 msgctxt "India"
 msgid "States"
 msgstr ""
 
-#: src/registry.rs:191
+#: src/registry.rs:204
 msgid "Prefectures"
 msgstr ""
 
-#: src/registry.rs:204
+#: src/registry.rs:217
 msgid "Continents"
 msgstr ""
 
-#: src/registry.rs:215
+#: src/registry.rs:228
 msgid "Countries of Africa"
 msgstr ""
 
-#: src/registry.rs:226
+#: src/registry.rs:239
 msgid "Countries of America"
 msgstr ""
 
-#: src/registry.rs:237
+#: src/registry.rs:250
 msgid "Countries of Asia"
 msgstr ""
 
-#: src/registry.rs:248
+#: src/registry.rs:261
 msgid "Countries of Europe"
 msgstr ""
 
-#: src/registry.rs:259
+#: src/registry.rs:272
 msgid "Capitals of Europe"
 msgstr ""
 
-#: src/registry.rs:270
+#: src/registry.rs:283
 msgid "Countries of Oceania"
 msgstr ""
 
-#: src/registry.rs:283
+#: src/registry.rs:296
 msgid "Districts"
 msgstr ""
 
-#: src/registry.rs:296
+#: src/registry.rs:309
 msgid "Voivodeships"
 msgstr ""
 
-#: src/registry.rs:307
+#: src/registry.rs:320
 msgid "Capitals of Voivodeships"
 msgstr ""
 
-#: src/registry.rs:323
+#: src/registry.rs:336
 msgctxt "United States"
 msgid "States"
 msgstr ""
 
-#: src/registry.rs:336
+#: src/registry.rs:349
 msgid "World"
 msgstr ""
 
 #: src/map_exercise_view.rs:198
+#, rust-format
 msgid "{}, capital of {}"
 msgstr ""
 
 #: src/map_exercise_view.rs:350
+#, rust-format
 msgid "Select: {}"
 msgstr ""
 
 #: src/map_exercise_view.rs:352
+#, rust-format
 msgid "Attempts remaining: {}"
 msgstr ""
 
 #: src/quiz_results_view.rs:102
+#, rust-format
 msgid "{}/{}"
 msgstr ""
 
 #: src/quiz_results_view.rs:104
+#, rust-format
 msgid "Score — {}%"
 msgstr ""
 
@@ -2547,6 +2632,7 @@ msgid "Your score didn't make the top 50"
 msgstr ""
 
 #: src/quiz_results_view.rs:179
+#, rust-format
 msgid "{}% — {}:{:02}"
 msgstr ""
 
@@ -2570,15 +2656,15 @@ msgstr ""
 msgid "Start Quiz"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:97
+#: resources/ui/map_exercise_view.ui:99
 msgid "Zoom In"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:106
+#: resources/ui/map_exercise_view.ui:108
 msgid "Zoom Out"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:115
+#: resources/ui/map_exercise_view.ui:117
 msgid "Reset Zoom"
 msgstr ""
 

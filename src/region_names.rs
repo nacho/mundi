@@ -38,6 +38,29 @@ pub const ITALY_REGIONS: &[(&str, &str)] = &[
     ("Veneto", N_("Veneto")),
 ];
 
+pub const ITALY_REGION_CAPITALS: &[(&str, &str)] = &[
+    (N_("Ancona"), N_("Marche")),
+    (N_("Aosta"), N_("Aosta Valley")),
+    (N_("Bari"), N_("Apulia")),
+    (N_("Bologna"), N_("Emilia-Romagna")),
+    (N_("Cagliari"), N_("Sardinia")),
+    (N_("Campobasso"), N_("Molise")),
+    (N_("Catanzaro"), N_("Calabria")),
+    (N_("Florence"), N_("Tuscany")),
+    (N_("Genoa"), N_("Liguria")),
+    (N_("L'Aquila"), N_("Abruzzo")),
+    (N_("Milan"), N_("Lombardy")),
+    (N_("Naples"), N_("Campania")),
+    (N_("Palermo"), N_("Sicily")),
+    (N_("Perugia"), N_("Umbria")),
+    (N_("Potenza"), N_("Basilicata")),
+    (N_("Rome"), N_("Lazio")),
+    (N_("Trento"), N_("Trentino-South Tyrol")),
+    (N_("Trieste"), N_("Friuli Venezia Giulia")),
+    (N_("Turin"), N_("Piedmont")),
+    (N_("Venice"), N_("Veneto")),
+];
+
 pub const GERMANY_STATES: &[(&str, &str)] = &[
     ("Baden-Württemberg", N_("Baden-Württemberg")),
     ("Bavaria", N_("Bavaria")),
