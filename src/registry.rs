@@ -675,8 +675,8 @@ mod tests {
         let peaks = exercise("italy", "peaks");
         assert_eq!(peaks.regions.len(), 17, "Italy should have 17 peaks");
         let svg = read_svg(peaks.svg_resource);
-        // Every peak gets an arrow marker, like the lakes.
-        assert!(svg.contains(r#"data-marker="arrow""#));
+        // Every peak or volcano is marked with a triangle.
+        assert!(svg.contains(r#"data-marker="triangle""#));
         // Each peak or volcano is a dot with its own id.
         assert_ids_present(&svg, peaks.regions.iter().map(|(peak, _)| peak.to_string()));
     }
@@ -707,6 +707,28 @@ mod tests {
                     .map(|(region, _)| format!("{land}{region}")),
             );
         }
+    }
+
+    #[test]
+    fn italy_region_borders() {
+        // The regions are always outlined, except on the rivers map, where
+        // they show only while the hint button is held down.
+        for id in [
+            "lakes",
+            "mountain-ranges",
+            "peaks",
+            "seas",
+            "plains-hills",
+            "gulfs-peninsulas",
+        ] {
+            let svg = read_svg(exercise("italy", id).svg_resource);
+            assert!(
+                svg.contains(r#"data-region-borders="true""#),
+                "{id}: region borders"
+            );
+        }
+        let rivers = read_svg(exercise("italy", "rivers").svg_resource);
+        assert!(rivers.contains(r#"data-region-hint="true""#));
     }
 
     #[test]

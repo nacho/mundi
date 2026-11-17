@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:52+0100\n"
+"POT-Creation-Date: 2026-11-17 10:15+0100\n"
 "PO-Revision-Date: 2026-09-09 03:06-0700\n"
 "Last-Translator: Jacob Padgett "
 "<74161959+jpadgett314@users.noreply.github.com>\n"
@@ -3091,17 +3091,17 @@ msgid "World"
 msgstr "世界"
 
 # ポーランドの県都、ドイツの州都、スペインの州都、ヨーロッパ各国の首都に対して使われます
-#: src/map_exercise_view.rs:198
+#: src/map_exercise_view.rs:230
 #, rust-format
 msgid "{}, capital of {}"
 msgstr "{}（{}の首都）"
 
-#: src/map_exercise_view.rs:350
+#: src/map_exercise_view.rs:382
 #, rust-format
 msgid "Select: {}"
 msgstr "{}をクリック"
 
-#: src/map_exercise_view.rs:352
+#: src/map_exercise_view.rs:384
 #, rust-format
 msgid "Attempts remaining: {}"
 msgstr "残り{}回"
@@ -3151,14 +3151,18 @@ msgid "Start Quiz"
 msgstr "クイズを始める"
 
 #: resources/ui/map_exercise_view.ui:99
+msgid "Hold to Show the Regions"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:109
 msgid "Zoom In"
 msgstr "拡大"
 
-#: resources/ui/map_exercise_view.ui:108
+#: resources/ui/map_exercise_view.ui:118
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: resources/ui/map_exercise_view.ui:117
+#: resources/ui/map_exercise_view.ui:127
 msgid "Reset Zoom"
 msgstr "ズームを戻す"
 

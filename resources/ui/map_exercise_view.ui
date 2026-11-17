@@ -94,6 +94,16 @@
                       <class name="toolbar"/>
                     </style>
                     <child>
+                      <object class="GtkButton" id="regions_button">
+                        <property name="icon-name">find-location-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Hold to Show the Regions</property>
+                        <property name="visible">false</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
                       <object class="GtkButton" id="zoom_in_button">
                         <property name="icon-name">zoom-in-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Zoom In</property>

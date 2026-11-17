@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:52+0100\n"
+"POT-Creation-Date: 2026-11-17 10:15+0100\n"
 "PO-Revision-Date: 2026-03-25 16:35+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -3079,17 +3079,17 @@ msgstr "Stany"
 msgid "World"
 msgstr "Świat"
 
-#: src/map_exercise_view.rs:198
+#: src/map_exercise_view.rs:230
 #, rust-format
 msgid "{}, capital of {}"
 msgstr "{}, stolica {}"
 
-#: src/map_exercise_view.rs:350
+#: src/map_exercise_view.rs:382
 #, rust-format
 msgid "Select: {}"
 msgstr "Wybierz: {}"
 
-#: src/map_exercise_view.rs:352
+#: src/map_exercise_view.rs:384
 #, rust-format
 msgid "Attempts remaining: {}"
 msgstr "Pozostałe próby: {}"
@@ -3138,14 +3138,18 @@ msgid "Start Quiz"
 msgstr "Rozpocznij quiz"
 
 #: resources/ui/map_exercise_view.ui:99
+msgid "Hold to Show the Regions"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:109
 msgid "Zoom In"
 msgstr "Powiększ"
 
-#: resources/ui/map_exercise_view.ui:108
+#: resources/ui/map_exercise_view.ui:118
 msgid "Zoom Out"
 msgstr "Pomniejsz"
 
-#: resources/ui/map_exercise_view.ui:117
+#: resources/ui/map_exercise_view.ui:127
 msgid "Reset Zoom"
 msgstr "Przywróć powiększenie"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:52+0100\n"
+"POT-Creation-Date: 2026-11-17 10:15+0100\n"
 "PO-Revision-Date: 2026-03-20 18:46+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -3078,17 +3078,17 @@ msgstr "Estados"
 msgid "World"
 msgstr "Mundo"
 
-#: src/map_exercise_view.rs:198
+#: src/map_exercise_view.rs:230
 #, rust-format
 msgid "{}, capital of {}"
 msgstr "{}, capital de {}"
 
-#: src/map_exercise_view.rs:350
+#: src/map_exercise_view.rs:382
 #, rust-format
 msgid "Select: {}"
 msgstr "Selecciona: {}"
 
-#: src/map_exercise_view.rs:352
+#: src/map_exercise_view.rs:384
 #, rust-format
 msgid "Attempts remaining: {}"
 msgstr "Intentos restantes: {}"
@@ -3137,14 +3137,18 @@ msgid "Start Quiz"
 msgstr "Iniciar prueba"
 
 #: resources/ui/map_exercise_view.ui:99
+msgid "Hold to Show the Regions"
+msgstr "Mantén pulsado para ver las regiones"
+
+#: resources/ui/map_exercise_view.ui:109
 msgid "Zoom In"
 msgstr "Acercar"
 
-#: resources/ui/map_exercise_view.ui:108
+#: resources/ui/map_exercise_view.ui:118
 msgid "Zoom Out"
 msgstr "Alejar"
 
-#: resources/ui/map_exercise_view.ui:117
+#: resources/ui/map_exercise_view.ui:127
 msgid "Reset Zoom"
 msgstr "Restablecer la ampliación"
 
@@ -3163,8 +3167,6 @@ msgstr "Guardar"
 #: resources/ui/preferences_dialog.ui:10
 msgid "Sound Effects"
 msgstr "Efectos de sonido"
-
-
 
 #~ msgid "Score"
 #~ msgstr "Puntuación"
