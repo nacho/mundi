@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:52+0100\n"
+"POT-Creation-Date: 2026-11-17 10:15+0100\n"
 "PO-Revision-Date: 2026-10-17 20:10+0200\n"
 "Last-Translator: Florian Frauenfelder <florian.l.frauenfelder@gmail.com>\n"
 "Language-Team: Swiss German\n"
@@ -3078,17 +3078,17 @@ msgstr "Stati"
 msgid "World"
 msgstr "Mondo"
 
-#: src/map_exercise_view.rs:198
+#: src/map_exercise_view.rs:230
 #, rust-format
 msgid "{}, capital of {}"
 msgstr "{}, capitale di {}"
 
-#: src/map_exercise_view.rs:350
+#: src/map_exercise_view.rs:382
 #, rust-format
 msgid "Select: {}"
 msgstr "Seleziona: {}"
 
-#: src/map_exercise_view.rs:352
+#: src/map_exercise_view.rs:384
 #, rust-format
 msgid "Attempts remaining: {}"
 msgstr "Tentativi rimasti: {}"
@@ -3137,14 +3137,18 @@ msgid "Start Quiz"
 msgstr "Inizia quiz"
 
 #: resources/ui/map_exercise_view.ui:99
+msgid "Hold to Show the Regions"
+msgstr "Tieni premuto per vedere le regioni"
+
+#: resources/ui/map_exercise_view.ui:109
 msgid "Zoom In"
 msgstr "Aumenta ingrandimento"
 
-#: resources/ui/map_exercise_view.ui:108
+#: resources/ui/map_exercise_view.ui:118
 msgid "Zoom Out"
 msgstr "Riduci ingrandimento"
 
-#: resources/ui/map_exercise_view.ui:117
+#: resources/ui/map_exercise_view.ui:127
 msgid "Reset Zoom"
 msgstr "Reimposta ingrandimento"
 
@@ -3163,8 +3167,6 @@ msgstr "Salva"
 #: resources/ui/preferences_dialog.ui:10
 msgid "Sound Effects"
 msgstr "Effetti sonori"
-
-
 
 #~ msgid "Score"
 #~ msgstr "Punteggio"

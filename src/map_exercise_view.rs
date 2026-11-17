@@ -45,6 +45,8 @@ mod imp {
         pub zoom_out_button: TemplateChild<gtk::Button>,
         #[template_child]
         pub zoom_reset_button: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub regions_button: TemplateChild<gtk::Button>,
         pub map_widget: RefCell<Option<MapWidget>>,
         pub quiz: RefCell<Option<Quiz>>,
         pub exercise: RefCell<Option<MapExercise>>,
@@ -87,6 +89,56 @@ impl MapExerciseView {
         let obj: Self = glib::Object::builder().build();
         obj.setup(exercise);
         obj
+    }
+
+    /// The regions hint shows the regions only while the button is held
+    /// down, then the map goes back as it was.
+    fn setup_regions_button(&self, map: &MapWidget) {
+        let button = self.imp().regions_button.get();
+        button.set_visible(map.has_region_hint());
+        if !map.has_region_hint() {
+            return;
+        }
+        let hold = gtk::GestureClick::new();
+        hold.set_propagation_phase(gtk::PropagationPhase::Capture);
+        let m = map.downgrade();
+        let b = button.downgrade();
+        hold.connect_pressed(move |gesture, _, _, _| {
+            // Keep the press: otherwise the button takes it as a click and
+            // the hint would end at once. Show the pressed look ourselves.
+            gesture.set_state(gtk::EventSequenceState::Claimed);
+            if let Some(b) = b.upgrade() {
+                b.set_state_flags(gtk::StateFlags::ACTIVE, false);
+            }
+            if let Some(m) = m.upgrade() {
+                m.set_show_regions(true);
+            }
+        });
+        // `end` also covers a release outside the button and a cancelled press.
+        let m = map.downgrade();
+        let b = button.downgrade();
+        hold.connect_end(move |_, _| {
+            if let Some(b) = b.upgrade() {
+                b.unset_state_flags(gtk::StateFlags::ACTIVE);
+            }
+            if let Some(m) = m.upgrade() {
+                m.set_show_regions(false);
+            }
+        });
+        // From the keyboard there is no holding: show the regions for a
+        // couple of seconds instead.
+        let m = map.downgrade();
+        button.connect_clicked(move |_| {
+            let Some(map) = m.upgrade() else { return };
+            map.set_show_regions(true);
+            let m = map.downgrade();
+            glib::timeout_add_seconds_local_once(2, move || {
+                if let Some(m) = m.upgrade() {
+                    m.set_show_regions(false);
+                }
+            });
+        });
+        button.add_controller(hold);
     }
 
     fn setup(&self, exercise: &MapExercise) {
@@ -150,6 +202,7 @@ impl MapExerciseView {
         );
 
         map.load_svg(exercise.svg_resource);
+        self.setup_regions_button(&map);
         *imp.map_widget.borrow_mut() = Some(map);
 
         // Wire quiz button

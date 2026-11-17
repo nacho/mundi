@@ -22,8 +22,66 @@ pub enum RegionState {
 const ARROW_LENGTH_PX: f32 = 26.0;
 const ARROW_HEAD_PX: f32 = 8.0;
 const ARROW_GAP_PX: f32 = 2.0;
-/// Width of the light halo drawn under arrows and haloed lines.
+/// Side of the triangle markers (`data-marker="triangle"` on the root
+/// `<svg>`): every clickable region, such as a mountain peak, is shown as an
+/// upward triangle centred on it.
+const TRIANGLE_PX: f32 = 14.0;
+/// Height of an equilateral triangle with side 1 (sqrt(3) / 2).
+const TRIANGLE_HEIGHT: f32 = 0.866;
+/// Width of the light halo drawn under markers and haloed lines.
 const HALO_PX: f32 = 7.0;
+
+/// How clickable regions are marked on top of the map.
+#[derive(Clone, Copy, PartialEq, Eq, Debug)]
+pub enum Marker {
+    /// Small regions get a square marker.
+    Default,
+    Arrow,
+    Triangle,
+}
+
+impl Marker {
+    fn from_attr(value: &str) -> Self {
+        match value {
+            "arrow" => Self::Arrow,
+            "triangle" => Self::Triangle,
+            _ => {
+                glib::g_warning!("mundi", "Unknown data-marker value {:?}", value);
+                Self::Default
+            }
+        }
+    }
+
+    /// Room the marker needs around the map, in pixels.
+    fn reach_px(self) -> f32 {
+        match self {
+            Self::Default => 0.0,
+            Self::Arrow => ARROW_GAP_PX + ARROW_LENGTH_PX + HALO_PX / 2.0,
+            // The tip is two thirds of the height above the centre.
+            Self::Triangle => TRIANGLE_PX * TRIANGLE_HEIGHT * 2.0 / 3.0 + HALO_PX / 2.0,
+        }
+    }
+}
+
+/// Centre of `region`'s bounding box, in SVG units.
+fn region_center(region: &Region) -> (f32, f32) {
+    let b = &region.bounds;
+    (b.x() + b.width() / 2.0, b.y() + b.height() / 2.0)
+}
+
+/// Upward triangle centred on `region`, in SVG units.
+fn triangle_path(region: &Region, scale: f32) -> gtk::gsk::Path {
+    let (cx, cy) = region_center(region);
+    let half = TRIANGLE_PX / 2.0 / scale;
+    // Equilateral: height = side * sqrt(3) / 2, centred on its centroid.
+    let h = TRIANGLE_PX * TRIANGLE_HEIGHT / scale;
+    let triangle = gtk::gsk::PathBuilder::new();
+    triangle.move_to(cx, cy - h * 2.0 / 3.0);
+    triangle.line_to(cx + half, cy + h / 3.0);
+    triangle.line_to(cx - half, cy + h / 3.0);
+    triangle.close();
+    triangle.to_path()
+}
 
 /// Unit vector from the arrow tail to its tip, for an arrow coming from
 /// `from` (a compass direction), or `None` for an unknown direction.
@@ -114,12 +172,20 @@ mod imp {
         pub cached_colors: RefCell<[gtk::gdk::RGBA; 5]>,
         pub zoom: Cell<f32>,
         pub pan: Cell<(f32, f32)>,
-        // Point at every clickable region with an arrow.
-        pub arrow_markers: Cell<bool>,
+        // How clickable regions are marked (`data-marker` on the root `<svg>`).
+        pub marker: Cell<Marker>,
         // Draw river-style lines with a light halo (`data-line-halo="true"`
         // on the root `<svg>`), for lines that leave the land, such as
         // mountain crests along the border.
         pub line_halo: Cell<bool>,
+        // Outline the decorative land shapes (`data-region-borders="true"`
+        // on the root `<svg>`), so the regions show where things are.
+        pub region_borders: Cell<bool>,
+        // The map offers a "hold to show the regions" hint
+        // (`data-region-hint="true"` on the root `<svg>`).
+        pub region_hint: Cell<bool>,
+        // The hint is being shown: region borders on, lines dimmed.
+        pub show_regions: Cell<bool>,
     }
 
     impl Default for MapWidget {
@@ -131,8 +197,11 @@ mod imp {
                 cached_colors: RefCell::new([fallback; 5]),
                 zoom: Cell::new(1.0),
                 pan: Cell::new((0.0, 0.0)),
-                arrow_markers: Cell::new(false),
+                marker: Cell::new(Marker::Default),
                 line_halo: Cell::new(false),
+                region_borders: Cell::new(false),
+                region_hint: Cell::new(false),
+                show_regions: Cell::new(false),
             }
         }
     }
@@ -330,7 +399,7 @@ mod imp {
             halo_stroke.set_line_join(gtk::gsk::LineJoin::Round);
             halo_stroke.set_line_cap(gtk::gsk::LineCap::Round);
             let line_halo = self.line_halo.get();
-            let arrow_markers = self.arrow_markers.get();
+            let marker = self.marker.get();
             let colors = self.cached_colors.borrow();
             let [c_normal, c_highlight, c_correct, c_wrong, c_border] = *colors;
             let state_color = |state: RegionState| match state {
@@ -342,9 +411,39 @@ mod imp {
             };
 
             let regions = self.regions.borrow();
+            // Region borders: all the land first, then all the borders, so
+            // no shape covers half of its neighbour's border.
+            let show_regions = self.show_regions.get();
+            let region_borders = self.region_borders.get() || show_regions;
+            // While the regions are shown, lines fade into the background.
+            let region_color = |region: &Region| {
+                let c = state_color(region.state);
+                if show_regions && region.is_river {
+                    gtk::gdk::RGBA::new(c.red(), c.green(), c.blue(), c.alpha() * 0.3)
+                } else {
+                    c
+                }
+            };
+            if region_borders {
+                let land = || {
+                    regions
+                        .iter()
+                        .filter(|r| r.state == RegionState::Decorative)
+                };
+                for region in land() {
+                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_border);
+                }
+                let border_stroke = gtk::gsk::Stroke::new(1.0 / scale);
+                border_stroke.set_line_join(gtk::gsk::LineJoin::Round);
+                for region in land() {
+                    snapshot.append_stroke(&region.path, &border_stroke, &c_normal);
+                }
+            }
             for region in regions.iter() {
                 if region.state == RegionState::Decorative {
-                    snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_border);
+                    if !region_borders {
+                        snapshot.append_fill(&region.path, gtk::gsk::FillRule::Winding, &c_border);
+                    }
                     continue;
                 }
 
@@ -358,7 +457,7 @@ mod imp {
                     continue;
                 }
 
-                let fill_color = state_color(region.state);
+                let fill_color = region_color(region);
 
                 if region.is_river {
                     // Haloed lines are drawn after this loop, all halos first.
@@ -380,12 +479,26 @@ mod imp {
                     snapshot.append_stroke(&region.path, &halo_stroke, &c_border);
                 }
                 for region in lines() {
-                    let color = state_color(region.state);
+                    let color = region_color(region);
                     snapshot.append_stroke(&region.path, &river_stroke, &color);
                 }
             }
 
-            if arrow_markers {
+            if marker == Marker::Triangle {
+                let triangles: Vec<_> = regions
+                    .iter()
+                    .filter(|r| is_clickable_area(r))
+                    .map(|r| (state_color(r.state), triangle_path(r, scale)))
+                    .collect();
+                for (_, triangle) in &triangles {
+                    snapshot.append_stroke(triangle, &halo_stroke, &c_border);
+                }
+                for (color, triangle) in &triangles {
+                    snapshot.append_fill(triangle, gtk::gsk::FillRule::Winding, color);
+                }
+            }
+
+            if marker == Marker::Arrow {
                 let arrow_stroke = gtk::gsk::Stroke::new(2.5 / scale);
                 let arrows: Vec<_> = regions
                     .iter()
@@ -406,7 +519,7 @@ mod imp {
             for region in regions.iter() {
                 if region.state == RegionState::Decorative
                     || region.state == RegionState::Background
-                    || (arrow_markers && !region.is_river)
+                    || (marker != Marker::Default && !region.is_river)
                 {
                     continue;
                 }
@@ -417,7 +530,7 @@ mod imp {
                     continue;
                 }
 
-                let fill_color = state_color(region.state);
+                let fill_color = region_color(region);
 
                 let (cx, cy) = if region.is_river {
                     let measure = gtk::gsk::PathMeasure::new(&region.path);
@@ -507,8 +620,11 @@ impl MapWidget {
         let mut regions = Vec::new();
         let mut markers: Vec<(String, f32, f32)> = Vec::new();
         let mut reader = Reader::from_str(data);
-        imp.arrow_markers.set(false);
+        imp.marker.set(Marker::Default);
         imp.line_halo.set(false);
+        imp.region_borders.set(false);
+        imp.region_hint.set(false);
+        imp.show_regions.set(false);
 
         loop {
             match reader.read_event() {
@@ -517,9 +633,13 @@ impl MapWidget {
                     if tag.as_ref() == "svg" {
                         for attr in e.attributes().flatten() {
                             if attr.key.as_ref() == "data-marker" {
-                                imp.arrow_markers.set(attr.value.as_ref() == "arrow");
+                                imp.marker.set(Marker::from_attr(attr.value.as_ref()));
                             } else if attr.key.as_ref() == "data-line-halo" {
                                 imp.line_halo.set(attr.value.as_ref() == "true");
+                            } else if attr.key.as_ref() == "data-region-borders" {
+                                imp.region_borders.set(attr.value.as_ref() == "true");
+                            } else if attr.key.as_ref() == "data-region-hint" {
+                                imp.region_hint.set(attr.value.as_ref() == "true");
                             }
                         }
                     } else if tag.as_ref() == "path" {
@@ -648,15 +768,15 @@ impl MapWidget {
         )
     }
 
-    /// The SVG bounds, plus room at the edges for arrow markers, which stick
-    /// out of the regions they point at.
+    /// The SVG bounds, plus room at the edges for arrow and triangle
+    /// markers, which stick out of the regions they mark.
     fn view_bounds(&self) -> gtk::graphene::Rect {
         let imp = self.imp();
         let bounds = *imp.svg_bounds.borrow();
-        if !imp.arrow_markers.get() {
+        let reach = imp.marker.get().reach_px();
+        if reach == 0.0 {
             return bounds;
         }
-        let reach = ARROW_GAP_PX + ARROW_LENGTH_PX + HALO_PX / 2.0;
         let scale = ((self.width() as f32 - 2.0 * reach) / bounds.width())
             .min((self.height() as f32 - 2.0 * reach) / bounds.height());
         if scale <= 0.0 {
@@ -692,9 +812,26 @@ impl MapWidget {
             return Some(r.id.clone());
         }
 
+        // Triangle markers: the nearest triangle wins.
+        if self.imp().marker.get() == Marker::Triangle {
+            let scale = self.compute_transform().0;
+            let threshold = TRIANGLE_PX / scale;
+            let nearest = regions
+                .iter()
+                .filter(|r| is_clickable_area(r))
+                .map(|r| {
+                    let (cx, cy) = region_center(r);
+                    (((svg_x - cx).powi(2) + (svg_y - cy).powi(2)).sqrt(), r)
+                })
+                .filter(|(dist, _)| *dist < threshold)
+                .min_by(|a, b| a.0.total_cmp(&b.0));
+            // Only the triangles are clickable.
+            return nearest.map(|(_, r)| r.id.clone());
+        }
+
         // Arrow markers: the region whose shape or arrow is nearest the
         // click wins, so an arrow passing by never steals a click on a dot.
-        if self.imp().arrow_markers.get() {
+        if self.imp().marker.get() == Marker::Arrow {
             let scale = self.compute_transform().0;
             let threshold = 8.0 / scale;
             let nearest = regions
@@ -890,6 +1027,20 @@ impl MapWidget {
         self.imp().pan.set((pan_x, pan_y));
         self.clamp_pan();
         self.queue_draw();
+    }
+
+    /// Whether the map offers the "hold to show the regions" hint.
+    pub fn has_region_hint(&self) -> bool {
+        self.imp().region_hint.get()
+    }
+
+    /// Show or hide the regions hint: region borders on, lines dimmed.
+    pub fn set_show_regions(&self, show: bool) {
+        let imp = self.imp();
+        if imp.show_regions.get() != show {
+            imp.show_regions.set(show);
+            self.queue_draw();
+        }
     }
 
     pub fn reset_view(&self) {

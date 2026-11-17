@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 18:52+0100\n"
+"POT-Creation-Date: 2026-11-17 10:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3078,17 +3078,17 @@ msgstr ""
 msgid "World"
 msgstr ""
 
-#: src/map_exercise_view.rs:198
+#: src/map_exercise_view.rs:230
 #, rust-format
 msgid "{}, capital of {}"
 msgstr ""
 
-#: src/map_exercise_view.rs:350
+#: src/map_exercise_view.rs:382
 #, rust-format
 msgid "Select: {}"
 msgstr ""
 
-#: src/map_exercise_view.rs:352
+#: src/map_exercise_view.rs:384
 #, rust-format
 msgid "Attempts remaining: {}"
 msgstr ""
@@ -3137,14 +3137,18 @@ msgid "Start Quiz"
 msgstr ""
 
 #: resources/ui/map_exercise_view.ui:99
+msgid "Hold to Show the Regions"
+msgstr ""
+
+#: resources/ui/map_exercise_view.ui:109
 msgid "Zoom In"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:108
+#: resources/ui/map_exercise_view.ui:118
 msgid "Zoom Out"
 msgstr ""
 
-#: resources/ui/map_exercise_view.ui:117
+#: resources/ui/map_exercise_view.ui:127
 msgid "Reset Zoom"
 msgstr ""
 
