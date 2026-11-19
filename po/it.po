@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mundi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-19 10:24+0100\n"
+"POT-Creation-Date: 2026-11-19 13:52+0100\n"
 "PO-Revision-Date: 2026-10-17 20:10+0200\n"
 "Last-Translator: Florian Frauenfelder <florian.l.frauenfelder@gmail.com>\n"
 "Language-Team: Swiss German\n"
@@ -157,7 +157,7 @@ msgstr "Perugia"
 msgid "Potenza"
 msgstr "Potenza"
 
-#: src/region_names.rs:57 src/region_names.rs:982
+#: src/region_names.rs:57 src/region_names.rs:994
 msgid "Rome"
 msgstr "Roma"
 
@@ -641,7 +641,7 @@ msgstr "Baden-Württemberg"
 msgid "Bavaria"
 msgstr "Baviera"
 
-#: src/region_names.rs:207 src/region_names.rs:227 src/region_names.rs:977
+#: src/region_names.rs:207 src/region_names.rs:227 src/region_names.rs:989
 msgid "Berlin"
 msgstr "Berlino"
 
@@ -769,7 +769,7 @@ msgstr "Basilea Campagna"
 msgid "Basel-Stadt"
 msgstr "Basilea Città"
 
-#: src/region_names.rs:251 src/region_names.rs:1005
+#: src/region_names.rs:251 src/region_names.rs:1017
 msgid "Bern"
 msgstr "Berna"
 
@@ -894,6 +894,7 @@ msgid "Extremadura"
 msgstr "Estremadura"
 
 #: src/region_names.rs:286 src/region_names.rs:309 src/registry.rs:186
+#: src/registry.rs:197
 msgid "Galicia"
 msgstr "Galizia"
 
@@ -902,7 +903,7 @@ msgid "La Rioja"
 msgstr "La Rioja"
 
 #: src/region_names.rs:288 src/region_names.rs:300 src/region_names.rs:347
-#: src/region_names.rs:1003
+#: src/region_names.rs:1015
 msgid "Madrid"
 msgstr "Madrid"
 
@@ -1150,204 +1151,204 @@ msgstr "Oceania"
 msgid "South America"
 msgstr "America del Sud"
 
-#: src/region_names.rs:381 src/region_names.rs:960
+#: src/region_names.rs:381 src/region_names.rs:972
 msgid "Albania"
 msgstr "Albania"
 
-#: src/region_names.rs:382 src/region_names.rs:961
+#: src/region_names.rs:382 src/region_names.rs:973
 msgid "Andorra"
 msgstr "Andorra"
 
-#: src/region_names.rs:383 src/region_names.rs:543 src/region_names.rs:962
+#: src/region_names.rs:383 src/region_names.rs:543 src/region_names.rs:974
 msgid "Armenia"
 msgstr "Armenia"
 
-#: src/region_names.rs:384 src/region_names.rs:963
+#: src/region_names.rs:384 src/region_names.rs:975
 msgid "Austria"
 msgstr "Austria"
 
-#: src/region_names.rs:385 src/region_names.rs:544 src/region_names.rs:964
+#: src/region_names.rs:385 src/region_names.rs:544 src/region_names.rs:976
 msgid "Azerbaijan"
 msgstr "Azerbaigian"
 
-#: src/region_names.rs:386 src/region_names.rs:965
+#: src/region_names.rs:386 src/region_names.rs:977
 msgid "Belarus"
 msgstr "Bielorussia"
 
-#: src/region_names.rs:387 src/region_names.rs:966
+#: src/region_names.rs:387 src/region_names.rs:978
 msgid "Belgium"
 msgstr "Belgio"
 
-#: src/region_names.rs:388 src/region_names.rs:967
+#: src/region_names.rs:388 src/region_names.rs:979
 msgid "Bosnia and Herzegovina"
 msgstr "Bosnia ed Erzegovina"
 
-#: src/region_names.rs:389 src/region_names.rs:968
+#: src/region_names.rs:389 src/region_names.rs:980
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
-#: src/region_names.rs:390 src/region_names.rs:969
+#: src/region_names.rs:390 src/region_names.rs:981
 msgid "Croatia"
 msgstr "Croazia"
 
-#: src/region_names.rs:391 src/region_names.rs:551 src/region_names.rs:970
+#: src/region_names.rs:391 src/region_names.rs:551 src/region_names.rs:982
 msgid "Cyprus"
 msgstr "Cipro"
 
-#: src/region_names.rs:392 src/region_names.rs:971
+#: src/region_names.rs:392 src/region_names.rs:983
 msgid "Czech Republic"
 msgstr "Repubblica Ceca"
 
-#: src/region_names.rs:393 src/region_names.rs:972
+#: src/region_names.rs:393 src/region_names.rs:984
 msgid "Denmark"
 msgstr "Danimarca"
 
-#: src/region_names.rs:394 src/region_names.rs:973
+#: src/region_names.rs:394 src/region_names.rs:985
 msgid "Estonia"
 msgstr "Estonia"
 
-#: src/region_names.rs:395 src/region_names.rs:974
+#: src/region_names.rs:395 src/region_names.rs:986
 msgid "Finland"
 msgstr "Finlandia"
 
-#: src/region_names.rs:396 src/region_names.rs:975 src/registry.rs:519
+#: src/region_names.rs:396 src/region_names.rs:987 src/registry.rs:530
 msgid "France"
 msgstr "Francia"
 
 #: src/region_names.rs:397 src/region_names.rs:553 src/region_names.rs:700
-#: src/region_names.rs:976
+#: src/region_names.rs:988
 msgid "Georgia"
 msgstr "Georgia"
 
-#: src/region_names.rs:398 src/region_names.rs:977 src/registry.rs:524
+#: src/region_names.rs:398 src/region_names.rs:989 src/registry.rs:535
 msgid "Germany"
 msgstr "Germania"
 
-#: src/region_names.rs:399 src/region_names.rs:978
+#: src/region_names.rs:399 src/region_names.rs:990
 msgid "Greece"
 msgstr "Grecia"
 
-#: src/region_names.rs:400 src/region_names.rs:979
+#: src/region_names.rs:400 src/region_names.rs:991
 msgid "Hungary"
 msgstr "Ungheria"
 
-#: src/region_names.rs:401 src/region_names.rs:980
+#: src/region_names.rs:401 src/region_names.rs:992
 msgid "Iceland"
 msgstr "Islanda"
 
-#: src/region_names.rs:402 src/region_names.rs:981
+#: src/region_names.rs:402 src/region_names.rs:993
 msgid "Ireland"
 msgstr "Irlanda"
 
-#: src/region_names.rs:403 src/region_names.rs:982 src/registry.rs:539
+#: src/region_names.rs:403 src/region_names.rs:994 src/registry.rs:550
 msgid "Italy"
 msgstr "Italia"
 
-#: src/region_names.rs:404 src/region_names.rs:983
+#: src/region_names.rs:404 src/region_names.rs:995
 msgid "Kosovo"
 msgstr "Kosovo"
 
-#: src/region_names.rs:405 src/region_names.rs:984
+#: src/region_names.rs:405 src/region_names.rs:996
 msgid "Latvia"
 msgstr "Lettonia"
 
-#: src/region_names.rs:406 src/region_names.rs:985
+#: src/region_names.rs:406 src/region_names.rs:997
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: src/region_names.rs:407 src/region_names.rs:986
+#: src/region_names.rs:407 src/region_names.rs:998
 msgid "Lithuania"
 msgstr "Lituania"
 
-#: src/region_names.rs:408 src/region_names.rs:987
+#: src/region_names.rs:408 src/region_names.rs:999
 msgid "Luxembourg"
 msgstr "Lussemburgo"
 
-#: src/region_names.rs:409 src/region_names.rs:988
+#: src/region_names.rs:409 src/region_names.rs:1000
 msgid "Malta"
 msgstr "Malta"
 
-#: src/region_names.rs:410 src/region_names.rs:989
+#: src/region_names.rs:410 src/region_names.rs:1001
 msgid "Moldova"
 msgstr "Moldavia"
 
-#: src/region_names.rs:411 src/region_names.rs:990
+#: src/region_names.rs:411 src/region_names.rs:1002
 msgid "Monaco"
 msgstr "Monaco"
 
-#: src/region_names.rs:412 src/region_names.rs:991
+#: src/region_names.rs:412 src/region_names.rs:1003
 msgid "Montenegro"
 msgstr "Montenegro"
 
-#: src/region_names.rs:413 src/region_names.rs:992
+#: src/region_names.rs:413 src/region_names.rs:1004
 msgid "Netherlands"
 msgstr "Paesi Bassi"
 
-#: src/region_names.rs:414 src/region_names.rs:993
+#: src/region_names.rs:414 src/region_names.rs:1005
 msgid "North Macedonia"
 msgstr "Macedonia del Nord"
 
-#: src/region_names.rs:415 src/region_names.rs:994
+#: src/region_names.rs:415 src/region_names.rs:1006
 msgid "Norway"
 msgstr "Norvegia"
 
-#: src/region_names.rs:416 src/region_names.rs:995 src/registry.rs:549
+#: src/region_names.rs:416 src/region_names.rs:1007 src/registry.rs:560
 msgid "Poland"
 msgstr "Polonia"
 
-#: src/region_names.rs:417 src/region_names.rs:996 src/registry.rs:554
+#: src/region_names.rs:417 src/region_names.rs:1008 src/registry.rs:565
 msgid "Portugal"
 msgstr "Portogallo"
 
-#: src/region_names.rs:418 src/region_names.rs:997
+#: src/region_names.rs:418 src/region_names.rs:1009
 msgid "Romania"
 msgstr "Romania"
 
-#: src/region_names.rs:419 src/region_names.rs:577 src/region_names.rs:998
+#: src/region_names.rs:419 src/region_names.rs:577 src/region_names.rs:1010
 msgid "Russia"
 msgstr "Russia"
 
-#: src/region_names.rs:420 src/region_names.rs:999
+#: src/region_names.rs:420 src/region_names.rs:1011
 msgid "San Marino"
 msgstr "San Marino"
 
-#: src/region_names.rs:421 src/region_names.rs:1000
+#: src/region_names.rs:421 src/region_names.rs:1012
 msgid "Serbia"
 msgstr "Serbia"
 
-#: src/region_names.rs:422 src/region_names.rs:1001
+#: src/region_names.rs:422 src/region_names.rs:1013
 msgid "Slovakia"
 msgstr "Slovacchia"
 
-#: src/region_names.rs:423 src/region_names.rs:1002
+#: src/region_names.rs:423 src/region_names.rs:1014
 msgid "Slovenia"
 msgstr "Slovenia"
 
-#: src/region_names.rs:424 src/region_names.rs:1003 src/registry.rs:559
+#: src/region_names.rs:424 src/region_names.rs:1015 src/registry.rs:570
 msgid "Spain"
 msgstr "Spagna"
 
-#: src/region_names.rs:425 src/region_names.rs:1004
+#: src/region_names.rs:425 src/region_names.rs:1016
 msgid "Sweden"
 msgstr "Svezia"
 
-#: src/region_names.rs:426 src/region_names.rs:1005 src/registry.rs:529
+#: src/region_names.rs:426 src/region_names.rs:1017 src/registry.rs:540
 msgid "Switzerland"
 msgstr "Svizzera"
 
-#: src/region_names.rs:427 src/region_names.rs:586 src/region_names.rs:1006
+#: src/region_names.rs:427 src/region_names.rs:586 src/region_names.rs:1018
 msgid "Turkey"
 msgstr "Turchia"
 
-#: src/region_names.rs:428 src/region_names.rs:1007
+#: src/region_names.rs:428 src/region_names.rs:1019
 msgid "Ukraine"
 msgstr "Ucraina"
 
-#: src/region_names.rs:429 src/region_names.rs:1008
+#: src/region_names.rs:429 src/region_names.rs:1020
 msgid "United Kingdom"
 msgstr "Regno Unito"
 
-#: src/region_names.rs:430 src/region_names.rs:1009
+#: src/region_names.rs:430 src/region_names.rs:1021
 msgid "Vatican City"
 msgstr "Città del Vaticano"
 
@@ -1451,7 +1452,7 @@ msgstr "Suriname"
 msgid "Trinidad and Tobago"
 msgstr "Trinidad e Tobago"
 
-#: src/region_names.rs:459 src/registry.rs:564
+#: src/region_names.rs:459 src/registry.rs:575
 msgid "United States"
 msgstr "Stati Uniti"
 
@@ -1767,7 +1768,7 @@ msgstr "Cina"
 msgid "East Timor"
 msgstr "Timor Est"
 
-#: src/region_names.rs:554 src/registry.rs:534
+#: src/region_names.rs:554 src/registry.rs:545
 msgid "India"
 msgstr "India"
 
@@ -1787,7 +1788,7 @@ msgstr "Iraq"
 msgid "Israel"
 msgstr "Israele"
 
-#: src/region_names.rs:559 src/registry.rs:544
+#: src/region_names.rs:559 src/registry.rs:555
 msgid "Japan"
 msgstr "Giappone"
 
@@ -2551,7 +2552,7 @@ msgstr "Rzeszów"
 msgid "Szczecin"
 msgstr "Szczecin"
 
-#: src/region_names.rs:777 src/region_names.rs:995
+#: src/region_names.rs:777 src/region_names.rs:1007
 msgid "Warsaw"
 msgstr "Varsavia"
 
@@ -2908,7 +2909,7 @@ msgid "Ibiza"
 msgstr ""
 
 #: src/region_names.rs:887
-msgid "Cíes Islands"
+msgid "Atlantic Islands"
 msgstr ""
 
 #: src/region_names.rs:888
@@ -3040,238 +3041,274 @@ msgid "Tarifa Point"
 msgstr ""
 
 #: src/region_names.rs:936
+msgid "Cíes Islands"
+msgstr ""
+
+#: src/region_names.rs:937
+msgid "Ons Island"
+msgstr ""
+
+#: src/region_names.rs:938
+msgid "Sálvora Island"
+msgstr ""
+
+#: src/region_names.rs:939
+msgid "Cortegada Island"
+msgstr ""
+
+#: src/region_names.rs:940
+msgid "Arousa Island"
+msgstr ""
+
+#: src/region_names.rs:941
+msgid "Tambo Island"
+msgstr ""
+
+#: src/region_names.rs:942
+msgid "San Simón Island"
+msgstr ""
+
+#: src/region_names.rs:943
+msgid "A Toxa Island"
+msgstr ""
+
+#: src/region_names.rs:944
+msgid "Sisargas Islands"
+msgstr ""
+
+#: src/region_names.rs:948
 msgid "Auvergne-Rhône-Alpes"
 msgstr "Alvernia-Rodano-Alpi"
 
-#: src/region_names.rs:937
+#: src/region_names.rs:949
 msgid "Bourgogne-Franche-Comté"
 msgstr "Borgogna-Franca Contea"
 
-#: src/region_names.rs:938
+#: src/region_names.rs:950
 msgid "Brittany"
 msgstr "Bretagna"
 
-#: src/region_names.rs:939
+#: src/region_names.rs:951
 msgid "Centre-Val de Loire"
 msgstr "Centro-Valle della Loira"
 
-#: src/region_names.rs:940
+#: src/region_names.rs:952
 msgid "Corsica"
 msgstr "Corsica"
 
-#: src/region_names.rs:941
+#: src/region_names.rs:953
 msgid "Grand Est"
 msgstr "Grand Est"
 
-#: src/region_names.rs:942
+#: src/region_names.rs:954
 msgid "Guadeloupe"
 msgstr "Guadalupa"
 
-#: src/region_names.rs:943
+#: src/region_names.rs:955
 msgid "French Guiana"
 msgstr "Guyana francese"
 
-#: src/region_names.rs:944
+#: src/region_names.rs:956
 msgid "Hauts-de-France"
 msgstr "Alta Francia"
 
-#: src/region_names.rs:945
+#: src/region_names.rs:957
 msgid "Île-de-France"
 msgstr "Île-de-France"
 
-#: src/region_names.rs:946
+#: src/region_names.rs:958
 msgid "Réunion"
 msgstr "Riunione"
 
-#: src/region_names.rs:947
+#: src/region_names.rs:959
 msgid "Martinique"
 msgstr "Martinica"
 
-#: src/region_names.rs:948
+#: src/region_names.rs:960
 msgid "Mayotte"
 msgstr "Mayotte"
 
-#: src/region_names.rs:949
+#: src/region_names.rs:961
 msgid "Normandy"
 msgstr "Normandia"
 
-#: src/region_names.rs:950
+#: src/region_names.rs:962
 msgid "New Aquitaine"
 msgstr "Nuova Aquitania"
 
-#: src/region_names.rs:951
+#: src/region_names.rs:963
 msgid "Occitanie"
 msgstr "Occitania"
 
-#: src/region_names.rs:952
+#: src/region_names.rs:964
 msgid "Pays de la Loire"
 msgstr "Paesi della Loira"
 
-#: src/region_names.rs:955
+#: src/region_names.rs:967
 msgid "Provence-Alpes-Côte d'Azur"
 msgstr "Provenza-Alpi-Costa Azzurra"
 
-#: src/region_names.rs:960
+#: src/region_names.rs:972
 msgid "Tirana"
 msgstr "Tirana"
 
-#: src/region_names.rs:961
+#: src/region_names.rs:973
 msgid "Andorra la Vella"
 msgstr "Andorra la Vella"
 
-#: src/region_names.rs:962
+#: src/region_names.rs:974
 msgid "Yerevan"
 msgstr "Yerevan"
 
-#: src/region_names.rs:963
+#: src/region_names.rs:975
 msgid "Vienna"
 msgstr "Vienna"
 
-#: src/region_names.rs:964
+#: src/region_names.rs:976
 msgid "Baku"
 msgstr "Baku"
 
-#: src/region_names.rs:965
+#: src/region_names.rs:977
 msgid "Minsk"
 msgstr "Minsk"
 
-#: src/region_names.rs:966
+#: src/region_names.rs:978
 msgid "Brussels"
 msgstr "Bruxelles"
 
-#: src/region_names.rs:967
+#: src/region_names.rs:979
 msgid "Sarajevo"
 msgstr "Sarajevo"
 
-#: src/region_names.rs:968
+#: src/region_names.rs:980
 msgid "Sofia"
 msgstr "Sofia"
 
-#: src/region_names.rs:969
+#: src/region_names.rs:981
 msgid "Zagreb"
 msgstr "Zagabria"
 
-#: src/region_names.rs:970
+#: src/region_names.rs:982
 msgid "Nicosia"
 msgstr "Nicosia"
 
-#: src/region_names.rs:971
+#: src/region_names.rs:983
 msgid "Prague"
 msgstr "Praga"
 
-#: src/region_names.rs:972
+#: src/region_names.rs:984
 msgid "Copenhagen"
 msgstr "Copenaghen"
 
-#: src/region_names.rs:973
+#: src/region_names.rs:985
 msgid "Tallinn"
 msgstr "Tallinn"
 
-#: src/region_names.rs:974
+#: src/region_names.rs:986
 msgid "Helsinki"
 msgstr "Helsinki"
 
-#: src/region_names.rs:975
+#: src/region_names.rs:987
 msgid "Paris"
 msgstr "Parigi"
 
-#: src/region_names.rs:976
+#: src/region_names.rs:988
 msgid "Tbilisi"
 msgstr "Tbilisi"
 
-#: src/region_names.rs:978
+#: src/region_names.rs:990
 msgid "Athens"
 msgstr "Atene"
 
-#: src/region_names.rs:979
+#: src/region_names.rs:991
 msgid "Budapest"
 msgstr "Budapest"
 
-#: src/region_names.rs:980
+#: src/region_names.rs:992
 msgid "Reykjavik"
 msgstr "Reykjavik"
 
-#: src/region_names.rs:981
+#: src/region_names.rs:993
 msgid "Dublin"
 msgstr "Dublino"
 
-#: src/region_names.rs:983
+#: src/region_names.rs:995
 msgid "Pristina"
 msgstr "Pristina"
 
-#: src/region_names.rs:984
+#: src/region_names.rs:996
 msgid "Riga"
 msgstr "Riga"
 
-#: src/region_names.rs:985
+#: src/region_names.rs:997
 msgid "Vaduz"
 msgstr "Vaduz"
 
-#: src/region_names.rs:986
+#: src/region_names.rs:998
 msgid "Vilnius"
 msgstr "Vilnius"
 
-#: src/region_names.rs:988
+#: src/region_names.rs:1000
 msgid "Valletta"
 msgstr "Valletta"
 
-#: src/region_names.rs:989
+#: src/region_names.rs:1001
 msgid "Chisinau"
 msgstr "Chișinău"
 
-#: src/region_names.rs:991
+#: src/region_names.rs:1003
 msgid "Podgorica"
 msgstr "Podgorica"
 
-#: src/region_names.rs:992
+#: src/region_names.rs:1004
 msgid "Amsterdam"
 msgstr "Amsterdam"
 
-#: src/region_names.rs:993
+#: src/region_names.rs:1005
 msgid "Skopje"
 msgstr "Skopje"
 
-#: src/region_names.rs:994
+#: src/region_names.rs:1006
 msgid "Oslo"
 msgstr "Oslo"
 
-#: src/region_names.rs:996
+#: src/region_names.rs:1008
 msgid "Lisbon"
 msgstr "Lisbona"
 
-#: src/region_names.rs:997
+#: src/region_names.rs:1009
 msgid "Bucharest"
 msgstr "Bucarest"
 
-#: src/region_names.rs:998
+#: src/region_names.rs:1010
 msgid "Moscow"
 msgstr "Mosca"
 
-#: src/region_names.rs:1000
+#: src/region_names.rs:1012
 msgid "Belgrade"
 msgstr "Belgrado"
 
-#: src/region_names.rs:1001
+#: src/region_names.rs:1013
 msgid "Bratislava"
 msgstr "Bratislava"
 
-#: src/region_names.rs:1002
+#: src/region_names.rs:1014
 msgid "Ljubljana"
 msgstr "Lubiana"
 
-#: src/region_names.rs:1004
+#: src/region_names.rs:1016
 msgid "Stockholm"
 msgstr "Stoccolma"
 
-#: src/region_names.rs:1006
+#: src/region_names.rs:1018
 msgid "Ankara"
 msgstr "Ankara"
 
-#: src/region_names.rs:1007
+#: src/region_names.rs:1019
 msgid "Kyiv"
 msgstr "Kiev"
 
-#: src/region_names.rs:1008
+#: src/region_names.rs:1020
 msgid "London"
 msgstr "Londra"
 
@@ -3287,114 +3324,118 @@ msgstr "Capitali delle Comunità Autonome"
 msgid "Provinces"
 msgstr "Province"
 
-#: src/registry.rs:94 src/registry.rs:267
+#: src/registry.rs:94 src/registry.rs:278
 msgid "Rivers"
 msgstr "Fiumi"
 
-#: src/registry.rs:105 src/registry.rs:278
+#: src/registry.rs:105 src/registry.rs:289
 msgid "Lakes"
 msgstr "Laghi"
 
-#: src/registry.rs:116 src/registry.rs:289
+#: src/registry.rs:116 src/registry.rs:300
 msgid "Mountain Ranges"
 msgstr "Catene montuose"
 
-#: src/registry.rs:127 src/registry.rs:300
+#: src/registry.rs:127 src/registry.rs:311
 msgid "Peaks and Volcanoes"
 msgstr "Vette e vulcani"
 
-#: src/registry.rs:138 src/registry.rs:311
+#: src/registry.rs:138 src/registry.rs:322
 msgid "Seas"
 msgstr "Mari"
 
-#: src/registry.rs:149 src/registry.rs:322
+#: src/registry.rs:149 src/registry.rs:333
 msgid "Islands and Archipelagos"
 msgstr "Isole e arcipelaghi"
 
-#: src/registry.rs:160 src/registry.rs:333
+#: src/registry.rs:160 src/registry.rs:344
 msgid "Plains and Hills"
 msgstr "Pianure e colline"
 
-#: src/registry.rs:171 src/registry.rs:344
+#: src/registry.rs:171 src/registry.rs:355
 msgid "Gulfs and Peninsulas"
 msgstr "Golfi e penisole"
 
-#: src/registry.rs:195 src/registry.rs:245
+#: src/registry.rs:193
+msgid "Islands"
+msgstr ""
+
+#: src/registry.rs:206 src/registry.rs:256
 msgid "Regions"
 msgstr "Regioni"
 
-#: src/registry.rs:208
+#: src/registry.rs:219
 msgctxt "Germany"
 msgid "States"
 msgstr "Stati federati"
 
-#: src/registry.rs:219
+#: src/registry.rs:230
 msgid "State Capitals"
 msgstr "Capitali dei Länder"
 
-#: src/registry.rs:232
+#: src/registry.rs:243
 msgid "Cantons"
 msgstr "Cantoni"
 
-#: src/registry.rs:256
+#: src/registry.rs:267
 msgid "Capitals of Regions"
 msgstr "Capoluoghi di regione"
 
-#: src/registry.rs:357
+#: src/registry.rs:368
 msgctxt "India"
 msgid "States"
 msgstr "Stati"
 
-#: src/registry.rs:369
+#: src/registry.rs:380
 msgid "Prefectures"
 msgstr "Prefetture"
 
-#: src/registry.rs:382
+#: src/registry.rs:393
 msgid "Continents"
 msgstr "Continenti"
 
-#: src/registry.rs:393
+#: src/registry.rs:404
 msgid "Countries of Africa"
 msgstr "Paesi dell'Africa"
 
-#: src/registry.rs:404
+#: src/registry.rs:415
 msgid "Countries of America"
 msgstr "Paesi dell'America"
 
-#: src/registry.rs:415
+#: src/registry.rs:426
 msgid "Countries of Asia"
 msgstr "Paesi dell'Asia"
 
-#: src/registry.rs:426
+#: src/registry.rs:437
 msgid "Countries of Europe"
 msgstr "Paesi d'Europa"
 
-#: src/registry.rs:437
+#: src/registry.rs:448
 msgid "Capitals of Europe"
 msgstr "Capitali d'Europa"
 
-#: src/registry.rs:448
+#: src/registry.rs:459
 msgid "Countries of Oceania"
 msgstr "Paesi dell’Oceania"
 
-#: src/registry.rs:461
+#: src/registry.rs:472
 msgid "Districts"
 msgstr "Distretti"
 
-#: src/registry.rs:474
+#: src/registry.rs:485
 msgid "Voivodeships"
 msgstr "Voivodati"
 
-#: src/registry.rs:485
+#: src/registry.rs:496
 msgid "Capitals of Voivodeships"
 msgstr "Capitali dei Voivodati"
 
-#: src/registry.rs:501
+#: src/registry.rs:512
 msgctxt "United States"
 msgid "States"
 msgstr "Stati"
 
-#: src/registry.rs:514
+#: src/registry.rs:525
 msgid "World"
 msgstr "Mondo"
 
