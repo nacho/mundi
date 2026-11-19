@@ -144,6 +144,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "islands",
+        country_id: "spain",
+        title_msgid: N_("Islands and Archipelagos"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/islands.svg",
+        regions: crate::region_names::SPAIN_ISLANDS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -860,6 +871,17 @@ mod tests {
         // clickable, so only the seas are.
         assert_ids_present(&svg, spain_land_ids("__"));
         assert_ids_present(&svg, ["__África".to_string()]);
+    }
+
+    #[test]
+    fn spain_islands_svg_ids_present() {
+        let ex = exercise("spain", "islands");
+        assert_eq!(ex.regions.len(), 14, "Spain should have 14 islands");
+        let svg = read_svg(ex.svg_resource);
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        assert_ids_present(&svg, ex.regions.iter().map(|(isle, _)| isle.to_string()));
+        // The land is a background outline (_bg_<Name>), not clickable.
+        assert_ids_present(&svg, spain_land_ids("_bg_"));
     }
 
     #[test]

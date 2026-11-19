@@ -877,6 +877,23 @@ pub const SPAIN_SEAS: &[(&str, &str)] = &[
     ("Océano Atlántico", N_("Atlantic Ocean")),
 ];
 
+pub const SPAIN_ISLANDS: &[(&str, &str)] = &[
+    ("Cabrera", N_("Cabrera")),
+    ("El Hierro", N_("El Hierro")),
+    ("Formentera", N_("Formentera")),
+    ("Fuerteventura", N_("Fuerteventura")),
+    ("Gran Canaria", N_("Gran Canaria")),
+    ("Ibiza", N_("Ibiza")),
+    ("Islas Cíes", N_("Cíes Islands")),
+    ("Islas Columbretes", N_("Columbretes Islands")),
+    ("La Gomera", N_("La Gomera")),
+    ("La Palma", N_("La Palma")),
+    ("Lanzarote", N_("Lanzarote")),
+    ("Mallorca", N_("Majorca")),
+    ("Menorca", N_("Minorca")),
+    ("Tenerife", N_("Tenerife")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
