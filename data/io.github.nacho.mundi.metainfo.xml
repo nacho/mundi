@@ -87,6 +87,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.3.0" date="2026-11-19">
+      <description>
+        <ul>
+          <li>New Spain exercises: lakes, mountain ranges, peaks and volcanoes, seas, islands and archipelagos, plains and hills, gulfs and peninsulas</li>
+          <li>New Galicia exercise: islands</li>
+          <li>Hold to show the regions on the Spanish rivers map</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.0" date="2026-11-13">
       <description>
         <ul>
