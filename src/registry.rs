@@ -122,6 +122,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "peaks",
+        country_id: "spain",
+        title_msgid: N_("Peaks and Volcanoes"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/peaks.svg",
+        regions: crate::region_names::SPAIN_PEAKS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -810,6 +821,19 @@ mod tests {
                 .iter()
                 .map(|(range, _)| format!("_river_{range}")),
         );
+        assert_ids_present(&svg, spain_land_ids("__"));
+    }
+
+    #[test]
+    fn spain_peaks_svg_ids_present() {
+        let ex = exercise("spain", "peaks");
+        assert_eq!(ex.regions.len(), 13, "Spain should have 13 peaks");
+        let svg = read_svg(ex.svg_resource);
+        // Every peak or volcano is marked with a triangle.
+        assert!(svg.contains(r#"data-marker="triangle""#));
+        assert!(svg.contains(r#"data-region-borders="true""#));
+        // Each peak or volcano is a dot with its own id.
+        assert_ids_present(&svg, ex.regions.iter().map(|(peak, _)| peak.to_string()));
         assert_ids_present(&svg, spain_land_ids("__"));
     }
 

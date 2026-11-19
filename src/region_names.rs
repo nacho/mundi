@@ -852,6 +852,22 @@ pub const SPAIN_MOUNTAIN_RANGES: &[(&str, &str)] = &[
     ("Sistemas Béticos", N_("Baetic System")),
 ];
 
+pub const SPAIN_PEAKS: &[(&str, &str)] = &[
+    ("Almanzor", N_("Almanzor")),
+    ("Aneto", N_("Aneto")),
+    ("Garajonay", N_("Garajonay")),
+    ("Moncayo", N_("Moncayo")),
+    ("Mont Caro", N_("Mont Caro")),
+    ("Monte Perdido", N_("Monte Perdido")),
+    ("Mulhacén", N_("Mulhacén")),
+    ("Peña Trevinca", N_("Peña Trevinca")),
+    ("Peñalara", N_("Peñalara")),
+    ("Roque de los Muchachos", N_("Roque de los Muchachos")),
+    ("Teide", N_("Mount Teide")),
+    ("Timanfaya", N_("Timanfaya")),
+    ("Torre Cerredo", N_("Torre de Cerredo")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
