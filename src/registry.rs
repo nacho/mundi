@@ -100,6 +100,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "lakes",
+        country_id: "spain",
+        title_msgid: N_("Lakes"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/lakes.svg",
+        regions: crate::region_names::SPAIN_LAKES,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -745,6 +756,47 @@ mod tests {
                 .filter(|(community, _)| !matches!(*community, "Ceuta" | "Melilla"))
                 .map(|(community, _)| format!("__{community}")),
         );
+    }
+
+    /// Ids of the land shapes drawn under the Spain physical maps: every
+    /// community on the rivers map, plus Portugal.
+    fn spain_land_ids(prefix: &str) -> Vec<String> {
+        crate::region_names::SPAIN_COMMUNITIES
+            .iter()
+            .map(|(community, _)| *community)
+            .filter(|community| !matches!(*community, "Ceuta" | "Melilla"))
+            .chain(["Portugal"])
+            .map(|name| format!("{prefix}{name}"))
+            .collect()
+    }
+
+    #[test]
+    fn spain_lakes_svg_ids_present() {
+        let ex = exercise("spain", "lakes");
+        assert_eq!(ex.regions.len(), 12, "Spain should have 12 lakes");
+        let svg = read_svg(ex.svg_resource);
+        // Every lake gets an arrow marker so even small ones are easy to find.
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        assert!(svg.contains(r#"data-region-borders="true""#));
+        // Each lake is a clickable region with its own id.
+        assert_ids_present(&svg, ex.regions.iter().map(|(lake, _)| lake.to_string()));
+        // Communities are decorative (__<Name>) so the lakes stand out.
+        assert_ids_present(&svg, spain_land_ids("__"));
+    }
+
+    #[test]
+    fn spain_arrow_directions_valid() {
+        for ex in SPAIN_EXERCISES {
+            let svg = read_svg(ex.svg_resource);
+            for value in svg.split(r#"data-arrow=""#).skip(1) {
+                let dir = &value[..value.find('"').unwrap()];
+                assert!(
+                    crate::map_widget::arrow_direction(dir).is_some(),
+                    "{}: unknown data-arrow {dir:?}",
+                    ex.id
+                );
+            }
+        }
     }
 
     #[test]

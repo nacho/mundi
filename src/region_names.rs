@@ -824,6 +824,21 @@ pub const SPAIN_RIVERS: &[(&str, &str)] = &[
     ("Turia", N_("Turia")),
 ];
 
+pub const SPAIN_LAKES: &[(&str, &str)] = &[
+    ("Albufera de Valencia", N_("Albufera of Valencia")),
+    ("Alarcón", N_("Alarcón Reservoir")),
+    ("Almendra", N_("Almendra Reservoir")),
+    ("Banyoles", N_("Lake Banyoles")),
+    ("Buendía", N_("Buendía Reservoir")),
+    ("Gallocanta", N_("Lake Gallocanta")),
+    ("La Serena", N_("La Serena Reservoir")),
+    ("Mar Menor", N_("Mar Menor")),
+    ("Mequinenza", N_("Mequinenza Reservoir")),
+    ("Sanabria", N_("Lake Sanabria")),
+    ("Sau", N_("Sau Reservoir")),
+    ("Ullibarri-Gamboa", N_("Ullibarri-Gamboa Reservoir")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
