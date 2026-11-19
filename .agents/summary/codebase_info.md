@@ -92,6 +92,6 @@ mundi/
 | Italy | Regions |
 | Poland | Voivodeships, Capitals of Voivodeships |
 | Portugal | Districts |
-| Spain | Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers |
+| Spain | Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes, Seas, Islands and Archipelagos, Plains and Hills, Gulfs and Peninsulas |
 | Spain/Galicia | Provinces |
 | United States | States |
