@@ -732,6 +732,22 @@ mod tests {
     }
 
     #[test]
+    fn spain_rivers_region_hint() {
+        let ex = exercise("spain", "rivers");
+        let svg = read_svg(ex.svg_resource);
+        // The communities are decorative (__<Name>) and show only while the
+        // hint button is held down.
+        assert!(svg.contains(r#"data-region-hint="true""#));
+        assert_ids_present(
+            &svg,
+            crate::region_names::SPAIN_COMMUNITIES
+                .iter()
+                .filter(|(community, _)| !matches!(*community, "Ceuta" | "Melilla"))
+                .map(|(community, _)| format!("__{community}")),
+        );
+    }
+
+    #[test]
     fn italy_arrow_directions_valid() {
         for ex in ITALY_EXERCISES {
             let svg = read_svg(ex.svg_resource);
