@@ -166,6 +166,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "gulfs-peninsulas",
+        country_id: "spain",
+        title_msgid: N_("Gulfs and Peninsulas"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/gulfs-peninsulas.svg",
+        regions: crate::region_names::SPAIN_GULFS_PENINSULAS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -908,6 +919,18 @@ mod tests {
         assert!(svg.contains(r#"data-region-borders="true""#));
         assert_ids_present(&svg, ex.regions.iter().map(|(area, _)| area.to_string()));
         // The land is not clickable, so only the plains and hills are.
+        assert_ids_present(&svg, spain_land_ids("__"));
+    }
+
+    #[test]
+    fn spain_gulfs_peninsulas_svg_ids_present() {
+        let ex = exercise("spain", "gulfs-peninsulas");
+        assert_eq!(ex.regions.len(), 14, "Spain should have 14 gulfs and capes");
+        let svg = read_svg(ex.svg_resource);
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        assert!(svg.contains(r#"data-region-borders="true""#));
+        assert_ids_present(&svg, ex.regions.iter().map(|(name, _)| name.to_string()));
+        // The land is not clickable, so only the gulfs and capes are.
         assert_ids_present(&svg, spain_land_ids("__"));
     }
 

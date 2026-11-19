@@ -908,6 +908,23 @@ pub const SPAIN_PLAINS_HILLS: &[(&str, &str)] = &[
     ("Vega de Granada", N_("Vega de Granada")),
 ];
 
+pub const SPAIN_GULFS_PENINSULAS: &[(&str, &str)] = &[
+    ("Cabo de Creus", N_("Cape Creus")),
+    ("Cabo de Gata", N_("Cape Gata")),
+    ("Cabo de Palos", N_("Cape Palos")),
+    ("Cabo de Peñas", N_("Cape Peñas")),
+    ("Cabo de Trafalgar", N_("Cape Trafalgar")),
+    ("Cabo de la Nao", N_("Cape La Nao")),
+    ("Cabo Finisterre", N_("Cape Finisterre")),
+    ("Cabo Ortegal", N_("Cape Ortegal")),
+    ("Golfo de Almería", N_("Gulf of Almería")),
+    ("Golfo de Cádiz", N_("Gulf of Cádiz")),
+    ("Golfo de Rosas", N_("Gulf of Roses")),
+    ("Golfo de Valencia", N_("Gulf of Valencia")),
+    ("Golfo de Vizcaya", N_("Bay of Biscay")),
+    ("Punta de Tarifa", N_("Tarifa Point")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
