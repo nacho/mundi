@@ -839,6 +839,19 @@ pub const SPAIN_LAKES: &[(&str, &str)] = &[
     ("Ullibarri-Gamboa", N_("Ullibarri-Gamboa Reservoir")),
 ];
 
+pub const SPAIN_MOUNTAIN_RANGES: &[(&str, &str)] = &[
+    ("Cordillera Cantábrica", N_("Cantabrian Mountains")),
+    ("Macizo Galaico", N_("Galician Massif")),
+    ("Montes de León", N_("Montes de León")),
+    ("Montes de Toledo", N_("Montes de Toledo")),
+    ("Pirineos", N_("Pyrenees")),
+    ("Sierra Morena", N_("Sierra Morena")),
+    ("Sistema Central", N_("Central System")),
+    ("Sistema Costero Catalán", N_("Catalan Coastal Range")),
+    ("Sistema Ibérico", N_("Iberian System")),
+    ("Sistemas Béticos", N_("Baetic System")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),

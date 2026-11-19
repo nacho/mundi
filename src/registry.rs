@@ -111,6 +111,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "mountain-ranges",
+        country_id: "spain",
+        title_msgid: N_("Mountain Ranges"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/mountains.svg",
+        regions: crate::region_names::SPAIN_MOUNTAIN_RANGES,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -781,6 +792,24 @@ mod tests {
         // Each lake is a clickable region with its own id.
         assert_ids_present(&svg, ex.regions.iter().map(|(lake, _)| lake.to_string()));
         // Communities are decorative (__<Name>) so the lakes stand out.
+        assert_ids_present(&svg, spain_land_ids("__"));
+    }
+
+    #[test]
+    fn spain_mountains_svg_ids_present() {
+        let ex = exercise("spain", "mountain-ranges");
+        assert_eq!(ex.regions.len(), 10, "Spain should have 10 ranges");
+        let svg = read_svg(ex.svg_resource);
+        // Crests along the border leave the land: draw them with a halo.
+        assert!(svg.contains(r#"data-line-halo="true""#));
+        assert!(svg.contains(r#"data-region-borders="true""#));
+        // Ranges are drawn and clicked like rivers (_river_<Name>).
+        assert_ids_present(
+            &svg,
+            ex.regions
+                .iter()
+                .map(|(range, _)| format!("_river_{range}")),
+        );
         assert_ids_present(&svg, spain_land_ids("__"));
     }
 
