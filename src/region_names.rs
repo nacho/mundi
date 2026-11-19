@@ -932,6 +932,18 @@ pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("Pontevedra", N_("Pontevedra")),
 ];
 
+pub const GALICIA_ISLANDS: &[(&str, &str)] = &[
+    ("Illas Cíes", N_("Cíes Islands")),
+    ("Illa de Ons", N_("Ons Island")),
+    ("Illa de Sálvora", N_("Sálvora Island")),
+    ("Illa de Cortegada", N_("Cortegada Island")),
+    ("Illa de Arousa", N_("Arousa Island")),
+    ("Illa de Tambo", N_("Tambo Island")),
+    ("Illa de San Simón", N_("San Simón Island")),
+    ("Illa da Toxa", N_("A Toxa Island")),
+    ("Illas Sisargas", N_("Sisargas Islands")),
+];
+
 pub const FRANCE_REGIONS: &[(&str, &str)] = &[
     ("Auvergne-Rhône-Alpes", N_("Auvergne-Rhône-Alpes")),
     ("Bourgogne-Franche-Comté", N_("Bourgogne-Franche-Comté")),

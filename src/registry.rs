@@ -187,6 +187,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         kind: ExerciseKind::Standard,
         alternates: &[],
     },
+    MapExercise {
+        id: "galicia-islands",
+        country_id: "spain",
+        title_msgid: N_("Islands"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/galicia/islands.svg",
+        regions: crate::region_names::GALICIA_ISLANDS,
+        group: Some(N_("Galicia")),
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
 ];
 
 static FRANCE_EXERCISES: &[MapExercise] = &[MapExercise {
@@ -893,6 +904,24 @@ mod tests {
         // clickable, so only the seas are.
         assert_ids_present(&svg, spain_land_ids("__"));
         assert_ids_present(&svg, ["__África".to_string()]);
+    }
+
+    #[test]
+    fn galicia_islands_svg_ids_present() {
+        let ex = exercise("spain", "galicia-islands");
+        assert_eq!(ex.regions.len(), 9, "Galicia should have 9 islands");
+        assert_eq!(ex.group, Some("Galicia"));
+        let svg = read_svg(ex.svg_resource);
+        assert!(svg.contains(r#"data-marker="arrow""#));
+        assert_ids_present(&svg, ex.regions.iter().map(|(isle, _)| isle.to_string()));
+        // The land is the four provinces as background outlines (_bg_<Name>),
+        // not clickable.
+        assert_ids_present(
+            &svg,
+            crate::region_names::GALICIA_PROVINCES
+                .iter()
+                .map(|(province, _)| format!("_bg_{province}")),
+        );
     }
 
     #[test]

@@ -15,7 +15,7 @@ A geography learning application for GNOME. Test your knowledge of world regions
 - **Japan** — Prefectures
 - **Poland** — Voivodeships, Capitals of Voivodeships
 - **Portugal** — Districts
-- **Spain** — Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes, Seas, Islands and Archipelagos, Plains and Hills, Gulfs and Peninsulas; Galicia: Provinces
+- **Spain** — Autonomous Communities, Capitals of Autonomous Communities, Provinces, Rivers, Lakes, Mountain Ranges, Peaks and Volcanoes, Seas, Islands and Archipelagos, Plains and Hills, Gulfs and Peninsulas; Galicia: Provinces, Islands
 - **United States** — States
 - **India** - States
 
