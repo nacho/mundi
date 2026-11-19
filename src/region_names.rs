@@ -884,7 +884,7 @@ pub const SPAIN_ISLANDS: &[(&str, &str)] = &[
     ("Fuerteventura", N_("Fuerteventura")),
     ("Gran Canaria", N_("Gran Canaria")),
     ("Ibiza", N_("Ibiza")),
-    ("Islas Cíes", N_("Cíes Islands")),
+    ("Illas Atlánticas", N_("Atlantic Islands")),
     ("Islas Columbretes", N_("Columbretes Islands")),
     ("La Gomera", N_("La Gomera")),
     ("La Palma", N_("La Palma")),
