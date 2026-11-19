@@ -894,6 +894,20 @@ pub const SPAIN_ISLANDS: &[(&str, &str)] = &[
     ("Tenerife", N_("Tenerife")),
 ];
 
+pub const SPAIN_PLAINS_HILLS: &[(&str, &str)] = &[
+    ("El Bierzo", N_("El Bierzo")),
+    ("Huerta de Valencia", N_("Huerta de Valencia")),
+    ("La Alcarria", N_("La Alcarria")),
+    ("La Mancha", N_("La Mancha")),
+    ("Meseta Norte", N_("Northern Plateau")),
+    ("Meseta Sur", N_("Southern Plateau")),
+    ("Penedés", N_("Penedès")),
+    ("Tierra de Campos", N_("Tierra de Campos")),
+    ("Valle del Ebro", N_("Ebro Valley")),
+    ("Valle del Guadalquivir", N_("Guadalquivir Valley")),
+    ("Vega de Granada", N_("Vega de Granada")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
