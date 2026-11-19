@@ -133,6 +133,17 @@ static SPAIN_EXERCISES: &[MapExercise] = &[
         alternates: &[],
     },
     MapExercise {
+        id: "seas",
+        country_id: "spain",
+        title_msgid: N_("Seas"),
+        title_context: None,
+        svg_resource: "/io/github/nacho/mundi/maps/spain/seas.svg",
+        regions: crate::region_names::SPAIN_SEAS,
+        group: None,
+        kind: ExerciseKind::Standard,
+        alternates: &[],
+    },
+    MapExercise {
         id: "galicia-provinces",
         country_id: "spain",
         title_msgid: N_("Provinces"),
@@ -835,6 +846,20 @@ mod tests {
         // Each peak or volcano is a dot with its own id.
         assert_ids_present(&svg, ex.regions.iter().map(|(peak, _)| peak.to_string()));
         assert_ids_present(&svg, spain_land_ids("__"));
+    }
+
+    #[test]
+    fn spain_seas_svg_ids_present() {
+        let ex = exercise("spain", "seas");
+        assert_eq!(ex.regions.len(), 6, "Spain should have 6 seas");
+        let svg = read_svg(ex.svg_resource);
+        assert!(!svg.contains("data-marker"));
+        assert!(svg.contains(r#"data-region-borders="true""#));
+        assert_ids_present(&svg, ex.regions.iter().map(|(sea, _)| sea.to_string()));
+        // The land (communities, Portugal and North Africa) is not
+        // clickable, so only the seas are.
+        assert_ids_present(&svg, spain_land_ids("__"));
+        assert_ids_present(&svg, ["__África".to_string()]);
     }
 
     #[test]

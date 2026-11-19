@@ -868,6 +868,15 @@ pub const SPAIN_PEAKS: &[(&str, &str)] = &[
     ("Torre Cerredo", N_("Torre de Cerredo")),
 ];
 
+pub const SPAIN_SEAS: &[(&str, &str)] = &[
+    ("Estrecho de Gibraltar", N_("Strait of Gibraltar")),
+    ("Mar Balear", N_("Balearic Sea")),
+    ("Mar Cantábrico", N_("Cantabrian Sea")),
+    ("Mar de Alborán", N_("Alboran Sea")),
+    ("Mar Mediterráneo", N_("Mediterranean Sea")),
+    ("Océano Atlántico", N_("Atlantic Ocean")),
+];
+
 pub const GALICIA_PROVINCES: &[(&str, &str)] = &[
     ("A Coruña", N_("A Coruña")),
     ("Lugo", N_("Lugo")),
